@@ -1,0 +1,51 @@
+
+
+header {
+    background-color: #9c0;
+    padding: 30px ;
+    text-align: center;
+    color: white;
+    margin: 0px;
+}
+
+body {
+    background-color: black;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.potato {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.lol {
+    
+    border: 2px solid  white;
+    padding: 20px;
+    position: absolute;
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 400px;
+    text-align: center;
+ 
+  
+}
+
+.test {
+    color: white;
+    position: fixed;
+    top: 90%;
+    left: 95%;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 1px solid white;
+    text-align: center;
+    padding: 10px;
+}
+
+.Porquoi {
+    color: white;
+}
