@@ -1,31 +1,309 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Super Site</title>
+    <title>Idle Downloader</title>
     <link rel="stylesheet" href="../CSS/style.css">
 </head>
-
 <body>
-
-    <header>
-        <h1>
-            Un titre de site : donc une balise < h1> dans un < header>
-        </h1>
+    <header class="hero">
+        <div class="hero__content">
+            <p class="hero__eyebrow">Prototype</p>
+            <h1>Idle Downloader</h1>
+            <p class="hero__subtitle">Téléchargez des jeux, optimisez votre bande passante et laissez vos améliorations faire le travail.</p>
+        </div>
+        <div class="hero__stats">
+            <div class="pill">Progression continue</div>
+            <div class="pill">Achat d'améliorations</div>
+            <div class="pill">Boucle idle infinie</div>
+        </div>
     </header>
 
-    <div class="lol">
-        <h1 class="potato">WOUAAA</h1>
-    </div>
+    <main class="layout">
+        <section class="card wide">
+            <div class="card__header">
+                <div>
+                    <p class="eyebrow">Téléchargement en cours</p>
+                    <h2 id="download-name">En attente...</h2>
+                    <p class="subtext" id="download-size">—</p>
+                </div>
+                <div class="stat-block">
+                    <p class="eyebrow">Vitesse effective</p>
+                    <p class="stat" id="speed-display">0 Mo/s</p>
+                </div>
+            </div>
+            <div class="progress">
+                <div class="progress__bar" id="progress-bar"></div>
+            </div>
+            <div class="progress__info">
+                <span id="progress-text">0%</span>
+                <span id="eta-text">Temps estimé : —</span>
+            </div>
+            <div class="actions">
+                <button id="boost-download" class="primary">Push download (+8%)</button>
+                <p class="helper">Coût : 3 crédits. Idéal pour débloquer un gros fichier coincé.</p>
+            </div>
+        </section>
 
-    <h1 class="test"> ?</h1>
+        <section class="grid">
+            <div class="card">
+                <p class="eyebrow">Crédits</p>
+                <p class="stat" id="credits">0</p>
+                <p class="subtext">Gagnez des crédits en terminant des téléchargements.</p>
+            </div>
+            <div class="card">
+                <p class="eyebrow">Jeux installés</p>
+                <p class="stat" id="downloads-finished">0</p>
+                <p class="subtext">Chaque jeu terminé rapporte des crédits supplémentaires.</p>
+            </div>
+            <div class="card">
+                <p class="eyebrow">Gains moyens</p>
+                <p class="stat" id="reward-display">—</p>
+                <p class="subtext">Influencé par vos accords éditeurs.</p>
+            </div>
+            <div class="card">
+                <p class="eyebrow">Modificateurs</p>
+                <p class="stat" id="modifier-display">x1.00</p>
+                <p class="subtext">Addition de tous vos bonus de vitesse.</p>
+            </div>
+        </section>
 
-    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
-    <h1 class="Porquoi">Je suis en bas</h1>
+        <section class="card">
+            <div class="card__header">
+                <div>
+                    <p class="eyebrow">Améliorations</p>
+                    <h2>Optimisez votre pipeline</h2>
+                </div>
+                <p class="subtext">Les coûts augmentent progressivement à chaque niveau.</p>
+            </div>
+            <div class="upgrade-list">
+                <div class="upgrade" data-upgrade="speed">
+                    <div>
+                        <h3>Carte réseau boostée</h3>
+                        <p class="subtext">+0,8 Mo/s par niveau. Installe de nouveaux drivers.</p>
+                        <p class="tag">Niveau <span class="level" data-level="speed">0</span></p>
+                    </div>
+                    <button class="secondary" data-action="buy" data-upgrade="speed">Acheter — <span class="cost" data-cost="speed">12</span> crédits</button>
+                </div>
+                <div class="upgrade" data-upgrade="optimizer">
+                    <div>
+                        <h3>Optimiseur de paquets</h3>
+                        <p class="subtext">+12% de vitesse globale par niveau.</p>
+                        <p class="tag">Niveau <span class="level" data-level="optimizer">0</span></p>
+                    </div>
+                    <button class="secondary" data-action="buy" data-upgrade="optimizer">Acheter — <span class="cost" data-cost="optimizer">30</span> crédits</button>
+                </div>
+                <div class="upgrade" data-upgrade="bots">
+                    <div>
+                        <h3>Bots seeders</h3>
+                        <p class="subtext">+0,5 Mo/s par bot qui push vos téléchargements.</p>
+                        <p class="tag">Niveau <span class="level" data-level="bots">0</span></p>
+                    </div>
+                    <button class="secondary" data-action="buy" data-upgrade="bots">Acheter — <span class="cost" data-cost="bots">45</span> crédits</button>
+                </div>
+                <div class="upgrade" data-upgrade="agreements">
+                    <div>
+                        <h3>Accords éditeurs</h3>
+                        <p class="subtext">+15% de crédits par jeu téléchargé.</p>
+                        <p class="tag">Niveau <span class="level" data-level="agreements">0</span></p>
+                    </div>
+                    <button class="secondary" data-action="buy" data-upgrade="agreements">Acheter — <span class="cost" data-cost="agreements">40</span> crédits</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="card__header">
+                <div>
+                    <p class="eyebrow">Journal</p>
+                    <h2>Événements récents</h2>
+                </div>
+                <p class="subtext">Gardez un œil sur vos téléchargements et achats.</p>
+            </div>
+            <ul class="log" id="log"></ul>
+        </section>
+    </main>
+
+    <script>
+        const gameNames = [
+            "Épopée lunaire",
+            "Donjon & Fibre",
+            "Course néon",
+            "Empire des bits",
+            "Rallye quantique",
+            "Gardien du cache",
+            "Chroniques 8K",
+            "Opération Photon",
+            "Légende du SSD",
+            "Seigneurs du Ping"
+        ];
+
+        const levels = {
+            speed: 0,
+            optimizer: 0,
+            bots: 0,
+            agreements: 0
+        };
+
+        const upgrades = {
+            speed: { baseCost: 12, apply: () => state.speed += 0.8 },
+            optimizer: { baseCost: 30, apply: () => {} },
+            bots: { baseCost: 45, apply: () => {} },
+            agreements: { baseCost: 40, apply: () => {} }
+        };
+
+        const state = {
+            credits: 8,
+            speed: 1.2,
+            downloadsFinished: 0,
+            currentDownload: null,
+            lastTick: Date.now(),
+            log: []
+        };
+
+        function randomGameName() {
+            return gameNames[Math.floor(Math.random() * gameNames.length)];
+        }
+
+        function createDownload() {
+            const size = Math.floor(Math.random() * 700) + 350; // 350 à 1050 Mo
+            const rewardBase = Math.round(size * 0.05 + 8);
+            return {
+                name: randomGameName(),
+                size,
+                progress: 0,
+                reward: rewardBase
+            };
+        }
+
+        function addLog(entry) {
+            state.log.unshift({ text: entry, time: new Date() });
+            if (state.log.length > 8) state.log.pop();
+        }
+
+        function costFor(key) {
+            const lvl = levels[key];
+            return Math.round(upgrades[key].baseCost * Math.pow(1.55, lvl));
+        }
+
+        function totalSpeedMultiplier() {
+            return 1 + (levels.optimizer * 0.12);
+        }
+
+        function botBonus() {
+            return levels.bots * 0.5;
+        }
+
+        function rewardMultiplier() {
+            return 1 + (levels.agreements * 0.15);
+        }
+
+        function startDownload() {
+            state.currentDownload = createDownload();
+            addLog(`Nouveau téléchargement : ${state.currentDownload.name}`);
+            render();
+        }
+
+        function formatTime(seconds) {
+            if (!isFinite(seconds) || seconds <= 0) return "instantané";
+            if (seconds < 10) return `${seconds.toFixed(1)} s`;
+            if (seconds < 90) return `${Math.round(seconds)} s`;
+            const minutes = Math.floor(seconds / 60);
+            return `${minutes} min ${Math.round(seconds % 60)} s`;
+        }
+
+        function attemptPurchase(key) {
+            const price = costFor(key);
+            if (state.credits < price) return;
+            state.credits -= price;
+            levels[key] += 1;
+            upgrades[key].apply();
+            addLog(`Achat : ${key} niveau ${levels[key]}`);
+            render();
+        }
+
+        function boostDownload() {
+            const cost = 3;
+            if (state.credits < cost || !state.currentDownload) return;
+            state.credits -= cost;
+            const boostAmount = state.currentDownload.size * 0.08;
+            state.currentDownload.progress = Math.min(state.currentDownload.size, state.currentDownload.progress + boostAmount);
+            addLog("Vous avez forcé un chunk du téléchargement (+8%).");
+            render();
+        }
+
+        function tick() {
+            const now = Date.now();
+            const delta = (now - state.lastTick) / 1000;
+            state.lastTick = now;
+
+            const download = state.currentDownload;
+            if (!download) return;
+
+            const effectiveSpeed = (state.speed + botBonus()) * totalSpeedMultiplier();
+            download.progress += effectiveSpeed * delta;
+
+            if (download.progress >= download.size) {
+                state.downloadsFinished += 1;
+                const gain = Math.round(download.reward * rewardMultiplier());
+                state.credits += gain;
+                addLog(`${download.name} terminé (+${gain} crédits).`);
+                startDownload();
+            }
+
+            render(false);
+        }
+
+        function render(updateCosts = true) {
+            const { currentDownload } = state;
+            const effectiveSpeed = (state.speed + botBonus()) * totalSpeedMultiplier();
+
+            document.getElementById("credits").textContent = `${state.credits.toFixed(0)} crédits`;
+            document.getElementById("downloads-finished").textContent = state.downloadsFinished;
+            document.getElementById("modifier-display").textContent = `x${totalSpeedMultiplier().toFixed(2)}`;
+            document.getElementById("speed-display").textContent = `${effectiveSpeed.toFixed(2)} Mo/s`;
+            document.getElementById("reward-display").textContent = `${Math.round((state.currentDownload?.reward || 0) * rewardMultiplier())} crédits/jeu`;
+
+            if (currentDownload) {
+                const percent = Math.min(100, (currentDownload.progress / currentDownload.size) * 100);
+                document.getElementById("progress-bar").style.width = `${percent}%`;
+                document.getElementById("progress-text").textContent = `${percent.toFixed(1)}%`;
+                document.getElementById("download-name").textContent = currentDownload.name;
+                document.getElementById("download-size").textContent = `${currentDownload.size} Mo`;
+                const remaining = (currentDownload.size - currentDownload.progress) / effectiveSpeed;
+                document.getElementById("eta-text").textContent = `Temps estimé : ${formatTime(remaining)}`;
+            }
+
+            if (updateCosts) {
+                document.querySelectorAll('[data-action="buy"]').forEach((btn) => {
+                    const key = btn.dataset.upgrade;
+                    const price = costFor(key);
+                    btn.querySelector('.cost').textContent = price;
+                    btn.disabled = state.credits < price;
+                });
+                document.querySelectorAll('.level').forEach((el) => {
+                    const key = el.dataset.level;
+                    el.textContent = levels[key];
+                });
+            }
+
+            const logList = document.getElementById("log");
+            logList.innerHTML = state.log.map(entry => {
+                const time = entry.time.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+                return `<li><span>${time}</span><span>${entry.text}</span></li>`;
+            }).join('');
+        }
+
+        document.getElementById("boost-download").addEventListener("click", boostDownload);
+        document.querySelectorAll('[data-action="buy"]').forEach((btn) => {
+            btn.addEventListener("click", () => attemptPurchase(btn.dataset.upgrade));
+        });
+
+        // Init
+        startDownload();
+        render();
+        setInterval(tick, 120);
+    </script>
 </body>
-
 </html>
