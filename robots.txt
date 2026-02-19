@@ -1,0 +1,8 @@
+# MLRH — Meilleur Logiciel RH
+# robots.txt
+
+# Site en cours de construction — désindexation temporaire
+User-agent: *
+Disallow: /
+
+Sitemap: https://meilleur-logiciel-rh.fr/sitemap.xml
