@@ -19,11 +19,39 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "LogicielRH.fr",
-    "description": "Comparatifs et guides sur les logiciels RH, paie et SIRH pour PME françaises",
-    "url": "https://logicielrh.fr",
-    "inLanguage": "fr-FR"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "LogicielRH.fr",
+        "description": "Comparatifs indépendants et guides sur les logiciels RH, paie et SIRH pour PME françaises",
+        "url": "https://logicielrh.fr",
+        "inLanguage": "fr-FR",
+        "potentialAction": {"@type": "SearchAction", "target": "https://logicielrh.fr/comparatifs/", "query-input": "required name=search_term_string"}
+      },
+      {
+        "@type": "Organization",
+        "name": "LogicielRH.fr",
+        "url": "https://logicielrh.fr",
+        "description": "Média indépendant spécialisé dans les comparatifs de logiciels RH et paie pour les PME françaises"
+      },
+      {
+        "@type": "ItemList",
+        "name": "Comparatifs logiciels RH 2026",
+        "description": "Les meilleurs comparatifs de logiciels RH et paie pour PME françaises",
+        "numberOfItems": 1,
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "PayFit vs Factorial 2026 : comparatif complet", "url": "https://logicielrh.fr/comparatifs/payfit-vs-factorial-2026.html"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "Quel est le meilleur logiciel de paie pour une PME en 2026 ?", "acceptedAnswer": {"@type": "Answer", "text": "PayFit est le logiciel de paie le plus adapté pour une PME de moins de 50 salariés sans DRH dédié : onboarding en moins d'une semaine, paie 100% automatisée et DSN native. Pour une PME avec un RH dédié cherchant un SIRH complet, Factorial ou Lucca sont plus pertinents."}},
+          {"@type": "Question", "name": "Quelle est la différence entre un logiciel de paie et un SIRH ?", "acceptedAnswer": {"@type": "Answer", "text": "Un logiciel de paie gère principalement les bulletins de salaire, la DSN et les déclarations sociales. Un SIRH (Système d'Information des Ressources Humaines) couvre l'ensemble du cycle RH : recrutement, onboarding, congés, temps, formation, entretiens et paie. PayFit est d'abord un logiciel de paie, tandis que Factorial et Lucca sont des SIRH complets."}},
+          {"@type": "Question", "name": "Combien coûte un logiciel RH pour une PME ?", "acceptedAnswer": {"@type": "Answer", "text": "Les tarifs varient de 5 à 20 € par salarié par mois selon les fonctionnalités. Pour 20 salariés, comptez entre 150 et 400 €/mois selon l'outil et les modules choisis. PayFit débute à 6 €/salarié/mois, Factorial à 5 €/salarié/mois."}}
+        ]
+      }
+    ]
   }
   </script>
 
@@ -545,26 +573,31 @@
     <p class="hero-sub">
       Comparatifs indépendants, prix réels et avis d'experts pour vous aider à sélectionner le bon outil de gestion RH et paie.
     </p>
-    <a href="#comparatifs" class="btn btn-primary" style="margin: 0 auto; display: inline-flex;">
-      Voir les comparatifs
-      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+    <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+      <a href="comparatifs/index.html" class="btn btn-primary" style="display:inline-flex;">
+        Voir les comparatifs
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="trouver-mon-logiciel.html" class="btn btn-secondary" style="display:inline-flex;background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.3)">
+        Trouver mon logiciel en 2 min
+      </a>
+    </div>
     <div class="hero-stats">
       <div class="hero-stat">
-        <strong>25+</strong>
-        <span>Logiciels analysés</span>
+        <strong>8+</strong>
+        <span>Logiciels RH testés</span>
       </div>
       <div class="hero-stat">
-        <strong>30+</strong>
-        <span>Comparatifs rédigés</span>
-      </div>
-      <div class="hero-stat">
-        <strong>CPC 70€</strong>
-        <span>Meilleur logiciel de paie</span>
+        <strong>1</strong>
+        <span>Comparatif disponible</span>
       </div>
       <div class="hero-stat">
         <strong>100%</strong>
         <span>Données vérifiées</span>
+      </div>
+      <div class="hero-stat">
+        <strong>Gratuit</strong>
+        <span>Accès libre, sans inscription</span>
       </div>
     </div>
   </section>
@@ -603,31 +636,31 @@
   <!-- CATEGORIES -->
   <section class="categories">
     <div class="container">
-      <h2 class="section-title" style="text-align:center">Que cherchez-vous ?</h2>
-      <p class="section-subtitle" style="text-align:center">Choisissez le type de contenu qui correspond à votre besoin</p>
+      <h2 class="section-title" style="text-align:center">Comment pouvons-nous vous aider ?</h2>
+      <p class="section-subtitle" style="text-align:center">Choisissez le type de contenu qui correspond à votre situation</p>
       <div class="categories-grid">
-        <a href="#comparatifs" class="category-card">
+        <a href="comparatifs/index.html" class="category-card">
           <div class="category-icon" style="background:#eff6ff">
             <svg width="24" height="24" fill="none" stroke="#1A56DB" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="13" y="3" width="8" height="8" rx="1"/><rect x="3" y="13" width="8" height="8" rx="1"/><rect x="13" y="13" width="8" height="8" rx="1"/></svg>
           </div>
           <h3>Comparatifs</h3>
           <p>Outil A vs outil B avec tableau, prix réels et verdict selon votre profil</p>
         </a>
-        <a href="#alternatives" class="category-card">
+        <a href="alternatives/index.html" class="category-card">
           <div class="category-icon" style="background:#fff7ed">
             <svg width="24" height="24" fill="none" stroke="#FF5C35" stroke-width="2" viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
           </div>
           <h3>Alternatives</h3>
           <p>Vous êtes déçu d'un outil ? Trouvez la meilleure alternative pour migrer</p>
         </a>
-        <a href="#guides" class="category-card">
+        <a href="guides/index.html" class="category-card">
           <div class="category-icon" style="background:#f0fdf4">
             <svg width="24" height="24" fill="none" stroke="#16a34a" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
           </div>
           <h3>Guides pratiques</h3>
           <p>Tout ce qu'il faut savoir pour choisir, déployer et optimiser votre logiciel RH</p>
         </a>
-        <a href="#avis" class="category-card">
+        <a href="avis/index.html" class="category-card">
           <div class="category-icon" style="background:#faf5ff">
             <svg width="24" height="24" fill="none" stroke="#7c3aed" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
           </div>
@@ -643,8 +676,8 @@
     <div class="container">
       <div class="section-header">
         <div>
-          <h2 class="section-title">Comparatifs</h2>
-          <p class="section-subtitle">Les face-à-face les plus recherchés sur le marché français</p>
+          <h2 class="section-title">Comparatifs logiciels RH et paie 2026</h2>
+          <p class="section-subtitle">Les face-à-face les plus recherchés — avec prix réels, tableau et verdict par profil</p>
         </div>
         <a href="comparatifs/index.html" class="see-all">Voir tous les comparatifs &rarr;</a>
       </div>
@@ -748,8 +781,8 @@
     <div class="container">
       <div class="section-header">
         <div>
-          <h2 class="section-title">Guides pratiques</h2>
-          <p class="section-subtitle">Tout ce qu'il faut savoir pour choisir et déployer votre logiciel RH</p>
+          <h2 class="section-title">Guides pratiques pour choisir votre logiciel RH</h2>
+          <p class="section-subtitle">Nos guides complets pour sélectionner, déployer et optimiser votre outil RH ou de paie</p>
         </div>
         <a href="guides/index.html" class="see-all">Voir tous les guides &rarr;</a>
       </div>
@@ -792,8 +825,8 @@
     <div class="container">
       <div class="section-header">
         <div>
-          <h2 class="section-title">Alternatives</h2>
-          <p class="section-subtitle">Vous souhaitez changer d'outil ? Trouvez la meilleure alternative</p>
+          <h2 class="section-title">Alternatives aux logiciels RH leaders du marché</h2>
+          <p class="section-subtitle">Vous êtes déçu de votre outil actuel ? Découvrez les meilleures solutions alternatives</p>
         </div>
         <a href="alternatives/index.html" class="see-all">Voir toutes les alternatives &rarr;</a>
       </div>
@@ -858,8 +891,8 @@
     <div class="container">
       <div class="section-header">
         <div>
-          <h2 class="section-title">Avis 2026</h2>
-          <p class="section-subtitle">Nos avis indépendants sur les principaux logiciels du marché</p>
+          <h2 class="section-title">Avis indépendants sur les logiciels RH 2026</h2>
+          <p class="section-subtitle">Nos verdicts complets après test : forces, faiblesses, tarifs réels et pour qui c'est fait</p>
         </div>
         <a href="avis/index.html" class="see-all">Voir tous les avis &rarr;</a>
       </div>
@@ -905,6 +938,88 @@
             <p>Lucca propose des modules à la carte. Puissant, mais la facture peut vite grimper selon vos besoins.</p>
           </div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION EDITORIALE SEO -->
+  <section style="padding:64px 24px;background:var(--bg);border-top:1px solid var(--border)">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start">
+        <div>
+          <h2 class="section-title" style="font-size:1.4rem">Pourquoi bien choisir son logiciel RH est crucial pour une PME</h2>
+          <p style="color:var(--text-muted);line-height:1.8;margin:16px 0">
+            En France, plus de 50 000 PME changent de logiciel RH ou de paie chaque année — souvent après un mauvais premier choix. Les conséquences sont réelles : erreurs de paie, pénalités URSSAF, données perdues lors d'une migration ou frais de résiliation imprévus.
+          </p>
+          <p style="color:var(--text-muted);line-height:1.8;margin-bottom:20px">
+            Le marché des logiciels RH SaaS en France compte une trentaine d'acteurs sérieux, avec des positionnements très différents : certains excellents pour la paie pure (PayFit, Silae), d'autres pour la gestion RH globale (Factorial, Lucca), d'autres encore pour les secteurs avec horaires variables (Skello, Kelio).
+          </p>
+          <h3 style="font-size:1rem;font-weight:700;margin-bottom:12px;color:var(--text)">Les critères à ne pas négliger</h3>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:10px">
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:.93rem;color:var(--text-muted)">
+              <span style="color:var(--blue);font-weight:700;flex-shrink:0">01</span>
+              <span><strong style="color:var(--text)">La maturité du module paie</strong> — conventions collectives couvertes, DSN, bulletins multi-cas</span>
+            </li>
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:.93rem;color:var(--text-muted)">
+              <span style="color:var(--blue);font-weight:700;flex-shrink:0">02</span>
+              <span><strong style="color:var(--text)">Le coût total de possession</strong> — tarif affiché + setup + modules + formation</span>
+            </li>
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:.93rem;color:var(--text-muted)">
+              <span style="color:var(--blue);font-weight:700;flex-shrink:0">03</span>
+              <span><strong style="color:var(--text)">La facilité de prise en main</strong> — qui va piloter l'outil au quotidien ?</span>
+            </li>
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:.93rem;color:var(--text-muted)">
+              <span style="color:var(--blue);font-weight:700;flex-shrink:0">04</span>
+              <span><strong style="color:var(--text)">Les intégrations</strong> — comptabilité, ATS, signature électronique, notes de frais</span>
+            </li>
+            <li style="display:flex;gap:10px;align-items:flex-start;font-size:.93rem;color:var(--text-muted)">
+              <span style="color:var(--blue);font-weight:700;flex-shrink:0">05</span>
+              <span><strong style="color:var(--text)">La sécurité et la conformité RGPD</strong> — hébergement, DPA, certifications</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="section-title" style="font-size:1.2rem;margin-bottom:20px">Questions fréquentes sur les logiciels RH</h2>
+          <div style="display:flex;flex-direction:column;gap:0">
+            <div style="border:1px solid var(--border);border-radius:var(--radius);margin-bottom:10px;background:#fff">
+              <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'" style="padding:16px 18px;font-weight:700;font-size:.93rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                Quel est le meilleur logiciel de paie pour une PME ? <span>+</span>
+              </div>
+              <div style="display:none;padding:0 18px 16px;font-size:.88rem;color:var(--text-muted);line-height:1.7">
+                Pour une PME de moins de 50 salariés sans DRH, <strong>PayFit</strong> est la référence : onboarding en moins d'une semaine, paie automatisée et interface simple. Pour une PME avec RH cherchant un SIRH complet, <strong>Factorial</strong> ou <strong>Lucca</strong> sont plus adaptés.
+              </div>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:var(--radius);margin-bottom:10px;background:#fff">
+              <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'" style="padding:16px 18px;font-weight:700;font-size:.93rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                Quelle différence entre logiciel de paie et SIRH ? <span>+</span>
+              </div>
+              <div style="display:none;padding:0 18px 16px;font-size:.88rem;color:var(--text-muted);line-height:1.7">
+                Un <strong>logiciel de paie</strong> gère bulletins, DSN et déclarations sociales. Un <strong>SIRH</strong> couvre tout le cycle RH : recrutement, congés, temps, formation, entretiens et paie. PayFit est d'abord un logiciel de paie, Factorial et Lucca sont des SIRH complets.
+              </div>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:var(--radius);margin-bottom:10px;background:#fff">
+              <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'" style="padding:16px 18px;font-weight:700;font-size:.93rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                Combien coûte un logiciel RH pour 20 salariés ? <span>+</span>
+              </div>
+              <div style="display:none;padding:0 18px 16px;font-size:.88rem;color:var(--text-muted);line-height:1.7">
+                Pour 20 salariés, comptez entre <strong>150 et 400 €/mois</strong> selon les fonctionnalités. PayFit : environ 160-220 €/mois. Factorial : environ 150-200 €/mois. Lucca : variable selon les modules activés. Des frais de setup (0 à 2 000 €) peuvent s'ajouter.
+              </div>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:var(--radius);background:#fff">
+              <div onclick="this.nextElementSibling.style.display=this.nextElementSibling.style.display==='block'?'none':'block'" style="padding:16px 18px;font-weight:700;font-size:.93rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center">
+                Peut-on changer de logiciel RH en cours d'année ? <span>+</span>
+              </div>
+              <div style="display:none;padding:0 18px 16px;font-size:.88rem;color:var(--text-muted);line-height:1.7">
+                Oui, mais c'est déconseillé en cours d'exercice pour la paie. La meilleure période est <strong>janvier</strong> (début d'exercice) ou à défaut un début de trimestre. Il faut prévoir l'export des données, l'import et une période de double-run d'au moins 1 mois.
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:16px">
+            <a href="trouver-mon-logiciel.html" class="btn btn-primary" style="display:inline-flex">
+              Utiliser notre outil de recommandation →
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </section>
