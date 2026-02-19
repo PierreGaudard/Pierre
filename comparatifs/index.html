@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Comparatifs logiciels RH et paie 2026 — MLRH</title>
+  <title>Comparatifs logiciels RH et paie 2026 - MLRH</title>
   <meta name="description" content="Tous nos comparatifs logiciels RH, paie et SIRH pour PME françaises. Face-à-face détaillés avec tableaux, prix réels et verdict d'expert.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://meilleur-logiciel-rh.fr/comparatifs/">
+  <link rel="icon" href="../assets/images/favicon.ico" sizes="any">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/style.css">
   <style>
     .page-hero {
@@ -20,7 +22,7 @@
     .page-hero .breadcrumb { font-size: .82rem; color: #93c5fd; margin-bottom: 16px; }
     .page-hero .breadcrumb a { color: #93c5fd; text-decoration: none; }
     .comparatifs-section { padding: 56px 24px; }
-    .comparatifs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+    .comparatifs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; margin-top: 32px; }
     .comp-card {
       background: #fff;
       border: 1px solid var(--border);
@@ -33,8 +35,6 @@
       transition: box-shadow .15s, transform .15s;
     }
     .comp-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none; color: var(--text); }
-    .comp-card.soon { opacity: .7; cursor: default; }
-    .comp-card.soon:hover { box-shadow: none; transform: none; }
     .comp-thumb {
       height: 140px;
       display: flex;
@@ -49,9 +49,7 @@
     .comp-body h3 { font-size: .98rem; font-weight: 700; line-height: 1.4; margin: 10px 0 8px; }
     .comp-body p { font-size: .86rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
     .comp-footer { margin-top: 14px; display: flex; align-items: center; justify-content: space-between; font-size: .82rem; }
-    .comp-read { color: var(--blue); font-weight: 600; }
-    .comp-soon { color: var(--text-muted); }
-    @media (max-width: 860px) { .comparatifs-grid { grid-template-columns: repeat(2,1fr); } }
+    .comp-read { color: var(--primary); font-weight: 600; }
     @media (max-width: 540px) { .comparatifs-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -59,9 +57,9 @@
 
   <header class="site-header">
     <div class="site-header-inner">
-      <a href="../index.html" class="site-logo">Logiciel<span>RH</span>.fr</a>
+      <a href="../index.html" class="site-logo"><span class="site-logo-icon">🔍</span>ML<span>RH</span></a>
       <nav class="site-nav">
-        <a href="../comparatifs/index.html" style="color:var(--blue);font-weight:700">Comparatifs</a>
+        <a href="../comparatifs/index.html" style="color:var(--primary);font-weight:700">Comparatifs</a>
         <a href="../guides/index.html">Guides</a>
         <a href="../alternatives/index.html">Alternatives</a>
         <a href="../avis/index.html">Avis</a>
@@ -79,17 +77,16 @@
   <section class="comparatifs-section">
     <div class="container">
       <h2 class="section-title">Tous les comparatifs</h2>
-      <p class="section-subtitle">1 comparatif disponible · d'autres arrivent prochainement</p>
+      <p class="section-subtitle">1 comparatif disponible</p>
 
       <div class="comparatifs-grid">
 
-        <!-- DISPONIBLE -->
         <a href="payfit-vs-factorial-2026.html" class="comp-card">
           <div class="comp-thumb" style="background:linear-gradient(135deg,#0f2d6b,#1A56DB)">
             PayFit vs Factorial
           </div>
           <div class="comp-body">
-            <span class="badge badge-blue">Disponible</span>
+            <span class="badge badge-green">Disponible</span>
             <h3>PayFit vs Factorial : quel logiciel RH choisir en 2026 ?</h3>
             <p>Paie automatisée vs SIRH complet. Le comparatif complet avec tableau, tarifs et verdict pour TPE et PME.</p>
             <div class="comp-footer">
@@ -99,67 +96,6 @@
           </div>
         </a>
 
-        <!-- PROCHAINEMENT -->
-        <div class="comp-card soon">
-          <div class="comp-thumb" style="background:linear-gradient(135deg,#7c3aed,#a855f7)">
-            PayFit vs Silae
-          </div>
-          <div class="comp-body">
-            <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            <h3>PayFit vs Silae : comparatif logiciel de paie 2026</h3>
-            <p>Silae cible les cabinets comptables et RH experts. PayFit vise les entreprises sans service paie interne.</p>
-            <div class="comp-footer"><span class="comp-soon">Bientôt disponible</span></div>
-          </div>
-        </div>
-
-        <div class="comp-card soon">
-          <div class="comp-thumb" style="background:linear-gradient(135deg,#0891b2,#22d3ee)">
-            Factorial vs Lucca
-          </div>
-          <div class="comp-body">
-            <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            <h3>Factorial vs Lucca : quel SIRH pour votre PME ?</h3>
-            <p>Deux SIRH complets, deux positionnements distincts. Lucca mise sur la modularité, Factorial sur l'intégration.</p>
-            <div class="comp-footer"><span class="comp-soon">Bientôt disponible</span></div>
-          </div>
-        </div>
-
-        <div class="comp-card soon">
-          <div class="comp-thumb" style="background:linear-gradient(135deg,#d97706,#f59e0b)">
-            Silae vs Nibelis
-          </div>
-          <div class="comp-body">
-            <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            <h3>Silae vs Nibelis : quel logiciel de paie expert choisir ?</h3>
-            <p>Pour les entreprises avec une paie complexe, conventions collectives multiples ou multi-sites.</p>
-            <div class="comp-footer"><span class="comp-soon">Bientôt disponible</span></div>
-          </div>
-        </div>
-
-        <div class="comp-card soon">
-          <div class="comp-thumb" style="background:linear-gradient(135deg,#16a34a,#4ade80)">
-            Skello vs Kelio
-          </div>
-          <div class="comp-body">
-            <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            <h3>Skello vs Kelio : gestion des plannings et temps de travail</h3>
-            <p>Deux solutions de planification pour les secteurs avec horaires variables : retail, restauration, santé.</p>
-            <div class="comp-footer"><span class="comp-soon">Bientôt disponible</span></div>
-          </div>
-        </div>
-
-        <div class="comp-card soon">
-          <div class="comp-thumb" style="background:linear-gradient(135deg,#dc2626,#f87171)">
-            Sage vs PayFit
-          </div>
-          <div class="comp-body">
-            <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            <h3>Sage Paie vs PayFit : l'historique contre le moderne</h3>
-            <p>Sage Paie est l'outil historique des PME françaises. PayFit est le challenger cloud-native. Qui gagne en 2026 ?</p>
-            <div class="comp-footer"><span class="comp-soon">Bientôt disponible</span></div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -168,23 +104,21 @@
     <div class="site-footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo">Logiciel<span>RH</span>.fr</div>
+          <div class="footer-logo"><span class="footer-logo-icon">🔍</span>ML<span>RH</span></div>
           <p>Comparatifs indépendants et guides sur les logiciels RH, paie et SIRH pour les PME françaises.</p>
         </div>
         <div class="footer-col">
           <h4>Comparatifs</h4>
           <ul>
             <li><a href="payfit-vs-factorial-2026.html">PayFit vs Factorial</a></li>
-            <li><a href="index.html">Tous les comparatifs</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Catégories</h4>
+          <h4>Ressources</h4>
           <ul>
-            <li><a href="../guides/index.html">Guides pratiques</a></li>
-            <li><a href="../alternatives/index.html">Alternatives</a></li>
-            <li><a href="../avis/index.html">Avis 2026</a></li>
-            <li><a href="../trouver-mon-logiciel.html">Trouver mon logiciel</a></li>
+            <li><a href="../guides/choisir-logiciel-paie-2026.html">Choisir son logiciel de paie</a></li>
+            <li><a href="../alternatives/alternatives-a-payfit-2026.html">Alternatives à PayFit</a></li>
+            <li><a href="../avis/payfit-avis-2026.html">PayFit avis 2026</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -193,17 +127,15 @@
             <li><a href="../a-propos.html">À propos</a></li>
             <li><a href="../methodologie.html">Méthodologie</a></li>
             <li><a href="../contact.html">Contact</a></li>
-            <li><a href="../politique-de-confidentialite.html">Politique de confidentialité</a></li>
+            <li><a href="../politique-de-confidentialite.html">Confidentialité</a></li>
             <li><a href="../mentions-legales.html">Mentions légales</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-affiliation">
-        Mentions légales : certains liens présents sur ce site sont des liens d'affiliation. Si vous achetez via ces liens, nous percevons une commission sans coût supplémentaire pour vous. Nos avis restent indépendants et basés sur des tests réels.
-      </div>
+      <div class="footer-affiliation">Certains liens sont des liens d'affiliation. Nos avis restent indépendants et basés sur des données vérifiées.</div>
       <div class="footer-bottom">
-        <span>&copy; 2026 MLRH — Tous droits réservés</span>
-        <span>Données vérifiées sur les sites officiels des éditeurs</span>
+        <span>© 2026 MLRH. Tous droits réservés</span>
+        <span>Données vérifiées sur les sites officiels</span>
       </div>
     </div>
   </footer>
