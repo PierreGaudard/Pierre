@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Guides pratiques logiciels RH 2026 — MLRH</title>
+  <title>Guides pratiques logiciels RH 2026 - MLRH</title>
   <meta name="description" content="Tous nos guides pratiques pour choisir, déployer et optimiser votre logiciel RH, paie ou SIRH. Conseils d'experts pour PME françaises.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://meilleur-logiciel-rh.fr/guides/">
+  <link rel="icon" href="../assets/images/favicon.ico" sizes="any">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/style.css">
   <style>
     .page-hero {
@@ -20,8 +22,8 @@
     .page-hero .breadcrumb { font-size: .82rem; color: #86efac; margin-bottom: 16px; }
     .page-hero .breadcrumb a { color: #86efac; text-decoration: none; }
     .guides-section { padding: 56px 24px; }
-    .guides-full-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 32px; }
-    .guide-card-full {
+    .guides-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; margin-top: 32px; }
+    .guide-card {
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -33,29 +35,28 @@
       color: var(--text);
       transition: border-color .15s, box-shadow .15s;
     }
-    .guide-card-full:hover { border-color: var(--blue); box-shadow: var(--shadow); text-decoration: none; color: var(--text); }
-    .guide-card-full.soon { opacity: .7; cursor: default; }
-    .guide-card-full.soon:hover { border-color: var(--border); box-shadow: none; }
+    .guide-card:hover { border-color: var(--primary); box-shadow: var(--shadow); text-decoration: none; color: var(--text); }
     .guide-icon-big {
       width: 52px; height: 52px; border-radius: 12px;
-      background: var(--bg); border: 1px solid var(--border);
+      background: var(--primary-light); border: 1px solid #bbf7d0;
       display: flex; align-items: center; justify-content: center;
       font-size: 1.4rem; flex-shrink: 0;
     }
     .guide-content h3 { font-size: .98rem; font-weight: 700; margin-bottom: 6px; line-height: 1.4; }
     .guide-content p { font-size: .86rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 10px; }
     .guide-tags { display: flex; gap: 8px; flex-wrap: wrap; }
-    @media (max-width: 720px) { .guides-full-grid { grid-template-columns: 1fr; } }
+    .guide-read { font-size: .82rem; font-weight: 600; color: var(--primary); }
+    @media (max-width: 540px) { .guides-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
 
   <header class="site-header">
     <div class="site-header-inner">
-      <a href="../index.html" class="site-logo">Logiciel<span>RH</span>.fr</a>
+      <a href="../index.html" class="site-logo"><span class="site-logo-icon">🔍</span>ML<span>RH</span></a>
       <nav class="site-nav">
         <a href="../comparatifs/index.html">Comparatifs</a>
-        <a href="../guides/index.html" style="color:var(--blue);font-weight:700">Guides</a>
+        <a href="../guides/index.html" style="color:var(--primary);font-weight:700">Guides</a>
         <a href="../alternatives/index.html">Alternatives</a>
         <a href="../avis/index.html">Avis</a>
         <a href="../trouver-mon-logiciel.html" class="nav-cta">Trouver mon logiciel</a>
@@ -72,81 +73,22 @@
   <section class="guides-section">
     <div class="container">
       <h2 class="section-title">Tous les guides</h2>
-      <p class="section-subtitle">Guides en cours de rédaction · publiés progressivement</p>
+      <p class="section-subtitle">1 guide disponible</p>
 
-      <div class="guides-full-grid">
+      <div class="guides-grid">
 
-        <div class="guide-card-full soon">
+        <a href="choisir-logiciel-paie-2026.html" class="guide-card">
           <div class="guide-icon-big">📋</div>
           <div class="guide-content">
             <h3>Comment choisir son logiciel de paie en 2026</h3>
             <p>Les 7 critères essentiels pour ne pas se tromper : DSN, intégrations, support et coût total de possession.</p>
             <div class="guide-tags">
-              <span class="badge" style="background:#f0fdf4;color:#16a34a">Choix</span>
-              <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="guide-card-full soon">
-          <div class="guide-icon-big">💰</div>
-          <div class="guide-content">
-            <h3>Prix des logiciels RH : grille tarifaire complète 2026</h3>
-            <p>Tarifs réels de PayFit, Factorial, Silae, Lucca et Skello pour 10, 20 et 50 salariés, avec les frais cachés.</p>
-            <div class="guide-tags">
-              <span class="badge" style="background:#fff7ed;color:#ea580c">Tarifs</span>
-              <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="guide-card-full soon">
-          <div class="guide-icon-big">🏗️</div>
-          <div class="guide-content">
-            <h3>Migrer son logiciel de paie sans perdre de données</h3>
-            <p>Le processus étape par étape pour changer d'outil en cours d'année sans erreur de paie ni perte d'historique.</p>
-            <div class="guide-tags">
-              <span class="badge" style="background:#eff6ff;color:#1A56DB">Migration</span>
-              <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="guide-card-full soon">
-          <div class="guide-icon-big">⚖️</div>
-          <div class="guide-content">
-            <h3>SIRH vs logiciel de paie : quelle différence ?</h3>
-            <p>Ce que chaque type d'outil couvre réellement, et comment choisir selon la taille et les besoins de votre entreprise.</p>
-            <div class="guide-tags">
-              <span class="badge" style="background:#f0fdf4;color:#16a34a">Comprendre</span>
-              <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="guide-card-full soon">
-          <div class="guide-icon-big">📄</div>
-          <div class="guide-content">
-            <h3>DSN : tout comprendre sur la Déclaration Sociale Nominative</h3>
-            <p>Obligations, délais, corrections et gestion des erreurs DSN avec votre logiciel de paie.</p>
-            <div class="guide-tags">
+              <span class="badge badge-green">Choix</span>
               <span class="badge" style="background:#eff6ff;color:#1A56DB">Paie</span>
-              <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
+              <span class="guide-read">Lire le guide →</span>
             </div>
           </div>
-        </div>
-
-        <div class="guide-card-full soon">
-          <div class="guide-icon-big">🔌</div>
-          <div class="guide-content">
-            <h3>Intégrer son logiciel RH avec son outil comptable</h3>
-            <p>Les intégrations natives et via API entre les principaux logiciels RH et vos outils comptables (Pennylane, Sage, etc.).</p>
-            <div class="guide-tags">
-              <span class="badge" style="background:#fff7ed;color:#ea580c">Intégrations</span>
-              <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            </div>
-          </div>
-        </div>
+        </a>
 
       </div>
     </div>
@@ -156,7 +98,7 @@
     <div class="site-footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo">Logiciel<span>RH</span>.fr</div>
+          <div class="footer-logo"><span class="footer-logo-icon">🔍</span>ML<span>RH</span></div>
           <p>Comparatifs indépendants et guides sur les logiciels RH, paie et SIRH pour les PME françaises.</p>
         </div>
         <div class="footer-col">
@@ -167,12 +109,11 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Catégories</h4>
+          <h4>Ressources</h4>
           <ul>
-            <li><a href="index.html">Guides pratiques</a></li>
-            <li><a href="../alternatives/index.html">Alternatives</a></li>
-            <li><a href="../avis/index.html">Avis 2026</a></li>
-            <li><a href="../trouver-mon-logiciel.html">Trouver mon logiciel</a></li>
+            <li><a href="choisir-logiciel-paie-2026.html">Choisir son logiciel de paie</a></li>
+            <li><a href="../alternatives/alternatives-a-payfit-2026.html">Alternatives à PayFit</a></li>
+            <li><a href="../avis/payfit-avis-2026.html">PayFit avis 2026</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -181,17 +122,15 @@
             <li><a href="../a-propos.html">À propos</a></li>
             <li><a href="../methodologie.html">Méthodologie</a></li>
             <li><a href="../contact.html">Contact</a></li>
-            <li><a href="../politique-de-confidentialite.html">Politique de confidentialité</a></li>
+            <li><a href="../politique-de-confidentialite.html">Confidentialité</a></li>
             <li><a href="../mentions-legales.html">Mentions légales</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-affiliation">
-        Mentions légales : certains liens présents sur ce site sont des liens d'affiliation. Si vous achetez via ces liens, nous percevons une commission sans coût supplémentaire pour vous. Nos avis restent indépendants et basés sur des tests réels.
-      </div>
+      <div class="footer-affiliation">Certains liens sont des liens d'affiliation. Nos avis restent indépendants et basés sur des données vérifiées.</div>
       <div class="footer-bottom">
-        <span>&copy; 2026 MLRH — Tous droits réservés</span>
-        <span>Données vérifiées sur les sites officiels des éditeurs</span>
+        <span>© 2026 MLRH. Tous droits réservés</span>
+        <span>Données vérifiées sur les sites officiels</span>
       </div>
     </div>
   </footer>

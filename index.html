@@ -3,683 +3,165 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MLRH — Meilleur Logiciel RH : comparatifs, guides et avis 2026</title>
-  <meta name="description" content="MLRH compare pour vous les meilleurs logiciels RH et paie pour PME françaises. Comparatifs détaillés PayFit, Factorial, Silae, Lucca — gratuit, sans inscription.">
+  <title>MLRH : comparatifs, guides et avis logiciels RH 2026</title>
+  <meta name="description" content="MLRH compare les meilleurs logiciels RH et paie pour PME françaises. Comparatifs détaillés PayFit, Factorial, Silae, Lucca. Gratuit, sans inscription.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://meilleur-logiciel-rh.fr/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="MLRH — Meilleur Logiciel RH 2026 : comparatifs et guides">
-  <meta property="og:description" content="MLRH compare pour vous les meilleurs logiciels RH et paie pour PME françaises. Gratuit, sans inscription.">
+  <link rel="icon" href="assets/images/favicon.ico" sizes="any">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <meta property="og:title" content="MLRH : comparatifs et guides logiciels RH 2026">
+  <meta property="og:description" content="MLRH compare les meilleurs logiciels RH et paie pour PME françaises. Gratuit, sans inscription.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="fr_FR">
 
-  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "MLRH — Meilleur Logiciel RH",
-        "description": "Comparatifs indépendants et guides sur les logiciels RH, paie et SIRH pour PME françaises",
-        "url": "https://meilleur-logiciel-rh.fr",
-        "inLanguage": "fr-FR"
-      },
-      {
-        "@type": "Organization",
-        "name": "MLRH",
-        "url": "https://meilleur-logiciel-rh.fr",
-        "description": "Média indépendant spécialisé dans les comparatifs de logiciels RH et paie pour les PME françaises"
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type": "Question", "name": "Quel est le meilleur logiciel de paie pour une PME en 2026 ?", "acceptedAnswer": {"@type": "Answer", "text": "PayFit est le logiciel de paie le plus adapté pour une PME de moins de 50 salariés sans DRH dédié : onboarding en moins d'une semaine, paie 100% automatisée et DSN native. Pour une PME avec un RH dédié cherchant un SIRH complet, Factorial ou Lucca sont plus pertinents."}},
-          {"@type": "Question", "name": "Quelle est la différence entre un logiciel de paie et un SIRH ?", "acceptedAnswer": {"@type": "Answer", "text": "Un logiciel de paie gère principalement les bulletins de salaire, la DSN et les déclarations sociales. Un SIRH couvre l'ensemble du cycle RH : recrutement, onboarding, congés, temps, formation, entretiens et paie."}},
-          {"@type": "Question", "name": "Combien coûte un logiciel RH pour une PME ?", "acceptedAnswer": {"@type": "Answer", "text": "Les tarifs varient de 5 à 20 € par salarié par mois selon les fonctionnalités. Pour 20 salariés, comptez entre 150 et 400 €/mois selon l'outil et les modules choisis."}}
-        ]
-      }
+      {"@type": "WebSite","name": "MLRH","url": "https://meilleur-logiciel-rh.fr","inLanguage": "fr-FR"},
+      {"@type": "Organization","name": "MLRH","url": "https://meilleur-logiciel-rh.fr","logo": "https://meilleur-logiciel-rh.fr/assets/images/logo.svg"},
+      {"@type": "FAQPage","mainEntity": [
+        {"@type": "Question","name": "Quel est le meilleur logiciel de paie pour une PME en 2026 ?","acceptedAnswer": {"@type": "Answer","text": "PayFit est le plus adapté pour une PME de moins de 50 salariés sans DRH. Pour un SIRH complet, Factorial ou Lucca sont plus pertinents."}},
+        {"@type": "Question","name": "Quelle différence entre logiciel de paie et SIRH ?","acceptedAnswer": {"@type": "Answer","text": "Un logiciel de paie gère les bulletins et la DSN. Un SIRH couvre tout le cycle RH : recrutement, congés, formation, entretiens et paie."}},
+        {"@type": "Question","name": "Combien coûte un logiciel RH pour 20 salariés ?","acceptedAnswer": {"@type": "Answer","text": "Entre 150 et 400 euros par mois selon l'outil et les modules choisis."}}
+      ]}
     ]
   }
   </script>
-
   <link rel="stylesheet" href="assets/style.css">
-
   <style>
-    /* ===== RESET GLOBAL CSS FOR DARK THEME ===== */
-    :root {
-      --g-dark:    #071a0e;
-      --g-card:    #0d2419;
-      --g-card2:   #112d1e;
-      --green:     #22c55e;
-      --green-dim: rgba(34,197,94,.12);
-      --green-border: rgba(34,197,94,.18);
-      --text-light: #f0fdf4;
-      --text-muted: #86efac;
-      --text-dim:   #4ade80;
-    }
+    .hero-dark{position:relative;overflow:hidden;background:#071a0e;background-image:linear-gradient(rgba(34,197,94,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(34,197,94,.055) 1px,transparent 1px);background-size:44px 44px;padding:72px 24px 0;text-align:center}
+    .hero-dark::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(34,197,94,.18) 0%,transparent 70%);pointer-events:none}
+    .hero-stars{position:absolute;inset:0;pointer-events:none}
+    .star{position:absolute;border-radius:50%;background:rgba(34,197,94,.5);animation:twinkle 4s infinite ease-in-out}
+    @keyframes twinkle{0%,100%{opacity:.2;transform:scale(1)}50%{opacity:.8;transform:scale(1.4)}}
+    .hero-inner{position:relative;z-index:2;max-width:760px;margin:0 auto}
+    .hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);border-radius:99px;padding:6px 14px 6px 6px;font-size:.82rem;color:#86efac;margin-bottom:24px}
+    .hero-badge-avatars{display:flex}
+    .hero-badge-avatars span{width:24px;height:24px;border-radius:50%;border:2px solid #071a0e;font-size:.6rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-left:-6px}
+    .hero-badge-avatars span:first-child{margin-left:0}
+    .hero-dark h1{font-size:clamp(2rem,5vw,3.4rem);font-weight:900;line-height:1.12;letter-spacing:-.02em;color:#f0fdf4;margin-bottom:18px}
+    .hero-dark h1 .green{color:#22c55e}
+    .hero-dark .sub{font-size:1.05rem;color:#86efac;line-height:1.7;max-width:520px;margin:0 auto 28px}
+    .hero-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:14px}
+    .hero-cta{display:inline-flex;align-items:center;gap:8px;background:#22c55e;color:#052e10;font-size:1rem;font-weight:800;border:none;border-radius:99px;padding:14px 28px;text-decoration:none;box-shadow:0 0 32px rgba(34,197,94,.3);transition:transform .15s,box-shadow .15s}
+    .hero-cta:hover{transform:translateY(-2px);box-shadow:0 4px 48px rgba(34,197,94,.45);text-decoration:none}
+    .hero-cta svg{width:18px;height:18px}
+    .hero-cta-sub{font-size:.8rem;color:rgba(134,239,172,.55)}
+    .hero-features{display:flex;justify-content:center;gap:28px;flex-wrap:wrap;margin:36px 0 0}
+    .hero-feat{display:flex;align-items:center;gap:8px;font-size:.84rem;color:#86efac}
+    .hf-icon{width:30px;height:30px;border-radius:8px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.2);display:flex;align-items:center;justify-content:center;font-size:.85rem}
+    .mockup{position:relative;z-index:2;max-width:880px;margin:44px auto 0;border-radius:14px 14px 0 0;background:#0d2419;border:1px solid rgba(34,197,94,.18);border-bottom:none;overflow:hidden;box-shadow:0 -8px 48px rgba(34,197,94,.12)}
+    .mockup-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#112d1e;border-bottom:1px solid rgba(34,197,94,.15)}
+    .m-dot{width:10px;height:10px;border-radius:50%}
+    .m-url{flex:1;margin:0 12px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.15);border-radius:6px;padding:4px 12px;font-size:.73rem;color:#4ade80;text-align:center}
+    .mockup table{width:100%;border-collapse:collapse;font-size:.78rem}
+    .mockup thead{background:rgba(34,197,94,.08)}
+    .mockup th{padding:10px 12px;text-align:left;font-weight:700;font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:#4ade80;border-bottom:1px solid rgba(34,197,94,.15)}
+    .mockup td{padding:10px 12px;border-bottom:1px solid rgba(34,197,94,.07);color:#86efac}
+    .mockup .nm{font-weight:700;color:#f0fdf4}
+    .mockup .ck{color:#22c55e;font-weight:700}
+    .mockup .cr{color:rgba(134,239,172,.25)}
+    .mp{display:inline-block;background:rgba(34,197,94,.15);color:#22c55e;border-radius:99px;padding:2px 9px;font-size:.7rem;font-weight:700}
+    .mp.or{background:rgba(255,92,53,.12);color:#fb923c}
 
-    html { scroll-behavior: smooth; }
+    .sl{padding:64px 24px}
+    .sg{background:#f8fafc}
+    .sw{background:#fff}
+    .mx{max-width:1100px;margin:0 auto}
+    .lb{font-size:.73rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--primary);margin-bottom:8px}
+    .h2s{font-size:1.6rem;font-weight:800;color:var(--text);margin-bottom:8px;letter-spacing:-.01em}
+    .sub2{color:var(--text-muted);font-size:.95rem;line-height:1.6}
+    .shd{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:28px;flex-wrap:wrap}
+    .smore{font-size:.84rem;font-weight:600;color:var(--primary);text-decoration:none;white-space:nowrap}
+    .smore:hover{text-decoration:underline}
 
-    body {
-      background: var(--g-dark);
-      color: var(--text-light);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
-      margin: 0;
-    }
+    .tbar{background:#fff;border-bottom:1px solid var(--border);padding:14px 24px}
+    .tbar-in{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .tl{font-size:.78rem;color:var(--text-muted);font-weight:600}
+    .tc{display:inline-flex;align-items:center;gap:6px;background:var(--bg);border:1px solid var(--border);border-radius:99px;padding:4px 12px;font-size:.8rem;color:var(--text-muted);text-decoration:none;transition:all .15s}
+    .tc:hover{background:var(--primary-light);border-color:var(--primary);color:var(--primary-dark);text-decoration:none}
+    .td{width:8px;height:8px;border-radius:50%}
 
-    /* ===== NAV ===== */
-    .nav-mlrh {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(7,26,14,.85);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--green-border);
-      padding: 0 24px;
-    }
-    .nav-inner {
-      max-width: 1160px; margin: 0 auto;
-      display: flex; align-items: center; gap: 32px;
-      height: 60px;
-    }
-    .nav-logo {
-      display: flex; align-items: center; gap: 10px;
-      text-decoration: none; flex-shrink: 0;
-    }
-    .nav-logo-icon {
-      width: 34px; height: 34px; border-radius: 10px;
-      background: var(--green);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1rem;
-    }
-    .nav-logo-text {
-      font-size: 1rem; font-weight: 800;
-      color: var(--text-light); letter-spacing: -.01em;
-    }
-    .nav-logo-text span { color: var(--green); }
-    .nav-links {
-      display: flex; gap: 4px; list-style: none; margin: 0; padding: 0;
-      flex: 1; justify-content: center;
-    }
-    .nav-links a {
-      font-size: .87rem; font-weight: 500; color: var(--text-muted);
-      text-decoration: none; padding: 6px 12px; border-radius: 8px;
-      transition: color .15s, background .15s;
-    }
-    .nav-links a:hover { color: var(--text-light); background: var(--green-dim); }
-    .nav-cta {
-      flex-shrink: 0;
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--green); color: #052e10;
-      border: none; border-radius: 99px;
-      padding: 8px 18px; font-size: .87rem; font-weight: 700;
-      text-decoration: none; cursor: pointer;
-      transition: opacity .15s;
-    }
-    .nav-cta:hover { opacity: .9; }
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .nav-inner { gap: 16px; }
-    }
+    .cg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+    .wc{background:#fff;border:1px solid var(--border);border-radius:14px;padding:24px;text-decoration:none;color:inherit;display:flex;flex-direction:column;gap:10px;transition:border-color .2s,transform .2s,box-shadow .2s}
+    .wc:hover{border-color:var(--primary);transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,.08);text-decoration:none}
+    .wci{width:40px;height:40px;border-radius:10px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+    .wc h3{font-size:.95rem;font-weight:700;color:var(--text);line-height:1.35}
+    .wc p{font-size:.84rem;color:var(--text-muted);line-height:1.6}
+    .wcl{margin-top:auto;font-size:.82rem;font-weight:600;color:var(--primary)}
 
-    /* ===== HERO ===== */
-    .hero-mlrh {
-      position: relative; overflow: hidden;
-      background: var(--g-dark);
-      padding: 80px 24px 0;
-      text-align: center;
-      /* Grid pattern */
-      background-image:
-        linear-gradient(rgba(34,197,94,.055) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(34,197,94,.055) 1px, transparent 1px);
-      background-size: 44px 44px;
-    }
-    /* Radial glow */
-    .hero-mlrh::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(34,197,94,.18) 0%, transparent 70%);
-      pointer-events: none;
-    }
+    .ft{background:#fff;border:1px solid var(--border);border-radius:14px;display:grid;grid-template-columns:260px 1fr;overflow:hidden;text-decoration:none;color:inherit;transition:border-color .2s,box-shadow .2s}
+    .ft:hover{border-color:var(--primary);box-shadow:0 8px 32px rgba(0,0,0,.08);text-decoration:none}
+    .ftl{background:linear-gradient(135deg,var(--primary-light),#f0fdf4);display:flex;align-items:center;justify-content:center;padding:28px;border-right:1px solid var(--border)}
+    .ftr{padding:28px;display:flex;flex-direction:column;gap:10px}
+    .ftr h2{font-size:1.1rem;font-weight:800;color:var(--text);line-height:1.4}
+    .ftr p{font-size:.88rem;color:var(--text-muted);line-height:1.65}
+    .ftk{font-size:.85rem;font-weight:700;color:var(--primary);margin-top:8px;display:inline-flex;align-items:center;gap:4px}
+    @media(max-width:640px){.ft{grid-template-columns:1fr}.ftl{border-right:none;border-bottom:1px solid var(--border)}}
 
-    /* Floating stars */
-    .hero-stars {
-      position: absolute; inset: 0; pointer-events: none; overflow: hidden;
-    }
-    .star {
-      position: absolute; border-radius: 50%;
-      background: rgba(34,197,94,.5);
-      animation: twinkle 4s infinite ease-in-out;
-    }
-    @keyframes twinkle {
-      0%,100% { opacity: .2; transform: scale(1); }
-      50%      { opacity: .8; transform: scale(1.4); }
-    }
+    .vs{display:flex;align-items:center;gap:14px}
+    .vsi{display:flex;flex-direction:column;align-items:center;gap:4px}
+    .vsn{font-size:.75rem;font-weight:700;color:var(--text-muted)}
+    .vsb{font-size:.7rem;font-weight:800;color:var(--primary);background:rgba(22,163,74,.1);width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center}
 
-    .hero-content { position: relative; z-index: 2; max-width: 780px; margin: 0 auto; }
+    .gr{background:#fff;border:1px solid var(--border);border-radius:12px;padding:18px 20px;display:flex;align-items:center;gap:16px;text-decoration:none;color:inherit;transition:border-color .2s,background .15s;margin-bottom:12px}
+    .gr:hover{border-color:var(--primary);background:#fafffe;text-decoration:none}
+    .gri{font-size:1.3rem;flex-shrink:0;width:42px;height:42px;border-radius:10px;background:var(--primary-light);display:flex;align-items:center;justify-content:center}
+    .grb{flex:1}
+    .gr h3{font-size:.9rem;font-weight:700;color:var(--text);margin-bottom:3px}
+    .gr p{font-size:.82rem;color:var(--text-muted);line-height:1.5}
 
-    /* Social proof badge */
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 10px;
-      background: rgba(34,197,94,.1);
-      border: 1px solid var(--green-border);
-      border-radius: 99px;
-      padding: 6px 14px 6px 6px;
-      font-size: .82rem; color: var(--text-muted);
-      margin-bottom: 28px;
-    }
-    .hero-badge-avatars {
-      display: flex;
-    }
-    .hero-badge-avatars span {
-      width: 24px; height: 24px; border-radius: 50%;
-      border: 2px solid var(--g-dark);
-      font-size: .65rem; font-weight: 700;
-      display: flex; align-items: center; justify-content: center;
-      margin-left: -6px; flex-shrink: 0;
-    }
-    .hero-badge-avatars span:first-child { margin-left: 0; }
-    .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); flex-shrink: 0; }
+    .eg{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+    @media(max-width:800px){.eg{grid-template-columns:1fr;gap:36px}}
+    .cl{list-style:none;display:flex;flex-direction:column;gap:12px;margin-top:18px}
+    .cl li{display:flex;gap:12px;font-size:.88rem;color:var(--text-muted);line-height:1.55}
+    .cn{flex-shrink:0;width:26px;height:26px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:800;color:var(--primary)}
 
-    /* Headline */
-    .hero-h1 {
-      font-size: clamp(2.2rem, 5vw, 3.6rem);
-      font-weight: 900;
-      line-height: 1.12;
-      letter-spacing: -.02em;
-      margin-bottom: 20px;
-      color: var(--text-light);
-    }
-    .hero-h1 .accent {
-      color: var(--green);
-      position: relative;
-      display: inline-block;
-    }
-    .hero-h1 .accent::after {
-      content: '';
-      position: absolute; left: 0; bottom: -4px;
-      width: 100%; height: 3px;
-      background: var(--green);
-      border-radius: 99px;
-      opacity: .4;
-    }
+    .fl{display:flex;flex-direction:column;gap:8px}
+    .fi{background:#fff;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+    .fq{padding:14px 18px;font-weight:700;font-size:.88rem;color:var(--text);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none}
+    .fq:hover{color:var(--primary)}
+    .ft2{flex-shrink:0;width:22px;height:22px;border-radius:6px;background:var(--primary-light);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:1rem;font-weight:700;transition:transform .2s}
+    .fi.open .ft2{transform:rotate(45deg)}
+    .fa{display:none;padding:0 18px 14px;font-size:.86rem;color:var(--text-muted);line-height:1.7}
+    .fi.open .fa{display:block}
 
-    .hero-sub {
-      font-size: 1.05rem;
-      color: var(--text-muted);
-      line-height: 1.7;
-      max-width: 540px;
-      margin: 0 auto 32px;
-    }
+    .nlc{background:linear-gradient(135deg,var(--primary-light),#f0fdf4);border:1px solid #bbf7d0;border-radius:18px;padding:44px 36px;text-align:center;max-width:580px;margin:0 auto}
+    .nlc h2{font-size:1.3rem;font-weight:800;color:var(--text);margin-bottom:8px}
+    .nlc p{color:var(--text-muted);font-size:.9rem;margin-bottom:20px}
+    .nlf{display:flex;gap:8px;max-width:400px;margin:0 auto}
+    .nlf input{flex:1;padding:11px 14px;background:#fff;border:1px solid var(--border);border-radius:8px;color:var(--text);font-size:.9rem;outline:none}
+    .nlf input:focus{border-color:var(--primary)}
+    .nlf button{padding:11px 18px;background:var(--primary);color:#fff;border:none;border-radius:8px;font-size:.88rem;font-weight:700;cursor:pointer;white-space:nowrap}
+    .nlf button:hover{background:var(--primary-dark)}
+    @media(max-width:500px){.nlf{flex-direction:column}}
 
-    /* CTA group */
-    .hero-cta-group {
-      display: flex; flex-direction: column; align-items: center; gap: 12px;
-      margin-bottom: 16px;
-    }
-    .hero-cta-btn {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--green); color: #052e10;
-      font-size: 1rem; font-weight: 800;
-      border: none; border-radius: 99px;
-      padding: 14px 28px;
-      text-decoration: none; cursor: pointer;
-      transition: transform .15s, box-shadow .15s;
-      box-shadow: 0 0 32px rgba(34,197,94,.3);
-    }
-    .hero-cta-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 48px rgba(34,197,94,.45);
-    }
-    .hero-cta-btn svg { width: 18px; height: 18px; flex-shrink: 0; }
-
-    .hero-cta-sub {
-      font-size: .8rem; color: rgba(134,239,172,.6);
-      display: flex; align-items: center; gap: 6px;
-    }
-    .hero-cta-sub span::before { content: '·'; margin-right: 6px; }
-    .hero-cta-sub span:first-child::before { content: ''; margin: 0; }
-
-    /* Features row */
-    .hero-features {
-      display: flex; justify-content: center; gap: 32px; flex-wrap: wrap;
-      margin: 40px 0 0;
-    }
-    .hero-feat {
-      display: flex; align-items: center; gap: 8px;
-      font-size: .85rem; color: var(--text-muted);
-    }
-    .feat-icon {
-      width: 32px; height: 32px; border-radius: 8px;
-      background: var(--green-dim);
-      border: 1px solid var(--green-border);
-      display: flex; align-items: center; justify-content: center;
-      font-size: .9rem; flex-shrink: 0;
-    }
-
-    /* ===== DASHBOARD MOCKUP ===== */
-    .mockup-wrap {
-      position: relative; z-index: 2;
-      max-width: 900px; margin: 48px auto 0;
-      border-radius: 16px 16px 0 0;
-      background: var(--g-card);
-      border: 1px solid var(--green-border);
-      border-bottom: none;
-      overflow: hidden;
-      box-shadow: 0 -8px 60px rgba(34,197,94,.15);
-    }
-    .mockup-bar {
-      display: flex; align-items: center; gap: 6px;
-      padding: 12px 16px;
-      background: var(--g-card2);
-      border-bottom: 1px solid var(--green-border);
-    }
-    .mockup-dot { width: 10px; height: 10px; border-radius: 50%; }
-    .mockup-url {
-      flex: 1; margin: 0 12px;
-      background: rgba(34,197,94,.08);
-      border: 1px solid var(--green-border);
-      border-radius: 6px;
-      padding: 4px 12px;
-      font-size: .75rem; color: var(--text-dim);
-      text-align: center;
-    }
-    .mockup-body { padding: 24px; }
-
-    /* Mini compare table in mockup */
-    .mock-table {
-      width: 100%; border-collapse: collapse;
-      font-size: .8rem;
-    }
-    .mock-table thead tr {
-      background: rgba(34,197,94,.08);
-    }
-    .mock-table th {
-      padding: 10px 14px; text-align: left;
-      font-weight: 700; font-size: .75rem; text-transform: uppercase;
-      letter-spacing: .05em; color: var(--text-dim);
-      border-bottom: 1px solid var(--green-border);
-    }
-    .mock-table td {
-      padding: 10px 14px;
-      border-bottom: 1px solid rgba(34,197,94,.07);
-      color: var(--text-muted);
-    }
-    .mock-table tbody tr:last-child td { border-bottom: none; }
-    .mock-table .soft-name { font-weight: 700; color: var(--text-light); }
-    .mock-check { color: var(--green); font-weight: 700; }
-    .mock-cross { color: rgba(134,239,172,.3); }
-    .mock-badge {
-      display: inline-block;
-      background: rgba(34,197,94,.15);
-      color: var(--green);
-      border-radius: 99px;
-      padding: 2px 9px;
-      font-size: .72rem; font-weight: 700;
-    }
-    .mock-badge.orange {
-      background: rgba(255,92,53,.12);
-      color: #fb923c;
-    }
-
-    /* ===== TOOLS BAR ===== */
-    .tools-bar {
-      background: rgba(13,36,25,.7);
-      border-top: 1px solid var(--green-border);
-      border-bottom: 1px solid var(--green-border);
-      padding: 14px 24px;
-      overflow: hidden;
-    }
-    .tools-bar-inner {
-      max-width: 1160px; margin: 0 auto;
-      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
-    }
-    .tools-bar-label { font-size: .78rem; color: var(--text-dim); font-weight: 600; flex-shrink: 0; }
-    .tool-chip {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--green-dim);
-      border: 1px solid var(--green-border);
-      border-radius: 99px;
-      padding: 4px 12px;
-      font-size: .8rem; color: var(--text-muted);
-      text-decoration: none;
-      transition: background .15s, color .15s;
-    }
-    .tool-chip:hover { background: rgba(34,197,94,.2); color: var(--text-light); }
-    .tool-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-
-    /* ===== SECTIONS ===== */
-    .section-dark {
-      padding: 72px 24px;
-    }
-    .section-alt { background: rgba(13,36,25,.5); }
-    .container-lg { max-width: 1160px; margin: 0 auto; }
-
-    .section-label {
-      font-size: .75rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .1em; color: var(--green);
-      margin-bottom: 10px;
-    }
-    .section-h2 {
-      font-size: clamp(1.4rem, 2.5vw, 2rem);
-      font-weight: 800; letter-spacing: -.02em;
-      color: var(--text-light); margin-bottom: 10px;
-    }
-    .section-sub {
-      color: var(--text-muted); font-size: .95rem; line-height: 1.6;
-    }
-    .section-head {
-      display: flex; align-items: flex-end; justify-content: space-between;
-      gap: 20px; margin-bottom: 32px; flex-wrap: wrap;
-    }
-    .see-all-dark {
-      font-size: .83rem; font-weight: 600; color: var(--green);
-      text-decoration: none; flex-shrink: 0;
-      display: inline-flex; align-items: center; gap: 4px;
-    }
-    .see-all-dark:hover { opacity: .75; }
-
-    /* ===== CARDS ===== */
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-    }
-    .dark-card {
-      background: var(--g-card);
-      border: 1px solid var(--green-border);
-      border-radius: 14px;
-      padding: 24px;
-      text-decoration: none;
-      color: inherit;
-      display: flex; flex-direction: column; gap: 12px;
-      transition: border-color .2s, transform .2s, box-shadow .2s;
-    }
-    .dark-card:hover {
-      border-color: var(--green);
-      transform: translateY(-3px);
-      box-shadow: 0 8px 32px rgba(34,197,94,.12);
-    }
-    .card-icon-dark {
-      width: 40px; height: 40px; border-radius: 10px;
-      background: var(--green-dim);
-      border: 1px solid var(--green-border);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.1rem;
-    }
-    .dark-card h3 {
-      font-size: .97rem; font-weight: 700; color: var(--text-light); line-height: 1.35;
-    }
-    .dark-card p { font-size: .85rem; color: var(--text-muted); line-height: 1.6; }
-    .card-arrow {
-      margin-top: auto; font-size: .8rem; font-weight: 600; color: var(--green);
-      display: inline-flex; align-items: center; gap: 4px;
-    }
-
-    /* ===== FEATURED COMPARATIF ===== */
-    .featured-dark {
-      background: var(--g-card);
-      border: 1px solid var(--green-border);
-      border-radius: 16px;
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      margin-bottom: 20px;
-      transition: border-color .2s, box-shadow .2s;
-    }
-    .featured-dark:hover {
-      border-color: var(--green);
-      box-shadow: 0 8px 48px rgba(34,197,94,.15);
-    }
-    .featured-thumb-dark {
-      background: linear-gradient(135deg, rgba(34,197,94,.12), rgba(34,197,94,.04));
-      display: flex; align-items: center; justify-content: center;
-      padding: 32px;
-      border-right: 1px solid var(--green-border);
-    }
-    .vs-dark {
-      display: flex; flex-direction: column; align-items: center; gap: 16px;
-    }
-    .vs-logo-dark {
-      display: flex; align-items: center; gap: 16px;
-    }
-    .vs-box-dark {
-      display: flex; flex-direction: column; align-items: center; gap: 6px;
-    }
-    .vs-box-dark .name { font-size: .8rem; font-weight: 700; color: var(--text-muted); }
-    .vs-sep-dark {
-      font-size: .75rem; font-weight: 800; color: var(--text-dim);
-      background: var(--green-dim); border: 1px solid var(--green-border);
-      width: 32px; height: 32px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .featured-body-dark { padding: 32px; display: flex; flex-direction: column; gap: 12px; }
-    .badge-green {
-      display: inline-block; background: rgba(34,197,94,.15); color: var(--green);
-      border-radius: 99px; padding: 3px 10px;
-      font-size: .75rem; font-weight: 700;
-    }
-    .featured-body-dark h2 { font-size: 1.15rem; font-weight: 800; color: var(--text-light); line-height: 1.4; }
-    .featured-body-dark p { font-size: .88rem; color: var(--text-muted); line-height: 1.65; }
-    .feat-read {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: .85rem; font-weight: 700; color: var(--green);
-      margin-top: 8px;
-    }
-    @media (max-width: 640px) {
-      .featured-dark { grid-template-columns: 1fr; }
-      .featured-thumb-dark { border-right: none; border-bottom: 1px solid var(--green-border); }
-    }
-
-    /* ===== GUIDE LIST ===== */
-    .guide-list { display: flex; flex-direction: column; gap: 12px; }
-    .guide-item-dark {
-      background: var(--g-card);
-      border: 1px solid var(--green-border);
-      border-radius: 12px;
-      padding: 18px 20px;
-      display: flex; align-items: center; gap: 16px;
-      text-decoration: none; color: inherit;
-      transition: border-color .2s, background .2s;
-    }
-    .guide-item-dark:hover { border-color: var(--green); background: var(--g-card2); }
-    .guide-item-dark .gi-icon {
-      font-size: 1.4rem; flex-shrink: 0;
-      width: 44px; height: 44px; border-radius: 10px;
-      background: var(--green-dim); border: 1px solid var(--green-border);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .guide-item-dark .gi-body { flex: 1; }
-    .guide-item-dark h3 { font-size: .92rem; font-weight: 700; color: var(--text-light); margin-bottom: 4px; }
-    .guide-item-dark p { font-size: .82rem; color: var(--text-muted); line-height: 1.5; }
-    .guide-item-dark .gi-arrow { color: var(--text-dim); flex-shrink: 0; }
-
-    /* ===== EDITORIAL ===== */
-    .editorial-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
-    @media (max-width: 800px) { .editorial-grid { grid-template-columns: 1fr; gap: 40px; } }
-
-    .criteria-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin-top: 20px; }
-    .criteria-list li {
-      display: flex; gap: 14px; align-items: flex-start;
-      font-size: .9rem; color: var(--text-muted); line-height: 1.55;
-    }
-    .criteria-num {
-      flex-shrink: 0; width: 26px; height: 26px; border-radius: 8px;
-      background: var(--green-dim); border: 1px solid var(--green-border);
-      display: flex; align-items: center; justify-content: center;
-      font-size: .72rem; font-weight: 800; color: var(--green);
-    }
-
-    /* ===== FAQ ===== */
-    .faq-list { display: flex; flex-direction: column; gap: 10px; }
-    .faq-item-dark {
-      background: var(--g-card);
-      border: 1px solid var(--green-border);
-      border-radius: 12px;
-      overflow: hidden;
-    }
-    .faq-q {
-      padding: 16px 20px;
-      font-weight: 700; font-size: .9rem; color: var(--text-light);
-      cursor: pointer;
-      display: flex; justify-content: space-between; align-items: center;
-      gap: 12px;
-      user-select: none;
-    }
-    .faq-q:hover { color: var(--green); }
-    .faq-toggle {
-      flex-shrink: 0; width: 22px; height: 22px; border-radius: 6px;
-      background: var(--green-dim); color: var(--green);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1rem; font-weight: 700;
-      transition: transform .2s;
-    }
-    .faq-item-dark.open .faq-toggle { transform: rotate(45deg); }
-    .faq-a {
-      display: none;
-      padding: 0 20px 16px;
-      font-size: .87rem; color: var(--text-muted); line-height: 1.7;
-      border-top: 1px solid rgba(34,197,94,.06);
-    }
-    .faq-item-dark.open .faq-a { display: block; }
-
-    /* ===== NEWSLETTER ===== */
-    .newsletter-dark {
-      background: linear-gradient(135deg, rgba(34,197,94,.12), rgba(34,197,94,.04));
-      border: 1px solid var(--green-border);
-      border-radius: 20px;
-      padding: 48px 40px;
-      text-align: center;
-      margin: 0 auto;
-      max-width: 640px;
-    }
-    .newsletter-dark h2 { font-size: 1.4rem; font-weight: 800; color: var(--text-light); margin-bottom: 10px; }
-    .newsletter-dark p { color: var(--text-muted); font-size: .92rem; line-height: 1.6; margin-bottom: 24px; }
-    .nl-form {
-      display: flex; gap: 10px; max-width: 420px; margin: 0 auto;
-    }
-    .nl-form input {
-      flex: 1; padding: 12px 16px;
-      background: rgba(7,26,14,.8);
-      border: 1px solid var(--green-border);
-      border-radius: 10px;
-      color: var(--text-light); font-size: .9rem;
-      outline: none;
-    }
-    .nl-form input::placeholder { color: rgba(134,239,172,.4); }
-    .nl-form input:focus { border-color: var(--green); }
-    .nl-form button {
-      padding: 12px 20px;
-      background: var(--green); color: #052e10;
-      border: none; border-radius: 10px;
-      font-size: .9rem; font-weight: 700; cursor: pointer;
-      white-space: nowrap;
-      transition: opacity .15s;
-    }
-    .nl-form button:hover { opacity: .9; }
-    @media (max-width: 500px) { .nl-form { flex-direction: column; } }
-
-    /* ===== FOOTER ===== */
-    .footer-dark {
-      background: rgba(5,16,9,.9);
-      border-top: 1px solid var(--green-border);
-      padding: 56px 24px 24px;
-    }
-    .footer-inner { max-width: 1160px; margin: 0 auto; }
-    .footer-top {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-      gap: 40px; margin-bottom: 40px;
-    }
-    @media (max-width: 900px) {
-      .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
-    }
-    @media (max-width: 500px) {
-      .footer-top { grid-template-columns: 1fr; }
-    }
-    .footer-brand-dark .logo {
-      display: flex; align-items: center; gap: 8px;
-      font-size: .95rem; font-weight: 800; color: var(--text-light);
-      margin-bottom: 12px;
-    }
-    .footer-brand-dark .logo-icon {
-      width: 28px; height: 28px; border-radius: 8px;
-      background: var(--green); font-size: .85rem;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .footer-brand-dark p { font-size: .82rem; color: var(--text-muted); line-height: 1.6; }
-    .footer-col-dark h4 {
-      font-size: .8rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .07em; color: var(--text-dim);
-      margin-bottom: 14px;
-    }
-    .footer-col-dark ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
-    .footer-col-dark a {
-      font-size: .83rem; color: var(--text-muted);
-      text-decoration: none;
-      transition: color .15s;
-    }
-    .footer-col-dark a:hover { color: var(--green); }
-    .footer-sitemap-section { margin-bottom: 32px; }
-    .footer-sitemap-section h4 {
-      font-size: .78rem; font-weight: 700; text-transform: uppercase;
-      letter-spacing: .08em; color: var(--green);
-      margin-bottom: 16px; padding-bottom: 8px;
-      border-bottom: 1px solid var(--green-border);
-    }
-    .sitemap-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; }
-    .sitemap-grid a {
-      font-size: .8rem; color: var(--text-muted); text-decoration: none;
-      display: flex; align-items: center; gap: 6px;
-      padding: 6px 10px; border-radius: 8px;
-      transition: background .15s, color .15s;
-    }
-    .sitemap-grid a:hover { background: var(--green-dim); color: var(--text-light); }
-    .sitemap-grid a::before { content: '→'; color: var(--green); font-size: .75rem; }
-    .footer-affil {
-      font-size: .75rem; color: rgba(134,239,172,.35);
-      line-height: 1.6; padding: 16px 0;
-      border-top: 1px solid var(--green-border);
-      border-bottom: 1px solid var(--green-border);
-      margin-bottom: 16px;
-    }
-    .footer-bottom-dark {
-      display: flex; justify-content: space-between; align-items: center;
-      font-size: .78rem; color: rgba(134,239,172,.35); flex-wrap: wrap; gap: 8px;
-    }
-    .footer-bottom-dark a { color: rgba(134,239,172,.45); text-decoration: none; }
-    .footer-bottom-dark a:hover { color: var(--green); }
+    .fsm{margin-bottom:28px}
+    .fsm h4{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4ade80;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #1f3d2b}
+    .smg{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:6px}
+    .smg a{font-size:.8rem;color:#9ca3af;text-decoration:none;display:flex;align-items:center;gap:6px;padding:5px 8px;border-radius:6px;transition:all .15s}
+    .smg a:hover{background:rgba(34,197,94,.08);color:#4ade80;text-decoration:none}
   </style>
 </head>
 <body>
 
-  <!-- ===== NAV ===== -->
-  <nav class="nav-mlrh">
-    <div class="nav-inner">
-      <a href="/" class="nav-logo">
-        <div class="nav-logo-icon">🔍</div>
-        <div class="nav-logo-text">ML<span>RH</span></div>
-      </a>
-      <ul class="nav-links">
-        <li><a href="#comparatifs">Comparatifs</a></li>
-        <li><a href="#guides">Guides</a></li>
-        <li><a href="#avis">Avis</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="a-propos.html">À propos</a></li>
-      </ul>
-      <a href="trouver-mon-logiciel.html" class="nav-cta">
-        Trouver mon logiciel
-        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo"><span class="site-logo-icon">🔍</span>ML<span>RH</span></a>
+      <nav class="site-nav">
+        <a href="comparatifs/index.html">Comparatifs</a>
+        <a href="guides/index.html">Guides</a>
+        <a href="alternatives/index.html">Alternatives</a>
+        <a href="avis/index.html">Avis</a>
+        <a href="trouver-mon-logiciel.html" class="nav-cta">Trouver mon logiciel</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero-mlrh">
-
-    <!-- Stars -->
+  <!-- HERO DARK -->
+  <section class="hero-dark">
     <div class="hero-stars" aria-hidden="true">
       <div class="star" style="width:3px;height:3px;top:12%;left:8%;animation-delay:0s"></div>
       <div class="star" style="width:2px;height:2px;top:25%;left:18%;animation-delay:.8s"></div>
@@ -687,14 +169,8 @@
       <div class="star" style="width:2px;height:2px;top:30%;left:55%;animation-delay:.4s"></div>
       <div class="star" style="width:3px;height:3px;top:15%;left:72%;animation-delay:2s"></div>
       <div class="star" style="width:2px;height:2px;top:40%;left:85%;animation-delay:1.2s"></div>
-      <div class="star" style="width:3px;height:3px;top:20%;left:92%;animation-delay:.6s"></div>
-      <div class="star" style="width:2px;height:2px;top:50%;left:5%;animation-delay:2.4s"></div>
-      <div class="star" style="width:4px;height:4px;top:60%;left:28%;animation-delay:3s"></div>
-      <div class="star" style="width:2px;height:2px;top:55%;left:78%;animation-delay:1.8s"></div>
     </div>
-
-    <div class="hero-content">
-      <!-- Badge -->
+    <div class="hero-inner">
       <div class="hero-badge">
         <div class="hero-badge-avatars">
           <span style="background:#1A56DB;color:#fff">DRH</span>
@@ -702,508 +178,181 @@
           <span style="background:#7c3aed;color:#fff">RH</span>
           <span style="background:#0891b2;color:#fff">+</span>
         </div>
-        <div class="hero-badge-dot"></div>
         Consulté par <strong>+5 000 DRH et dirigeants</strong>
       </div>
-
-      <!-- Headline -->
-      <h1 class="hero-h1">
-        Tous les logiciels RH<br>
-        <span class="accent">comparés pour vous</span>
-      </h1>
-
-      <!-- Subtitle -->
-      <p class="hero-sub">
-        MLRH analyse pour vous les meilleurs outils RH et paie du marché français.
-        Pas besoin de chercher pendant des heures — on compare, vous choisissez.
-      </p>
-
-      <!-- CTA -->
-      <div class="hero-cta-group">
-        <a href="trouver-mon-logiciel.html" class="hero-cta-btn">
+      <h1>Tous les logiciels RH<br><span class="green">comparés pour vous</span></h1>
+      <p class="sub">MLRH analyse les meilleurs outils RH et paie du marché français. Pas besoin de chercher pendant des heures : on compare, vous choisissez.</p>
+      <div class="hero-cta-wrap">
+        <a href="trouver-mon-logiciel.html" class="hero-cta">
           <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
           Trouver mon logiciel en 2 min
           <svg fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <div class="hero-cta-sub">
-          <span>Gratuit</span>
-          <span>Sans inscription</span>
-          <span>Données 2026</span>
-        </div>
+        <div class="hero-cta-sub">Gratuit · Sans inscription · Données 2026</div>
       </div>
-
-      <!-- Features row -->
       <div class="hero-features">
-        <div class="hero-feat">
-          <div class="feat-icon">📊</div>
-          <span>Comparatifs détaillés</span>
-        </div>
-        <div class="hero-feat">
-          <div class="feat-icon">💰</div>
-          <span>Prix réels vérifiés</span>
-        </div>
-        <div class="hero-feat">
-          <div class="feat-icon">🎯</div>
-          <span>Recommandation personnalisée</span>
-        </div>
-        <div class="hero-feat">
-          <div class="feat-icon">🔒</div>
-          <span>100% indépendant</span>
-        </div>
+        <div class="hero-feat"><div class="hf-icon">📊</div>Comparatifs détaillés</div>
+        <div class="hero-feat"><div class="hf-icon">💰</div>Prix réels vérifiés</div>
+        <div class="hero-feat"><div class="hf-icon">🎯</div>Recommandation sur mesure</div>
+        <div class="hero-feat"><div class="hf-icon">🔒</div>100% indépendant</div>
       </div>
     </div>
-
-    <!-- Dashboard mockup -->
-    <div class="mockup-wrap">
+    <div class="mockup">
       <div class="mockup-bar">
-        <div class="mockup-dot" style="background:#ff5f57"></div>
-        <div class="mockup-dot" style="background:#febc2e"></div>
-        <div class="mockup-dot" style="background:#28c840"></div>
-        <div class="mockup-url">meilleur-logiciel-rh.fr/comparatifs</div>
+        <div class="m-dot" style="background:#ff5f57"></div>
+        <div class="m-dot" style="background:#febc2e"></div>
+        <div class="m-dot" style="background:#28c840"></div>
+        <div class="m-url">meilleur-logiciel-rh.fr/comparatifs</div>
       </div>
-      <div class="mockup-body">
-        <table class="mock-table">
-          <thead>
-            <tr>
-              <th>Logiciel</th>
-              <th>Prix / salarié</th>
-              <th>Paie DSN</th>
-              <th>SIRH complet</th>
-              <th>Cible</th>
-              <th>Notre verdict</th>
-            </tr>
-          </thead>
+      <div style="padding:20px">
+        <table>
+          <thead><tr><th>Logiciel</th><th>Prix / salarié</th><th>Paie DSN</th><th>SIRH</th><th>Cible</th><th>Verdict</th></tr></thead>
           <tbody>
-            <tr>
-              <td class="soft-name">💙 PayFit</td>
-              <td>6–9 €/mois</td>
-              <td class="mock-check">✔</td>
-              <td class="mock-cross">—</td>
-              <td>TPE &lt; 50</td>
-              <td><span class="mock-badge">Paie automatisée</span></td>
-            </tr>
-            <tr>
-              <td class="soft-name">📊 Factorial</td>
-              <td>5–8 €/mois</td>
-              <td class="mock-check">✔</td>
-              <td class="mock-check">✔</td>
-              <td>PME 20–300</td>
-              <td><span class="mock-badge">SIRH complet</span></td>
-            </tr>
-            <tr>
-              <td class="soft-name">💼 Silae</td>
-              <td>Sur devis</td>
-              <td class="mock-check">✔</td>
-              <td class="mock-cross">—</td>
-              <td>Cabinets / ETI</td>
-              <td><span class="mock-badge orange">Paie experte</span></td>
-            </tr>
-            <tr>
-              <td class="soft-name">🔷 Lucca</td>
-              <td>Modulaire</td>
-              <td class="mock-check">✔</td>
-              <td class="mock-check">✔</td>
-              <td>PME 50–200</td>
-              <td><span class="mock-badge">Modulaire FR</span></td>
-            </tr>
+            <tr><td class="nm">PayFit</td><td>6-9 €/mois</td><td class="ck">✓</td><td class="cr">-</td><td>TPE &lt;50</td><td><span class="mp">Paie auto</span></td></tr>
+            <tr><td class="nm">Factorial</td><td>5-8 €/mois</td><td class="ck">✓</td><td class="ck">✓</td><td>PME 20-300</td><td><span class="mp">SIRH complet</span></td></tr>
+            <tr><td class="nm">Silae</td><td>Sur devis</td><td class="ck">✓</td><td class="cr">-</td><td>Cabinets</td><td><span class="mp or">Paie experte</span></td></tr>
+            <tr><td class="nm">Lucca</td><td>Modulaire</td><td class="ck">✓</td><td class="ck">✓</td><td>PME 50-200</td><td><span class="mp">Modulaire FR</span></td></tr>
           </tbody>
         </table>
       </div>
     </div>
-
   </section>
 
-  <!-- ===== TOOLS BAR ===== -->
-  <div class="tools-bar">
-    <div class="tools-bar-inner">
-      <span class="tools-bar-label">Outils couverts :</span>
-      <a href="comparatifs/payfit-vs-factorial-2026.html" class="tool-chip"><span class="tool-dot" style="background:#1A56DB"></span>PayFit</a>
-      <a href="#" class="tool-chip"><span class="tool-dot" style="background:#FF5C35"></span>Factorial</a>
-      <a href="#" class="tool-chip"><span class="tool-dot" style="background:#7c3aed"></span>Silae</a>
-      <a href="#" class="tool-chip"><span class="tool-dot" style="background:#0891b2"></span>Lucca</a>
-      <a href="#" class="tool-chip"><span class="tool-dot" style="background:#16a34a"></span>Skello</a>
-      <a href="#" class="tool-chip"><span class="tool-dot" style="background:#dc2626"></span>Sage Paie</a>
-      <a href="#" class="tool-chip"><span class="tool-dot" style="background:#d97706"></span>Nibelis</a>
-      <a href="#" class="tool-chip"><span class="tool-dot" style="background:#0f766e"></span>Kelio</a>
+  <!-- TOOLS BAR -->
+  <div class="tbar">
+    <div class="tbar-in">
+      <span class="tl">Outils couverts :</span>
+      <a href="comparatifs/payfit-vs-factorial-2026.html" class="tc"><span class="td" style="background:#1A56DB"></span>PayFit</a>
+      <a href="comparatifs/payfit-vs-factorial-2026.html" class="tc"><span class="td" style="background:#FF5C35"></span>Factorial</a>
+      <span class="tc"><span class="td" style="background:#7c3aed"></span>Silae</span>
+      <span class="tc"><span class="td" style="background:#0891b2"></span>Lucca</span>
+      <span class="tc"><span class="td" style="background:#16a34a"></span>Skello</span>
+      <span class="tc"><span class="td" style="background:#dc2626"></span>Sage Paie</span>
+      <span class="tc"><span class="td" style="background:#d97706"></span>Nibelis</span>
+      <span class="tc"><span class="td" style="background:#0f766e"></span>Kelio</span>
     </div>
   </div>
 
-  <!-- ===== CATÉGORIES ===== -->
-  <section class="section-dark" id="categories">
-    <div class="container-lg">
-      <div style="text-align:center;margin-bottom:40px">
-        <div class="section-label">Notre contenu</div>
-        <h2 class="section-h2">Comment pouvons-nous vous aider ?</h2>
-        <p class="section-sub" style="max-width:480px;margin:0 auto">Choisissez le type de contenu qui correspond à votre situation</p>
-      </div>
-      <div class="cards-grid">
-        <a href="comparatifs/index.html" class="dark-card">
-          <div class="card-icon-dark">⚖️</div>
-          <h3>Comparatifs</h3>
-          <p>Outil A vs outil B avec tableau, prix réels et verdict selon votre profil d'entreprise.</p>
-          <div class="card-arrow">Explorer les comparatifs →</div>
-        </a>
-        <a href="alternatives/index.html" class="dark-card">
-          <div class="card-icon-dark">🔄</div>
-          <h3>Alternatives</h3>
-          <p>Vous êtes déçu d'un outil ? Trouvez la meilleure alternative pour migrer sereinement.</p>
-          <div class="card-arrow">Voir les alternatives →</div>
-        </a>
-        <a href="guides/index.html" class="dark-card">
-          <div class="card-icon-dark">📋</div>
-          <h3>Guides pratiques</h3>
-          <p>Tout ce qu'il faut savoir pour choisir, déployer et optimiser votre logiciel RH.</p>
-          <div class="card-arrow">Lire les guides →</div>
-        </a>
-        <a href="avis/index.html" class="dark-card">
-          <div class="card-icon-dark">⭐</div>
-          <h3>Avis 2026</h3>
-          <p>Avis détaillés sur chaque logiciel : fonctionnalités, prix réels, SAV et points faibles.</p>
-          <div class="card-arrow">Voir les avis →</div>
-        </a>
+  <!-- CATÉGORIES -->
+  <section class="sl sw">
+    <div class="mx" style="text-align:center">
+      <div class="lb">Notre contenu</div>
+      <h2 class="h2s">Comment pouvons-nous vous aider ?</h2>
+      <p class="sub2" style="max-width:460px;margin:0 auto 32px">Choisissez le type de contenu qui correspond à votre situation</p>
+      <div class="cg" style="text-align:left">
+        <a href="comparatifs/index.html" class="wc"><div class="wci">⚖️</div><h3>Comparatifs</h3><p>Outil A vs outil B avec tableau, prix réels et verdict selon votre profil.</p><div class="wcl">Explorer →</div></a>
+        <a href="alternatives/index.html" class="wc"><div class="wci">🔄</div><h3>Alternatives</h3><p>Déçu d'un outil ? Trouvez la meilleure alternative pour migrer sereinement.</p><div class="wcl">Voir →</div></a>
+        <a href="guides/index.html" class="wc"><div class="wci">📋</div><h3>Guides pratiques</h3><p>Tout pour choisir, déployer et optimiser votre logiciel RH.</p><div class="wcl">Lire →</div></a>
+        <a href="avis/index.html" class="wc"><div class="wci">⭐</div><h3>Avis 2026</h3><p>Avis détaillés : fonctionnalités, prix, SAV et points faibles.</p><div class="wcl">Voir →</div></a>
       </div>
     </div>
   </section>
 
-  <!-- ===== COMPARATIFS ===== -->
-  <section class="section-dark section-alt" id="comparatifs">
-    <div class="container-lg">
-      <div class="section-head">
-        <div>
-          <div class="section-label">Comparatifs logiciels RH 2026</div>
-          <h2 class="section-h2">Les face-à-face les plus recherchés</h2>
-          <p class="section-sub">Prix réels, tableau complet et verdict selon votre profil</p>
-        </div>
-        <a href="comparatifs/index.html" class="see-all-dark">Tous les comparatifs →</a>
-      </div>
-
-      <!-- Featured -->
-      <a href="comparatifs/payfit-vs-factorial-2026.html" class="featured-dark">
-        <div class="featured-thumb-dark">
-          <div class="vs-dark">
-            <div class="vs-logo-dark">
-              <div class="vs-box-dark">
-                <svg width="52" height="52" viewBox="0 0 48 48" fill="none">
-                  <circle cx="24" cy="24" r="22" fill="#1A56DB"/>
-                  <circle cx="24" cy="24" r="14" fill="white"/>
-                  <circle cx="24" cy="24" r="8" fill="#1A56DB"/>
-                </svg>
-                <span class="name">PayFit</span>
-              </div>
-              <div class="vs-sep-dark">VS</div>
-              <div class="vs-box-dark">
-                <svg width="52" height="52" viewBox="0 0 48 48" fill="none">
-                  <rect x="4" y="28" width="10" height="16" rx="3" fill="#FF5C35"/>
-                  <rect x="19" y="18" width="10" height="26" rx="3" fill="#FF5C35" opacity=".8"/>
-                  <rect x="34" y="8" width="10" height="36" rx="3" fill="#FF5C35" opacity=".6"/>
-                </svg>
-                <span class="name">Factorial</span>
-              </div>
-            </div>
+  <!-- COMPARATIF -->
+  <section class="sl sg" id="comparatifs">
+    <div class="mx">
+      <div class="shd"><div><div class="lb">Comparatifs 2026</div><h2 class="h2s">Le face-à-face le plus recherché</h2><p class="sub2">Prix réels, tableau complet et verdict selon votre profil</p></div><a href="comparatifs/index.html" class="smore">Tous les comparatifs →</a></div>
+      <a href="comparatifs/payfit-vs-factorial-2026.html" class="ft">
+        <div class="ftl">
+          <div class="vs">
+            <div class="vsi"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#1A56DB"/><circle cx="24" cy="24" r="14" fill="white"/><circle cx="24" cy="24" r="8" fill="#1A56DB"/></svg><span class="vsn">PayFit</span></div>
+            <div class="vsb">VS</div>
+            <div class="vsi"><svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="4" y="28" width="10" height="16" rx="3" fill="#FF5C35"/><rect x="19" y="18" width="10" height="26" rx="3" fill="#FF5C35" opacity=".8"/><rect x="34" y="8" width="10" height="36" rx="3" fill="#FF5C35" opacity=".6"/></svg><span class="vsn">Factorial</span></div>
           </div>
         </div>
-        <div class="featured-body-dark">
-          <div><span class="badge-green">Comparatif phare</span></div>
-          <h2>PayFit vs Factorial : quel logiciel RH choisir en 2026 ?</h2>
-          <p>PayFit excelle sur la paie automatisée pour les TPE et startups. Factorial propose un SIRH complet adapté aux PME de 20 à 300 salariés. Le choix dépend de votre priorité : la paie clé en main ou la gestion RH intégrale.</p>
-          <div class="feat-read">Lire le comparatif complet <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
-        </div>
+        <div class="ftr"><div><span class="badge badge-green">Comparatif phare</span></div><h2>PayFit vs Factorial : quel logiciel RH choisir en 2026 ?</h2><p>PayFit excelle sur la paie automatisée pour les TPE. Factorial propose un SIRH complet adapté aux PME de 20 à 300 salariés.</p><div class="ftk">Lire le comparatif complet →</div></div>
       </a>
-
-      <!-- Autres comparatifs -->
-      <div class="cards-grid">
-        <div class="dark-card" style="opacity:.7">
-          <div class="card-icon-dark">🔮</div>
-          <div><span class="badge-green" style="font-size:.7rem">Prochainement</span></div>
-          <h3>PayFit vs Silae 2026</h3>
-          <p>Silae cible les cabinets et les RH experts. PayFit vise les entreprises sans service paie. Les vraies différences.</p>
-        </div>
-        <div class="dark-card" style="opacity:.7">
-          <div class="card-icon-dark">🔮</div>
-          <div><span class="badge-green" style="font-size:.7rem">Prochainement</span></div>
-          <h3>Factorial vs Lucca 2026</h3>
-          <p>Deux SIRH complets, deux positionnements distincts. Lucca mise sur la modularité, Factorial sur la suite intégrée.</p>
-        </div>
-        <div class="dark-card" style="opacity:.7">
-          <div class="card-icon-dark">🔮</div>
-          <div><span class="badge-green" style="font-size:.7rem">Prochainement</span></div>
-          <h3>Silae vs Nibelis 2026</h3>
-          <p>Pour les paies complexes, conventions collectives multiples ou multi-sites — les deux références du marché.</p>
-        </div>
-      </div>
     </div>
   </section>
 
-  <!-- ===== GUIDES ===== -->
-  <section class="section-dark" id="guides">
-    <div class="container-lg">
-      <div class="section-head">
-        <div>
-          <div class="section-label">Guides pratiques</div>
-          <h2 class="section-h2">Tout pour bien choisir votre logiciel RH</h2>
-          <p class="section-sub">Nos guides complets pour sélectionner, déployer et optimiser votre outil</p>
-        </div>
-        <a href="guides/index.html" class="see-all-dark">Tous les guides →</a>
-      </div>
-      <div class="guide-list">
-        <a href="#" class="guide-item-dark">
-          <div class="gi-icon">📋</div>
-          <div class="gi-body">
-            <h3>Comment choisir son logiciel de paie en 2026</h3>
-            <p>Les 7 critères essentiels pour ne pas se tromper : DSN, intégrations, support et coût total.</p>
-          </div>
-          <svg class="gi-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#" class="guide-item-dark">
-          <div class="gi-icon">💰</div>
-          <div class="gi-body">
-            <h3>Prix des logiciels RH : grille tarifaire complète 2026</h3>
-            <p>Tarifs réels de PayFit, Factorial, Silae, Lucca et Skello pour 10, 20 et 50 salariés.</p>
-          </div>
-          <svg class="gi-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#" class="guide-item-dark">
-          <div class="gi-icon">🏗️</div>
-          <div class="gi-body">
-            <h3>Migrer son logiciel de paie sans perdre de données</h3>
-            <p>Le processus étape par étape pour changer d'outil en cours d'année sans erreur de paie.</p>
-          </div>
-          <svg class="gi-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#" class="guide-item-dark">
-          <div class="gi-icon">⚖️</div>
-          <div class="gi-body">
-            <h3>SIRH vs logiciel de paie : quelle différence ?</h3>
-            <p>Ce que chaque type d'outil couvre réellement et comment choisir selon la taille de votre entreprise.</p>
-          </div>
-          <svg class="gi-arrow" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
+  <!-- GUIDES -->
+  <section class="sl sw" id="guides">
+    <div class="mx">
+      <div class="shd"><div><div class="lb">Guides pratiques</div><h2 class="h2s">Tout pour bien choisir votre logiciel RH</h2></div><a href="guides/index.html" class="smore">Tous les guides →</a></div>
+      <a href="guides/choisir-logiciel-paie-2026.html" class="gr"><div class="gri">📋</div><div class="grb"><h3>Comment choisir son logiciel de paie en 2026</h3><p>Les 7 critères essentiels : DSN, intégrations, support et coût total.</p></div><svg width="18" height="18" fill="none" stroke="var(--text-muted)" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </section>
 
-  <!-- ===== AVIS ===== -->
-  <section class="section-dark section-alt" id="avis">
-    <div class="container-lg">
-      <div class="section-head">
-        <div>
-          <div class="section-label">Avis indépendants 2026</div>
-          <h2 class="section-h2">Nos verdicts après test</h2>
-          <p class="section-sub">Forces, faiblesses, tarifs réels et profil idéal pour chaque outil</p>
-        </div>
-        <a href="avis/index.html" class="see-all-dark">Tous les avis →</a>
-      </div>
-      <div class="cards-grid">
-        <a href="#" class="dark-card">
-          <div style="display:flex;align-items:center;gap:10px">
-            <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#1A56DB"/><circle cx="24" cy="24" r="14" fill="white"/><circle cx="24" cy="24" r="8" fill="#1A56DB"/></svg>
-            <strong style="color:var(--text-light)">PayFit</strong>
-          </div>
-          <h3>PayFit avis 2026 : notre verdict complet</h3>
-          <p>Forces, faiblesses, tarifs réels et verdict pour les TPE et startups françaises.</p>
-          <div class="card-arrow">Lire l'avis →</div>
-        </a>
-        <a href="#" class="dark-card">
-          <div style="display:flex;align-items:center;gap:10px">
-            <svg width="36" height="36" viewBox="0 0 48 48" fill="none"><rect x="4" y="28" width="10" height="16" rx="3" fill="#FF5C35"/><rect x="19" y="18" width="10" height="26" rx="3" fill="#FF5C35" opacity=".8"/><rect x="34" y="8" width="10" height="36" rx="3" fill="#FF5C35" opacity=".6"/></svg>
-            <strong style="color:var(--text-light)">Factorial</strong>
-          </div>
-          <h3>Factorial avis 2026 : que vaut ce SIRH en France ?</h3>
-          <p>Fonctionnalités, conformité droit du travail français, support et tarifs passés au crible.</p>
-          <div class="card-arrow">Lire l'avis →</div>
-        </a>
-        <a href="#" class="dark-card">
-          <div class="card-icon-dark">💼</div>
-          <h3>Silae avis 2026 : le logiciel de paie des experts</h3>
-          <p>Silae est la référence des cabinets comptables. Mais est-il adapté aux entreprises autonomes ?</p>
-          <div class="card-arrow">Lire l'avis →</div>
-        </a>
-        <a href="#" class="dark-card">
-          <div class="card-icon-dark">🔷</div>
-          <h3>Lucca avis 2026 : le SIRH modulaire français</h3>
-          <p>Lucca propose des modules à la carte. Puissant, mais la facture peut vite grimper.</p>
-          <div class="card-arrow">Lire l'avis →</div>
-        </a>
-      </div>
+  <!-- ALTERNATIVES -->
+  <section class="sl sg" id="alternatives">
+    <div class="mx">
+      <div class="shd"><div><div class="lb">Alternatives</div><h2 class="h2s">Déçu de votre outil actuel ?</h2></div><a href="alternatives/index.html" class="smore">Toutes les alternatives →</a></div>
+      <a href="alternatives/alternatives-a-payfit-2026.html" class="gr"><div class="gri">🔄</div><div class="grb"><h3>5 alternatives à PayFit en 2026</h3><p>PayFit ne correspond plus à vos besoins ? Voici les 5 alternatives à considérer.</p></div><svg width="18" height="18" fill="none" stroke="var(--text-muted)" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
   </section>
 
-  <!-- ===== SECTION ÉDITORIALE ===== -->
-  <section class="section-dark">
-    <div class="container-lg">
-      <div class="editorial-grid">
+  <!-- AVIS -->
+  <section class="sl sw" id="avis">
+    <div class="mx">
+      <div class="shd"><div><div class="lb">Avis 2026</div><h2 class="h2s">Nos verdicts après test</h2></div><a href="avis/index.html" class="smore">Tous les avis →</a></div>
+      <a href="avis/payfit-avis-2026.html" class="wc" style="max-width:400px">
+        <div style="display:flex;align-items:center;gap:10px"><svg width="36" height="36" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="22" fill="#1A56DB"/><circle cx="24" cy="24" r="14" fill="white"/><circle cx="24" cy="24" r="8" fill="#1A56DB"/></svg><strong>PayFit</strong></div>
+        <h3>PayFit avis 2026 : notre verdict complet</h3><p>Forces, faiblesses, tarifs réels et verdict pour les TPE françaises.</p><div class="wcl">Lire l'avis →</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ÉDITORIAL + FAQ -->
+  <section class="sl sg">
+    <div class="mx">
+      <div class="eg">
         <div>
-          <div class="section-label">Pourquoi MLRH ?</div>
-          <h2 class="section-h2" style="font-size:1.5rem">Bien choisir son logiciel RH, c'est crucial pour une PME</h2>
-          <p class="section-sub" style="margin:14px 0">
-            En France, plus de 50 000 PME changent de logiciel RH ou de paie chaque année — souvent après un mauvais premier choix. Les conséquences sont réelles : erreurs de paie, pénalités URSSAF, données perdues lors d'une migration ou frais de résiliation imprévus.
-          </p>
-          <p class="section-sub" style="margin-bottom:24px">
-            Le marché compte une trentaine d'acteurs sérieux avec des positionnements très différents : certains excellents pour la paie pure (PayFit, Silae), d'autres pour la gestion RH globale (Factorial, Lucca), d'autres pour les secteurs avec horaires variables (Skello, Kelio).
-          </p>
-          <div class="section-label" style="margin-bottom:12px">Les critères à ne pas négliger</div>
-          <ul class="criteria-list">
-            <li><div class="criteria-num">01</div><span><strong style="color:var(--text-light)">La maturité du module paie</strong> — conventions collectives couvertes, DSN, bulletins multi-cas</span></li>
-            <li><div class="criteria-num">02</div><span><strong style="color:var(--text-light)">Le coût total de possession</strong> — tarif affiché + setup + modules + formation</span></li>
-            <li><div class="criteria-num">03</div><span><strong style="color:var(--text-light)">La facilité de prise en main</strong> — qui va piloter l'outil au quotidien ?</span></li>
-            <li><div class="criteria-num">04</div><span><strong style="color:var(--text-light)">Les intégrations</strong> — comptabilité, ATS, signature électronique, notes de frais</span></li>
-            <li><div class="criteria-num">05</div><span><strong style="color:var(--text-light)">La sécurité RGPD</strong> — hébergement, DPA, certifications ISO</span></li>
+          <div class="lb">Pourquoi MLRH ?</div>
+          <h2 class="h2s" style="font-size:1.4rem">Bien choisir son logiciel RH, c'est crucial</h2>
+          <p class="sub2" style="margin:12px 0">En France, plus de 50 000 PME changent de logiciel RH chaque année, souvent après un mauvais premier choix. Erreurs de paie, pénalités URSSAF, données perdues lors de la migration : les conséquences sont réelles.</p>
+          <p class="sub2" style="margin-bottom:20px">Le marché compte une trentaine d'acteurs sérieux. Certains sont excellents pour la paie pure (PayFit, Silae), d'autres pour la gestion RH globale (Factorial, Lucca) et d'autres pour les horaires variables (Skello, Kelio).</p>
+          <div class="lb" style="margin-bottom:10px">Les critères clés</div>
+          <ul class="cl">
+            <li><div class="cn">01</div><span><strong style="color:var(--text)">Module paie</strong> : conventions collectives, DSN, bulletins multi-cas</span></li>
+            <li><div class="cn">02</div><span><strong style="color:var(--text)">Coût total</strong> : tarif + setup + modules + formation</span></li>
+            <li><div class="cn">03</div><span><strong style="color:var(--text)">Prise en main</strong> : qui pilote l'outil au quotidien ?</span></li>
+            <li><div class="cn">04</div><span><strong style="color:var(--text)">Intégrations</strong> : comptabilité, ATS, signature, notes de frais</span></li>
+            <li><div class="cn">05</div><span><strong style="color:var(--text)">Sécurité RGPD</strong> : hébergement France, DPA, certifications</span></li>
           </ul>
         </div>
-
-        <!-- FAQ -->
         <div id="faq">
-          <div class="section-label">Questions fréquentes</div>
-          <h2 class="section-h2" style="font-size:1.3rem;margin-bottom:20px">Tout ce que vous vous demandez sur les logiciels RH</h2>
-          <div class="faq-list">
-            <div class="faq-item-dark">
-              <div class="faq-q" onclick="toggleFaqDark(this)">
-                Quel est le meilleur logiciel de paie pour une PME ?
-                <div class="faq-toggle">+</div>
-              </div>
-              <div class="faq-a">Pour une PME de moins de 50 salariés sans DRH, <strong>PayFit</strong> est la référence : onboarding en moins d'une semaine, paie automatisée et interface simple. Pour une PME avec un RH cherchant un SIRH complet, <strong>Factorial</strong> ou <strong>Lucca</strong> sont plus adaptés.</div>
-            </div>
-            <div class="faq-item-dark">
-              <div class="faq-q" onclick="toggleFaqDark(this)">
-                Quelle différence entre logiciel de paie et SIRH ?
-                <div class="faq-toggle">+</div>
-              </div>
-              <div class="faq-a">Un <strong>logiciel de paie</strong> gère bulletins, DSN et déclarations sociales. Un <strong>SIRH</strong> couvre tout le cycle RH : recrutement, congés, temps, formation, entretiens et paie. PayFit est avant tout un logiciel de paie, Factorial et Lucca sont des SIRH complets.</div>
-            </div>
-            <div class="faq-item-dark">
-              <div class="faq-q" onclick="toggleFaqDark(this)">
-                Combien coûte un logiciel RH pour 20 salariés ?
-                <div class="faq-toggle">+</div>
-              </div>
-              <div class="faq-a">Pour 20 salariés, comptez entre <strong>150 et 400 €/mois</strong> selon les fonctionnalités. PayFit : environ 160–220 €/mois. Factorial : environ 150–200 €/mois. Lucca : variable selon les modules. Des frais de setup (0 à 2 000 €) peuvent s'ajouter.</div>
-            </div>
-            <div class="faq-item-dark">
-              <div class="faq-q" onclick="toggleFaqDark(this)">
-                Peut-on changer de logiciel RH en cours d'année ?
-                <div class="faq-toggle">+</div>
-              </div>
-              <div class="faq-a">Oui, mais c'est déconseillé en cours d'exercice pour la paie. La meilleure période est <strong>janvier</strong> (début d'exercice) ou à défaut un début de trimestre. Prévoyez l'export des données, l'import et une période de double-run d'au moins 1 mois.</div>
-            </div>
+          <div class="lb">Questions fréquentes</div>
+          <h2 class="h2s" style="font-size:1.2rem;margin-bottom:16px">Vos questions sur les logiciels RH</h2>
+          <div class="fl">
+            <div class="fi"><div class="fq" onclick="tF(this)">Quel est le meilleur logiciel de paie pour une PME ?<div class="ft2">+</div></div><div class="fa">Pour une PME de moins de 50 salariés sans DRH, <strong>PayFit</strong> est la référence. Pour un SIRH complet, <strong>Factorial</strong> ou <strong>Lucca</strong> sont plus adaptés.</div></div>
+            <div class="fi"><div class="fq" onclick="tF(this)">Quelle différence entre logiciel de paie et SIRH ?<div class="ft2">+</div></div><div class="fa">Un <strong>logiciel de paie</strong> gère bulletins, DSN et déclarations sociales. Un <strong>SIRH</strong> couvre tout le cycle RH : recrutement, congés, temps, formation et paie.</div></div>
+            <div class="fi"><div class="fq" onclick="tF(this)">Combien coûte un logiciel RH pour 20 salariés ?<div class="ft2">+</div></div><div class="fa">Comptez entre <strong>150 et 400 €/mois</strong> selon les fonctionnalités. PayFit : 160-220 €/mois. Factorial : 150-200 €/mois. Lucca : variable selon les modules.</div></div>
+            <div class="fi"><div class="fq" onclick="tF(this)">Peut-on changer de logiciel en cours d'année ?<div class="ft2">+</div></div><div class="fa">Oui, mais privilégiez <strong>janvier</strong> (début d'exercice). Prévoyez l'export des données et une période de double-run d'au moins 1 mois.</div></div>
           </div>
-          <div style="margin-top:20px">
-            <a href="trouver-mon-logiciel.html" class="hero-cta-btn" style="font-size:.87rem;padding:11px 22px;display:inline-flex">
-              Utiliser notre outil de recommandation →
-            </a>
-          </div>
+          <div style="margin-top:18px"><a href="trouver-mon-logiciel.html" class="btn btn-primary" style="border-radius:99px">Trouver mon logiciel →</a></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== NEWSLETTER ===== -->
-  <section class="section-dark section-alt">
-    <div class="container-lg" style="text-align:center">
-      <div class="newsletter-dark">
-        <div style="font-size:2rem;margin-bottom:12px">📬</div>
+  <!-- NEWSLETTER -->
+  <section class="sl sw">
+    <div class="mx">
+      <div class="nlc">
         <h2>Restez informé des évolutions tarifaires</h2>
-        <p>Les logiciels RH changent leurs prix régulièrement. Recevez nos alertes et nouveaux comparatifs directement par email.</p>
-        <form class="nl-form" onsubmit="return false;">
-          <input type="email" placeholder="votre@email.fr" autocomplete="email">
-          <button type="submit">S'abonner</button>
-        </form>
+        <p>Les logiciels RH changent leurs prix régulièrement. Recevez nos alertes par email.</p>
+        <form class="nlf" onsubmit="return false;"><input type="email" placeholder="votre@email.fr" autocomplete="email"><button type="submit">S'abonner</button></form>
       </div>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer-dark">
-    <div class="footer-inner">
-
-      <!-- Top grid -->
-      <div class="footer-top">
-        <div class="footer-brand-dark">
-          <div class="logo">
-            <div class="logo-icon">🔍</div>
-            ML<span style="color:var(--green)">RH</span>
-          </div>
-          <p>Comparatifs indépendants et guides sur les logiciels RH, paie et SIRH pour les PME françaises. Nos analyses sont basées sur des données vérifiées sur les sites officiels des éditeurs.</p>
-        </div>
-        <div class="footer-col-dark">
-          <h4>Comparatifs</h4>
-          <ul>
-            <li><a href="comparatifs/payfit-vs-factorial-2026.html">PayFit vs Factorial</a></li>
-            <li><a href="#">PayFit vs Silae</a></li>
-            <li><a href="#">Factorial vs Lucca</a></li>
-            <li><a href="#">Silae vs Nibelis</a></li>
-          </ul>
-        </div>
-        <div class="footer-col-dark">
-          <h4>Guides</h4>
-          <ul>
-            <li><a href="#">Choisir son logiciel de paie</a></li>
-            <li><a href="#">Prix des logiciels RH</a></li>
-            <li><a href="#">SIRH vs logiciel de paie</a></li>
-            <li><a href="#">Migrer son logiciel</a></li>
-          </ul>
-        </div>
-        <div class="footer-col-dark">
-          <h4>Avis</h4>
-          <ul>
-            <li><a href="#">PayFit avis 2026</a></li>
-            <li><a href="#">Factorial avis 2026</a></li>
-            <li><a href="#">Silae avis 2026</a></li>
-            <li><a href="#">Lucca avis 2026</a></li>
-          </ul>
-        </div>
-        <div class="footer-col-dark">
-          <h4>Le site</h4>
-          <ul>
-            <li><a href="a-propos.html">À propos</a></li>
-            <li><a href="methodologie.html">Méthodologie</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="politique-de-confidentialite.html">Confidentialité</a></li>
-            <li><a href="mentions-legales.html">Mentions légales</a></li>
-            <li><a href="plan-du-site.html">Plan du site</a></li>
-          </ul>
-        </div>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="footer-logo"><span class="footer-logo-icon">🔍</span>ML<span>RH</span></div><p>Comparatifs indépendants de logiciels RH et paie pour PME françaises. Analyses basées sur les données officielles.</p></div>
+        <div class="footer-col"><h4>Comparatifs</h4><ul><li><a href="comparatifs/payfit-vs-factorial-2026.html">PayFit vs Factorial</a></li></ul></div>
+        <div class="footer-col"><h4>Ressources</h4><ul><li><a href="guides/choisir-logiciel-paie-2026.html">Choisir son logiciel de paie</a></li><li><a href="alternatives/alternatives-a-payfit-2026.html">Alternatives à PayFit</a></li><li><a href="avis/payfit-avis-2026.html">PayFit avis 2026</a></li></ul></div>
+        <div class="footer-col"><h4>Le site</h4><ul><li><a href="a-propos.html">À propos</a></li><li><a href="methodologie.html">Méthodologie</a></li><li><a href="contact.html">Contact</a></li><li><a href="mentions-legales.html">Mentions légales</a></li><li><a href="politique-de-confidentialite.html">Confidentialité</a></li></ul></div>
       </div>
-
-      <!-- PLAN DU SITE HTML -->
-      <div class="footer-sitemap-section">
-        <h4>Plan du site</h4>
-        <div class="sitemap-grid">
-          <a href="/">Accueil</a>
-          <a href="trouver-mon-logiciel.html">Trouver mon logiciel</a>
-          <a href="comparatifs/index.html">Tous les comparatifs</a>
-          <a href="comparatifs/payfit-vs-factorial-2026.html">PayFit vs Factorial 2026</a>
-          <a href="alternatives/index.html">Toutes les alternatives</a>
-          <a href="guides/index.html">Tous les guides</a>
-          <a href="avis/index.html">Tous les avis</a>
-          <a href="a-propos.html">À propos</a>
-          <a href="methodologie.html">Méthodologie</a>
-          <a href="contact.html">Contact</a>
-          <a href="mentions-legales.html">Mentions légales</a>
-          <a href="politique-de-confidentialite.html">Politique de confidentialité</a>
-        </div>
-      </div>
-
-      <div class="footer-affil">
-        Mentions légales : certains liens présents sur ce site sont des liens d'affiliation. Si vous achetez via ces liens, nous percevons une commission sans coût supplémentaire pour vous. Cela nous permet de financer nos analyses et de garder le site accessible gratuitement. Nos avis restent indépendants et basés sur des données vérifiées.
-      </div>
-      <div class="footer-bottom-dark">
-        <span>&copy; 2026 MLRH — Meilleur Logiciel RH — Tous droits réservés</span>
-        <div style="display:flex;gap:16px">
-          <a href="mentions-legales.html">Mentions légales</a>
-          <a href="politique-de-confidentialite.html">Confidentialité</a>
-          <a href="contact.html">Contact</a>
-        </div>
-      </div>
+      <div class="fsm"><h4>Plan du site</h4><div class="smg">
+        <a href="/">Accueil</a><a href="trouver-mon-logiciel.html">Trouver mon logiciel</a><a href="comparatifs/index.html">Comparatifs</a><a href="comparatifs/payfit-vs-factorial-2026.html">PayFit vs Factorial</a><a href="alternatives/index.html">Alternatives</a><a href="alternatives/alternatives-a-payfit-2026.html">Alternatives PayFit</a><a href="guides/index.html">Guides</a><a href="guides/choisir-logiciel-paie-2026.html">Choisir logiciel paie</a><a href="avis/index.html">Avis</a><a href="avis/payfit-avis-2026.html">PayFit avis</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a>
+      </div></div>
+      <div class="footer-affiliation">Certains liens sont des liens d'affiliation. Nos avis restent indépendants et basés sur des données vérifiées.</div>
+      <div class="footer-bottom"><span>© 2026 MLRH. Tous droits réservés</span><span>Données vérifiées sur les sites officiels</span></div>
     </div>
   </footer>
 
-  <script>
-    function toggleFaqDark(el) {
-      const item = el.parentElement;
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.faq-item-dark.open').forEach(i => i.classList.remove('open'));
-      if (!isOpen) item.classList.add('open');
-    }
-  </script>
-
+  <script>function tF(e){var i=e.parentElement,o=i.classList.contains('open');document.querySelectorAll('.fi.open').forEach(function(x){x.classList.remove('open')});if(!o)i.classList.add('open')}</script>
 </body>
 </html>

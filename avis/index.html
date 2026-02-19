@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Avis logiciels RH 2026 — MLRH</title>
+  <title>Avis logiciels RH 2026 - MLRH</title>
   <meta name="description" content="Nos avis indépendants sur les principaux logiciels RH et paie du marché français. Tests complets, notes détaillées et verdicts d'experts.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://meilleur-logiciel-rh.fr/avis/">
+  <link rel="icon" href="../assets/images/favicon.ico" sizes="any">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="../assets/style.css">
   <style>
     .page-hero {
@@ -20,7 +22,7 @@
     .page-hero .breadcrumb { font-size: .82rem; color: #c4b5fd; margin-bottom: 16px; }
     .page-hero .breadcrumb a { color: #c4b5fd; text-decoration: none; }
     .avis-section { padding: 56px 24px; }
-    .avis-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 32px; }
+    .avis-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 20px; margin-top: 32px; }
     .avis-card {
       background: #fff;
       border: 1px solid var(--border);
@@ -33,9 +35,7 @@
       color: var(--text);
       transition: border-color .15s, box-shadow .15s;
     }
-    .avis-card:hover { border-color: var(--blue); box-shadow: var(--shadow-md); text-decoration: none; color: var(--text); }
-    .avis-card.soon { opacity: .7; cursor: default; }
-    .avis-card.soon:hover { border-color: var(--border); box-shadow: none; }
+    .avis-card:hover { border-color: var(--primary); box-shadow: var(--shadow-md); text-decoration: none; color: var(--text); }
     .avis-logo {
       width: 56px; height: 56px; border-radius: 14px;
       display: flex; align-items: center; justify-content: center;
@@ -45,19 +45,20 @@
     .avis-content p { font-size: .86rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 12px; }
     .avis-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
     .stars { color: #f59e0b; font-size: .9rem; letter-spacing: 1px; }
-    @media (max-width: 720px) { .avis-grid { grid-template-columns: 1fr; } }
+    .avis-read { font-size: .82rem; font-weight: 600; color: var(--primary); }
+    @media (max-width: 540px) { .avis-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
 
   <header class="site-header">
     <div class="site-header-inner">
-      <a href="../index.html" class="site-logo">Logiciel<span>RH</span>.fr</a>
+      <a href="../index.html" class="site-logo"><span class="site-logo-icon">🔍</span>ML<span>RH</span></a>
       <nav class="site-nav">
         <a href="../comparatifs/index.html">Comparatifs</a>
         <a href="../guides/index.html">Guides</a>
         <a href="../alternatives/index.html">Alternatives</a>
-        <a href="../avis/index.html" style="color:var(--blue);font-weight:700">Avis</a>
+        <a href="../avis/index.html" style="color:var(--primary);font-weight:700">Avis</a>
         <a href="../trouver-mon-logiciel.html" class="nav-cta">Trouver mon logiciel</a>
       </nav>
     </div>
@@ -72,11 +73,11 @@
   <section class="avis-section">
     <div class="container">
       <h2 class="section-title">Tous les avis</h2>
-      <p class="section-subtitle">Avis en cours de rédaction · publiés après test complet de chaque outil</p>
+      <p class="section-subtitle">1 avis disponible</p>
 
       <div class="avis-grid">
 
-        <div class="avis-card soon">
+        <a href="payfit-avis-2026.html" class="avis-card">
           <div class="avis-logo" style="background:#eff6ff">
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
               <circle cx="16" cy="16" r="14" fill="#1A56DB"/>
@@ -89,84 +90,12 @@
             <p>Forces, faiblesses, tarifs réels et verdict pour les TPE et startups françaises. Test sur un vrai compte.</p>
             <div class="avis-meta">
               <span class="badge" style="background:#eff6ff;color:#1A56DB">PayFit</span>
-              <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
+              <span class="stars">★★★★☆</span>
+              <span style="font-size:.78rem;color:var(--text-muted)">4.2/5</span>
+              <span class="avis-read">Lire l'avis →</span>
             </div>
           </div>
-        </div>
-
-        <div class="avis-card soon">
-          <div class="avis-logo" style="background:#fff4f0">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
-              <rect x="2" y="18" width="7" height="12" rx="2" fill="#FF5C35"/>
-              <rect x="12" y="12" width="7" height="18" rx="2" fill="#FF5C35" opacity=".8"/>
-              <rect x="22" y="5" width="7" height="25" rx="2" fill="#FF5C35" opacity=".6"/>
-            </svg>
-          </div>
-          <div class="avis-content">
-            <h3>Factorial avis 2026 : que vaut ce SIRH en France ?</h3>
-            <p>Fonctionnalités, conformité droit du travail français, support et tarifs passés au crible.</p>
-            <div class="avis-meta">
-              <span class="badge badge-orange">Factorial</span>
-              <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="avis-card soon">
-          <div class="avis-logo" style="background:#f5f3ff">
-            <span style="font-size:1.6rem">💼</span>
-          </div>
-          <div class="avis-content">
-            <h3>Silae avis 2026 : le logiciel de paie des experts</h3>
-            <p>Silae est la référence des cabinets comptables. Mais est-il adapté aux entreprises autonomes en 2026 ?</p>
-            <div class="avis-meta">
-              <span class="badge" style="background:#f5f3ff;color:#7c3aed">Silae</span>
-              <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="avis-card soon">
-          <div class="avis-logo" style="background:#ecfeff">
-            <span style="font-size:1.6rem">🔷</span>
-          </div>
-          <div class="avis-content">
-            <h3>Lucca avis 2026 : le SIRH modulaire français</h3>
-            <p>Lucca propose des modules à la carte. Puissant, mais la facture peut vite grimper selon vos besoins.</p>
-            <div class="avis-meta">
-              <span class="badge" style="background:#ecfeff;color:#0891b2">Lucca</span>
-              <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="avis-card soon">
-          <div class="avis-logo" style="background:#f0fdf4">
-            <span style="font-size:1.6rem">📅</span>
-          </div>
-          <div class="avis-content">
-            <h3>Skello avis 2026 : la référence du planning en CHR</h3>
-            <p>Skello domine le secteur hôtellerie-restauration et retail. Notre avis après 3 mois de test.</p>
-            <div class="avis-meta">
-              <span class="badge" style="background:#f0fdf4;color:#16a34a">Skello</span>
-              <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="avis-card soon">
-          <div class="avis-logo" style="background:#fef2f2">
-            <span style="font-size:1.6rem">📊</span>
-          </div>
-          <div class="avis-content">
-            <h3>Sage Paie avis 2026 : encore pertinent face au cloud ?</h3>
-            <p>L'outil historique des PME françaises. Toujours compétitif ou dépassé par les nouvelles solutions ?</p>
-            <div class="avis-meta">
-              <span class="badge" style="background:#fef2f2;color:#dc2626">Sage</span>
-              <span class="badge" style="background:#f3f0ff;color:#7c3aed">Prochainement</span>
-            </div>
-          </div>
-        </div>
+        </a>
 
       </div>
     </div>
@@ -176,7 +105,7 @@
     <div class="site-footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo">Logiciel<span>RH</span>.fr</div>
+          <div class="footer-logo"><span class="footer-logo-icon">🔍</span>ML<span>RH</span></div>
           <p>Comparatifs indépendants et guides sur les logiciels RH, paie et SIRH pour les PME françaises.</p>
         </div>
         <div class="footer-col">
@@ -187,12 +116,11 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Catégories</h4>
+          <h4>Ressources</h4>
           <ul>
-            <li><a href="../guides/index.html">Guides pratiques</a></li>
-            <li><a href="../alternatives/index.html">Alternatives</a></li>
-            <li><a href="index.html">Avis 2026</a></li>
-            <li><a href="../trouver-mon-logiciel.html">Trouver mon logiciel</a></li>
+            <li><a href="../guides/choisir-logiciel-paie-2026.html">Choisir son logiciel de paie</a></li>
+            <li><a href="../alternatives/alternatives-a-payfit-2026.html">Alternatives à PayFit</a></li>
+            <li><a href="payfit-avis-2026.html">PayFit avis 2026</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -201,17 +129,15 @@
             <li><a href="../a-propos.html">À propos</a></li>
             <li><a href="../methodologie.html">Méthodologie</a></li>
             <li><a href="../contact.html">Contact</a></li>
-            <li><a href="../politique-de-confidentialite.html">Politique de confidentialité</a></li>
+            <li><a href="../politique-de-confidentialite.html">Confidentialité</a></li>
             <li><a href="../mentions-legales.html">Mentions légales</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-affiliation">
-        Mentions légales : certains liens présents sur ce site sont des liens d'affiliation. Si vous achetez via ces liens, nous percevons une commission sans coût supplémentaire pour vous. Nos avis restent indépendants et basés sur des tests réels.
-      </div>
+      <div class="footer-affiliation">Certains liens sont des liens d'affiliation. Nos avis restent indépendants et basés sur des données vérifiées.</div>
       <div class="footer-bottom">
-        <span>&copy; 2026 MLRH — Tous droits réservés</span>
-        <span>Données vérifiées sur les sites officiels des éditeurs</span>
+        <span>© 2026 MLRH. Tous droits réservés</span>
+        <span>Données vérifiées sur les sites officiels</span>
       </div>
     </div>
   </footer>
