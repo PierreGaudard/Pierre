@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — LogicielRH.fr</title>
+  <meta name="description" content="Contactez l'équipe LogicielRH.fr pour signaler une erreur, proposer un partenariat ou poser une question sur les logiciels RH.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://logicielrh.fr/contact.html">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    .page-hero { background: linear-gradient(135deg, #0f2d6b 0%, #1A56DB 100%); color: #fff; padding: 56px 24px 48px; text-align: center; }
+    .page-hero h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 12px; }
+    .page-hero p { color: #bfdbfe; font-size: 1rem; max-width: 540px; margin: 0 auto; }
+    .breadcrumb { font-size: .82rem; color: #93c5fd; margin-bottom: 16px; }
+    .breadcrumb a { color: #93c5fd; text-decoration: none; }
+    .contact-wrap { max-width: 800px; margin: 0 auto; padding: 56px 24px 80px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .contact-info h2 { font-size: 1.2rem; font-weight: 700; margin-bottom: 16px; }
+    .contact-info p { color: var(--text-muted); font-size: .95rem; line-height: 1.75; margin-bottom: 16px; }
+    .contact-reason { display: flex; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--border); }
+    .contact-reason:last-child { border-bottom: none; }
+    .contact-reason-icon { font-size: 1.2rem; flex-shrink: 0; }
+    .contact-reason-text strong { display: block; font-size: .92rem; font-weight: 700; margin-bottom: 2px; }
+    .contact-reason-text span { font-size: .85rem; color: var(--text-muted); }
+    .contact-form-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; }
+    .contact-form-card h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 20px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: .88rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+    .form-group input, .form-group select, .form-group textarea {
+      width: 100%; padding: 10px 14px; border: 1px solid var(--border);
+      border-radius: 8px; font-size: .95rem; font-family: inherit;
+      background: var(--white); color: var(--text);
+      transition: border-color .15s; outline: none;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(26,86,219,.1); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-note { font-size: .8rem; color: var(--text-muted); margin-top: 14px; }
+    .success-msg { display: none; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: var(--radius); padding: 16px; color: #15803d; font-size: .92rem; margin-top: 16px; }
+    @media (max-width: 680px) { .contact-wrap { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-logo">Logiciel<span>RH</span>.fr</a>
+      <nav class="site-nav">
+        <a href="comparatifs/index.html">Comparatifs</a>
+        <a href="guides/index.html">Guides</a>
+        <a href="alternatives/index.html">Alternatives</a>
+        <a href="avis/index.html">Avis</a>
+        <a href="trouver-mon-logiciel.html" class="nav-cta">Trouver mon logiciel</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="breadcrumb"><a href="index.html">Accueil</a> › Contact</div>
+    <h1>Nous contacter</h1>
+    <p>Une question, une erreur à signaler ou un partenariat à proposer ? Écrivez-nous.</p>
+  </div>
+
+  <div class="contact-wrap">
+
+    <div class="contact-info">
+      <h2>Pourquoi nous écrire ?</h2>
+      <p>Notre équipe répond à toutes les demandes sous <strong>48h ouvrées</strong>.</p>
+
+      <div class="contact-reason">
+        <div class="contact-reason-icon">🔍</div>
+        <div class="contact-reason-text">
+          <strong>Signaler une erreur</strong>
+          <span>Un tarif inexact, une fonctionnalité mal décrite, une info obsolète ? Dites-le nous.</span>
+        </div>
+      </div>
+      <div class="contact-reason">
+        <div class="contact-reason-icon">🤝</div>
+        <div class="contact-reason-text">
+          <strong>Partenariat ou affiliation</strong>
+          <span>Vous êtes éditeur ou agence et souhaitez travailler avec nous.</span>
+        </div>
+      </div>
+      <div class="contact-reason">
+        <div class="contact-reason-icon">❓</div>
+        <div class="contact-reason-text">
+          <strong>Question sur un logiciel</strong>
+          <span>Vous hésitez entre deux outils et souhaitez un avis personnalisé.</span>
+        </div>
+      </div>
+      <div class="contact-reason">
+        <div class="contact-reason-icon">✍️</div>
+        <div class="contact-reason-text">
+          <strong>Proposition de contenu</strong>
+          <span>Vous souhaitez suggérer un comparatif ou un guide à rédiger.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form-card">
+      <h2>Envoyer un message</h2>
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Votre nom</label>
+          <input type="text" id="name" placeholder="Marie Dupont" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Votre email</label>
+          <input type="email" id="email" placeholder="marie@entreprise.fr" required>
+        </div>
+        <div class="form-group">
+          <label for="subject">Objet</label>
+          <select id="subject">
+            <option value="">Choisir un objet…</option>
+            <option value="erreur">Signaler une erreur</option>
+            <option value="partenariat">Partenariat / Affiliation</option>
+            <option value="question">Question sur un logiciel</option>
+            <option value="contenu">Suggestion de contenu</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Décrivez votre demande…" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center">
+          Envoyer le message
+        </button>
+        <p class="form-note">En soumettant ce formulaire, vous acceptez notre <a href="politique-de-confidentialite.html">politique de confidentialité</a>.</p>
+        <div class="success-msg" id="successMsg">
+          ✓ Votre message a bien été envoyé. Nous vous répondrons sous 48h ouvrées.
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Logiciel<span>RH</span>.fr</div>
+          <p>Comparatifs indépendants et guides sur les logiciels RH, paie et SIRH pour les PME françaises.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Comparatifs</h4>
+          <ul>
+            <li><a href="comparatifs/payfit-vs-factorial-2026.html">PayFit vs Factorial</a></li>
+            <li><a href="comparatifs/index.html">Tous les comparatifs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Catégories</h4>
+          <ul>
+            <li><a href="guides/index.html">Guides pratiques</a></li>
+            <li><a href="alternatives/index.html">Alternatives</a></li>
+            <li><a href="avis/index.html">Avis 2026</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Le site</h4>
+          <ul>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="methodologie.html">Méthodologie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="politique-de-confidentialite.html">Politique de confidentialité</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-affiliation">
+        Mentions légales : certains liens présents sur ce site sont des liens d'affiliation. Nos avis restent indépendants et basés sur des tests réels.
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 LogicielRH.fr — Tous droits réservés</span>
+        <span>Données vérifiées sur les sites officiels des éditeurs</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('successMsg').style.display = 'block';
+      document.getElementById('contactForm').querySelector('button[type=submit]').disabled = true;
+    }
+  </script>
+
+</body>
+</html>

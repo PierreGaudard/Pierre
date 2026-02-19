@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trouver mon logiciel RH — Recommandation personnalisée — LogicielRH.fr</title>
+  <meta name="description" content="Répondez à 8 questions et obtenez en 2 minutes une recommandation personnalisée de logiciel RH ou de paie, adaptée à votre entreprise et votre budget.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://logicielrh.fr/trouver-mon-logiciel.html">
+  <link rel="stylesheet" href="assets/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Outil de recommandation logiciel RH",
+    "description": "Quiz interactif pour trouver le logiciel RH ou paie le mieux adapté à votre PME",
+    "url": "https://logicielrh.fr/trouver-mon-logiciel.html",
+    "applicationCategory": "UtilitiesApplication",
+    "inLanguage": "fr-FR",
+    "publisher": {"@type": "Organization", "name": "LogicielRH.fr"}
+  }
+  </script>
+  <style>
+    .tool-hero {
+      background: linear-gradient(135deg, #0f2d6b 0%, #1A56DB 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .tool-hero h1 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; margin-bottom: 12px; }
+    .tool-hero p { color: #bfdbfe; font-size: 1rem; max-width: 560px; margin: 0 auto; }
+    .breadcrumb { font-size: .82rem; color: #93c5fd; margin-bottom: 16px; }
+    .breadcrumb a { color: #93c5fd; text-decoration: none; }
+    .hero-badges {
+      display: flex; gap: 16px; justify-content: center; margin-top: 24px; flex-wrap: wrap;
+    }
+    .hero-badge {
+      display: inline-flex; gap: 6px; align-items: center;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.2);
+      border-radius: 99px;
+      padding: 6px 14px;
+      font-size: .82rem; color: #bfdbfe;
+    }
+
+    /* Quiz wrapper */
+    .quiz-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 24px 80px;
+    }
+
+    /* Progress */
+    .progress-wrap { margin-bottom: 36px; }
+    .progress-top { display: flex; justify-content: space-between; font-size: .82rem; color: var(--text-muted); margin-bottom: 10px; }
+    .progress-track { height: 6px; background: var(--border); border-radius: 99px; overflow: hidden; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #1A56DB, #60a5fa); border-radius: 99px; transition: width .4s ease; }
+    .progress-steps {
+      display: flex; gap: 0; margin-top: 12px; overflow-x: auto; padding-bottom: 4px;
+    }
+    .ps-item {
+      flex-shrink: 0;
+      display: flex; flex-direction: column; align-items: center; gap: 4px;
+      min-width: 60px; position: relative;
+    }
+    .ps-item::after {
+      content: '';
+      position: absolute; left: 50%; top: 10px;
+      height: 2px; width: 100%;
+      background: var(--border);
+      z-index: 0;
+    }
+    .ps-item:last-child::after { display: none; }
+    .ps-dot {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--border); border: 2px solid var(--border);
+      font-size: .7rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-muted); position: relative; z-index: 1;
+      transition: background .2s, border-color .2s;
+    }
+    .ps-dot.done { background: var(--blue); border-color: var(--blue); color: #fff; }
+    .ps-dot.current { background: #fff; border-color: var(--blue); color: var(--blue); }
+    .ps-label { font-size: .68rem; color: var(--text-muted); text-align: center; line-height: 1.2; max-width: 56px; }
+
+    /* Steps */
+    .step { display: none; }
+    .step.active { display: block; animation: fadeIn .25s ease; }
+    @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+
+    .step-header { margin-bottom: 24px; }
+    .step-num { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: var(--blue); margin-bottom: 8px; }
+    .step-header h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 6px; line-height: 1.3; color: var(--text); }
+    .step-header p { color: var(--text-muted); font-size: .92rem; margin: 0; }
+
+    /* Options */
+    .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 24px; }
+    .options-col { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
+    .option-btn {
+      background: var(--white);
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      text-align: left;
+      cursor: pointer;
+      transition: border-color .15s, background .15s, box-shadow .15s;
+      display: flex; align-items: flex-start; gap: 12px;
+      width: 100%;
+    }
+    .option-btn:hover { border-color: var(--blue); background: var(--blue-light); }
+    .option-btn.selected { border-color: var(--blue); background: var(--blue-light); }
+    .opt-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 1px; }
+    .opt-text strong { display: block; font-size: .9rem; font-weight: 700; margin-bottom: 2px; color: var(--text); }
+    .opt-text span { font-size: .82rem; color: var(--text-muted); line-height: 1.3; }
+
+    /* Multi-select */
+    .multi-hint { font-size: .8rem; color: var(--text-muted); margin-bottom: 12px; }
+    .option-btn.multi { position: relative; }
+    .option-btn.multi.selected::after {
+      content: '✓';
+      position: absolute; top: 10px; right: 12px;
+      width: 20px; height: 20px; border-radius: 50%;
+      background: var(--blue); color: #fff;
+      font-size: .75rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* Nav buttons */
+    .step-nav { display: flex; gap: 12px; align-items: center; }
+    .btn-back-q {
+      background: none; border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 10px 20px;
+      font-size: .88rem; cursor: pointer; color: var(--text-muted);
+    }
+    .btn-back-q:hover { border-color: var(--text-muted); color: var(--text); }
+    .btn-next-q {
+      background: var(--blue); color: #fff;
+      border: none; border-radius: var(--radius);
+      padding: 11px 24px; font-size: .9rem; font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-next-q:hover { background: var(--blue-dark); }
+    .btn-next-q:disabled { opacity: .4; cursor: default; }
+
+    /* Result */
+    .result-wrap { display: none; animation: fadeIn .3s ease; }
+    .result-wrap.visible { display: block; }
+    .result-score-bar {
+      display: flex; gap: 8px; margin: 20px 0;
+    }
+    .rs-item { flex: 1; }
+    .rs-label { font-size: .78rem; font-weight: 600; color: var(--text-muted); margin-bottom: 4px; text-align: center; }
+    .rs-track { height: 8px; background: var(--border); border-radius: 99px; overflow: hidden; }
+    .rs-fill { height: 100%; border-radius: 99px; }
+
+    .result-main {
+      background: var(--white);
+      border: 2px solid var(--blue);
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(26,86,219,.12);
+    }
+    .result-badge-top {
+      display: inline-block;
+      background: var(--blue-light);
+      color: var(--blue);
+      font-size: .78rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .06em;
+      padding: 5px 14px; border-radius: 99px;
+      margin-bottom: 20px;
+    }
+    .result-logo {
+      width: 80px; height: 80px; border-radius: 20px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 16px; font-size: 2rem;
+    }
+    .result-main h2 { font-size: 1.8rem; font-weight: 900; margin-bottom: 8px; }
+    .result-tagline { font-size: 1rem; color: var(--text-muted); margin-bottom: 24px; }
+    .result-why {
+      text-align: left;
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 24px;
+    }
+    .result-why h3 { font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 12px; }
+    .result-why ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .result-why ul li { font-size: .9rem; display: flex; gap: 8px; align-items: flex-start; line-height: 1.45; }
+    .result-why ul li::before { content: '✓'; color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+    .result-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+    .btn-restart-q {
+      background: none; border: 2px solid var(--border);
+      border-radius: var(--radius); padding: 10px 22px;
+      font-size: .88rem; font-weight: 600; cursor: pointer; color: var(--text-muted);
+    }
+    .btn-restart-q:hover { border-color: var(--blue); color: var(--blue); }
+
+    /* Alternatives */
+    .alts-section { margin-top: 40px; }
+    .alts-section h3 { font-size: 1rem; font-weight: 700; margin-bottom: 12px; }
+    .alts-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; }
+    .alt-card-sm {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      font-size: .85rem;
+    }
+    .alt-card-sm strong { display: block; margin-bottom: 2px; }
+    .alt-card-sm span { color: var(--text-muted); font-size: .8rem; }
+
+    /* Step loading dots */
+    .loading-dots { text-align: center; padding: 40px; color: var(--text-muted); }
+
+    @media (max-width: 580px) {
+      .options-grid { grid-template-columns: 1fr; }
+      .alts-grid { grid-template-columns: 1fr 1fr; }
+      .result-actions { flex-direction: column; }
+    }
+    @media (max-width: 400px) {
+      .alts-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="index.html" class="site-logo">Logiciel<span>RH</span>.fr</a>
+      <nav class="site-nav">
+        <a href="comparatifs/index.html">Comparatifs</a>
+        <a href="guides/index.html">Guides</a>
+        <a href="alternatives/index.html">Alternatives</a>
+        <a href="avis/index.html">Avis</a>
+        <a href="trouver-mon-logiciel.html" class="nav-cta" style="background:var(--blue-dark)">Trouver mon logiciel</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="tool-hero">
+    <div class="breadcrumb"><a href="index.html">Accueil</a> › Trouver mon logiciel</div>
+    <h1>Trouvez votre logiciel RH<br>en 2 minutes chrono</h1>
+    <p>8 questions pour une recommandation sur mesure — gratuit, sans email requis.</p>
+    <div class="hero-badges">
+      <span class="hero-badge">⚡ 2 minutes</span>
+      <span class="hero-badge">🎯 Recommandation personnalisée</span>
+      <span class="hero-badge">🔒 100% gratuit</span>
+    </div>
+  </div>
+
+  <div class="quiz-wrap">
+
+    <!-- Progress bar -->
+    <div class="progress-wrap" id="progressWrap">
+      <div class="progress-top">
+        <span id="progressLabel">Question 1 sur 8</span>
+        <span id="progressPct">13%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill" style="width:13%"></div>
+      </div>
+      <div class="progress-steps">
+        <div class="ps-item">
+          <div class="ps-dot current" id="psDot1">1</div>
+          <div class="ps-label">Taille</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-dot" id="psDot2">2</div>
+          <div class="ps-label">Logiciel actuel</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-dot" id="psDot3">3</div>
+          <div class="ps-label">Gestion RH</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-dot" id="psDot4">4</div>
+          <div class="ps-label">Besoin</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-dot" id="psDot5">5</div>
+          <div class="ps-label">Budget</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-dot" id="psDot6">6</div>
+          <div class="ps-label">Structure</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-dot" id="psDot7">7</div>
+          <div class="ps-label">Secteur</div>
+        </div>
+        <div class="ps-item">
+          <div class="ps-dot" id="psDot8">8</div>
+          <div class="ps-label">Délai</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ÉTAPE 1 — Taille -->
+    <div class="step active" id="step1">
+      <div class="step-header">
+        <div class="step-num">Question 1 / 8 — Votre entreprise</div>
+        <h2>Combien de salariés compte votre entreprise ?</h2>
+        <p>Le nombre de salariés est le premier critère de choix : il détermine la complexité de la paie, le besoin en SIRH et l'enveloppe budgétaire raisonnable.</p>
+      </div>
+      <div class="options-grid">
+        <button class="option-btn" onclick="goToStep(2, this)" data-val="1-9">
+          <span class="opt-icon">🌱</span>
+          <div class="opt-text">
+            <strong>1 à 9 salariés</strong>
+            <span>TPE, auto-entrepreneur avec salariés, micro-structure</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(2, this)" data-val="10-49">
+          <span class="opt-icon">🏢</span>
+          <div class="opt-text">
+            <strong>10 à 49 salariés</strong>
+            <span>Petite entreprise, PME naissante</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(2, this)" data-val="50-199">
+          <span class="opt-icon">🏗️</span>
+          <div class="opt-text">
+            <strong>50 à 199 salariés</strong>
+            <span>PME avec service RH structuré</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(2, this)" data-val="200+">
+          <span class="opt-icon">🏭</span>
+          <div class="opt-text">
+            <strong>200 salariés et plus</strong>
+            <span>Grande PME, ETI ou groupe</span>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- ÉTAPE 2 — Logiciel actuel -->
+    <div class="step" id="step2">
+      <div class="step-header">
+        <div class="step-num">Question 2 / 8 — Situation actuelle</div>
+        <h2>Quel logiciel de paie ou RH utilisez-vous actuellement ?</h2>
+        <p>Connaître votre point de départ nous permet de mieux cibler les outils compatibles avec une migration et d'identifier les doublons à éviter.</p>
+      </div>
+      <div class="options-col">
+        <button class="option-btn" onclick="goToStep(3, this)" data-val="none">
+          <span class="opt-icon">📄</span>
+          <div class="opt-text">
+            <strong>Aucun logiciel — gestion manuelle ou Excel</strong>
+            <span>Vous partez de zéro ou d'un processus non automatisé</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(3, this)" data-val="payfit">
+          <span class="opt-icon">💙</span>
+          <div class="opt-text">
+            <strong>PayFit</strong>
+            <span>Vous utilisez PayFit et souhaitez comparer ou migrer</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(3, this)" data-val="silae">
+          <span class="opt-icon">💼</span>
+          <div class="opt-text">
+            <strong>Silae / Cabinet comptable</strong>
+            <span>La paie est gérée par votre cabinet comptable via Silae</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(3, this)" data-val="sage">
+          <span class="opt-icon">📊</span>
+          <div class="opt-text">
+            <strong>Sage Paie / outil on-premise</strong>
+            <span>Vous avez un logiciel installé localement et souhaitez passer au cloud</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(3, this)" data-val="other">
+          <span class="opt-icon">🔧</span>
+          <div class="opt-text">
+            <strong>Un autre outil (Factorial, Lucca, Nibelis…)</strong>
+            <span>Vous êtes sur un autre logiciel et souhaitez comparer</span>
+          </div>
+        </button>
+      </div>
+      <div class="step-nav">
+        <button class="btn-back-q" onclick="goToStep(1)">← Retour</button>
+      </div>
+    </div>
+
+    <!-- ÉTAPE 3 — Qui gère la RH -->
+    <div class="step" id="step3">
+      <div class="step-header">
+        <div class="step-num">Question 3 / 8 — Organisation interne</div>
+        <h2>Qui gère la paie et les ressources humaines dans votre entreprise ?</h2>
+        <p>La complexité de l'outil à choisir dépend fortement de qui l'utilisera au quotidien et de son niveau d'expertise.</p>
+      </div>
+      <div class="options-col">
+        <button class="option-btn" onclick="goToStep(4, this)" data-val="founder">
+          <span class="opt-icon">👤</span>
+          <div class="opt-text">
+            <strong>Le dirigeant lui-même (sans expertise RH/paie)</strong>
+            <span>Pas de spécialiste en interne, le fondateur fait tout</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(4, this)" data-val="admin">
+          <span class="opt-icon">📋</span>
+          <div class="opt-text">
+            <strong>Un assistant(e) administratif(ve) ou office manager</strong>
+            <span>Quelqu'un en charge de l'admin, sans expertise paie dédiée</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(4, this)" data-val="rh">
+          <span class="opt-icon">👥</span>
+          <div class="opt-text">
+            <strong>Un RH ou DRH dédié</strong>
+            <span>Un professionnel RH à plein temps ou à mi-temps</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(4, this)" data-val="compta">
+          <span class="opt-icon">🧮</span>
+          <div class="opt-text">
+            <strong>Un expert-comptable ou cabinet externe</strong>
+            <span>La paie est externalisée, vous cherchez à internaliser</span>
+          </div>
+        </button>
+      </div>
+      <div class="step-nav">
+        <button class="btn-back-q" onclick="goToStep(2)">← Retour</button>
+      </div>
+    </div>
+
+    <!-- ÉTAPE 4 — Besoin principal -->
+    <div class="step" id="step4">
+      <div class="step-header">
+        <div class="step-num">Question 4 / 8 — Vos priorités</div>
+        <h2>Quels sont vos besoins principaux ? <span style="font-size:.8rem;color:var(--text-muted);font-weight:400">(plusieurs choix possibles)</span></h2>
+        <p>Sélectionnez tout ce qui vous correspond — nous pondérerons chaque critère dans notre recommandation finale.</p>
+      </div>
+      <div class="multi-hint">Sélectionnez toutes les cases qui vous correspondent, puis cliquez sur "Continuer".</div>
+      <div class="options-grid" id="needsGrid">
+        <button class="option-btn multi" data-val="paie">
+          <span class="opt-icon">💰</span>
+          <div class="opt-text">
+            <strong>Automatiser la paie</strong>
+            <span>Bulletins, DSN, charges sociales</span>
+          </div>
+        </button>
+        <button class="option-btn multi" data-val="conges">
+          <span class="opt-icon">🏖️</span>
+          <div class="opt-text">
+            <strong>Gestion des congés et absences</strong>
+            <span>Pose de congés, suivi RTT, absences</span>
+          </div>
+        </button>
+        <button class="option-btn multi" data-val="recrutement">
+          <span class="opt-icon">🔍</span>
+          <div class="opt-text">
+            <strong>Recrutement</strong>
+            <span>Annonces, candidatures, pipeline de recrutement</span>
+          </div>
+        </button>
+        <button class="option-btn multi" data-val="temps">
+          <span class="opt-icon">⏱️</span>
+          <div class="opt-text">
+            <strong>Suivi du temps et présences</strong>
+            <span>Pointage, heures supplémentaires, modulation</span>
+          </div>
+        </button>
+        <button class="option-btn multi" data-val="onboarding">
+          <span class="opt-icon">🎓</span>
+          <div class="opt-text">
+            <strong>Onboarding & formation</strong>
+            <span>Intégration des nouveaux, plan de formation</span>
+          </div>
+        </button>
+        <button class="option-btn multi" data-val="frais">
+          <span class="opt-icon">🧾</span>
+          <div class="opt-text">
+            <strong>Notes de frais</strong>
+            <span>Remboursements, justificatifs, virements</span>
+          </div>
+        </button>
+      </div>
+      <div class="step-nav">
+        <button class="btn-back-q" onclick="goToStep(3)">← Retour</button>
+        <button class="btn-next-q" id="btnNext4" onclick="goToStep(5)">Continuer →</button>
+      </div>
+    </div>
+
+    <!-- ÉTAPE 5 — Budget -->
+    <div class="step" id="step5">
+      <div class="step-header">
+        <div class="step-num">Question 5 / 8 — Budget</div>
+        <h2>Quel est votre budget mensuel par salarié ?</h2>
+        <p>Les tarifs affichés sont hors taxes, hors frais de setup et hors options complémentaires. Les prix réels se négocient souvent.</p>
+      </div>
+      <div class="options-col">
+        <button class="option-btn" onclick="goToStep(6, this)" data-val="<5">
+          <span class="opt-icon">💸</span>
+          <div class="opt-text">
+            <strong>Moins de 5 €/salarié/mois</strong>
+            <span>Budget serré — fonctionnalités de base suffisent</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(6, this)" data-val="5-10">
+          <span class="opt-icon">💵</span>
+          <div class="opt-text">
+            <strong>5 à 10 €/salarié/mois</strong>
+            <span>Budget standard pour une PME — couvre la majorité des besoins</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(6, this)" data-val="10-20">
+          <span class="opt-icon">💳</span>
+          <div class="opt-text">
+            <strong>10 à 20 €/salarié/mois</strong>
+            <span>Budget confortable — accès aux fonctionnalités avancées</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(6, this)" data-val=">20">
+          <span class="opt-icon">🏆</span>
+          <div class="opt-text">
+            <strong>Plus de 20 €/salarié/mois</strong>
+            <span>Budget premium — solution enterprise avec accompagnement complet</span>
+          </div>
+        </button>
+      </div>
+      <div class="step-nav">
+        <button class="btn-back-q" onclick="goToStep(4)">← Retour</button>
+      </div>
+    </div>
+
+    <!-- ÉTAPE 6 — Structure -->
+    <div class="step" id="step6">
+      <div class="step-header">
+        <div class="step-num">Question 6 / 8 — Structure</div>
+        <h2>Votre entreprise a-t-elle plusieurs établissements ou des conventions collectives multiples ?</h2>
+        <p>La complexité de la paie (multi-sites, multi-CCN) élimine certains outils et en favorise d'autres comme Silae ou Nibelis.</p>
+      </div>
+      <div class="options-col">
+        <button class="option-btn" onclick="goToStep(7, this)" data-val="simple">
+          <span class="opt-icon">🏠</span>
+          <div class="opt-text">
+            <strong>Un seul établissement, une seule convention collective</strong>
+            <span>Situation standard pour une majorité de PME</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(7, this)" data-val="multi-site">
+          <span class="opt-icon">🗺️</span>
+          <div class="opt-text">
+            <strong>Plusieurs établissements (mêmes CCN)</strong>
+            <span>Multi-sites mais sans complexité de conventions collectives</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(7, this)" data-val="multi-ccn">
+          <span class="opt-icon">📑</span>
+          <div class="opt-text">
+            <strong>Plusieurs conventions collectives différentes</strong>
+            <span>Paie complexe nécessitant une gestion multi-CCN</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(7, this)" data-val="multi-pays">
+          <span class="opt-icon">🌍</span>
+          <div class="opt-text">
+            <strong>Présence dans plusieurs pays</strong>
+            <span>Salariés en France et à l'étranger — multi-législations</span>
+          </div>
+        </button>
+      </div>
+      <div class="step-nav">
+        <button class="btn-back-q" onclick="goToStep(5)">← Retour</button>
+      </div>
+    </div>
+
+    <!-- ÉTAPE 7 — Secteur -->
+    <div class="step" id="step7">
+      <div class="step-header">
+        <div class="step-num">Question 7 / 8 — Secteur d'activité</div>
+        <h2>Dans quel secteur évolue votre entreprise ?</h2>
+        <p>Certains logiciels sont spécialisés ou particulièrement bien adaptés à des secteurs précis.</p>
+      </div>
+      <div class="options-grid">
+        <button class="option-btn" onclick="goToStep(8, this)" data-val="tech">
+          <span class="opt-icon">💻</span>
+          <div class="opt-text">
+            <strong>Tech / Startup / Numérique</strong>
+            <span>SaaS, ESN, agences digitales</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(8, this)" data-val="chr">
+          <span class="opt-icon">🍽️</span>
+          <div class="opt-text">
+            <strong>CHR / Commerce / Retail</strong>
+            <span>Hôtellerie, restauration, commerce de détail</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(8, this)" data-val="industrie">
+          <span class="opt-icon">🔩</span>
+          <div class="opt-text">
+            <strong>Industrie / BTP / Logistique</strong>
+            <span>Fabrication, construction, transport</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(8, this)" data-val="sante">
+          <span class="opt-icon">🏥</span>
+          <div class="opt-text">
+            <strong>Santé / Médico-social</strong>
+            <span>Cliniques, EHPAD, cabinets médicaux, associations</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(8, this)" data-val="conseil">
+          <span class="opt-icon">💼</span>
+          <div class="opt-text">
+            <strong>Conseil / Services aux entreprises</strong>
+            <span>Cabinets conseil, juridique, comptabilité</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="goToStep(8, this)" data-val="autre">
+          <span class="opt-icon">📋</span>
+          <div class="opt-text">
+            <strong>Autre secteur</strong>
+            <span>Association, collectivité, éducation…</span>
+          </div>
+        </button>
+      </div>
+      <div class="step-nav">
+        <button class="btn-back-q" onclick="goToStep(6)">← Retour</button>
+      </div>
+    </div>
+
+    <!-- ÉTAPE 8 — Délai -->
+    <div class="step" id="step8">
+      <div class="step-header">
+        <div class="step-num">Question 8 / 8 — Votre calendrier</div>
+        <h2>Quel est votre délai de mise en place souhaité ?</h2>
+        <p>Certains outils s'implémentent en quelques jours, d'autres nécessitent un projet de 2 à 3 mois. Votre calendrier influe sur le choix.</p>
+      </div>
+      <div class="options-col">
+        <button class="option-btn" onclick="computeResult(this)" data-val="urgent">
+          <span class="opt-icon">🚀</span>
+          <div class="opt-text">
+            <strong>Urgent — moins d'un mois</strong>
+            <span>Besoin immédiat, première paie à lancer rapidement</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="computeResult(this)" data-val="1-3m">
+          <span class="opt-icon">📅</span>
+          <div class="opt-text">
+            <strong>Dans 1 à 3 mois</strong>
+            <span>Vous avez le temps de bien paramétrer et former les équipes</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="computeResult(this)" data-val="6m+">
+          <span class="opt-icon">🗓️</span>
+          <div class="opt-text">
+            <strong>Dans 3 à 6 mois ou plus</strong>
+            <span>Déploiement stratégique avec un projet structuré</span>
+          </div>
+        </button>
+        <button class="option-btn" onclick="computeResult(this)" data-val="recherche">
+          <span class="opt-icon">🔍</span>
+          <div class="opt-text">
+            <strong>Je fais juste des recherches pour l'instant</strong>
+            <span>Benchmarking en cours, pas de décision imminente</span>
+          </div>
+        </button>
+      </div>
+      <div class="step-nav">
+        <button class="btn-back-q" onclick="goToStep(7)">← Retour</button>
+      </div>
+    </div>
+
+    <!-- RÉSULTAT -->
+    <div class="result-wrap" id="resultWrap">
+      <div class="result-main">
+        <div class="result-badge-top">Recommandation personnalisée</div>
+        <div class="result-logo" id="rLogo"></div>
+        <h2 id="rName" style="color:var(--blue)">—</h2>
+        <p class="result-tagline" id="rTagline">—</p>
+        <p id="rDesc" style="font-size:.92rem;color:var(--text-muted);line-height:1.65;margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto">—</p>
+        <div class="result-why" id="rWhy">
+          <h3>Pourquoi ce choix ?</h3>
+          <ul id="rWhyList"></ul>
+        </div>
+        <div class="result-actions">
+          <a href="comparatifs/payfit-vs-factorial-2026.html" class="btn btn-primary" id="rCta">Lire notre analyse complète →</a>
+          <button class="btn-restart-q" onclick="restartQuiz()">↺ Recommencer</button>
+        </div>
+      </div>
+
+      <div class="alts-section">
+        <h3>Autres solutions à explorer</h3>
+        <div class="alts-grid" id="rAlts"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">Logiciel<span>RH</span>.fr</div>
+          <p>Comparatifs indépendants et guides sur les logiciels RH, paie et SIRH pour les PME françaises.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Comparatifs</h4>
+          <ul>
+            <li><a href="comparatifs/payfit-vs-factorial-2026.html">PayFit vs Factorial</a></li>
+            <li><a href="comparatifs/index.html">Tous les comparatifs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Catégories</h4>
+          <ul>
+            <li><a href="guides/index.html">Guides pratiques</a></li>
+            <li><a href="alternatives/index.html">Alternatives</a></li>
+            <li><a href="avis/index.html">Avis 2026</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Le site</h4>
+          <ul>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="methodologie.html">Méthodologie</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="politique-de-confidentialite.html">Politique de confidentialité</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-affiliation">
+        Certains liens sont des liens d'affiliation. Cela ne biaise pas nos recommandations.
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 LogicielRH.fr</span>
+        <span>Données vérifiées sur les sites officiels des éditeurs</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // === STATE ===
+    const answers = { needs: [] };
+    let currentStep = 1;
+    const TOTAL = 8;
+
+    // === NAVIGATION ===
+    function goToStep(n, btn) {
+      if (btn) {
+        const val = btn.dataset.val;
+        const stepAnswerKey = {1:'size',2:'current',3:'manager',5:'budget',6:'structure',7:'sector',8:'delay'};
+        if (stepAnswerKey[currentStep]) answers[stepAnswerKey[currentStep]] = val;
+        // mark selection
+        btn.closest('.options-grid, .options-col').querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+      }
+
+      // step dots
+      document.getElementById('psDot' + currentStep).className = 'ps-dot done';
+      document.getElementById('step' + currentStep).classList.remove('active');
+
+      currentStep = n;
+      if (n <= TOTAL) {
+        document.getElementById('step' + n).classList.add('active');
+        document.getElementById('psDot' + n).className = 'ps-dot current';
+        const pct = Math.round((n / TOTAL) * 100);
+        document.getElementById('progressFill').style.width = pct + '%';
+        document.getElementById('progressLabel').textContent = 'Question ' + n + ' sur ' + TOTAL;
+        document.getElementById('progressPct').textContent = pct + '%';
+        window.scrollTo({top: 0, behavior: 'smooth'});
+      }
+    }
+
+    // Multi-select q4
+    document.querySelectorAll('#needsGrid .option-btn.multi').forEach(btn => {
+      btn.addEventListener('click', function() {
+        this.classList.toggle('selected');
+        const val = this.dataset.val;
+        if (this.classList.contains('selected')) {
+          if (!answers.needs.includes(val)) answers.needs.push(val);
+        } else {
+          answers.needs = answers.needs.filter(v => v !== val);
+        }
+      });
+    });
+
+    // === COMPUTE RESULT ===
+    function computeResult(btn) {
+      if (btn) {
+        btn.closest('.options-col').querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        answers.delay = btn.dataset.val;
+      }
+
+      // Hide quiz, show progress
+      document.getElementById('step8').classList.remove('active');
+      document.getElementById('progressWrap').style.display = 'none';
+
+      // Scoring
+      const s = answers.size, cur = answers.current, mgr = answers.manager;
+      const needs = answers.needs, budget = answers.budget;
+      const struct = answers.structure, sector = answers.sector, delay = answers.delay;
+
+      let rec = pickRec(s, cur, mgr, needs, budget, struct, sector, delay);
+      renderResult(rec);
+      document.getElementById('resultWrap').classList.add('visible');
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    function pickRec(size, cur, mgr, needs, budget, struct, sector, delay) {
+      // Special cases
+      if (sector === 'chr') {
+        return {
+          name: 'Skello', color: '#16a34a', bg: '#f0fdf4', icon: '📅',
+          tagline: 'La référence pour la gestion des plannings en CHR et retail',
+          desc: 'Skello est conçu spécifiquement pour les secteurs à horaires variables. Sa gestion des plannings, du pointage et des contrats courts est imbattable dans la restauration, l\'hôtellerie et le commerce.',
+          reasons: ['Planning drag & drop avec contraintes légales automatiques', 'Gestion des extras, CDD courts et heures sup', 'Conformité CCN CHR et retail intégrée', 'Application mobile pour les équipes terrain', 'Intégration paie via PayFit ou Silae'],
+          cta: 'avis/index.html',
+          alts: [{name:'PayFit',desc:'Pour la paie'},{name:'Factorial',desc:'Pour le SIRH'},{name:'Kelio',desc:'Alternative planning'}]
+        };
+      }
+      if (struct === 'multi-ccn' || struct === 'multi-pays' || size === '200+') {
+        return {
+          name: 'Silae', color: '#7c3aed', bg: '#f5f3ff', icon: '💼',
+          tagline: 'La référence paie pour les structures complexes',
+          desc: 'Silae est le moteur de paie le plus puissant du marché français. Il gère les conventions collectives multiples, les multi-établissements, les paies atypiques et s\'intègre aux outils SIRH du marché.',
+          reasons: ['Gestion de 400+ conventions collectives', 'Multi-établissements et multi-sociétés natif', 'Utilisé par 30 000+ cabinets comptables en France', 'Reporting paie très avancé', 'Intégrations SIRH (Lucca, Factorial, Cegid)'],
+          cta: 'comparatifs/index.html',
+          alts: [{name:'Nibelis',desc:'Alternative experte'},{name:'Cegid',desc:'Pour les grandes structures'},{name:'PayFit',desc:'Si la structure se simplifie'}]
+        };
+      }
+      if ((size === '1-9' || size === '10-49') && mgr !== 'rh' && delay === 'urgent') {
+        return {
+          name: 'PayFit', color: '#1A56DB', bg: '#eff6ff', icon: '💙',
+          tagline: 'La paie automatisée idéale pour TPE et startups',
+          desc: 'PayFit est la solution la plus rapide à déployer pour une PME sans service RH. Mise en production en moins d\'une semaine, paie 100% automatisée, DSN native et interface ultra-simple.',
+          reasons: ['Onboarding en moins d\'une semaine', 'Paie et DSN 100% automatisées', '350+ conventions collectives couvertes', 'Interface intuitive sans formation', 'Support francophone très réactif'],
+          cta: 'comparatifs/payfit-vs-factorial-2026.html',
+          alts: [{name:'Factorial',desc:'Si vous avez un RH dédié'},{name:'Silae',desc:'Pour les paies complexes'},{name:'Lucca',desc:'Pour un SIRH modulaire'}]
+        };
+      }
+      if (needs.includes('recrutement') || needs.includes('onboarding') || (size === '50-199' && mgr === 'rh')) {
+        return {
+          name: 'Factorial', color: '#FF5C35', bg: '#fff4f0', icon: '📊',
+          tagline: 'Le SIRH complet pour PME de 20 à 300 salariés',
+          desc: 'Factorial couvre l\'intégralité de la chaîne RH : recrutement, onboarding, gestion des congés, suivi du temps, entretiens, formation et paie. Un seul outil pour votre DRH.',
+          reasons: ['SIRH complet en un seul outil', 'Module recrutement avec pipeline natif', 'Gestion des entretiens et de la formation', 'Paie française intégrée (ou via Silae)', 'Application mobile soignée pour les collaborateurs'],
+          cta: 'comparatifs/payfit-vs-factorial-2026.html',
+          alts: [{name:'Lucca',desc:'SIRH modulaire français'},{name:'PayFit',desc:'Si la paie prime sur le SIRH'},{name:'BambooHR',desc:'Alternative internationale'}]
+        };
+      }
+      if (size === '50-199' && (struct === 'simple' || struct === 'multi-site')) {
+        return {
+          name: 'Lucca', color: '#0891b2', bg: '#ecfeff', icon: '🔷',
+          tagline: 'Le SIRH modulaire français pour PME exigeantes',
+          desc: 'Lucca propose des modules à la carte que vous activez selon vos besoins : Pagga (paie via Silae), Figgo (congés), Cleemy (frais), Elevo (entretiens). Idéal pour les PME françaises structurées.',
+          reasons: ['Modules indépendants — payez ce que vous utilisez', 'Excellente expérience collaborateur', 'Intégration native avec Silae pour la paie', 'Made in France, support en français', 'Très bonne conformité droit du travail'],
+          cta: 'comparatifs/index.html',
+          alts: [{name:'Factorial',desc:'Alternative tout-en-un'},{name:'PayFit',desc:'Si vous privilégiez la paie'},{name:'Cegid',desc:'Pour les structures plus grandes'}]
+        };
+      }
+      if (sector === 'sante' || needs.includes('temps') && size !== '1-9') {
+        return {
+          name: 'Kelio', color: '#0f766e', bg: '#f0fdfa', icon: '⏱️',
+          tagline: 'La référence pour la gestion des temps et accès',
+          desc: 'Kelio (ex-Bodet Software) est le spécialiste de la gestion des temps, des plannings et du contrôle d\'accès. Particulièrement apprécié dans la santé, l\'industrie et les collectivités.',
+          reasons: ['Gestion des temps très poussée', 'Contrôle d\'accès intégrable', 'Adapté aux secteurs réglementés (santé, industrie)', 'Terminaux de pointage physiques disponibles', 'Interfaçage avec les principaux logiciels de paie'],
+          cta: 'comparatifs/index.html',
+          alts: [{name:'PayFit',desc:'Pour la paie'},{name:'Skello',desc:'Pour le planning'},{name:'Factorial',desc:'Pour le SIRH complet'}]
+        };
+      }
+      // Default
+      return {
+        name: 'PayFit', color: '#1A56DB', bg: '#eff6ff', icon: '💙',
+        tagline: 'La paie automatisée idéale pour les PME françaises',
+        desc: 'Pour la majorité des PME françaises, PayFit est un excellent point de départ : déploiement rapide, paie automatisée et interface accessible à tous, même sans expertise RH.',
+        reasons: ['Démarrage en moins d\'une semaine', 'Paie et DSN automatisées', '350+ conventions collectives', 'Interface sans formation requise', 'Hébergement 100% France (ISO 27001)'],
+        cta: 'comparatifs/payfit-vs-factorial-2026.html',
+        alts: [{name:'Factorial',desc:'Si vous avez un RH dédié'},{name:'Silae',desc:'Pour une paie complexe'},{name:'Lucca',desc:'Pour un SIRH modulaire'}]
+      };
+    }
+
+    function renderResult(rec) {
+      document.getElementById('rLogo').innerHTML = '<span style="font-size:2.2rem">' + rec.icon + '</span>';
+      document.getElementById('rLogo').style.background = rec.bg;
+      document.getElementById('rName').textContent = rec.name;
+      document.getElementById('rName').style.color = rec.color;
+      document.getElementById('rTagline').textContent = rec.tagline;
+      document.getElementById('rDesc').textContent = rec.desc;
+      document.getElementById('rWhyList').innerHTML = rec.reasons.map(r => '<li>' + r + '</li>').join('');
+      document.getElementById('rCta').href = rec.cta;
+      document.getElementById('rAlts').innerHTML = rec.alts.map(a =>
+        '<div class="alt-card-sm"><strong>' + a.name + '</strong><span>' + a.desc + '</span></div>'
+      ).join('');
+    }
+
+    function restartQuiz() {
+      answers.needs = [];
+      ['size','current','manager','budget','structure','sector','delay'].forEach(k => delete answers[k]);
+      document.getElementById('resultWrap').classList.remove('visible');
+      document.getElementById('progressWrap').style.display = 'block';
+      document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
+      for (let i = 1; i <= 8; i++) {
+        const dot = document.getElementById('psDot' + i);
+        if (dot) dot.className = 'ps-dot' + (i === 1 ? ' current' : '');
+      }
+      currentStep = 1;
+      document.getElementById('step1').classList.add('active');
+      document.getElementById('progressFill').style.width = '13%';
+      document.getElementById('progressLabel').textContent = 'Question 1 sur 8';
+      document.getElementById('progressPct').textContent = '13%';
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+  </script>
+
+</body>
+</html>
