@@ -149,8 +149,16 @@
     }
 
     .article-hero-right {
-      text-align: right;
       flex-shrink: 0;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 12px;
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      min-width: 240px;
     }
 
     .article-hero .badge {
@@ -177,12 +185,12 @@
 
     .article-hero-meta {
       display: flex;
-      justify-content: flex-end;
-      gap: 20px;
+      flex-direction: column;
+      gap: 6px;
       flex-wrap: wrap;
       font-size: .82rem;
       color: rgba(255,255,255,.7);
-      margin-top: 8px;
+      margin-top: 0;
     }
 
     /* ====== LAYOUT 2 COLONNES ====== */
@@ -643,12 +651,12 @@
       }
 
       .article-hero-right {
-        text-align: center;
         width: 100%;
+        align-items: center;
       }
 
       .article-hero-meta {
-        justify-content: center;
+        align-items: center;
       }
 
       .section-alt {
@@ -662,7 +670,7 @@
     }
 
     .article-hero .author-line {
-      justify-content: flex-end;
+      justify-content: flex-start;
       color: rgba(255,255,255,.85);
     }
     .article-hero .author-line a {
@@ -715,9 +723,9 @@
       <div class="article-hero-right">
         <div class="author-line"><div class="author-avatar"><img src="../assets/images/thomas-renaud.jpg" alt="Thomas Renaud"></div> Par <a href="../auteur/thomas-renaud.html">Thomas Renaud</a></div>
         <div class="article-hero-meta">
-          <span>Mis a jour le 19 fevrier 2026</span>
-          <span>Lecture : 12 minutes</span>
-          <span>Donnees verifiees sur les sites officiels</span>
+          <span>📅 Mis a jour le 19 fevrier 2026</span>
+          <span>⏱ Lecture : 12 minutes</span>
+          <span>✅ Donnees verifiees</span>
         </div>
       </div>
     </div>
