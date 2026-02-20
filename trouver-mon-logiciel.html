@@ -177,7 +177,10 @@
     .result-logo {
       width: 80px; height: 80px; border-radius: 20px;
       display: flex; align-items: center; justify-content: center;
-      margin: 0 auto 16px; font-size: 2rem;
+      margin: 0 auto 16px; overflow: hidden;
+    }
+    .result-logo img {
+      width: 54px; height: 54px; object-fit: contain; border-radius: 10px;
     }
     .result-main h2 { font-size: 1.8rem; font-weight: 900; margin-bottom: 8px; }
     .result-tagline { font-size: 1rem; color: var(--text-muted); margin-bottom: 24px; }
@@ -211,8 +214,10 @@
       padding: 12px 14px;
       font-size: .85rem;
     }
-    .alt-card-sm strong { display: block; margin-bottom: 2px; }
-    .alt-card-sm span { color: var(--text-muted); font-size: .8rem; }
+    .alt-card-sm { display: flex; align-items: center; gap: 10px; }
+    .alt-card-sm img { width: 32px; height: 32px; object-fit: contain; border-radius: 8px; flex-shrink: 0; }
+    .alt-card-sm .alt-info strong { display: block; margin-bottom: 2px; }
+    .alt-card-sm .alt-info span { color: var(--text-muted); font-size: .8rem; }
 
     /* Step loading dots */
     .loading-dots { text-align: center; padding: 40px; color: var(--text-muted); }
@@ -706,14 +711,14 @@
           <p>Comparatifs indépendants et guides sur les logiciels RH, paie et SIRH pour les PME françaises.</p>
         </div>
         <div class="footer-col">
-          <h4>Comparatifs</h4>
+          <p class="footer-col-title">Comparatifs</p>
           <ul>
             <li><a href="comparatifs/payfit-vs-factorial.html">PayFit vs Factorial</a></li>
             <li><a href="comparatifs/">Tous les comparatifs</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Ressources</h4>
+          <p class="footer-col-title">Ressources</p>
           <ul>
             <li><a href="guides/choisir-logiciel-paie.html">Choisir son logiciel de paie</a></li>
             <li><a href="alternatives/payfit.html">Alternatives à PayFit</a></li>
@@ -721,7 +726,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Le site</h4>
+          <p class="footer-col-title">Le site</p>
           <ul>
             <li><a href="a-propos.html">À propos</a></li>
             <li><a href="methodologie.html">Méthodologie</a></li>
@@ -807,86 +812,102 @@
 
     function pickRec(size, cur, mgr, needs, budget, struct, sector, delay) {
       // Special cases
+      var logos = {
+        'PayFit': 'assets/images/payfit-logo.png',
+        'Factorial': 'assets/images/factorial.png',
+        'Lucca': 'assets/images/luca-logo.webp',
+        'Silae': 'assets/images/silae-logo.png',
+        'Kelio': 'assets/images/kelio-logo.webp',
+        'Skello': 'assets/images/skello logo.png',
+        'Nibelis': 'assets/images/nibelis-logo.webp',
+        'Cegid': '',
+        'BambooHR': ''
+      };
+
       if (sector === 'chr') {
         return {
-          name: 'Skello', color: '#16a34a', bg: '#f0fdf4', icon: '📅',
+          name: 'Skello', color: '#16a34a', bg: '#f0fdf4', logo: logos['Skello'],
           tagline: 'La référence pour la gestion des plannings en CHR et retail',
           desc: 'Skello est conçu spécifiquement pour les secteurs à horaires variables. Sa gestion des plannings, du pointage et des contrats courts est imbattable dans la restauration, l\'hôtellerie et le commerce.',
           reasons: ['Planning drag & drop avec contraintes légales automatiques', 'Gestion des extras, CDD courts et heures sup', 'Conformité CCN CHR et retail intégrée', 'Application mobile pour les équipes terrain', 'Intégration paie via PayFit ou Silae'],
           cta: 'avis/',
           url: 'https://www.skello.io/fr',
-          alts: [{name:'PayFit',desc:'Pour la paie'},{name:'Factorial',desc:'Pour le SIRH'},{name:'Kelio',desc:'Alternative planning'}]
+          alts: [{name:'PayFit',desc:'Pour la paie',logo:logos['PayFit']},{name:'Factorial',desc:'Pour le SIRH',logo:logos['Factorial']},{name:'Kelio',desc:'Alternative planning',logo:logos['Kelio']}]
         };
       }
       if (struct === 'multi-ccn' || struct === 'multi-pays' || size === '200+') {
         return {
-          name: 'Silae', color: '#7c3aed', bg: '#f5f3ff', icon: '💼',
+          name: 'Silae', color: '#7c3aed', bg: '#f5f3ff', logo: logos['Silae'],
           tagline: 'La référence paie pour les structures complexes',
           desc: 'Silae est le moteur de paie le plus puissant du marché français. Il gère les conventions collectives multiples, les multi-établissements, les paies atypiques et s\'intègre aux outils SIRH du marché.',
           reasons: ['Gestion de 400+ conventions collectives', 'Multi-établissements et multi-sociétés natif', 'Utilisé par 30 000+ cabinets comptables en France', 'Reporting paie très avancé', 'Intégrations SIRH (Lucca, Factorial, Cegid)'],
           cta: 'comparatifs/',
           url: 'https://www.silae.fr',
-          alts: [{name:'Nibelis',desc:'Alternative experte'},{name:'Cegid',desc:'Pour les grandes structures'},{name:'PayFit',desc:'Si la structure se simplifie'}]
+          alts: [{name:'Nibelis',desc:'Alternative experte',logo:logos['Nibelis']},{name:'Lucca',desc:'Pour les grandes structures',logo:logos['Lucca']},{name:'PayFit',desc:'Si la structure se simplifie',logo:logos['PayFit']}]
         };
       }
       if ((size === '1-9' || size === '10-49') && mgr !== 'rh' && delay === 'urgent') {
         return {
-          name: 'PayFit', color: '#16a34a', bg: '#f0fdf4', icon: '💚',
+          name: 'PayFit', color: '#16a34a', bg: '#f0fdf4', logo: logos['PayFit'],
           tagline: 'La paie automatisée idéale pour TPE et startups',
           desc: 'PayFit est la solution la plus rapide à déployer pour une PME sans service RH. Mise en production en moins d\'une semaine, paie 100% automatisée, DSN native et interface ultra-simple.',
           reasons: ['Onboarding en moins d\'une semaine', 'Paie et DSN 100% automatisées', '350+ conventions collectives couvertes', 'Interface intuitive sans formation', 'Support francophone très réactif'],
           cta: 'comparatifs/payfit-vs-factorial.html',
           url: 'https://payfit.com/fr/',
-          alts: [{name:'Factorial',desc:'Si vous avez un RH dédié'},{name:'Silae',desc:'Pour les paies complexes'},{name:'Lucca',desc:'Pour un SIRH modulaire'}]
+          alts: [{name:'Factorial',desc:'Si vous avez un RH dédié',logo:logos['Factorial']},{name:'Silae',desc:'Pour les paies complexes',logo:logos['Silae']},{name:'Lucca',desc:'Pour un SIRH modulaire',logo:logos['Lucca']}]
         };
       }
       if (needs.includes('recrutement') || needs.includes('onboarding') || (size === '50-199' && mgr === 'rh')) {
         return {
-          name: 'Factorial', color: '#FF5C35', bg: '#fff4f0', icon: '📊',
+          name: 'Factorial', color: '#FF5C35', bg: '#fff4f0', logo: logos['Factorial'],
           tagline: 'Le SIRH complet pour PME de 20 à 300 salariés',
           desc: 'Factorial couvre l\'intégralité de la chaîne RH : recrutement, onboarding, gestion des congés, suivi du temps, entretiens, formation et paie. Un seul outil pour votre DRH.',
           reasons: ['SIRH complet en un seul outil', 'Module recrutement avec pipeline natif', 'Gestion des entretiens et de la formation', 'Paie française intégrée (ou via Silae)', 'Application mobile soignée pour les collaborateurs'],
           cta: 'comparatifs/payfit-vs-factorial.html',
           url: 'https://factorial.fr',
-          alts: [{name:'Lucca',desc:'SIRH modulaire français'},{name:'PayFit',desc:'Si la paie prime sur le SIRH'},{name:'BambooHR',desc:'Alternative internationale'}]
+          alts: [{name:'Lucca',desc:'SIRH modulaire français',logo:logos['Lucca']},{name:'PayFit',desc:'Si la paie prime sur le SIRH',logo:logos['PayFit']},{name:'Silae',desc:'Alternative internationale',logo:logos['Silae']}]
         };
       }
       if (size === '50-199' && (struct === 'simple' || struct === 'multi-site')) {
         return {
-          name: 'Lucca', color: '#0891b2', bg: '#ecfeff', icon: '🔷',
+          name: 'Lucca', color: '#0891b2', bg: '#ecfeff', logo: logos['Lucca'],
           tagline: 'Le SIRH modulaire français pour PME exigeantes',
           desc: 'Lucca propose des modules à la carte que vous activez selon vos besoins : Pagga (paie via Silae), Figgo (congés), Cleemy (frais), Elevo (entretiens). Idéal pour les PME françaises structurées.',
           reasons: ['Modules indépendants : payez ce que vous utilisez', 'Excellente expérience collaborateur', 'Intégration native avec Silae pour la paie', 'Made in France, support en français', 'Très bonne conformité droit du travail'],
           cta: 'comparatifs/',
           url: 'https://www.lucca.fr',
-          alts: [{name:'Factorial',desc:'Alternative tout-en-un'},{name:'PayFit',desc:'Si vous privilégiez la paie'},{name:'Cegid',desc:'Pour les structures plus grandes'}]
+          alts: [{name:'Factorial',desc:'Alternative tout-en-un',logo:logos['Factorial']},{name:'PayFit',desc:'Si vous privilégiez la paie',logo:logos['PayFit']},{name:'Silae',desc:'Pour les structures plus grandes',logo:logos['Silae']}]
         };
       }
       if (sector === 'sante' || needs.includes('temps') && size !== '1-9') {
         return {
-          name: 'Kelio', color: '#0f766e', bg: '#f0fdfa', icon: '⏱️',
+          name: 'Kelio', color: '#0f766e', bg: '#f0fdfa', logo: logos['Kelio'],
           tagline: 'La référence pour la gestion des temps et accès',
           desc: 'Kelio (ex-Bodet Software) est le spécialiste de la gestion des temps, des plannings et du contrôle d\'accès. Particulièrement apprécié dans la santé, l\'industrie et les collectivités.',
           reasons: ['Gestion des temps très poussée', 'Contrôle d\'accès intégrable', 'Adapté aux secteurs réglementés (santé, industrie)', 'Terminaux de pointage physiques disponibles', 'Interfaçage avec les principaux logiciels de paie'],
           cta: 'comparatifs/',
           url: 'https://www.kelio.com/fr/',
-          alts: [{name:'PayFit',desc:'Pour la paie'},{name:'Skello',desc:'Pour le planning'},{name:'Factorial',desc:'Pour le SIRH complet'}]
+          alts: [{name:'PayFit',desc:'Pour la paie',logo:logos['PayFit']},{name:'Skello',desc:'Pour le planning',logo:logos['Skello']},{name:'Factorial',desc:'Pour le SIRH complet',logo:logos['Factorial']}]
         };
       }
       // Default
       return {
-        name: 'PayFit', color: '#16a34a', bg: '#f0fdf4', icon: '💚',
+        name: 'PayFit', color: '#16a34a', bg: '#f0fdf4', logo: logos['PayFit'],
         tagline: 'La paie automatisée idéale pour les PME françaises',
         desc: 'Pour la majorité des PME françaises, PayFit est un excellent point de départ : déploiement rapide, paie automatisée et interface accessible à tous, même sans expertise RH.',
         reasons: ['Démarrage en moins d\'une semaine', 'Paie et DSN automatisées', '350+ conventions collectives', 'Interface sans formation requise', 'Hébergement 100% France (ISO 27001)'],
         cta: 'comparatifs/payfit-vs-factorial.html',
         url: 'https://payfit.com/fr/',
-        alts: [{name:'Factorial',desc:'Si vous avez un RH dédié'},{name:'Silae',desc:'Pour une paie complexe'},{name:'Lucca',desc:'Pour un SIRH modulaire'}]
+        alts: [{name:'Factorial',desc:'Si vous avez un RH dédié',logo:logos['Factorial']},{name:'Silae',desc:'Pour une paie complexe',logo:logos['Silae']},{name:'Lucca',desc:'Pour un SIRH modulaire',logo:logos['Lucca']}]
       };
     }
 
     function renderResult(rec) {
-      document.getElementById('rLogo').innerHTML = '<span style="font-size:2.2rem">' + rec.icon + '</span>';
+      if (rec.logo) {
+        document.getElementById('rLogo').innerHTML = '<img src="' + rec.logo + '" alt="' + rec.name + '">';
+      } else {
+        document.getElementById('rLogo').innerHTML = '<span style="font-size:2.2rem;font-weight:700">' + rec.name.charAt(0) + '</span>';
+      }
       document.getElementById('rLogo').style.background = rec.bg;
       document.getElementById('rName').textContent = rec.name;
       document.getElementById('rName').style.color = rec.color;
@@ -902,7 +923,9 @@
         document.getElementById('rTryBtn').style.display = 'none';
       }
       document.getElementById('rAlts').innerHTML = rec.alts.map(a =>
-        '<div class="alt-card-sm"><strong>' + a.name + '</strong><span>' + a.desc + '</span></div>'
+        '<div class="alt-card-sm">' +
+        (a.logo ? '<img src="' + a.logo + '" alt="' + a.name + '">' : '') +
+        '<div class="alt-info"><strong>' + a.name + '</strong><span>' + a.desc + '</span></div></div>'
       ).join('');
     }
 

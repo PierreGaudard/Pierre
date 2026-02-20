@@ -1,7 +1,32 @@
 # MLRH — Meilleur Logiciel RH
-# robots.txt
+# https://meilleur-logiciel-rh.fr
+# robots.txt — Derniere mise a jour : 2026-02-20
 
+# ======================
+# Tous les robots
+# ======================
 User-agent: *
 Allow: /
+Allow: /comparatifs/
+Allow: /guides/
+Allow: /avis/
+Allow: /alternatives/
+Allow: /auteur/
+Allow: /assets/
 
+# ======================
+# Googlebot
+# ======================
+User-agent: Googlebot
+Allow: /
+
+# ======================
+# Bingbot
+# ======================
+User-agent: Bingbot
+Allow: /
+
+# ======================
+# Sitemap
+# ======================
 Sitemap: https://meilleur-logiciel-rh.fr/sitemap.xml
