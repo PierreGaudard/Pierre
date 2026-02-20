@@ -30,31 +30,31 @@
   <link rel="icon" href="assets/images/favicon-mlrh.png" type="image/png">
   <link rel="stylesheet" href="assets/style.css">
   <style>
-    .hero-dark{position:relative;overflow:hidden;background:#071a0e;background-image:linear-gradient(rgba(34,197,94,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(34,197,94,.055) 1px,transparent 1px);background-size:44px 44px;padding:40px 24px 0;text-align:center}
+    .hero-dark{position:relative;overflow:hidden;background:#071a0e;background-image:linear-gradient(rgba(34,197,94,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(34,197,94,.055) 1px,transparent 1px);background-size:44px 44px;padding:48px 24px 0;text-align:center}
     .hero-dark::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(34,197,94,.18) 0%,transparent 70%);pointer-events:none}
     .hero-stars{position:absolute;inset:0;pointer-events:none}
     .star{position:absolute;border-radius:50%;background:rgba(34,197,94,.5);animation:twinkle 4s infinite ease-in-out}
     @keyframes twinkle{0%,100%{opacity:.2;transform:scale(1)}50%{opacity:.8;transform:scale(1.4)}}
-    .hero-layout{position:relative;z-index:2;max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:40px}
-    .hero-inner{flex:1;text-align:left;min-width:0}
+    .hero-layout{position:relative;z-index:2;max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:0}
+    .hero-inner{text-align:center;min-width:0;width:100%}
     .hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);border-radius:99px;padding:6px 14px 6px 6px;font-size:.82rem;color:#86efac;margin-bottom:24px}
     .hero-badge-avatars{display:flex}
     .hero-badge-avatars span{width:24px;height:24px;border-radius:50%;border:2px solid #071a0e;font-size:.6rem;font-weight:700;display:flex;align-items:center;justify-content:center;margin-left:-6px}
     .hero-badge-avatars span:first-child{margin-left:0}
     .hero-dark h1{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:900;line-height:1.15;letter-spacing:-.02em;color:#f0fdf4;margin-bottom:14px}
     .hero-dark h1 .green{color:#22c55e}
-    .hero-dark .sub{font-size:.95rem;color:#86efac;line-height:1.6;max-width:520px;margin:0 0 20px}
-    .hero-cta-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-bottom:10px}
+    .hero-dark .sub{font-size:.95rem;color:#86efac;line-height:1.6;max-width:560px;margin:0 auto 24px}
+    .hero-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:14px}
     .hero-cta{display:inline-flex;align-items:center;gap:8px;background:#22c55e;color:#fff;font-size:1rem;font-weight:800;border:none;border-radius:99px;padding:14px 28px;text-decoration:none;box-shadow:0 0 32px rgba(34,197,94,.3);transition:transform .15s,box-shadow .15s}
     .hero-cta:hover{transform:translateY(-2px);box-shadow:0 4px 48px rgba(34,197,94,.45);text-decoration:none}
     .hero-cta svg{width:18px;height:18px}
     .hero-cta-sub{font-size:.8rem;color:rgba(134,239,172,.55)}
-    .hero-features{display:flex;justify-content:flex-start;gap:20px;flex-wrap:wrap;margin:16px 0 0}
+    .hero-features{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:16px 0 0}
     .hero-feat{display:flex;align-items:center;gap:8px;font-size:.84rem;color:#86efac}
     .hf-icon{width:30px;height:30px;border-radius:8px;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.2);display:flex;align-items:center;justify-content:center;font-size:.85rem}
-    .mockup{position:relative;z-index:2;flex:0 0 460px;max-width:460px;border-radius:14px;background:#0d2419;border:1px solid rgba(34,197,94,.18);overflow:hidden;box-shadow:0 -8px 48px rgba(34,197,94,.12);align-self:center}
+    .mockup{position:relative;z-index:2;width:100%;max-width:780px;border-radius:14px 14px 0 0;background:#0d2419;border:1px solid rgba(34,197,94,.18);border-bottom:none;overflow:hidden;box-shadow:0 -8px 48px rgba(34,197,94,.12);margin-top:40px}
     .mockup table{table-layout:auto}
-    @media(max-width:900px){.hero-layout{flex-direction:column;text-align:center}.hero-inner{text-align:center}.hero-cta-wrap{align-items:center}.hero-features{justify-content:center}.mockup{flex:none;max-width:100%;width:100%;border-radius:14px 14px 0 0;border-bottom:none}.hero-dark{padding:32px 16px 0}}
+    @media(max-width:900px){.hero-dark{padding:32px 16px 0}.mockup{max-width:100%}}
     .mockup-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;background:#112d1e;border-bottom:1px solid rgba(34,197,94,.15)}
     .m-dot{width:10px;height:10px;border-radius:50%}
     .m-url{flex:1;margin:0 12px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.15);border-radius:6px;padding:4px 12px;font-size:.73rem;color:#4ade80;text-align:center}
