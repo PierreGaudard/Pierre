@@ -8,8 +8,7 @@
   <meta name="author" content="Thomas Renaud">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://meilleur-logiciel-rh.fr/comparatifs/payfit-vs-factorial-2026.html">
-  <link rel="icon" href="../assets/images/favicon.ico" sizes="any">
-  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/images/favicon-mlrh.png" type="image/png">
   <link rel="stylesheet" href="../assets/style.css">
 
   <!-- Open Graph -->
@@ -38,7 +37,7 @@
         "wordCount": 3200,
         "timeRequired": "PT10M",
         "author": {"@type": "Person", "@id": "https://meilleur-logiciel-rh.fr/auteur/thomas-renaud.html#author", "name": "Thomas Renaud", "url": "https://meilleur-logiciel-rh.fr/auteur/thomas-renaud.html"},
-        "publisher": {"@type": "Organization", "name": "MLRH", "url": "https://meilleur-logiciel-rh.fr", "logo": {"@type": "ImageObject", "url": "https://meilleur-logiciel-rh.fr/assets/images/favicon.svg"}},
+        "publisher": {"@type": "Organization", "name": "MLRH", "url": "https://meilleur-logiciel-rh.fr", "logo": {"@type": "ImageObject", "url": "https://meilleur-logiciel-rh.fr/assets/images/mlrh-logo.png"}},
         "mainEntityOfPage": {"@type": "WebPage", "@id": "https://meilleur-logiciel-rh.fr/comparatifs/payfit-vs-factorial-2026.html"},
         "about": [{"@type": "SoftwareApplication", "name": "PayFit"}, {"@type": "SoftwareApplication", "name": "Factorial"}]
       },
@@ -195,10 +194,21 @@
 
     .article-hero-sub {
       font-size: 1.05rem;
-      color: #bbf7d0;
+      color: rgba(255,255,255,.85);
       max-width: 600px;
       margin: 0 auto 32px;
       line-height: 1.6;
+    }
+
+    .article-hero .author-line {
+      justify-content: center;
+      color: rgba(255,255,255,.85);
+    }
+    .article-hero .author-line a {
+      color: #fff;
+    }
+    .article-hero .author-avatar {
+      background: rgba(255,255,255,.2);
     }
 
     .article-hero-meta {
@@ -207,7 +217,7 @@
       gap: 20px;
       flex-wrap: wrap;
       font-size: .82rem;
-      color: #86efac;
+      color: rgba(255,255,255,.65);
     }
 
     .vs-hero-block {
@@ -831,7 +841,7 @@
     .quick-tool-badge {
       display: inline-block;
       background: rgba(255,255,255,.15);
-      color: #bbf7d0;
+      color: rgba(255,255,255,.7);
       font-size: .75rem;
       font-weight: 700;
       text-transform: uppercase;
@@ -841,7 +851,7 @@
       margin-bottom: 12px;
     }
     .quick-tool-header h3 { font-size: 1.2rem; font-weight: 800; margin-bottom: 6px; }
-    .quick-tool-header p { font-size: .9rem; color: #bbf7d0; margin: 0; }
+    .quick-tool-header p { font-size: .9rem; color: rgba(255,255,255,.85); margin: 0; }
     .qt-step { display: none; animation: fadeIn .2s ease; }
     .qt-step.qt-active { display: block; }
     .qt-question {
@@ -888,15 +898,15 @@
       padding: 20px 28px;
       margin: 12px 0 18px;
     }
-    .qt-winner-label { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: #bbf7d0; margin-bottom: 6px; }
+    .qt-winner-label { font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,.65); margin-bottom: 6px; }
     .qt-winner-name { font-size: 1.5rem; font-weight: 900; }
-    .qt-reason { font-size: .88rem; color: #bbf7d0; line-height: 1.6; margin-bottom: 16px; max-width: 420px; margin-left: auto; margin-right: auto; }
+    .qt-reason { font-size: .88rem; color: rgba(255,255,255,.85); line-height: 1.6; margin-bottom: 16px; max-width: 420px; margin-left: auto; margin-right: auto; }
     .qt-restart {
       background: rgba(255,255,255,.15);
       border: 1px solid rgba(255,255,255,.25);
       border-radius: 8px;
       padding: 8px 18px;
-      color: #bbf7d0;
+      color: rgba(255,255,255,.7);
       font-size: .82rem;
       cursor: pointer;
     }
@@ -919,7 +929,7 @@
     }
 
     .cta-box p {
-      color: #bbf7d0;
+      color: rgba(255,255,255,.85);
       font-size: .95rem;
       margin-bottom: 24px;
     }
@@ -994,10 +1004,6 @@
       .scores-section {
         grid-template-columns: 1fr;
       }
-
-      .article-hero .author-line {
-        justify-content: center;
-      }
     }
   </style>
 </head>
@@ -1006,7 +1012,7 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="site-header-inner">
-      <a href="../index.html" class="site-logo"><span class="site-logo-icon">🔍</span>ML<span>RH</span></a>
+      <a href="../index.html" class="site-logo"><img src="../assets/images/mlrh-logo.png" alt="MLRH" style="height:30px;width:auto;filter:brightness(0)"></a>
       <nav class="site-nav">
         <a href="../comparatifs/index.html">Comparatifs</a>
         <a href="../guides/index.html">Guides</a>
@@ -1034,22 +1040,14 @@
     <div class="vs-hero-block">
       <div class="vs-hero-tool">
         <div class="vs-hero-icon">
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-            <circle cx="22" cy="22" r="20" fill="#16a34a"/>
-            <circle cx="22" cy="22" r="13" fill="white"/>
-            <circle cx="22" cy="22" r="7" fill="#16a34a"/>
-          </svg>
+          <img src="../assets/images/payfit-logo.png" alt="PayFit" width="44" height="44" style="border-radius:10px">
         </div>
         <div class="vs-hero-name">PayFit</div>
       </div>
       <div class="vs-hero-sep">VS</div>
       <div class="vs-hero-tool">
         <div class="vs-hero-icon">
-          <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-            <rect x="4" y="26" width="9" height="14" rx="3" fill="#FF5C35"/>
-            <rect x="17" y="17" width="9" height="23" rx="3" fill="#FF5C35" opacity=".8"/>
-            <rect x="30" y="8" width="9" height="32" rx="3" fill="#FF5C35" opacity=".6"/>
-          </svg>
+          <img src="../assets/images/factorial.png" alt="Factorial" width="44" height="44" style="border-radius:10px;object-fit:cover">
         </div>
         <div class="vs-hero-name">Factorial</div>
       </div>
@@ -1117,7 +1115,7 @@
         <div class="score-card">
           <div class="score-card-header">
             <div class="score-logo-sm" style="background:#f0fdf4">
-              <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="11" fill="#16a34a"/><circle cx="13" cy="13" r="7" fill="white"/><circle cx="13" cy="13" r="4" fill="#16a34a"/></svg>
+              <img src="../assets/images/payfit-logo.png" alt="PayFit" width="26" height="26" style="border-radius:6px">
             </div>
             <div class="score-name">PayFit</div>
             <div class="score-overall">4,4<span>/5</span></div>
@@ -1147,7 +1145,7 @@
         <div class="score-card">
           <div class="score-card-header">
             <div class="score-logo-sm" style="background:#fff4f0">
-              <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><rect x="2" y="16" width="5.5" height="8.5" rx="2" fill="#FF5C35"/><rect x="10" y="11" width="5.5" height="13.5" rx="2" fill="#FF5C35" opacity=".8"/><rect x="18" y="5" width="5.5" height="19.5" rx="2" fill="#FF5C35" opacity=".6"/></svg>
+              <img src="../assets/images/factorial.png" alt="Factorial" width="26" height="26" style="border-radius:6px;object-fit:cover">
             </div>
             <div class="score-name">Factorial</div>
             <div class="score-overall">4,2<span>/5</span></div>
@@ -1186,11 +1184,7 @@
         <div class="tool-card">
           <div class="tool-card-header">
             <div class="tool-logo" style="background:#f0fdf4">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <circle cx="18" cy="18" r="16" fill="#16a34a"/>
-                <circle cx="18" cy="18" r="10" fill="white"/>
-                <circle cx="18" cy="18" r="6" fill="#16a34a"/>
-              </svg>
+              <img src="../assets/images/payfit-logo.png" alt="PayFit" width="36" height="36" style="border-radius:8px">
             </div>
             <div>
               <div class="tool-card-name">PayFit</div>
@@ -1216,11 +1210,7 @@
         <div class="tool-card">
           <div class="tool-card-header">
             <div class="tool-logo" style="background:#fff4f0">
-              <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
-                <rect x="3" y="21" width="8" height="12" rx="2.5" fill="#FF5C35"/>
-                <rect x="14" y="14" width="8" height="19" rx="2.5" fill="#FF5C35" opacity=".8"/>
-                <rect x="25" y="7" width="8" height="26" rx="2.5" fill="#FF5C35" opacity=".6"/>
-              </svg>
+              <img src="../assets/images/factorial.png" alt="Factorial" width="36" height="36" style="border-radius:8px;object-fit:cover">
             </div>
             <div>
               <div class="tool-card-name">Factorial</div>
@@ -1408,11 +1398,7 @@
         <div class="pricing-card">
           <div class="pricing-card-header">
             <div class="tool-logo" style="background:#f0fdf4; width:36px; height:36px">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <circle cx="14" cy="14" r="12" fill="#16a34a"/>
-                <circle cx="14" cy="14" r="8" fill="white"/>
-                <circle cx="14" cy="14" r="4" fill="#16a34a"/>
-              </svg>
+              <img src="../assets/images/payfit-logo.png" alt="PayFit" width="28" height="28" style="border-radius:6px">
             </div>
             <h3>PayFit</h3>
           </div>
@@ -1432,11 +1418,7 @@
         <div class="pricing-card">
           <div class="pricing-card-header">
             <div class="tool-logo" style="background:#fff4f0; width:36px; height:36px">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-                <rect x="2" y="16" width="6" height="10" rx="2" fill="#FF5C35"/>
-                <rect x="11" y="10" width="6" height="16" rx="2" fill="#FF5C35" opacity=".8"/>
-                <rect x="20" y="4" width="6" height="22" rx="2" fill="#FF5C35" opacity=".6"/>
-              </svg>
+              <img src="../assets/images/factorial.png" alt="Factorial" width="28" height="28" style="border-radius:6px;object-fit:cover">
             </div>
             <h3>Factorial</h3>
           </div>
@@ -1693,7 +1675,7 @@
     <div class="site-footer-inner">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="footer-logo"><span class="footer-logo-icon">🔍</span>ML<span>RH</span></div>
+          <div class="footer-logo"><img src="../assets/images/mlrh-logo.png" alt="MLRH" style="height:30px;width:auto"></div>
           <p>Comparatifs indépendants et guides sur les logiciels RH, paie et SIRH pour les PME françaises.</p>
         </div>
         <div class="footer-col">
