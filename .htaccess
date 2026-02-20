@@ -17,6 +17,17 @@ RewriteCond %{HTTP_HOST} ^www\.meilleur-logiciel-rh\.fr$ [NC]
 RewriteRule ^(.*)$ https://meilleur-logiciel-rh.fr/$1 [R=301,L]
 
 # ---------------------------------------------------------------
+# 2b. REDIRECTION index.html -> / (URL propres)
+# ---------------------------------------------------------------
+# Racine : /index.html -> /
+RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Sous-dossiers : /dossier/index.html -> /dossier/
+RewriteCond %{THE_REQUEST} \s/(.+/)index\.html[\s?] [NC]
+RewriteRule ^(.+/)index\.html$ /$1 [R=301,L]
+
+# ---------------------------------------------------------------
 # 3. COMPRESSION GZIP
 # ---------------------------------------------------------------
 <IfModule mod_deflate.c>
@@ -129,7 +140,7 @@ RedirectMatch 404 /\.git
 # ---------------------------------------------------------------
 # 8. PAGE 404 PERSONNALISEE
 # ---------------------------------------------------------------
-ErrorDocument 404 /index.html
+ErrorDocument 404 /404.html
 
 # ---------------------------------------------------------------
 # 9. EMPECHER LE LISTING DES REPERTOIRES
