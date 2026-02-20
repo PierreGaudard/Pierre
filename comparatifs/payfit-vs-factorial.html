@@ -193,8 +193,16 @@
     }
 
     .article-hero-right {
-      text-align: right;
       flex-shrink: 0;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 12px;
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+      min-width: 240px;
     }
 
     .article-hero .badge {
@@ -219,7 +227,7 @@
     }
 
     .article-hero .author-line {
-      justify-content: flex-end;
+      justify-content: flex-start;
       color: rgba(255,255,255,.85);
     }
     .article-hero .author-line a {
@@ -231,12 +239,11 @@
 
     .article-hero-meta {
       display: flex;
-      justify-content: flex-end;
-      gap: 16px;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 6px;
       font-size: .78rem;
       color: rgba(255,255,255,.65);
-      margin-top: 8px;
+      margin-top: 0;
     }
 
     .vs-hero-block {
@@ -1022,8 +1029,8 @@
       }
 
       .article-hero-right {
-        text-align: center;
         width: 100%;
+        align-items: center;
       }
 
       .article-hero .author-line {
@@ -1031,7 +1038,7 @@
       }
 
       .article-hero-meta {
-        justify-content: center;
+        align-items: center;
       }
 
       .hero-cta-buttons {
@@ -1124,9 +1131,9 @@
       <div class="article-hero-right">
         <div class="author-line"><div class="author-avatar"><img src="../assets/images/thomas-renaud.jpg" alt="Thomas Renaud"></div> Par <a href="../auteur/thomas-renaud.html">Thomas Renaud</a></div>
         <div class="article-hero-meta">
-          <span>Mis à jour le 19 février 2026</span>
-          <span>Lecture : 10 minutes</span>
-          <span>Données vérifiées sur les sites officiels</span>
+          <span>📅 Mis à jour le 19 fév. 2026</span>
+          <span>⏱ Lecture : 10 min</span>
+          <span>✅ Données vérifiées</span>
         </div>
       </div>
     </div>

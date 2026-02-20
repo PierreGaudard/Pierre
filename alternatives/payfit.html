@@ -61,8 +61,10 @@
     }
     .article-hero-inner { display:flex; align-items:center; justify-content:space-between; gap:24px; max-width:1100px; margin:0 auto; flex-wrap:wrap; }
     .article-hero-left { text-align:left; }
-    .article-hero-right { text-align:right; flex-shrink:0; }
-    @media(max-width:700px) { .article-hero-inner { flex-direction:column; text-align:center; } .article-hero-left, .article-hero-right { text-align:center; } }
+    .article-hero-right { flex-shrink:0; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.15); border-radius: 12px; padding: 18px 22px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; min-width: 240px; }
+    .article-hero-meta { display: flex; flex-direction: column; gap: 6px; font-size: .82rem; color: rgba(255,255,255,.7); margin-top: 0; }
+    .article-hero .author-line { justify-content: flex-start; }
+    @media(max-width:700px) { .article-hero-inner { flex-direction:column; text-align:center; } .article-hero-left { text-align:center; } .article-hero-right { width: 100%; align-items: center; } .article-hero .author-line { justify-content: center; } .article-hero-meta { align-items: center; } }
     .article-hero .breadcrumb { font-size: .82rem; color: rgba(255,255,255,.7); margin-bottom: 16px; }
     .article-hero .breadcrumb a { color: rgba(255,255,255,.7); text-decoration: none; }
     .article-hero h1 { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 800; margin-bottom: 12px; }
@@ -182,7 +184,11 @@
       </div>
       <div class="article-hero-right">
         <div class="author-line"><div class="author-avatar"><img src="../assets/images/thomas-renaud.jpg" alt="Thomas Renaud"></div> Par <a href="../auteur/thomas-renaud.html">Thomas Renaud</a></div>
-        <div class="meta">Mis à jour le 19 février 2026 · 10 min de lecture</div>
+        <div class="article-hero-meta">
+          <span>📅 Mis à jour le 19 février 2026</span>
+          <span>⏱ Lecture : 10 min</span>
+          <span>✅ Données vérifiées</span>
+        </div>
       </div>
     </div>
   </div>

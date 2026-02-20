@@ -179,13 +179,16 @@
     }
 
     .article-hero-right {
-      text-align: right;
       flex-shrink: 0;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 12px;
+      padding: 18px 22px;
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
-      gap: 10px;
-      padding-top: 4px;
+      align-items: flex-start;
+      gap: 12px;
+      min-width: 240px;
     }
 
     .article-hero .badge {
@@ -212,11 +215,12 @@
 
     .article-hero-meta {
       display: flex;
-      justify-content: flex-end;
-      gap: 16px;
+      flex-direction: column;
+      gap: 6px;
       flex-wrap: wrap;
       font-size: .82rem;
       color: rgba(255,255,255,.7);
+      margin-top: 0;
     }
 
     .hero-rating-badge {
@@ -856,12 +860,12 @@
       }
 
       .article-hero-right {
-        align-items: flex-start;
-        text-align: left;
+        width: 100%;
+        align-items: center;
       }
 
       .article-hero-meta {
-        justify-content: flex-start;
+        align-items: center;
       }
 
       .verdict-score-label {
@@ -875,12 +879,12 @@
       }
 
       .article-hero .author-line {
-        justify-content: flex-start;
+        justify-content: center;
       }
     }
 
     .article-hero .author-line {
-      justify-content: flex-end;
+      justify-content: flex-start;
       color: rgba(255,255,255,.85);
     }
     .article-hero .author-line a {
@@ -938,8 +942,9 @@
       <div class="article-hero-right">
         <div class="author-line"><div class="author-avatar"><img src="../assets/images/thomas-renaud.jpg" alt="Thomas Renaud"></div> Par <a href="../auteur/thomas-renaud.html">Thomas Renaud</a></div>
         <div class="article-hero-meta">
-          <span>Mis à jour le 19 février 2026</span>
-          <span>Lecture : 10 min</span>
+          <span>📅 Mis à jour le 19 février 2026</span>
+          <span>⏱ Lecture : 10 min</span>
+          <span>✅ Données vérifiées</span>
         </div>
         <div class="hero-rating-badge">
           4,4/5 <span class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
