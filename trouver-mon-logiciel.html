@@ -684,6 +684,7 @@
           <ul id="rWhyList"></ul>
         </div>
         <div class="result-actions">
+          <a href="#" target="_blank" rel="noopener" class="btn btn-orange" id="rTryBtn" style="border-radius:99px">Essayer →</a>
           <a href="comparatifs/payfit-vs-factorial.html" class="btn btn-primary" id="rCta">Lire notre analyse complète →</a>
           <button class="btn-restart-q" onclick="restartQuiz()">↺ Recommencer</button>
         </div>
@@ -813,6 +814,7 @@
           desc: 'Skello est conçu spécifiquement pour les secteurs à horaires variables. Sa gestion des plannings, du pointage et des contrats courts est imbattable dans la restauration, l\'hôtellerie et le commerce.',
           reasons: ['Planning drag & drop avec contraintes légales automatiques', 'Gestion des extras, CDD courts et heures sup', 'Conformité CCN CHR et retail intégrée', 'Application mobile pour les équipes terrain', 'Intégration paie via PayFit ou Silae'],
           cta: 'avis/',
+          url: 'https://www.skello.io/fr',
           alts: [{name:'PayFit',desc:'Pour la paie'},{name:'Factorial',desc:'Pour le SIRH'},{name:'Kelio',desc:'Alternative planning'}]
         };
       }
@@ -823,6 +825,7 @@
           desc: 'Silae est le moteur de paie le plus puissant du marché français. Il gère les conventions collectives multiples, les multi-établissements, les paies atypiques et s\'intègre aux outils SIRH du marché.',
           reasons: ['Gestion de 400+ conventions collectives', 'Multi-établissements et multi-sociétés natif', 'Utilisé par 30 000+ cabinets comptables en France', 'Reporting paie très avancé', 'Intégrations SIRH (Lucca, Factorial, Cegid)'],
           cta: 'comparatifs/',
+          url: 'https://www.silae.fr',
           alts: [{name:'Nibelis',desc:'Alternative experte'},{name:'Cegid',desc:'Pour les grandes structures'},{name:'PayFit',desc:'Si la structure se simplifie'}]
         };
       }
@@ -833,6 +836,7 @@
           desc: 'PayFit est la solution la plus rapide à déployer pour une PME sans service RH. Mise en production en moins d\'une semaine, paie 100% automatisée, DSN native et interface ultra-simple.',
           reasons: ['Onboarding en moins d\'une semaine', 'Paie et DSN 100% automatisées', '350+ conventions collectives couvertes', 'Interface intuitive sans formation', 'Support francophone très réactif'],
           cta: 'comparatifs/payfit-vs-factorial.html',
+          url: 'https://payfit.com/fr/',
           alts: [{name:'Factorial',desc:'Si vous avez un RH dédié'},{name:'Silae',desc:'Pour les paies complexes'},{name:'Lucca',desc:'Pour un SIRH modulaire'}]
         };
       }
@@ -843,6 +847,7 @@
           desc: 'Factorial couvre l\'intégralité de la chaîne RH : recrutement, onboarding, gestion des congés, suivi du temps, entretiens, formation et paie. Un seul outil pour votre DRH.',
           reasons: ['SIRH complet en un seul outil', 'Module recrutement avec pipeline natif', 'Gestion des entretiens et de la formation', 'Paie française intégrée (ou via Silae)', 'Application mobile soignée pour les collaborateurs'],
           cta: 'comparatifs/payfit-vs-factorial.html',
+          url: 'https://factorial.fr',
           alts: [{name:'Lucca',desc:'SIRH modulaire français'},{name:'PayFit',desc:'Si la paie prime sur le SIRH'},{name:'BambooHR',desc:'Alternative internationale'}]
         };
       }
@@ -853,6 +858,7 @@
           desc: 'Lucca propose des modules à la carte que vous activez selon vos besoins : Pagga (paie via Silae), Figgo (congés), Cleemy (frais), Elevo (entretiens). Idéal pour les PME françaises structurées.',
           reasons: ['Modules indépendants : payez ce que vous utilisez', 'Excellente expérience collaborateur', 'Intégration native avec Silae pour la paie', 'Made in France, support en français', 'Très bonne conformité droit du travail'],
           cta: 'comparatifs/',
+          url: 'https://www.lucca.fr',
           alts: [{name:'Factorial',desc:'Alternative tout-en-un'},{name:'PayFit',desc:'Si vous privilégiez la paie'},{name:'Cegid',desc:'Pour les structures plus grandes'}]
         };
       }
@@ -863,6 +869,7 @@
           desc: 'Kelio (ex-Bodet Software) est le spécialiste de la gestion des temps, des plannings et du contrôle d\'accès. Particulièrement apprécié dans la santé, l\'industrie et les collectivités.',
           reasons: ['Gestion des temps très poussée', 'Contrôle d\'accès intégrable', 'Adapté aux secteurs réglementés (santé, industrie)', 'Terminaux de pointage physiques disponibles', 'Interfaçage avec les principaux logiciels de paie'],
           cta: 'comparatifs/',
+          url: 'https://www.kelio.com/fr/',
           alts: [{name:'PayFit',desc:'Pour la paie'},{name:'Skello',desc:'Pour le planning'},{name:'Factorial',desc:'Pour le SIRH complet'}]
         };
       }
@@ -873,6 +880,7 @@
         desc: 'Pour la majorité des PME françaises, PayFit est un excellent point de départ : déploiement rapide, paie automatisée et interface accessible à tous, même sans expertise RH.',
         reasons: ['Démarrage en moins d\'une semaine', 'Paie et DSN automatisées', '350+ conventions collectives', 'Interface sans formation requise', 'Hébergement 100% France (ISO 27001)'],
         cta: 'comparatifs/payfit-vs-factorial.html',
+        url: 'https://payfit.com/fr/',
         alts: [{name:'Factorial',desc:'Si vous avez un RH dédié'},{name:'Silae',desc:'Pour une paie complexe'},{name:'Lucca',desc:'Pour un SIRH modulaire'}]
       };
     }
@@ -886,6 +894,13 @@
       document.getElementById('rDesc').textContent = rec.desc;
       document.getElementById('rWhyList').innerHTML = rec.reasons.map(r => '<li>' + r + '</li>').join('');
       document.getElementById('rCta').href = rec.cta;
+      if (rec.url) {
+        document.getElementById('rTryBtn').href = rec.url;
+        document.getElementById('rTryBtn').textContent = 'Essayer ' + rec.name + ' →';
+        document.getElementById('rTryBtn').style.display = '';
+      } else {
+        document.getElementById('rTryBtn').style.display = 'none';
+      }
       document.getElementById('rAlts').innerHTML = rec.alts.map(a =>
         '<div class="alt-card-sm"><strong>' + a.name + '</strong><span>' + a.desc + '</span></div>'
       ).join('');
