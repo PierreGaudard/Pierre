@@ -58,6 +58,10 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 2rem; font-weight: 800;
       flex-shrink: 0;
+      overflow: hidden;
+    }
+    .author-photo img {
+      width: 100%; height: 100%; object-fit: cover;
     }
     .author-info h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 4px; }
     .author-info .role { font-size: .9rem; color: var(--primary); font-weight: 600; margin-bottom: 12px; }
@@ -131,12 +135,12 @@
 
   <section class="author-section">
     <div class="author-card">
-      <div class="author-photo">TR</div>
+      <div class="author-photo"><img src="../assets/images/thomas-renaud.jpg" alt="Thomas Renaud, fondateur de MLRH"></div>
       <div class="author-info">
         <h2>Thomas Renaud</h2>
         <div class="role">Fondateur de MLRH · Ex-DRH de PME</div>
-        <p>Après 8 ans en tant que DRH de PME françaises (50 à 200 salariés), Thomas a géré la paie, les processus RH et piloté plusieurs migrations de logiciels RH. Il a testé en profondeur PayFit, Factorial, Silae, Lucca et Sage Paie dans des contextes réels d'entreprise.</p>
-        <p>En 2025, il fonde MLRH pour partager son expérience et aider les dirigeants et RH de PME à choisir le bon outil, sans jargon et sans parti pris. Tous les comparatifs et avis sont basés sur des tests réels et des données vérifiées sur les sites officiels des éditeurs.</p>
+        <p>Après <strong>8 ans en tant que DRH</strong> de PME françaises (50 à 200 salariés), Thomas a géré la paie, les <strong>processus RH</strong> et piloté plusieurs <strong>migrations de logiciels RH</strong>. Il a testé en profondeur PayFit, Factorial, Silae, Lucca et Sage Paie dans des contextes réels d'entreprise.</p>
+        <p>En 2025, il fonde <strong>MLRH</strong> pour partager son expérience et aider les dirigeants et RH de PME à <strong>choisir le bon outil</strong>, sans jargon et sans parti pris. Tous les comparatifs et avis sont basés sur des <strong>tests réels</strong> et des données vérifiées sur les sites officiels des éditeurs.</p>
 
         <div class="author-stats">
           <div class="author-stat"><strong>8 ans</strong><span>Expérience RH</span></div>

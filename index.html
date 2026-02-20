@@ -44,7 +44,7 @@
     .hero-dark h1 .green{color:#22c55e}
     .hero-dark .sub{font-size:1.05rem;color:#86efac;line-height:1.7;max-width:520px;margin:0 auto 28px}
     .hero-cta-wrap{display:flex;flex-direction:column;align-items:center;gap:10px;margin-bottom:14px}
-    .hero-cta{display:inline-flex;align-items:center;gap:8px;background:#22c55e;color:#052e10;font-size:1rem;font-weight:800;border:none;border-radius:99px;padding:14px 28px;text-decoration:none;box-shadow:0 0 32px rgba(34,197,94,.3);transition:transform .15s,box-shadow .15s}
+    .hero-cta{display:inline-flex;align-items:center;gap:8px;background:#22c55e;color:#fff;font-size:1rem;font-weight:800;border:none;border-radius:99px;padding:14px 28px;text-decoration:none;box-shadow:0 0 32px rgba(34,197,94,.3);transition:transform .15s,box-shadow .15s}
     .hero-cta:hover{transform:translateY(-2px);box-shadow:0 4px 48px rgba(34,197,94,.45);text-decoration:none}
     .hero-cta svg{width:18px;height:18px}
     .hero-cta-sub{font-size:.8rem;color:rgba(134,239,172,.55)}
@@ -175,9 +175,9 @@
     <div class="hero-inner">
       <div class="hero-badge">
         <div class="hero-badge-avatars">
-          <span style="background:#1A56DB;color:#fff">DRH</span>
-          <span style="background:#FF5C35;color:#fff">PDG</span>
-          <span style="background:#7c3aed;color:#fff">RH</span>
+          <span style="background:none;padding:0;overflow:hidden"><img src="assets/images/avatar-drh-1.jpg" alt="" style="width:24px;height:24px;border-radius:50%;object-fit:cover"></span>
+          <span style="background:none;padding:0;overflow:hidden"><img src="assets/images/avatar-pdg-1.jpg" alt="" style="width:24px;height:24px;border-radius:50%;object-fit:cover"></span>
+          <span style="background:none;padding:0;overflow:hidden"><img src="assets/images/avatar-rh-1.jpg" alt="" style="width:24px;height:24px;border-radius:50%;object-fit:cover"></span>
           <span style="background:#0891b2;color:#fff">+</span>
         </div>
         Consulté par <strong>+5 000 DRH et dirigeants</strong>
@@ -301,8 +301,8 @@
         <div>
           <div class="lb">Pourquoi MLRH ?</div>
           <h2 class="h2s" style="font-size:1.4rem">Bien choisir son logiciel RH, c'est crucial</h2>
-          <p class="sub2" style="margin:12px 0">En France, plus de 50 000 PME changent de logiciel RH chaque année, souvent après un mauvais premier choix. Erreurs de paie, pénalités URSSAF, données perdues lors de la migration : les conséquences sont réelles.</p>
-          <p class="sub2" style="margin-bottom:20px">Le marché compte une trentaine d'acteurs sérieux. Certains sont excellents pour la paie pure (PayFit, Silae), d'autres pour la gestion RH globale (Factorial, Lucca) et d'autres pour les horaires variables (Skello, Kelio).</p>
+          <p class="sub2" style="margin:12px 0">En France, plus de <strong>50 000 PME</strong> changent de logiciel RH chaque année, souvent après un <strong>mauvais premier choix</strong>. Erreurs de paie, pénalités URSSAF, données perdues lors de la migration : les conséquences sont réelles.</p>
+          <p class="sub2" style="margin-bottom:20px">Le marché compte une <strong>trentaine d'acteurs sérieux</strong>. Certains sont excellents pour la <strong>paie pure</strong> (PayFit, Silae), d'autres pour la <strong>gestion RH globale</strong> (Factorial, Lucca) et d'autres pour les horaires variables (Skello, Kelio).</p>
           <div class="lb" style="margin-bottom:10px">Les critères clés</div>
           <ul class="cl">
             <li><div class="cn">01</div><span><strong style="color:var(--text)">Module paie</strong> : conventions collectives, DSN, bulletins multi-cas</span></li>
@@ -316,10 +316,10 @@
           <div class="lb">Questions fréquentes</div>
           <h2 class="h2s" style="font-size:1.2rem;margin-bottom:16px">Vos questions sur les logiciels RH</h2>
           <div class="fl">
-            <div class="fi"><div class="fq" onclick="tF(this)">Quel est le meilleur logiciel de paie pour une PME ?<div class="ft2">+</div></div><div class="fa">Pour une PME de moins de 50 salariés sans DRH, <strong>PayFit</strong> est la référence. Pour un SIRH complet, <strong>Factorial</strong> ou <strong>Lucca</strong> sont plus adaptés.</div></div>
-            <div class="fi"><div class="fq" onclick="tF(this)">Quelle différence entre logiciel de paie et SIRH ?<div class="ft2">+</div></div><div class="fa">Un <strong>logiciel de paie</strong> gère bulletins, DSN et déclarations sociales. Un <strong>SIRH</strong> couvre tout le cycle RH : recrutement, congés, temps, formation et paie.</div></div>
-            <div class="fi"><div class="fq" onclick="tF(this)">Combien coûte un logiciel RH pour 20 salariés ?<div class="ft2">+</div></div><div class="fa">Comptez entre <strong>150 et 400 €/mois</strong> selon les fonctionnalités. PayFit : 160-220 €/mois. Factorial : 150-200 €/mois. Lucca : variable selon les modules.</div></div>
-            <div class="fi"><div class="fq" onclick="tF(this)">Peut-on changer de logiciel en cours d'année ?<div class="ft2">+</div></div><div class="fa">Oui, mais privilégiez <strong>janvier</strong> (début d'exercice). Prévoyez l'export des données et une période de double-run d'au moins 1 mois.</div></div>
+            <div class="fi"><div class="fq" onclick="tF(this)"><h3 style="font-size:inherit;font-weight:inherit;margin:0;display:inline">Quel est le meilleur logiciel de paie pour une PME ?</h3><div class="ft2">+</div></div><div class="fa">Pour une PME de moins de 50 salariés sans DRH, <strong>PayFit</strong> est la référence. Pour un SIRH complet, <strong>Factorial</strong> ou <strong>Lucca</strong> sont plus adaptés.</div></div>
+            <div class="fi"><div class="fq" onclick="tF(this)"><h3 style="font-size:inherit;font-weight:inherit;margin:0;display:inline">Quelle différence entre logiciel de paie et SIRH ?</h3><div class="ft2">+</div></div><div class="fa">Un <strong>logiciel de paie</strong> gère bulletins, DSN et déclarations sociales. Un <strong>SIRH</strong> couvre tout le cycle RH : recrutement, congés, temps, formation et paie.</div></div>
+            <div class="fi"><div class="fq" onclick="tF(this)"><h3 style="font-size:inherit;font-weight:inherit;margin:0;display:inline">Combien coûte un logiciel RH pour 20 salariés ?</h3><div class="ft2">+</div></div><div class="fa">Comptez entre <strong>150 et 400 €/mois</strong> selon les fonctionnalités. PayFit : 160-220 €/mois. Factorial : 150-200 €/mois. Lucca : variable selon les modules.</div></div>
+            <div class="fi"><div class="fq" onclick="tF(this)"><h3 style="font-size:inherit;font-weight:inherit;margin:0;display:inline">Peut-on changer de logiciel en cours d'année ?</h3><div class="ft2">+</div></div><div class="fa">Oui, mais privilégiez <strong>janvier</strong> (début d'exercice). Prévoyez l'export des données et une période de double-run d'au moins 1 mois.</div></div>
           </div>
           <div style="margin-top:18px"><a href="trouver-mon-logiciel.html" class="btn btn-primary" style="border-radius:99px">Trouver mon logiciel →</a></div>
         </div>
