@@ -617,6 +617,10 @@
         margin: 0 -16px;
         padding: 8px 16px;
       }
+
+      .article-hero .author-line {
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -633,6 +637,7 @@
         <a href="../avis/index.html">Avis</a>
         <a href="../trouver-mon-logiciel.html" class="nav-cta">Trouver mon logiciel</a>
       </nav>
+      <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </header>
 
@@ -649,7 +654,6 @@
 
   <!-- HERO ARTICLE -->
   <section class="article-hero">
-    <div class="breadcrumb"><a href="../index.html">Accueil</a> › <a href="index.html">Guides</a> › Choisir son logiciel de paie</div>
     <span class="badge">Guide</span>
     <h1>Comment choisir son logiciel de paie en 2026 : le guide complet pour PME</h1>
     <p class="article-hero-sub">
@@ -1290,5 +1294,24 @@
     })();
   </script>
 
+<script>
+(function(){
+  var burger = document.querySelector('.nav-burger');
+  var nav = document.querySelector('.site-nav');
+  if(!burger || !nav) return;
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e){
+    if(!burger.contains(e.target) && !nav.contains(e.target)){
+      nav.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
 </body>
 </html>
