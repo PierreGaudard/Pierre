@@ -113,7 +113,6 @@
     }
     .option-btn:hover { border-color: var(--primary); background: var(--primary-light); }
     .option-btn.selected { border-color: var(--primary); background: var(--primary-light); }
-    .opt-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 1px; }
     .opt-text strong { display: block; font-size: .9rem; font-weight: 700; margin-bottom: 2px; color: var(--text); }
     .opt-text span { font-size: .82rem; color: var(--text-muted); line-height: 1.3; }
 
@@ -253,9 +252,9 @@
     <h1>Trouvez votre logiciel RH<br>en 2 minutes chrono</h1>
     <p>8 questions pour une recommandation sur mesure : gratuit, sans email requis.</p>
     <div class="hero-badges">
-      <span class="hero-badge">⚡ 2 minutes</span>
-      <span class="hero-badge">🎯 Recommandation personnalisée</span>
-      <span class="hero-badge">🔒 100% gratuit</span>
+      <span class="hero-badge">2 minutes</span>
+      <span class="hero-badge">Recommandation personnalisée</span>
+      <span class="hero-badge">100% gratuit</span>
     </div>
   </div>
 
@@ -315,28 +314,28 @@
       </div>
       <div class="options-grid">
         <button class="option-btn" onclick="goToStep(2, this)" data-val="1-9">
-          <span class="opt-icon">🌱</span>
+
           <div class="opt-text">
             <strong>1 à 9 salariés</strong>
             <span>TPE, auto-entrepreneur avec salariés, micro-structure</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(2, this)" data-val="10-49">
-          <span class="opt-icon">🏢</span>
+
           <div class="opt-text">
             <strong>10 à 49 salariés</strong>
             <span>Petite entreprise, PME naissante</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(2, this)" data-val="50-199">
-          <span class="opt-icon">🏗️</span>
+
           <div class="opt-text">
             <strong>50 à 199 salariés</strong>
             <span>PME avec service RH structuré</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(2, this)" data-val="200+">
-          <span class="opt-icon">🏭</span>
+
           <div class="opt-text">
             <strong>200 salariés et plus</strong>
             <span>Grande PME, ETI ou groupe</span>
@@ -354,35 +353,35 @@
       </div>
       <div class="options-col">
         <button class="option-btn" onclick="goToStep(3, this)" data-val="none">
-          <span class="opt-icon">📄</span>
+
           <div class="opt-text">
             <strong>Aucun logiciel : gestion manuelle ou Excel</strong>
             <span>Vous partez de zéro ou d'un processus non automatisé</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(3, this)" data-val="payfit">
-          <span class="opt-icon">💙</span>
+
           <div class="opt-text">
             <strong>PayFit</strong>
             <span>Vous utilisez PayFit et souhaitez comparer ou migrer</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(3, this)" data-val="silae">
-          <span class="opt-icon">💼</span>
+
           <div class="opt-text">
             <strong>Silae / Cabinet comptable</strong>
             <span>La paie est gérée par votre cabinet comptable via Silae</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(3, this)" data-val="sage">
-          <span class="opt-icon">📊</span>
+
           <div class="opt-text">
             <strong>Sage Paie / outil on-premise</strong>
             <span>Vous avez un logiciel installé localement et souhaitez passer au cloud</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(3, this)" data-val="other">
-          <span class="opt-icon">🔧</span>
+
           <div class="opt-text">
             <strong>Un autre outil (Factorial, Lucca, Nibelis…)</strong>
             <span>Vous êtes sur un autre logiciel et souhaitez comparer</span>
@@ -403,28 +402,28 @@
       </div>
       <div class="options-col">
         <button class="option-btn" onclick="goToStep(4, this)" data-val="founder">
-          <span class="opt-icon">👤</span>
+
           <div class="opt-text">
             <strong>Le dirigeant lui-même (sans expertise RH/paie)</strong>
             <span>Pas de spécialiste en interne, le fondateur fait tout</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(4, this)" data-val="admin">
-          <span class="opt-icon">📋</span>
+
           <div class="opt-text">
             <strong>Un assistant(e) administratif(ve) ou office manager</strong>
             <span>Quelqu'un en charge de l'admin, sans expertise paie dédiée</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(4, this)" data-val="rh">
-          <span class="opt-icon">👥</span>
+
           <div class="opt-text">
             <strong>Un RH ou DRH dédié</strong>
             <span>Un professionnel RH à plein temps ou à mi-temps</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(4, this)" data-val="compta">
-          <span class="opt-icon">🧮</span>
+
           <div class="opt-text">
             <strong>Un expert-comptable ou cabinet externe</strong>
             <span>La paie est externalisée, vous cherchez à internaliser</span>
@@ -446,42 +445,42 @@
       <div class="multi-hint">Sélectionnez toutes les cases qui vous correspondent, puis cliquez sur "Continuer".</div>
       <div class="options-grid" id="needsGrid">
         <button class="option-btn multi" data-val="paie">
-          <span class="opt-icon">💰</span>
+
           <div class="opt-text">
             <strong>Automatiser la paie</strong>
             <span>Bulletins, DSN, charges sociales</span>
           </div>
         </button>
         <button class="option-btn multi" data-val="conges">
-          <span class="opt-icon">🏖️</span>
+
           <div class="opt-text">
             <strong>Gestion des congés et absences</strong>
             <span>Pose de congés, suivi RTT, absences</span>
           </div>
         </button>
         <button class="option-btn multi" data-val="recrutement">
-          <span class="opt-icon">🔍</span>
+
           <div class="opt-text">
             <strong>Recrutement</strong>
             <span>Annonces, candidatures, pipeline de recrutement</span>
           </div>
         </button>
         <button class="option-btn multi" data-val="temps">
-          <span class="opt-icon">⏱️</span>
+
           <div class="opt-text">
             <strong>Suivi du temps et présences</strong>
             <span>Pointage, heures supplémentaires, modulation</span>
           </div>
         </button>
         <button class="option-btn multi" data-val="onboarding">
-          <span class="opt-icon">🎓</span>
+
           <div class="opt-text">
             <strong>Onboarding & formation</strong>
             <span>Intégration des nouveaux, plan de formation</span>
           </div>
         </button>
         <button class="option-btn multi" data-val="frais">
-          <span class="opt-icon">🧾</span>
+
           <div class="opt-text">
             <strong>Notes de frais</strong>
             <span>Remboursements, justificatifs, virements</span>
@@ -503,28 +502,28 @@
       </div>
       <div class="options-col">
         <button class="option-btn" onclick="goToStep(6, this)" data-val="<5">
-          <span class="opt-icon">💸</span>
+
           <div class="opt-text">
             <strong>Moins de 5 €/salarié/mois</strong>
             <span>Budget serré : fonctionnalités de base suffisent</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(6, this)" data-val="5-10">
-          <span class="opt-icon">💵</span>
+
           <div class="opt-text">
             <strong>5 à 10 €/salarié/mois</strong>
             <span>Budget standard pour une PME : couvre la majorité des besoins</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(6, this)" data-val="10-20">
-          <span class="opt-icon">💳</span>
+
           <div class="opt-text">
             <strong>10 à 20 €/salarié/mois</strong>
             <span>Budget confortable : accès aux fonctionnalités avancées</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(6, this)" data-val=">20">
-          <span class="opt-icon">🏆</span>
+
           <div class="opt-text">
             <strong>Plus de 20 €/salarié/mois</strong>
             <span>Budget premium : solution enterprise avec accompagnement complet</span>
@@ -545,28 +544,28 @@
       </div>
       <div class="options-col">
         <button class="option-btn" onclick="goToStep(7, this)" data-val="simple">
-          <span class="opt-icon">🏠</span>
+
           <div class="opt-text">
             <strong>Un seul établissement, une seule convention collective</strong>
             <span>Situation standard pour une majorité de PME</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(7, this)" data-val="multi-site">
-          <span class="opt-icon">🗺️</span>
+
           <div class="opt-text">
             <strong>Plusieurs établissements (mêmes CCN)</strong>
             <span>Multi-sites mais sans complexité de conventions collectives</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(7, this)" data-val="multi-ccn">
-          <span class="opt-icon">📑</span>
+
           <div class="opt-text">
             <strong>Plusieurs conventions collectives différentes</strong>
             <span>Paie complexe nécessitant une gestion multi-CCN</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(7, this)" data-val="multi-pays">
-          <span class="opt-icon">🌍</span>
+
           <div class="opt-text">
             <strong>Présence dans plusieurs pays</strong>
             <span>Salariés en France et à l'étranger : multi-législations</span>
@@ -587,42 +586,42 @@
       </div>
       <div class="options-grid">
         <button class="option-btn" onclick="goToStep(8, this)" data-val="tech">
-          <span class="opt-icon">💻</span>
+
           <div class="opt-text">
             <strong>Tech / Startup / Numérique</strong>
             <span>SaaS, ESN, agences digitales</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(8, this)" data-val="chr">
-          <span class="opt-icon">🍽️</span>
+
           <div class="opt-text">
             <strong>CHR / Commerce / Retail</strong>
             <span>Hôtellerie, restauration, commerce de détail</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(8, this)" data-val="industrie">
-          <span class="opt-icon">🔩</span>
+
           <div class="opt-text">
             <strong>Industrie / BTP / Logistique</strong>
             <span>Fabrication, construction, transport</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(8, this)" data-val="sante">
-          <span class="opt-icon">🏥</span>
+
           <div class="opt-text">
             <strong>Santé / Médico-social</strong>
             <span>Cliniques, EHPAD, cabinets médicaux, associations</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(8, this)" data-val="conseil">
-          <span class="opt-icon">💼</span>
+
           <div class="opt-text">
             <strong>Conseil / Services aux entreprises</strong>
             <span>Cabinets conseil, juridique, comptabilité</span>
           </div>
         </button>
         <button class="option-btn" onclick="goToStep(8, this)" data-val="autre">
-          <span class="opt-icon">📋</span>
+
           <div class="opt-text">
             <strong>Autre secteur</strong>
             <span>Association, collectivité, éducation…</span>
@@ -643,28 +642,28 @@
       </div>
       <div class="options-col">
         <button class="option-btn" onclick="computeResult(this)" data-val="urgent">
-          <span class="opt-icon">🚀</span>
+
           <div class="opt-text">
             <strong>Urgent : moins d'un mois</strong>
             <span>Besoin immédiat, première paie à lancer rapidement</span>
           </div>
         </button>
         <button class="option-btn" onclick="computeResult(this)" data-val="1-3m">
-          <span class="opt-icon">📅</span>
+
           <div class="opt-text">
             <strong>Dans 1 à 3 mois</strong>
             <span>Vous avez le temps de bien paramétrer et former les équipes</span>
           </div>
         </button>
         <button class="option-btn" onclick="computeResult(this)" data-val="6m+">
-          <span class="opt-icon">🗓️</span>
+
           <div class="opt-text">
             <strong>Dans 3 à 6 mois ou plus</strong>
             <span>Déploiement stratégique avec un projet structuré</span>
           </div>
         </button>
         <button class="option-btn" onclick="computeResult(this)" data-val="recherche">
-          <span class="opt-icon">🔍</span>
+
           <div class="opt-text">
             <strong>Je fais juste des recherches pour l'instant</strong>
             <span>Benchmarking en cours, pas de décision imminente</span>
@@ -702,6 +701,11 @@
     </div>
 
   </div>
+
+  <section style="max-width:760px;margin:0 auto;padding:0 24px 56px">
+    <h2 style="font-size:1.2rem;font-weight:800;margin-bottom:12px;color:var(--text)">Comment choisir le bon logiciel RH pour votre PME ?</h2>
+    <p style="font-size:.92rem;color:var(--text-muted);line-height:1.7;margin:0">Choisir un logiciel RH adapté est un enjeu stratégique pour toute PME. Entre les solutions de paie automatisée comme PayFit, les SIRH complets comme Factorial ou Lucca, et les outils spécialisés comme Silae pour les paies complexes, l'offre est vaste. Notre outil de recommandation analyse votre taille d'entreprise, vos besoins fonctionnels, votre budget et votre secteur d'activité pour vous orienter vers la solution la plus pertinente. Chaque recommandation s'appuie sur nos tests et comparatifs indépendants, réalisés selon une <a href="methodologie.html" style="color:var(--primary)">méthodologie transparente</a>.</p>
+  </section>
 
   <footer class="site-footer">
     <div class="site-footer-inner">
