@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulateur cout d'un salarie 2026 : calculez le cout total employeur - MLRH</title>
+  <meta name="description" content="Simulateur gratuit du cout total d'un salarie en France en 2026. Charges patronales, mutuelle, tickets restaurant, transport. Donnees URSSAF officielles.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://meilleur-logiciel-rh.fr/outils/simulateur-cout-salarie.html">
+  <link rel="icon" href="../assets/images/favicon-mlrh.png" type="image/png">
+  <link rel="stylesheet" href="../assets/style.css">
+
+  <meta property="og:title" content="Simulateur cout d'un salarie 2026 : calculez le cout total employeur - MLRH">
+  <meta property="og:description" content="Calculez le cout reel d'un salarie pour votre entreprise. Charges patronales, mutuelle, avantages. Donnees URSSAF 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://meilleur-logiciel-rh.fr/outils/simulateur-cout-salarie.html">
+
+  <link rel="alternate" hreflang="fr" href="https://meilleur-logiciel-rh.fr/outils/simulateur-cout-salarie.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://meilleur-logiciel-rh.fr/"},
+          {"@type": "ListItem", "position": 2, "name": "Outils RH", "item": "https://meilleur-logiciel-rh.fr/outils/"},
+          {"@type": "ListItem", "position": 3, "name": "Simulateur cout d'un salarie", "item": "https://meilleur-logiciel-rh.fr/outils/simulateur-cout-salarie.html"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quel est le cout reel d'un salarie pour l'employeur en France ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "En France, le cout total d'un salarie pour l'employeur represente en moyenne 1,4 a 1,6 fois le salaire brut. Pour un salarie non-cadre au SMIC, grace a la reduction Fillon, le ratio peut descendre autour de 1,1. Pour un cadre a 5 000 EUR brut, il monte a environ 1,45. Ce ratio inclut les cotisations patronales obligatoires (maladie, vieillesse, chomage, retraite complementaire, AT/MP) mais pas les avantages facultatifs (mutuelle, tickets restaurant, transport)."}
+          },
+          {
+            "@type": "Question",
+            "name": "Quelles sont les principales charges patronales en 2026 ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Les charges patronales comprennent : l'assurance maladie (7% ou 13%), les allocations familiales (3,45% ou 5,25%), l'assurance vieillesse (8,55% plafonee + 2,02% deplafonee), les accidents du travail (taux variable, 1,28% en moyenne), l'assurance chomage (4,05%), l'AGS (0,20%), la retraite complementaire AGIRC-ARRCO (4,72% T1 + 12,95% T2), la CEG (1,29% T1 + 1,62% T2), le FNAL (0,10% ou 0,50%), la CSA (0,30%), la taxe d'apprentissage (0,68%) et la contribution formation (0,55% ou 1%)."}
+          },
+          {
+            "@type": "Question",
+            "name": "Comment fonctionne la reduction Fillon ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "La reduction generale de cotisations patronales (ex-reduction Fillon) s'applique aux salaires inferieurs a 1,6 SMIC brut mensuel (soit environ 2 883 EUR en 2026). Elle reduit progressivement les charges patronales selon un coefficient calcule par la formule : C = (0,3206 / 0,6) x (1,6 x SMIC / salaire brut - 1). La reduction est maximale au SMIC (environ 560 EUR/mois de charges en moins) et devient nulle a 1,6 SMIC. Pour les entreprises de 50 salaries et plus, le coefficient maximal est de 0,3246."}
+          },
+          {
+            "@type": "Question",
+            "name": "Un CDD coute-t-il plus cher qu'un CDI ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Oui, un CDD coute generalement plus cher qu'un CDI. Le salarie en CDD a droit a une indemnite de fin de contrat (prime de precarite) egale a 10% de la remuneration brute totale versee pendant le contrat. De plus, certains CDD d'usage sont soumis a une taxe forfaitaire de 10 EUR. En revanche, les cotisations patronales de base sont identiques entre CDD et CDI. Au total, un CDD represente un surcout d'environ 10 a 15% par rapport a un CDI pour un meme salaire brut."}
+          },
+          {
+            "@type": "Question",
+            "name": "La mutuelle d'entreprise est-elle obligatoire ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Oui, depuis le 1er janvier 2016, tout employeur du secteur prive doit proposer une complementaire sante collective a ses salaries. L'employeur doit financer au minimum 50% de la cotisation. Le panier de soins minimal est defini par la loi et comprend le remboursement du ticket moderateur, le forfait journalier hospitalier, les frais dentaires et optiques dans certaines limites. La part employeur de la mutuelle est exoneree de cotisations sociales dans la limite de certains plafonds, mais elle est soumise a la CSG-CRDS et au forfait social de 8%."}
+          }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Simulateur cout d'un salarie 2026",
+        "url": "https://meilleur-logiciel-rh.fr/outils/simulateur-cout-salarie.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "description": "Simulateur gratuit pour calculer le cout total d'un salarie en France en 2026. Charges patronales detaillees, reduction Fillon, avantages en nature.",
+        "inLanguage": "fr-FR",
+        "provider": {
+          "@type": "Organization",
+          "name": "MLRH",
+          "url": "https://meilleur-logiciel-rh.fr"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body { background: #f8fafc; }
+
+    /* Hero */
+    .tool-hero {
+      background: linear-gradient(135deg, #14532d 0%, #16a34a 100%);
+      padding: 28px 24px 36px;
+      color: white;
+    }
+    .tool-hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .tool-hero h1 {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+    .tool-hero-sub {
+      font-size: 1.02rem;
+      color: rgba(255,255,255,.85);
+      max-width: 640px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      padding: 14px 24px;
+      background: white;
+      border-bottom: 1px solid var(--border);
+      font-size: .82rem;
+      color: var(--text-muted);
+    }
+    .breadcrumb-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--primary); }
+    .breadcrumb-sep { color: #cbd5e1; }
+
+    /* Calculator section */
+    .calc-section {
+      max-width: 900px;
+      margin: -24px auto 0;
+      padding: 0 24px 48px;
+      position: relative;
+      z-index: 2;
+    }
+    .calc-card {
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .calc-header {
+      background: var(--bg);
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--border);
+    }
+    .calc-header-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .calc-header-sub {
+      font-size: .84rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .calc-body {
+      padding: 28px;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .calc-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .calc-field.full {
+      grid-column: 1 / -1;
+    }
+    .calc-field label {
+      font-size: .84rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .calc-field .field-hint {
+      font-size: .78rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    .calc-input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .calc-input-wrap input,
+    .calc-input-wrap select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: .95rem;
+      color: var(--text);
+      background: var(--white);
+      outline: none;
+      transition: border-color .15s;
+      font-family: inherit;
+    }
+    .calc-input-wrap input:focus,
+    .calc-input-wrap select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(22,163,74,.1);
+    }
+    .calc-input-wrap .input-suffix {
+      position: absolute;
+      right: 14px;
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+    .calc-input-wrap input.has-suffix {
+      padding-right: 40px;
+    }
+    .calc-input-wrap select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%235a6478' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+      cursor: pointer;
+    }
+
+    /* Results */
+    .calc-results {
+      margin-top: 28px;
+      border-top: 2px solid var(--primary-light);
+      padding-top: 24px;
+    }
+    .results-title {
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    .result-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .result-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .result-line:last-child {
+      border-bottom: none;
+    }
+    .result-line .rl-label {
+      font-size: .9rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .result-line .rl-label .rl-pct {
+      font-size: .78rem;
+      color: var(--text-muted);
+      background: var(--bg);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+    .result-line .rl-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .result-line.highlight {
+      background: var(--primary-light);
+      margin: 0 -28px;
+      padding: 16px 28px;
+      border-radius: 10px;
+      border-bottom: none;
+    }
+    .result-line.highlight .rl-label {
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+    .result-line.highlight .rl-value {
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+    }
+    .result-line.deduction .rl-value {
+      color: #dc2626;
+    }
+    .result-group-title {
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--text-muted);
+      margin: 16px 0 4px;
+    }
+
+    /* Breakdown toggle */
+    .breakdown-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 8px 16px;
+      font-size: .84rem;
+      font-weight: 600;
+      color: var(--primary);
+      cursor: pointer;
+      margin-top: 16px;
+      font-family: inherit;
+      transition: background .15s;
+    }
+    .breakdown-toggle:hover {
+      background: var(--primary-light);
+    }
+    .breakdown-table-wrap {
+      display: none;
+      margin-top: 16px;
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .breakdown-table-wrap.visible {
+      display: block;
+    }
+    .breakdown-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+    }
+    .breakdown-table thead {
+      background: #dcfce7;
+    }
+    .breakdown-table th {
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 700;
+      font-size: .78rem;
+      color: #14532d;
+      border-bottom: 2px solid #e2e8f0;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+    .breakdown-table td {
+      padding: 8px 14px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    .breakdown-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .breakdown-table tbody tr:hover {
+      background: #f0fdf4;
+    }
+    .breakdown-table .total-row {
+      background: #dcfce7;
+      font-weight: 700;
+    }
+
+    /* Content section */
+    .content-section {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .content-section h2 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--text);
+      margin: 48px 0 16px;
+      line-height: 1.3;
+    }
+    .content-section h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 28px 0 12px;
+    }
+    .content-section p {
+      color: var(--text);
+      line-height: 1.85;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+    .content-section ul,
+    .content-section ol {
+      margin: 0 0 20px 20px;
+      line-height: 1.85;
+    }
+    .content-section li {
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    /* Tables */
+    .compare-table-wrap {
+      overflow-x: auto;
+      margin: 28px 0;
+      border-radius: var(--radius);
+      border: 1px solid #e2e8f0;
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .92rem;
+      background: white;
+    }
+    .compare-table thead tr {
+      background: #dcfce7;
+    }
+    .compare-table thead th {
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: .85rem;
+      color: #14532d;
+      border-bottom: 2px solid #e2e8f0;
+      white-space: nowrap;
+    }
+    .compare-table tbody tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    .compare-table tbody tr:hover {
+      background: #f0fdf4;
+    }
+    .compare-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .compare-table td:first-child {
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    /* Info box */
+    .info-box {
+      background: #f0fdf4;
+      border-left: 4px solid #16a34a;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+
+    /* FAQ */
+    .faq-list { margin: 24px 0; }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 18px 20px;
+      font-weight: 700;
+      font-size: .95rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: white;
+      user-select: none;
+    }
+    .faq-question:hover { background: var(--bg); }
+    .faq-chevron {
+      flex-shrink: 0;
+      transition: transform .25s;
+    }
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      display: none;
+      padding: 0 20px 18px;
+      font-size: .93rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      background: white;
+    }
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* CTA box */
+    .cta-box {
+      background: linear-gradient(135deg, #14532d, #16a34a);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+      color: white;
+      margin: 48px 0 0;
+    }
+    .cta-box h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: white;
+    }
+    .cta-box p {
+      color: rgba(255,255,255,.85);
+      font-size: .95rem;
+      margin-bottom: 24px;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+      .calc-body {
+        padding: 20px;
+      }
+      .calc-header {
+        padding: 16px 20px;
+      }
+      .result-line.highlight {
+        margin: 0 -20px;
+        padding: 14px 20px;
+      }
+      .calc-section {
+        padding: 0 16px 36px;
+      }
+      .content-section {
+        padding: 0 16px 60px;
+      }
+      .tool-hero {
+        padding: 24px 16px 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="../" class="site-logo"><img src="../assets/images/mlrh-logo.png" alt="MLRH" style="height:30px;width:auto;filter:brightness(0)"></a>
+      <nav class="site-nav">
+        <a href="../comparatifs/">Comparatifs</a>
+        <a href="../guides/">Guides</a>
+        <a href="../alternatives/">Alternatives</a>
+        <a href="../avis/">Avis</a>
+        <a href="../outils/">Outils</a>
+        <a href="../trouver-mon-logiciel.html" class="nav-cta">Trouver mon logiciel</a>
+      </nav>
+      <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- FIL D'ARIANE -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <div class="breadcrumb-inner">
+      <a href="../">Accueil</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../outils/">Outils RH</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>Simulateur cout d'un salarie</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <h1>Simulateur cout d'un salarie 2026</h1>
+      <p class="tool-hero-sub">Calculez le cout total reel d'un salarie pour votre entreprise. Charges patronales detaillees, reduction Fillon, mutuelle, tickets restaurant et transport. Donnees URSSAF officielles.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATEUR -->
+  <section class="calc-section">
+    <div class="calc-card">
+      <div class="calc-header">
+        <div class="calc-header-title">Simulateur de cout employeur</div>
+        <div class="calc-header-sub">Saisissez les informations du poste, le calcul se met a jour automatiquement</div>
+      </div>
+      <div class="calc-body">
+        <div class="calc-grid">
+          <!-- Salaire brut -->
+          <div class="calc-field">
+            <label for="salaire-brut">Salaire brut mensuel</label>
+            <div class="calc-input-wrap">
+              <input type="number" id="salaire-brut" class="has-suffix" placeholder="3 000" min="0" step="50" value="3000">
+              <span class="input-suffix">&euro;</span>
+            </div>
+          </div>
+
+          <!-- Statut -->
+          <div class="calc-field">
+            <label for="statut">Statut du salarie</label>
+            <div class="calc-input-wrap">
+              <select id="statut">
+                <option value="non-cadre">Non-cadre</option>
+                <option value="cadre">Cadre</option>
+                <option value="apprenti">Apprenti</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Type de contrat -->
+          <div class="calc-field">
+            <label for="contrat">Type de contrat</label>
+            <div class="calc-input-wrap">
+              <select id="contrat">
+                <option value="cdi">CDI</option>
+                <option value="cdd">CDD (prime de precarite 10%)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Taille entreprise -->
+          <div class="calc-field">
+            <label for="taille">Taille de l'entreprise</label>
+            <div class="calc-input-wrap">
+              <select id="taille">
+                <option value="petite">Moins de 11 salaries</option>
+                <option value="moyenne">11 a 49 salaries</option>
+                <option value="grande">50 salaries et plus</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Taux AT/MP -->
+          <div class="calc-field">
+            <label for="taux-at">Taux AT/MP <span class="field-hint">(accidents du travail)</span></label>
+            <div class="calc-input-wrap">
+              <input type="number" id="taux-at" class="has-suffix" placeholder="1.28" min="0" max="10" step="0.01" value="1.28">
+              <span class="input-suffix">%</span>
+            </div>
+          </div>
+
+          <!-- Mutuelle -->
+          <div class="calc-field">
+            <label for="mutuelle">Mutuelle part employeur <span class="field-hint">(mensuel)</span></label>
+            <div class="calc-input-wrap">
+              <input type="number" id="mutuelle" class="has-suffix" placeholder="50" min="0" step="5" value="50">
+              <span class="input-suffix">&euro;</span>
+            </div>
+          </div>
+
+          <!-- Tickets restaurant -->
+          <div class="calc-field">
+            <label for="tickets">Tickets restaurant part employeur <span class="field-hint">(mensuel)</span></label>
+            <div class="calc-input-wrap">
+              <input type="number" id="tickets" class="has-suffix" placeholder="0" min="0" step="10" value="0">
+              <span class="input-suffix">&euro;</span>
+            </div>
+          </div>
+
+          <!-- Transport -->
+          <div class="calc-field">
+            <label for="transport">Remboursement transport <span class="field-hint">(mensuel)</span></label>
+            <div class="calc-input-wrap">
+              <input type="number" id="transport" class="has-suffix" placeholder="0" min="0" step="5" value="0">
+              <span class="input-suffix">&euro;</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Resultats -->
+        <div class="calc-results" id="calc-results">
+          <div class="results-title">Resultats de la simulation</div>
+          <div class="result-lines">
+            <div class="result-line">
+              <span class="rl-label">Salaire brut mensuel</span>
+              <span class="rl-value" id="res-brut">-</span>
+            </div>
+            <div class="result-line deduction">
+              <span class="rl-label">Cotisations patronales <span class="rl-pct" id="res-cotis-pct">-</span></span>
+              <span class="rl-value" id="res-cotis">-</span>
+            </div>
+            <div class="result-line deduction" id="row-fillon" style="display:none">
+              <span class="rl-label">Reduction generale (Fillon) <span class="rl-pct" id="res-fillon-pct">-</span></span>
+              <span class="rl-value" id="res-fillon" style="color:#16a34a">-</span>
+            </div>
+            <div class="result-line">
+              <span class="rl-label">Cotisations nettes employeur</span>
+              <span class="rl-value" id="res-cotis-nettes">-</span>
+            </div>
+            <div class="result-line">
+              <span class="rl-label">Mutuelle employeur</span>
+              <span class="rl-value" id="res-mutuelle">-</span>
+            </div>
+            <div class="result-line">
+              <span class="rl-label">Tickets restaurant</span>
+              <span class="rl-value" id="res-tickets">-</span>
+            </div>
+            <div class="result-line">
+              <span class="rl-label">Transport</span>
+              <span class="rl-value" id="res-transport">-</span>
+            </div>
+            <div class="result-line" id="row-precarite" style="display:none">
+              <span class="rl-label">Provision prime de precarite CDD <span class="rl-pct">10%</span></span>
+              <span class="rl-value" id="res-precarite">-</span>
+            </div>
+            <div class="result-line highlight">
+              <span class="rl-label">Cout total mensuel employeur</span>
+              <span class="rl-value" id="res-total-mensuel">-</span>
+            </div>
+
+            <div class="result-group-title">Recapitulatif</div>
+            <div class="result-line">
+              <span class="rl-label">Cout total annuel</span>
+              <span class="rl-value" id="res-total-annuel">-</span>
+            </div>
+            <div class="result-line highlight">
+              <span class="rl-label">Ratio cout / brut</span>
+              <span class="rl-value" id="res-ratio">-</span>
+            </div>
+          </div>
+
+          <!-- Detail charges -->
+          <button type="button" class="breakdown-toggle" id="btn-detail" onclick="toggleBreakdown()">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            Voir le detail des charges patronales
+          </button>
+          <div class="breakdown-table-wrap" id="breakdown-wrap">
+            <table class="breakdown-table">
+              <thead>
+                <tr>
+                  <th>Cotisation</th>
+                  <th>Taux</th>
+                  <th>Base</th>
+                  <th>Montant</th>
+                </tr>
+              </thead>
+              <tbody id="breakdown-body">
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENU SEO -->
+  <section class="content-section">
+
+    <h2>Combien coute reellement un salarie en France en 2026 ?</h2>
+
+    <p>Recruter un collaborateur represente un investissement majeur pour toute entreprise. Pourtant, beaucoup de dirigeants de PME et de responsables RH confondent encore le salaire brut avec le cout reel du salarie. En realite, entre le montant inscrit sur le contrat de travail et la somme totale debitee chaque mois sur le compte de l'entreprise, la difference est considerable. En France, un salarie coute en moyenne <strong>1,4 a 1,6 fois son salaire brut</strong>. Pour un salaire brut de 3 000 EUR, l'entreprise debourse ainsi entre 4 200 et 4 800 EUR par mois, tout compris.</p>
+
+    <p>Cette realite s'explique par le systeme de protection sociale francais, parmi les plus complets au monde. Les cotisations patronales financent l'assurance maladie, les retraites, le chomage, la formation professionnelle et la prevention des accidents du travail. A ces charges obligatoires s'ajoutent des dispositifs complementaires comme la mutuelle d'entreprise, les tickets restaurant ou le remboursement du titre de transport. Comprendre la composition exacte de ce cout est indispensable pour etablir un budget previsionnel fiable, negocier en connaissance de cause et optimiser sa masse salariale dans le respect du cadre legal.</p>
+
+    <h2>Le detail des charges patronales en 2026</h2>
+
+    <p>Les cotisations patronales se decomposent en plusieurs families. Chacune finance un pilier specifique de la protection sociale. Voici le tableau complet des taux applicables en 2026, bases sur les donnees officielles de l'URSSAF :</p>
+
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Cotisation</th>
+            <th>Taux employeur</th>
+            <th>Plafond / base</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Assurance maladie</td><td>7,00% ou 13,00%</td><td>Totalite du salaire. Taux reduit a 7% si brut &le; 2,5 SMIC</td></tr>
+          <tr><td>Allocations familiales</td><td>3,45% ou 5,25%</td><td>Totalite du salaire. Taux reduit a 3,45% si brut &le; 3,5 SMIC</td></tr>
+          <tr><td>Assurance vieillesse plafonnee</td><td>8,55%</td><td>Plafond : 1 PASS (3 864 EUR/mois en 2025)</td></tr>
+          <tr><td>Assurance vieillesse deplafonnee</td><td>2,02%</td><td>Totalite du salaire</td></tr>
+          <tr><td>Accidents du travail (AT/MP)</td><td>Variable (moy. 1,28%)</td><td>Totalite du salaire. Taux fixe par la CARSAT selon le secteur</td></tr>
+          <tr><td>Assurance chomage</td><td>4,05%</td><td>Plafond : 4 PASS (15 456 EUR/mois)</td></tr>
+          <tr><td>AGS (garantie des salaires)</td><td>0,20%</td><td>Plafond : 4 PASS</td></tr>
+          <tr><td>FNAL</td><td>0,10% ou 0,50%</td><td>0,10% &le; 1 PASS (< 50 sal.) / 0,50% totalite (&ge; 50 sal.)</td></tr>
+          <tr><td>Contribution solidarite autonomie</td><td>0,30%</td><td>Totalite du salaire</td></tr>
+          <tr><td>Retraite AGIRC-ARRCO T1</td><td>4,72%</td><td>Jusqu'a 1 PASS</td></tr>
+          <tr><td>Retraite AGIRC-ARRCO T2</td><td>12,95%</td><td>De 1 PASS a 8 PASS (cadres principalement)</td></tr>
+          <tr><td>CEG tranche 1</td><td>1,29%</td><td>Jusqu'a 1 PASS</td></tr>
+          <tr><td>CEG tranche 2</td><td>1,62%</td><td>De 1 PASS a 8 PASS</td></tr>
+          <tr><td>Contribution formation</td><td>0,55% ou 1,00%</td><td>0,55% (< 11 sal.) / 1% (&ge; 11 sal.). Totalite du salaire</td></tr>
+          <tr><td>Taxe d'apprentissage</td><td>0,68%</td><td>Totalite du salaire</td></tr>
+          <tr><td>Effort construction (PEEC)</td><td>0,45%</td><td>Totalite du salaire. Uniquement &ge; 50 salaries</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box">
+      <strong>Source :</strong> Ces taux sont issus des baremes officiels publies par l'URSSAF et applicables au 1er janvier 2026. Le taux AT/MP varie selon l'activite de l'entreprise et sa sinistralite. Le plafond annuel de la Securite sociale (PASS) pour 2025 est de 46 368 EUR, soit 3 864 EUR par mois.
+    </div>
+
+    <h2>La reduction generale de cotisations patronales (ex-Fillon)</h2>
+
+    <p>La reduction generale, communement appelee reduction Fillon, constitue le principal levier d'allegement du cout du travail en France. Elle vise a reduire le cout des emplois peu qualifies en diminuant significativement les charges patronales sur les bas salaires.</p>
+
+    <h3>Comment ca fonctionne ?</h3>
+
+    <p>La reduction s'applique automatiquement a tout salarie dont la remuneration brute mensuelle ne depasse pas <strong>1,6 fois le SMIC</strong>, soit environ 2 883 EUR brut par mois en 2026. Le montant de la reduction est calcule selon la formule suivante :</p>
+
+    <ul>
+      <li><strong>Coefficient C</strong> = (T / 0,6) x (1,6 x SMIC mensuel / salaire brut - 1)</li>
+      <li><strong>T</strong> = 0,3206 pour les entreprises de moins de 50 salaries, 0,3246 pour les autres</li>
+      <li><strong>Reduction mensuelle</strong> = C x salaire brut mensuel</li>
+    </ul>
+
+    <p>Concretement, pour un salarie au SMIC (1 802 EUR brut), la reduction represente environ <strong>560 EUR par mois</strong>, soit une baisse massive du cout employeur. Pour un salaire de 2 200 EUR brut, la reduction tombe a environ 280 EUR par mois. Elle atteint zero a 1,6 SMIC.</p>
+
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Salaire brut mensuel</th>
+            <th>Reduction Fillon</th>
+            <th>Charges patronales nettes</th>
+            <th>Cout total employeur</th>
+            <th>Ratio cout/brut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1 802 EUR (SMIC)</td><td>-560 EUR</td><td>~210 EUR</td><td>~2 062 EUR</td><td>1,14x</td></tr>
+          <tr><td>2 200 EUR</td><td>-280 EUR</td><td>~630 EUR</td><td>~2 880 EUR</td><td>1,31x</td></tr>
+          <tr><td>2 600 EUR</td><td>-90 EUR</td><td>~990 EUR</td><td>~3 640 EUR</td><td>1,40x</td></tr>
+          <tr><td>2 883 EUR (1,6 SMIC)</td><td>0 EUR</td><td>~1 150 EUR</td><td>~4 083 EUR</td><td>1,42x</td></tr>
+          <tr><td>3 500 EUR</td><td>0 EUR</td><td>~1 470 EUR</td><td>~5 020 EUR</td><td>1,43x</td></tr>
+          <tr><td>5 000 EUR</td><td>0 EUR</td><td>~2 250 EUR</td><td>~7 300 EUR</td><td>1,46x</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>CDD vs CDI : l'impact sur le cout employeur</h2>
+
+    <p>Le choix entre un CDD et un CDI a un impact direct sur le budget RH de l'entreprise. Contrairement a une idee recue, les cotisations patronales de base sont identiques pour les deux types de contrat. La difference vient principalement de la <strong>prime de precarite</strong>.</p>
+
+    <p>A la fin d'un CDD, le salarie recoit une indemnite de fin de contrat egale a <strong>10% de la remuneration brute totale</strong> percue pendant le contrat (ou 6% si un accord de branche le prevoit en contrepartie d'un acces renforce a la formation). Cette prime est elle-meme soumise aux cotisations sociales, ce qui genere un surcout supplementaire.</p>
+
+    <ul>
+      <li><strong>CDI a 3 000 EUR brut</strong> : cout employeur mensuel d'environ 4 350 EUR (ratio 1,45x)</li>
+      <li><strong>CDD a 3 000 EUR brut</strong> : cout employeur effectif d'environ 4 785 EUR par mois (ratio 1,60x) en integrant la provision pour prime de precarite et les charges afferentes</li>
+      <li><strong>Surcout du CDD</strong> : environ 10 a 15% de plus qu'un CDI pour le meme poste</li>
+    </ul>
+
+    <div class="info-box">
+      <strong>Bon a savoir :</strong> Certains CDD ne donnent pas droit a la prime de precarite : les contrats saisonniers, les CDD conclus avec des etudiants pendant les vacances, les CDD qui se transforment en CDI et les contrats d'insertion (CUI). Pensez a verifier la situation au cas par cas.
+    </div>
+
+    <h2>Les couts annexes souvent oublies</h2>
+
+    <p>Au-dela des cotisations patronales, plusieurs postes de depense viennent alourdir la facture totale d'un salarie. Les ignorer conduit a sous-estimer le budget reel :</p>
+
+    <ul>
+      <li><strong>Mutuelle d'entreprise</strong> : obligatoire depuis 2016, l'employeur finance au minimum 50% de la cotisation. Comptez en moyenne 40 a 80 EUR par mois et par salarie selon la couverture choisie.</li>
+      <li><strong>Tickets restaurant</strong> : lorsqu'ils sont en place, la part employeur represente 50 a 60% de la valeur du titre. Pour des tickets a 10 EUR avec une participation a 60%, cela fait 132 EUR par mois (22 jours travailles).</li>
+      <li><strong>Remboursement transport</strong> : l'employeur prend en charge 50% du titre de transport en commun (75% a Paris depuis 2024 pour certaines entreprises). Comptez 40 a 50 EUR par mois en moyenne.</li>
+      <li><strong>Indemnite teletravail</strong> : de plus en plus courante, elle est en general de 2,60 EUR par jour de teletravail, exoneree dans cette limite. Pour 2 jours de teletravail par semaine, cela represente environ 22 EUR par mois.</li>
+      <li><strong>Medecine du travail</strong> : l'adhesion a un service de sante au travail coute entre 80 et 150 EUR par salarie et par an.</li>
+      <li><strong>Formation professionnelle</strong> : bien que la contribution obligatoire soit integree aux charges, les formations concretes engagent un budget supplementaire (cout pedagogique, absence du salarie).</li>
+    </ul>
+
+    <h2>Exemples concrets de cout total employeur</h2>
+
+    <p>Pour rendre ces chiffres plus parlants, voici trois exemples detailles correspondant a des profils courants en PME :</p>
+
+    <h3>Exemple 1 : assistant administratif au SMIC en CDI</h3>
+
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr><th>Poste</th><th>Montant mensuel</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Salaire brut</td><td>1 802 EUR</td></tr>
+          <tr><td>Charges patronales brutes</td><td>~770 EUR</td></tr>
+          <tr><td>Reduction Fillon</td><td>-560 EUR</td></tr>
+          <tr><td>Mutuelle employeur</td><td>40 EUR</td></tr>
+          <tr><td>Tickets restaurant (60% de 9 EUR x 22j)</td><td>119 EUR</td></tr>
+          <tr><td>Transport (50% Navigo)</td><td>43 EUR</td></tr>
+          <tr><td><strong>Cout total mensuel</strong></td><td><strong>2 214 EUR</strong></td></tr>
+          <tr><td><strong>Cout total annuel</strong></td><td><strong>26 568 EUR</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Exemple 2 : commercial cadre a 3 500 EUR brut en CDI</h3>
+
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr><th>Poste</th><th>Montant mensuel</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Salaire brut</td><td>3 500 EUR</td></tr>
+          <tr><td>Charges patronales</td><td>~1 540 EUR</td></tr>
+          <tr><td>Reduction Fillon</td><td>0 EUR (brut > 1,6 SMIC)</td></tr>
+          <tr><td>Mutuelle employeur</td><td>60 EUR</td></tr>
+          <tr><td>Tickets restaurant</td><td>132 EUR</td></tr>
+          <tr><td>Transport</td><td>43 EUR</td></tr>
+          <tr><td><strong>Cout total mensuel</strong></td><td><strong>5 275 EUR</strong></td></tr>
+          <tr><td><strong>Cout total annuel</strong></td><td><strong>63 300 EUR</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Exemple 3 : developpeur cadre a 5 000 EUR brut en CDI</h3>
+
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr><th>Poste</th><th>Montant mensuel</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Salaire brut</td><td>5 000 EUR</td></tr>
+          <tr><td>Charges patronales</td><td>~2 310 EUR</td></tr>
+          <tr><td>Mutuelle employeur</td><td>70 EUR</td></tr>
+          <tr><td>Tickets restaurant</td><td>132 EUR</td></tr>
+          <tr><td>Transport</td><td>43 EUR</td></tr>
+          <tr><td><strong>Cout total mensuel</strong></td><td><strong>7 555 EUR</strong></td></tr>
+          <tr><td><strong>Cout total annuel</strong></td><td><strong>90 660 EUR</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Comment optimiser le cout d'un salarie legalement ?</h2>
+
+    <p>Reduire le cout du travail ne signifie pas rogner sur les salaires. Plusieurs leviers legaux permettent d'optimiser la masse salariale tout en preservant l'attractivite de votre entreprise :</p>
+
+    <ol>
+      <li><strong>Exploiter la reduction Fillon au maximum</strong> : pour les postes dont la remuneration est proche du SMIC, la reduction generale peut diviser les charges patronales par trois. Verifiez que vos bulletins de paie appliquent bien cette reduction.</li>
+      <li><strong>Privilegier les avantages exoneres</strong> : les tickets restaurant (jusqu'a 7,18 EUR de part employeur exonere), l'indemnite teletravail, le forfait mobilite durable (jusqu'a 700 EUR/an exoneres) sont autant de leviers pour augmenter le pouvoir d'achat sans charges supplementaires.</li>
+      <li><strong>Mettre en place l'interessement et la participation</strong> : exoneres de cotisations patronales (hors forfait social de 8% pour les entreprises de plus de 250 salaries), ces dispositifs permettent de partager les resultats sans alourdir la masse salariale fixe.</li>
+      <li><strong>Recourir a l'apprentissage</strong> : l'aide a l'embauche d'apprentis (6 000 EUR la premiere annee) cumulee a des cotisations reduites rend ce contrat tres competitif pour former de futurs collaborateurs.</li>
+      <li><strong>Verifier les aides a l'embauche en vigueur</strong> : certaines zones geographiques (ZRR, QPV) ou certains profils (travailleurs handicapes, seniors) ouvrent droit a des exonerations specifiques. Consultez le site de l'URSSAF ou de France Travail pour les dispositifs actuels.</li>
+    </ol>
+
+    <div class="info-box">
+      <strong>Attention :</strong> Nos calculs sont bases sur les regles generales applicables en France metropolitaine. Votre situation exacte peut varier selon votre convention collective, vos accords d'entreprise et le taux AT/MP propre a votre activite. Pour un chiffrage precis et opposable, consultez votre expert-comptable ou votre gestionnaire de paie.
+    </div>
+
+    <h2>Questions frequentes sur le cout d'un salarie</h2>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Quel est le cout reel d'un salarie pour l'employeur en France ?</span>
+          <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer">
+          Le cout total d'un salarie represente en moyenne 1,4 a 1,6 fois son salaire brut. Pour un salarie au SMIC, grace a la reduction Fillon, ce ratio peut descendre a 1,1. Pour un cadre gagnant 5 000 EUR brut, comptez environ 7 300 EUR par mois, soit un ratio de 1,46. A cela s'ajoutent les avantages eventuels (mutuelle, tickets restaurant, transport) qui alourdissent encore la facture. Le cout annuel total est obtenu en multipliant le cout mensuel par 12 (les conges payes sont deja inclus dans le salaire brut).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Quelles sont les charges patronales principales en 2026 ?</span>
+          <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer">
+          Les charges patronales comprennent l'assurance maladie (7% ou 13% selon le salaire), les allocations familiales (3,45% ou 5,25%), l'assurance vieillesse (8,55% plafonnee + 2,02% deplafonnee), les accidents du travail (taux variable), l'assurance chomage (4,05%), la retraite complementaire AGIRC-ARRCO (4,72% T1 + 12,95% T2), le FNAL (0,10% ou 0,50%), la CSA (0,30%), la taxe d'apprentissage (0,68%) et la contribution formation (0,55% ou 1%). Au total, elles representent entre 25% et 45% du salaire brut selon le niveau de remuneration et le statut.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Comment fonctionne la reduction Fillon en 2026 ?</span>
+          <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer">
+          La reduction generale (ex-Fillon) allege les charges patronales pour les salaires inferieurs a 1,6 SMIC brut mensuel (environ 2 883 EUR). Le coefficient de reduction est calcule par la formule : C = (T / 0,6) x (1,6 x SMIC mensuel / salaire brut - 1), ou T vaut 0,3206 (< 50 salaries) ou 0,3246 (>= 50 salaries). La reduction est maximale au SMIC (environ 560 EUR/mois) et diminue lineairement jusqu'a s'annuler a 1,6 SMIC. Elle s'applique automatiquement et doit figurer sur le bulletin de paie.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Un CDD coute-t-il plus cher qu'un CDI pour l'employeur ?</span>
+          <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer">
+          Oui, le CDD est plus couteux en raison de la prime de precarite de 10% versee au salarie a la fin du contrat (sauf exceptions). Cette prime est elle-meme soumise aux cotisations sociales. Le surcout total d'un CDD par rapport a un CDI est d'environ 10 a 15%. En revanche, les cotisations patronales de base sont strictement identiques entre CDD et CDI, et le CDD offre l'avantage de la flexibilite pour les besoins temporaires.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>La mutuelle d'entreprise est-elle obligatoire ?</span>
+          <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer">
+          Oui, depuis le 1er janvier 2016, tout employeur du secteur prive doit proposer une complementaire sante a l'ensemble de ses salaries. L'employeur doit financer au minimum 50% de la cotisation. Le contrat doit respecter un panier de soins minimal defini par la loi. La part patronale de la mutuelle est deductible de l'assiette de l'impot sur les societes et beneficie d'une exoneration partielle de cotisations sociales, ce qui en fait un avantage fiscalement avantageux pour l'entreprise.
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA final -->
+    <div class="cta-box">
+      <h3>Optimisez la gestion de votre masse salariale</h3>
+      <p>Trouvez le logiciel de paie adapte a votre PME en 2 minutes. Comparatif independant, donnees verifiees.</p>
+      <div class="cta-buttons">
+        <a href="../trouver-mon-logiciel.html" class="btn btn-orange">Trouver mon logiciel</a>
+        <a href="../outils/" class="btn btn-secondary" style="background:rgba(255,255,255,.1);color:white;border-color:rgba(255,255,255,.3)">Tous nos outils RH</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="../assets/images/mlrh-logo.png" alt="MLRH" style="height:30px;width:auto"></div>
+          <p>Comparatifs independants et guides sur les logiciels RH, paie et SIRH pour les PME francaises.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Comparatifs</p>
+          <ul>
+            <li><a href="../comparatifs/payfit-vs-factorial.html">PayFit vs Factorial</a></li>
+            <li><a href="../comparatifs/">Tous les comparatifs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Ressources</p>
+          <ul>
+            <li><a href="../guides/choisir-logiciel-paie.html">Choisir son logiciel de paie</a></li>
+            <li><a href="../alternatives/payfit.html">Alternatives a PayFit</a></li>
+            <li><a href="../avis/payfit.html">PayFit avis 2026</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Le site</p>
+          <ul>
+            <li><a href="../a-propos.html">A propos</a></li>
+            <li><a href="../methodologie.html">Methodologie</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../plan-du-site.html">Plan du site</a></li>
+            <li><a href="../mentions-legales.html">Mentions legales</a></li>
+            <li><a href="../politique-de-confidentialite.html">Politique de confidentialite</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-affiliation">Certains liens sont des liens d'affiliation. Nos avis restent independants et bases sur des donnees verifiees.</div>
+      <div class="footer-bottom"><span>&copy; 2026 MLRH. Tous droits reserves</span><span>Donnees verifiees sur les sites officiels</span></div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    // ==========================================
+    // Simulateur cout d'un salarie - France 2026
+    // Donnees URSSAF officielles
+    // ==========================================
+
+    var SMIC_MENSUEL = 1802; // SMIC brut mensuel 35h (11,88 EUR x 151,67h)
+    var PASS_MENSUEL = 3864; // Plafond Securite sociale mensuel 2025
+
+    // References DOM
+    var brutInput = document.getElementById('salaire-brut');
+    var statutSelect = document.getElementById('statut');
+    var contratSelect = document.getElementById('contrat');
+    var tailleSelect = document.getElementById('taille');
+    var tauxATInput = document.getElementById('taux-at');
+    var mutuelleInput = document.getElementById('mutuelle');
+    var ticketsInput = document.getElementById('tickets');
+    var transportInput = document.getElementById('transport');
+
+    var resBrut = document.getElementById('res-brut');
+    var resCotis = document.getElementById('res-cotis');
+    var resCotisPct = document.getElementById('res-cotis-pct');
+    var rowFillon = document.getElementById('row-fillon');
+    var resFillon = document.getElementById('res-fillon');
+    var resFillonPct = document.getElementById('res-fillon-pct');
+    var resCotisNettes = document.getElementById('res-cotis-nettes');
+    var resMutuelle = document.getElementById('res-mutuelle');
+    var resTickets = document.getElementById('res-tickets');
+    var resTransport = document.getElementById('res-transport');
+    var rowPrecarite = document.getElementById('row-precarite');
+    var resPrecarite = document.getElementById('res-precarite');
+    var resTotalMensuel = document.getElementById('res-total-mensuel');
+    var resTotalAnnuel = document.getElementById('res-total-annuel');
+    var resRatio = document.getElementById('res-ratio');
+    var breakdownBody = document.getElementById('breakdown-body');
+
+    function formatMoney(n) {
+      return Math.round(n).toLocaleString('fr-FR') + ' \u20AC';
+    }
+
+    function calculate() {
+      var brut = parseFloat(brutInput.value) || 0;
+      if (brut <= 0) return;
+
+      var statut = statutSelect.value;
+      var contrat = contratSelect.value;
+      var taille = tailleSelect.value;
+      var tauxAT = (parseFloat(tauxATInput.value) || 1.28) / 100;
+      var mutuelle = parseFloat(mutuelleInput.value) || 0;
+      var tickets = parseFloat(ticketsInput.value) || 0;
+      var transport = parseFloat(transportInput.value) || 0;
+
+      // Determiner taille pour les taux variables
+      var isGrande = (taille === 'grande');
+      var isPetite = (taille === 'petite');
+
+      // Bases de calcul
+      var baseT1 = Math.min(brut, PASS_MENSUEL);
+      var baseT2 = Math.max(0, brut - PASS_MENSUEL);
+      var base4PASS = Math.min(brut, PASS_MENSUEL * 4);
+
+      // ---- Cotisations patronales detaillees ----
+      var details = [];
+
+      // Assurance maladie
+      var tauxMaladie = (brut <= 2.5 * SMIC_MENSUEL) ? 0.07 : 0.13;
+      var cotMaladie = brut * tauxMaladie;
+      details.push({nom: 'Assurance maladie', taux: (tauxMaladie * 100).toFixed(2) + '%', base: brut, montant: cotMaladie});
+
+      // Allocations familiales
+      var tauxAF = (brut <= 3.5 * SMIC_MENSUEL) ? 0.0345 : 0.0525;
+      var cotAF = brut * tauxAF;
+      details.push({nom: 'Allocations familiales', taux: (tauxAF * 100).toFixed(2) + '%', base: brut, montant: cotAF});
+
+      // Vieillesse plafonnee
+      var cotVieillesseP = baseT1 * 0.0855;
+      details.push({nom: 'Vieillesse plafonnee', taux: '8,55%', base: baseT1, montant: cotVieillesseP});
+
+      // Vieillesse deplafonnee
+      var cotVieillesseDP = brut * 0.0202;
+      details.push({nom: 'Vieillesse deplafonnee', taux: '2,02%', base: brut, montant: cotVieillesseDP});
+
+      // AT/MP
+      var cotAT = brut * tauxAT;
+      details.push({nom: 'Accidents du travail', taux: (tauxAT * 100).toFixed(2) + '%', base: brut, montant: cotAT});
+
+      // Chomage
+      var cotChomage = base4PASS * 0.0405;
+      details.push({nom: 'Assurance chomage', taux: '4,05%', base: base4PASS, montant: cotChomage});
+
+      // AGS
+      var cotAGS = base4PASS * 0.0020;
+      details.push({nom: 'AGS', taux: '0,20%', base: base4PASS, montant: cotAGS});
+
+      // FNAL
+      var tauxFNAL, baseFNAL;
+      if (isGrande) {
+        tauxFNAL = 0.0050;
+        baseFNAL = brut;
+      } else {
+        tauxFNAL = 0.0010;
+        baseFNAL = baseT1;
+      }
+      var cotFNAL = baseFNAL * tauxFNAL;
+      details.push({nom: 'FNAL', taux: (tauxFNAL * 100).toFixed(2) + '%', base: baseFNAL, montant: cotFNAL});
+
+      // CSA
+      var cotCSA = brut * 0.003;
+      details.push({nom: 'Solidarite autonomie (CSA)', taux: '0,30%', base: brut, montant: cotCSA});
+
+      // Retraite complementaire T1
+      var cotRetraiteT1 = baseT1 * 0.0472;
+      details.push({nom: 'AGIRC-ARRCO T1', taux: '4,72%', base: baseT1, montant: cotRetraiteT1});
+
+      // Retraite complementaire T2 (cadre ou si brut > PASS)
+      var cotRetraiteT2 = 0;
+      if (statut === 'cadre' || baseT2 > 0) {
+        cotRetraiteT2 = baseT2 * 0.1295;
+        if (cotRetraiteT2 > 0) {
+          details.push({nom: 'AGIRC-ARRCO T2', taux: '12,95%', base: baseT2, montant: cotRetraiteT2});
+        }
+      }
+
+      // CEG T1
+      var cotCEG1 = baseT1 * 0.0129;
+      details.push({nom: 'CEG tranche 1', taux: '1,29%', base: baseT1, montant: cotCEG1});
+
+      // CEG T2
+      var cotCEG2 = 0;
+      if (statut === 'cadre' || baseT2 > 0) {
+        cotCEG2 = baseT2 * 0.0162;
+        if (cotCEG2 > 0) {
+          details.push({nom: 'CEG tranche 2', taux: '1,62%', base: baseT2, montant: cotCEG2});
+        }
+      }
+
+      // Formation
+      var tauxFormation = isPetite ? 0.0055 : 0.01;
+      var cotFormation = brut * tauxFormation;
+      details.push({nom: 'Contribution formation', taux: (tauxFormation * 100).toFixed(2) + '%', base: brut, montant: cotFormation});
+
+      // Taxe apprentissage
+      var cotApprentissage = brut * 0.0068;
+      details.push({nom: 'Taxe d\'apprentissage', taux: '0,68%', base: brut, montant: cotApprentissage});
+
+      // Effort construction
+      var cotConstruction = 0;
+      if (isGrande) {
+        cotConstruction = brut * 0.0045;
+        details.push({nom: 'Effort construction', taux: '0,45%', base: brut, montant: cotConstruction});
+      }
+
+      // APEC (cadres uniquement)
+      var cotAPEC = 0;
+      if (statut === 'cadre') {
+        cotAPEC = base4PASS * 0.00036;
+        details.push({nom: 'APEC', taux: '0,036%', base: base4PASS, montant: cotAPEC});
+      }
+
+      // Total cotisations brutes
+      var totalCotis = 0;
+      for (var i = 0; i < details.length; i++) {
+        totalCotis += details[i].montant;
+      }
+
+      // ---- Reduction Fillon ----
+      var reductionFillon = 0;
+      if (brut > 0 && brut < 1.6 * SMIC_MENSUEL && statut !== 'apprenti') {
+        var T = isGrande ? 0.3246 : 0.3206;
+        var coeff = (T / 0.6) * (1.6 * SMIC_MENSUEL / brut - 1);
+        coeff = Math.max(0, Math.min(coeff, T));
+        reductionFillon = coeff * brut;
+      }
+
+      // Apprenti : exoneration specifique
+      if (statut === 'apprenti') {
+        // Aide employeur et exonerations specifiques
+        // Simplification : exoneration sur base SMIC
+        var seuilApprentis = 0.79 * SMIC_MENSUEL;
+        if (brut <= seuilApprentis) {
+          reductionFillon = totalCotis * 0.80; // exoneration quasi-totale
+        } else {
+          reductionFillon = totalCotis * 0.50;
+        }
+      }
+
+      var cotisNettes = totalCotis - reductionFillon;
+
+      // Prime precarite CDD
+      var precarite = 0;
+      if (contrat === 'cdd') {
+        precarite = brut * 0.10;
+      }
+
+      // Cout total
+      var coutTotal = brut + cotisNettes + mutuelle + tickets + transport + precarite;
+      var coutAnnuel = coutTotal * 12;
+      var ratio = brut > 0 ? (coutTotal / brut) : 0;
+
+      // ---- Afficher les resultats ----
+      resBrut.textContent = formatMoney(brut);
+      resCotisPct.textContent = brut > 0 ? (totalCotis / brut * 100).toFixed(1) + '%' : '-';
+      resCotis.textContent = formatMoney(totalCotis);
+
+      if (reductionFillon > 0) {
+        rowFillon.style.display = '';
+        resFillon.textContent = '- ' + formatMoney(reductionFillon);
+        resFillonPct.textContent = brut > 0 ? '-' + (reductionFillon / brut * 100).toFixed(1) + '%' : '';
+      } else {
+        rowFillon.style.display = 'none';
+      }
+
+      resCotisNettes.textContent = formatMoney(cotisNettes);
+      resMutuelle.textContent = formatMoney(mutuelle);
+      resTickets.textContent = formatMoney(tickets);
+      resTransport.textContent = formatMoney(transport);
+
+      if (contrat === 'cdd') {
+        rowPrecarite.style.display = '';
+        resPrecarite.textContent = formatMoney(precarite);
+      } else {
+        rowPrecarite.style.display = 'none';
+      }
+
+      resTotalMensuel.textContent = formatMoney(coutTotal);
+      resTotalAnnuel.textContent = formatMoney(coutAnnuel);
+      resRatio.textContent = ratio.toFixed(2) + 'x le brut';
+
+      // ---- Tableau detail ----
+      var html = '';
+      for (var j = 0; j < details.length; j++) {
+        var d = details[j];
+        html += '<tr><td>' + d.nom + '</td><td>' + d.taux + '</td><td>' + formatMoney(d.base) + '</td><td>' + formatMoney(d.montant) + '</td></tr>';
+      }
+      html += '<tr class="total-row"><td>Total cotisations brutes</td><td></td><td></td><td>' + formatMoney(totalCotis) + '</td></tr>';
+      if (reductionFillon > 0) {
+        html += '<tr style="color:#16a34a;font-weight:600"><td>Reduction generale (Fillon)</td><td></td><td></td><td>- ' + formatMoney(reductionFillon) + '</td></tr>';
+        html += '<tr class="total-row"><td>Cotisations nettes</td><td></td><td></td><td>' + formatMoney(cotisNettes) + '</td></tr>';
+      }
+      breakdownBody.innerHTML = html;
+    }
+
+    // Evenements
+    var inputs = [brutInput, statutSelect, contratSelect, tailleSelect, tauxATInput, mutuelleInput, ticketsInput, transportInput];
+    for (var k = 0; k < inputs.length; k++) {
+      inputs[k].addEventListener('input', calculate);
+      inputs[k].addEventListener('change', calculate);
+    }
+
+    // Calcul initial
+    calculate();
+  })();
+
+  // Toggle breakdown
+  function toggleBreakdown() {
+    var wrap = document.getElementById('breakdown-wrap');
+    wrap.classList.toggle('visible');
+    var btn = document.getElementById('btn-detail');
+    if (wrap.classList.contains('visible')) {
+      btn.textContent = 'Masquer le detail des charges';
+    } else {
+      btn.innerHTML = '<svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg> Voir le detail des charges patronales';
+    }
+  }
+
+  // FAQ toggle
+  function toggleFaq(el) {
+    var item = el.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    var allItems = document.querySelectorAll('.faq-item.open');
+    for (var i = 0; i < allItems.length; i++) {
+      allItems[i].classList.remove('open');
+    }
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Burger menu
+  (function(){
+    var burger = document.querySelector('.nav-burger');
+    var nav = document.querySelector('.site-nav');
+    if(!burger || !nav) return;
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', function(e){
+      if(!burger.contains(e.target) && !nav.contains(e.target)){
+        nav.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+  </script>
+</body>
+</html>

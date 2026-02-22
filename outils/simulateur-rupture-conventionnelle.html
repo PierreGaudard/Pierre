@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulateur rupture conventionnelle 2026 : calcul indemnite gratuit - MLRH</title>
+  <meta name="description" content="Calculez gratuitement votre indemnite de rupture conventionnelle 2026. Simulateur conforme au Code du travail (art. L1234-9). Anciennete, salaire de reference, fiscalite.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://meilleur-logiciel-rh.fr/outils/simulateur-rupture-conventionnelle.html">
+  <link rel="icon" href="../assets/images/favicon-mlrh.png" type="image/png">
+  <link rel="stylesheet" href="../assets/style.css">
+
+  <meta property="og:title" content="Simulateur rupture conventionnelle 2026 : calcul indemnite gratuit">
+  <meta property="og:description" content="Calculez gratuitement votre indemnite de rupture conventionnelle 2026. Simulateur conforme au Code du travail.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://meilleur-logiciel-rh.fr/outils/simulateur-rupture-conventionnelle.html">
+
+  <link rel="alternate" hreflang="fr" href="https://meilleur-logiciel-rh.fr/outils/simulateur-rupture-conventionnelle.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://meilleur-logiciel-rh.fr/"},
+          {"@type": "ListItem", "position": 2, "name": "Outils RH", "item": "https://meilleur-logiciel-rh.fr/outils/"},
+          {"@type": "ListItem", "position": 3, "name": "Simulateur rupture conventionnelle 2026", "item": "https://meilleur-logiciel-rh.fr/outils/simulateur-rupture-conventionnelle.html"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "L'employeur peut-il refuser une rupture conventionnelle ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Oui. La rupture conventionnelle repose sur le consentement mutuel du salarie et de l'employeur. Aucune des deux parties ne peut imposer une rupture conventionnelle a l'autre. L'employeur est libre de refuser sans avoir a justifier sa decision. En cas de refus, le salarie peut renouveler sa demande ultérieurement ou envisager une demission."}
+          },
+          {
+            "@type": "Question",
+            "name": "Peut-on negocier plus que le minimum legal ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Oui, l'indemnite legale constitue un plancher. En pratique, il est courant de negocier une indemnite supra-legale, notamment si l'initiative vient de l'employeur. Les montants negocies atteignent souvent entre 1 et 3 mois de salaire supplementaires selon le contexte et le rapport de force."}
+          },
+          {
+            "@type": "Question",
+            "name": "Quel est le delai de retractation ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Apres la signature de la convention, chaque partie dispose d'un delai de retractation de 15 jours calendaires. Ce delai commence le lendemain de la date de signature. Pendant cette periode, le salarie comme l'employeur peut revenir sur sa decision sans avoir a motiver son choix."}
+          },
+          {
+            "@type": "Question",
+            "name": "La rupture conventionnelle ouvre-t-elle droit au chomage ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Oui. Contrairement a la demission, la rupture conventionnelle ouvre droit a l'allocation d'aide au retour a l'emploi (ARE) versee par France Travail, sous reserve de remplir les conditions d'affiliation (avoir travaille au moins 6 mois au cours des 24 derniers mois)."}
+          },
+          {
+            "@type": "Question",
+            "name": "L'anciennete inclut-elle les periodes de conge parental ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "La periode de conge parental d'education est prise en compte pour moitie dans le calcul de l'anciennete du salarie, conformement a l'article L1225-54 du Code du travail. Par exemple, 2 ans de conge parental comptent pour 1 an d'anciennete."}
+          }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Simulateur rupture conventionnelle 2026",
+        "url": "https://meilleur-logiciel-rh.fr/outils/simulateur-rupture-conventionnelle.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "description": "Calculez gratuitement votre indemnite de rupture conventionnelle 2026. Conforme au Code du travail (art. L1234-9 et R1234-2).",
+        "inLanguage": "fr-FR",
+        "publisher": {
+          "@type": "Organization",
+          "name": "MLRH",
+          "url": "https://meilleur-logiciel-rh.fr"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body {
+      background: var(--bg);
+    }
+
+    /* ====== HERO ====== */
+    .tool-hero {
+      background: linear-gradient(135deg, #14532d 0%, #16a34a 100%);
+      padding: 0 24px 48px;
+      color: #fff;
+    }
+
+    .tool-hero .breadcrumb {
+      padding: 14px 0;
+      background: none;
+      border: none;
+      font-size: .82rem;
+      color: rgba(255,255,255,.6);
+    }
+    .tool-hero .breadcrumb a {
+      color: rgba(255,255,255,.7);
+    }
+    .tool-hero .breadcrumb a:hover {
+      color: #fff;
+    }
+    .tool-hero .breadcrumb-sep {
+      color: rgba(255,255,255,.35);
+    }
+
+    .tool-hero-inner {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .tool-hero h1 {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      letter-spacing: -.02em;
+    }
+
+    .tool-hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,.8);
+      line-height: 1.6;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    /* ====== CALCULATOR ====== */
+    .calc-section {
+      max-width: 800px;
+      margin: -32px auto 0;
+      padding: 0 24px 48px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .calc-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 4px 24px rgba(0,0,0,.08);
+      overflow: hidden;
+    }
+
+    .calc-header {
+      padding: 24px 28px 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .calc-header h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .calc-header p {
+      font-size: .85rem;
+      color: var(--text-muted);
+    }
+
+    .calc-body {
+      padding: 28px;
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .calc-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .calc-field.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .calc-field label {
+      font-size: .84rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .calc-field label .label-hint {
+      font-weight: 400;
+      color: var(--text-muted);
+      font-size: .78rem;
+    }
+
+    .calc-field input {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: .92rem;
+      color: var(--text);
+      background: var(--bg);
+      transition: border-color .15s, box-shadow .15s;
+      width: 100%;
+      font-family: inherit;
+    }
+
+    .calc-field input:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(22,163,74,.12);
+    }
+
+    .calc-field input::placeholder {
+      color: #a0aec0;
+    }
+
+    .input-euro {
+      position: relative;
+    }
+
+    .input-euro input {
+      padding-right: 36px;
+    }
+
+    .input-euro::after {
+      content: "\20AC";
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: .88rem;
+      pointer-events: none;
+    }
+
+    .calc-btn-wrap {
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    .calc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 99px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .15s, transform .15s, box-shadow .15s;
+      font-family: inherit;
+    }
+
+    .calc-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px rgba(22,163,74,.25);
+    }
+
+    /* ====== RESULTS ====== */
+    .calc-results {
+      display: none;
+      margin-top: 28px;
+      border: 2px solid var(--primary);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .calc-results.visible {
+      display: block;
+      animation: fadeInUp .35s ease;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .results-header {
+      background: var(--primary-light);
+      padding: 16px 24px;
+      border-bottom: 1px solid #bbf7d0;
+    }
+
+    .results-header h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .results-body {
+      padding: 24px;
+    }
+
+    .result-main {
+      text-align: center;
+      padding: 20px 0;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .result-main-label {
+      font-size: .85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+
+    .result-main-value {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      letter-spacing: -.02em;
+    }
+
+    .results-details {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .result-row:last-child {
+      border-bottom: none;
+    }
+
+    .result-label {
+      font-size: .88rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .result-value {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--text);
+      text-align: right;
+    }
+
+    .result-note {
+      font-size: .8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: var(--bg);
+      border-radius: 8px;
+      border-left: 3px solid var(--primary);
+    }
+
+    .result-fiscal {
+      margin-top: 16px;
+      padding: 16px;
+      background: var(--bg);
+      border-radius: 8px;
+    }
+
+    .result-fiscal h4 {
+      font-size: .88rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    .result-fiscal p {
+      font-size: .82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+
+    .result-fiscal p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ====== SEO CONTENT ====== */
+    .seo-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+
+    .seo-content h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text);
+      margin: 48px 0 16px;
+      line-height: 1.3;
+    }
+
+    .seo-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .seo-content h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 28px 0 12px;
+    }
+
+    .seo-content p {
+      font-size: .95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .seo-content ul, .seo-content ol {
+      margin: 12px 0 20px 20px;
+      color: var(--text-muted);
+      font-size: .95rem;
+      line-height: 1.75;
+    }
+
+    .seo-content li {
+      margin-bottom: 6px;
+    }
+
+    .seo-content strong {
+      color: var(--text);
+    }
+
+    .seo-content .info-box {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 20px 0;
+    }
+
+    .seo-content .info-box p {
+      color: var(--text);
+      margin-bottom: 0;
+      font-size: .9rem;
+    }
+
+    /* ====== TABLE ====== */
+    .seo-table-wrap {
+      overflow-x: auto;
+      margin: 20px 0;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .seo-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .88rem;
+    }
+
+    .seo-table thead {
+      background: var(--primary-light);
+    }
+
+    .seo-table th {
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: .82rem;
+      color: var(--primary-dark);
+      border-bottom: 2px solid #bbf7d0;
+      white-space: nowrap;
+    }
+
+    .seo-table td {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .seo-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .seo-table tbody tr:hover {
+      background: var(--bg);
+    }
+
+    /* ====== FAQ ====== */
+    .faq-section {
+      margin-top: 48px;
+    }
+
+    .faq-section h2 {
+      margin-bottom: 20px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      text-align: left;
+      font-size: .92rem;
+      font-weight: 600;
+      color: var(--text);
+      font-family: inherit;
+      transition: background .15s;
+    }
+
+    .faq-q:hover {
+      background: var(--bg);
+    }
+
+    .faq-q svg {
+      flex-shrink: 0;
+      transition: transform .25s;
+    }
+
+    .faq-item.open .faq-q svg {
+      transform: rotate(180deg);
+    }
+
+    .faq-a {
+      display: none;
+      padding: 0 20px 16px;
+      font-size: .88rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-a {
+      display: block;
+    }
+
+    /* ====== RESPONSIVE ====== */
+    @media (max-width: 768px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .calc-body {
+        padding: 20px;
+      }
+
+      .calc-header {
+        padding: 20px;
+      }
+
+      .result-main-value {
+        font-size: 1.8rem;
+      }
+
+      .tool-hero {
+        padding-bottom: 36px;
+      }
+
+      .seo-content h2 {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .calc-section {
+        padding: 0 16px 36px;
+      }
+
+      .seo-content {
+        padding: 0 16px 48px;
+      }
+
+      .result-row {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .result-value {
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo"><img src="../assets/images/mlrh-logo.png" alt="MLRH" style="height:30px;width:auto;filter:brightness(0)"></a>
+      <nav class="site-nav">
+        <a href="../comparatifs/">Comparatifs</a>
+        <a href="../guides/">Guides</a>
+        <a href="../alternatives/">Alternatives</a>
+        <a href="../avis/">Avis</a>
+        <a href="../outils/">Outils</a>
+        <a href="../trouver-mon-logiciel.html" class="nav-cta">Trouver mon logiciel</a>
+      </nav>
+      <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="tool-hero">
+    <div style="max-width:1100px;margin:0 auto">
+      <div class="breadcrumb">
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+          <a href="/">Accueil</a>
+          <span class="breadcrumb-sep">></span>
+          <a href="/outils/">Outils RH</a>
+          <span class="breadcrumb-sep">></span>
+          <span style="color:rgba(255,255,255,.9)">Simulateur rupture conventionnelle</span>
+        </div>
+      </div>
+    </div>
+    <div class="tool-hero-inner">
+      <h1>Simulateur rupture conventionnelle 2026</h1>
+      <p class="tool-hero-sub">Calculez gratuitement le montant minimum de votre indemnite de rupture conventionnelle. Conforme au Code du travail (art. L1234-9 et R1234-2).</p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section class="calc-section">
+    <div class="calc-card">
+      <div class="calc-header">
+        <h2>Calculez votre indemnite</h2>
+        <p>Renseignez les informations ci-dessous pour obtenir une estimation precise</p>
+      </div>
+      <div class="calc-body">
+        <div class="calc-grid">
+          <div class="calc-field">
+            <label for="date-entree">Date d'entree dans l'entreprise</label>
+            <input type="date" id="date-entree" required>
+          </div>
+          <div class="calc-field">
+            <label for="date-rupture">Date de rupture envisagee</label>
+            <input type="date" id="date-rupture" required>
+          </div>
+          <div class="calc-field">
+            <label for="salaire-12">Salaire brut mensuel moyen <span class="label-hint">(12 derniers mois)</span></label>
+            <div class="input-euro">
+              <input type="number" id="salaire-12" placeholder="Ex : 2800" min="0" step="0.01" required>
+            </div>
+          </div>
+          <div class="calc-field">
+            <label for="salaire-3">Salaire brut mensuel moyen <span class="label-hint">(3 derniers mois, si plus favorable)</span></label>
+            <div class="input-euro">
+              <input type="number" id="salaire-3" placeholder="Ex : 3000" min="0" step="0.01">
+            </div>
+          </div>
+          <div class="calc-field full-width">
+            <label for="primes">Primes exceptionnelles percues ces 12 derniers mois <span class="label-hint">(facultatif)</span></label>
+            <div class="input-euro">
+              <input type="number" id="primes" placeholder="Ex : 1500" min="0" step="0.01" value="0">
+            </div>
+          </div>
+        </div>
+
+        <div class="calc-btn-wrap">
+          <button class="calc-btn" id="btn-calculer" type="button">Calculer mon indemnite</button>
+        </div>
+
+        <div class="calc-results" id="results">
+          <div class="results-header">
+            <h3>Resultat de votre simulation</h3>
+          </div>
+          <div class="results-body">
+            <div class="result-main">
+              <div class="result-main-label">Indemnite legale minimum</div>
+              <div class="result-main-value" id="res-indemnite">-- </div>
+            </div>
+            <div class="results-details">
+              <div class="result-row">
+                <span class="result-label">Anciennete calculee</span>
+                <span class="result-value" id="res-anciennete">--</span>
+              </div>
+              <div class="result-row">
+                <span class="result-label">Salaire de reference retenu</span>
+                <span class="result-value" id="res-salaire-ref">--</span>
+              </div>
+              <div class="result-row">
+                <span class="result-label">Methode de calcul retenue</span>
+                <span class="result-value" id="res-methode">--</span>
+              </div>
+              <div class="result-row">
+                <span class="result-label">Detail du calcul</span>
+                <span class="result-value" id="res-detail">--</span>
+              </div>
+            </div>
+
+            <div class="result-fiscal" id="res-fiscal">
+              <h4>Regime fiscal et social</h4>
+              <p id="res-fiscal-text"></p>
+              <p id="res-social-text"></p>
+            </div>
+
+            <div class="result-note">
+              <p>Ce simulateur calcule l'indemnite legale minimum. Votre convention collective peut prevoir un montant plus favorable. L'indemnite negociee entre les parties peut egalement etre superieure au minimum legal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT -->
+  <section class="seo-content">
+
+    <h2>Comment est calculee l'indemnite de rupture conventionnelle ?</h2>
+
+    <p>L'indemnite de rupture conventionnelle constitue une somme versee par l'employeur au salarie lors de la rupture d'un commun accord du contrat de travail a duree indeterminee (CDI). Son montant ne peut pas etre inferieur a celui de l'indemnite legale de licenciement, tel que le prevoit l'article L1237-13 du Code du travail.</p>
+
+    <p>Le calcul repose sur deux parametres fondamentaux : l'anciennete du salarie dans l'entreprise et son salaire de reference. Contrairement a une idee recue, la formule n'est pas arbitraire : elle est strictement encadree par les articles L1234-9 et R1234-2 du Code du travail.</p>
+
+    <h3>La formule legale</h3>
+
+    <p>Depuis le 27 septembre 2017, l'indemnite legale de licenciement (qui sert de plancher a la rupture conventionnelle) se calcule comme suit :</p>
+
+    <ul>
+      <li><strong>1/4 de mois de salaire par annee d'anciennete</strong> pour les 10 premieres annees</li>
+      <li><strong>1/3 de mois de salaire par annee d'anciennete</strong> pour chaque annee au-dela de 10 ans</li>
+    </ul>
+
+    <p>Les annees incompletes sont prises en compte au prorata du nombre de mois travailles. Un salarie ayant 7 ans et 4 mois d'anciennete verra ses 4 mois supplementaires valorises a hauteur de 4/12e d'annee.</p>
+
+    <h3>Le salaire de reference</h3>
+
+    <p>Le salaire de reference correspond au montant le plus favorable pour le salarie entre deux modes de calcul :</p>
+
+    <ol>
+      <li><strong>La moyenne mensuelle des 12 derniers mois</strong> precedant la notification de la rupture. Ce calcul inclut toutes les primes et gratifications, y compris les primes exceptionnelles, les primes d'anciennete et la part variable du salaire.</li>
+      <li><strong>La moyenne mensuelle des 3 derniers mois</strong> precedant la rupture. Dans ce cas, les primes annuelles ou exceptionnelles versees pendant cette periode sont prises en compte au prorata (rapportees a une base de 3 mois sur 12). Par exemple, un treizieme mois de 3 000 euros sera integre a hauteur de 750 euros (3 000 x 3/12) dans le calcul sur 3 mois.</li>
+    </ol>
+
+    <p>L'employeur et le salarie doivent retenir la methode la plus avantageuse. Dans la grande majorite des cas, c'est la methode des 12 derniers mois qui prevaut, sauf lorsque le salarie a beneficie d'augmentations recentes ou de primes significatives sur les derniers mois.</p>
+
+    <div class="info-box">
+      <p><strong>Attention :</strong> si votre convention collective prevoit une indemnite plus favorable que l'indemnite legale, c'est le montant conventionnel qui s'applique. Verifiez toujours votre convention collective avant de negocier.</p>
+    </div>
+
+    <h2>Exemple concret de calcul</h2>
+
+    <p>Prenons le cas de Marie, salariee dans une PME depuis 7 ans et 4 mois, avec un salaire brut mensuel moyen de 2 800 euros sur les 12 derniers mois. Son salaire moyen sur les 3 derniers mois est de 2 900 euros (une prime de performance a ete versee recemment). Elle a par ailleurs recu une prime exceptionnelle de 1 200 euros au cours des 12 derniers mois.</p>
+
+    <h3>Etape 1 : determiner le salaire de reference</h3>
+
+    <p><strong>Methode 1 -- Moyenne des 12 derniers mois :</strong> le salaire de reference est de 2 800 euros (toutes primes incluses dans la moyenne).</p>
+
+    <p><strong>Methode 2 -- Moyenne des 3 derniers mois :</strong> le salaire de base moyen est de 2 900 euros. Il faut y ajouter le prorata des primes annuelles : 1 200 euros x 3/12 = 300 euros, soit 2 900 + (300 / 3) = 3 000 euros. On divise les 300 euros par 3 mois car on les repartit sur la periode de reference de 3 mois.</p>
+
+    <p>Le salaire de reference le plus favorable est donc celui de la methode 2 : <strong>3 000 euros</strong>.</p>
+
+    <h3>Etape 2 : calculer l'anciennete en annees et mois</h3>
+
+    <p>Marie dispose de 7 ans et 4 mois d'anciennete, soit 7 + 4/12 = <strong>7,333 annees</strong>.</p>
+
+    <h3>Etape 3 : appliquer la formule</h3>
+
+    <p>Comme son anciennete est inferieure a 10 ans, seul le taux de 1/4 s'applique :</p>
+
+    <p><strong>Indemnite = (1/4) x 3 000 x 7,333 = 5 500 euros</strong></p>
+
+    <p>Marie peut donc pretendre a une indemnite legale minimum de 5 500 euros brut. En pratique, elle pourra negocier un montant superieur selon le contexte de la rupture et sa capacite de negociation.</p>
+
+    <h2>Tableau des indemnites selon l'anciennete</h2>
+
+    <p>Le tableau ci-dessous presente le montant de l'indemnite legale de rupture conventionnelle pour un salaire de reference de 2 500 euros brut mensuel, selon l'anciennete du salarie :</p>
+
+    <div class="seo-table-wrap">
+      <table class="seo-table">
+        <thead>
+          <tr>
+            <th>Anciennete</th>
+            <th>Calcul</th>
+            <th>Indemnite legale minimum</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 an</td>
+            <td>1/4 x 2 500 x 1</td>
+            <td><strong>625 euros</strong></td>
+          </tr>
+          <tr>
+            <td>2 ans</td>
+            <td>1/4 x 2 500 x 2</td>
+            <td><strong>1 250 euros</strong></td>
+          </tr>
+          <tr>
+            <td>3 ans</td>
+            <td>1/4 x 2 500 x 3</td>
+            <td><strong>1 875 euros</strong></td>
+          </tr>
+          <tr>
+            <td>5 ans</td>
+            <td>1/4 x 2 500 x 5</td>
+            <td><strong>3 125 euros</strong></td>
+          </tr>
+          <tr>
+            <td>7 ans</td>
+            <td>1/4 x 2 500 x 7</td>
+            <td><strong>4 375 euros</strong></td>
+          </tr>
+          <tr>
+            <td>10 ans</td>
+            <td>1/4 x 2 500 x 10</td>
+            <td><strong>6 250 euros</strong></td>
+          </tr>
+          <tr>
+            <td>15 ans</td>
+            <td>(1/4 x 2 500 x 10) + (1/3 x 2 500 x 5)</td>
+            <td><strong>10 417 euros</strong></td>
+          </tr>
+          <tr>
+            <td>20 ans</td>
+            <td>(1/4 x 2 500 x 10) + (1/3 x 2 500 x 10)</td>
+            <td><strong>14 583 euros</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Ces montants correspondent a l'indemnite legale minimum. L'indemnite effectivement versee peut etre superieure si la convention collective du secteur prevoit un calcul plus avantageux ou si les parties negocient un montant supra-legal.</p>
+
+    <h2>Fiscalite de l'indemnite de rupture conventionnelle</h2>
+
+    <p>Le regime fiscal de l'indemnite de rupture conventionnelle est un sujet complexe qui merite une attention particuliere. En effet, selon le montant percu et la situation du salarie, l'indemnite peut etre totalement exoneree d'impot sur le revenu ou partiellement soumise a imposition.</p>
+
+    <h3>Exoneration d'impot sur le revenu</h3>
+
+    <p>L'indemnite de rupture conventionnelle est exoneree d'impot sur le revenu dans la limite du plus eleve des trois plafonds suivants :</p>
+
+    <ul>
+      <li>Le montant de l'indemnite legale ou conventionnelle de licenciement</li>
+      <li>Le double de la remuneration annuelle brute percue au cours de l'annee civile precedant la rupture</li>
+      <li>La moitie du montant total de l'indemnite versee</li>
+    </ul>
+
+    <p>En tout etat de cause, la fraction exoneree ne peut exceder un plafond global fixe a <strong>6 fois le plafond annuel de la Securite sociale (PASS)</strong>. Pour 2026, ce plafond represente une somme significative qui couvre la tres grande majorite des indemnites versees aux salaries.</p>
+
+    <p>En pratique, pour la plupart des salaries, l'indemnite de rupture conventionnelle est integralement exoneree d'impot sur le revenu lorsqu'elle ne depasse pas le montant prevu par la loi ou la convention collective.</p>
+
+    <h3>Regime social : cotisations et CSG/CRDS</h3>
+
+    <p>Sur le plan des cotisations sociales, le traitement est le suivant :</p>
+
+    <ul>
+      <li><strong>La fraction exoneree d'impot</strong> est egalement exoneree de cotisations de Securite sociale, dans la limite de 2 fois le PASS.</li>
+      <li><strong>La CSG et la CRDS</strong> sont dues sur la fraction de l'indemnite depassant le montant de l'indemnite legale ou conventionnelle, avec un abattement possible.</li>
+      <li><strong>Au-dela de 2 fois le PASS</strong>, l'integralite de l'indemnite est soumise a cotisations sociales des le premier euro.</li>
+    </ul>
+
+    <p>Il est important de distinguer la situation du salarie qui ne remplit pas les conditions pour beneficier d'une retraite a taux plein : dans ce cas, les exonerations decrites ci-dessus s'appliquent pleinement. En revanche, si le salarie est en droit de liquider sa pension de retraite, l'indemnite de rupture conventionnelle est integralement soumise a cotisations sociales et a impot sur le revenu.</p>
+
+    <div class="info-box">
+      <p><strong>Conseil :</strong> si votre indemnite negociee est significativement superieure au minimum legal, faites-vous accompagner par un expert-comptable ou un avocat specialise pour optimiser le traitement fiscal de la somme percue.</p>
+    </div>
+
+    <h2>Rupture conventionnelle : vos droits au chomage</h2>
+
+    <p>L'un des principaux avantages de la rupture conventionnelle, par rapport a une demission, reside dans l'ouverture des droits au chomage. En effet, la rupture conventionnelle est consideree comme une privation involontaire d'emploi par France Travail (anciennement Pole emploi), ce qui permet au salarie de percevoir l'allocation d'aide au retour a l'emploi (ARE).</p>
+
+    <h3>Conditions d'ouverture des droits</h3>
+
+    <p>Pour beneficier de l'ARE apres une rupture conventionnelle, le salarie doit remplir les conditions suivantes :</p>
+
+    <ul>
+      <li><strong>Avoir travaille au moins 6 mois</strong> (130 jours ou 910 heures) au cours des 24 derniers mois (36 mois pour les salaries de 53 ans et plus)</li>
+      <li>Etre inscrit comme demandeur d'emploi aupres de France Travail dans les 12 mois suivant la fin du contrat</li>
+      <li>Etre en recherche active d'emploi et resider en France</li>
+      <li>Ne pas avoir atteint l'age legal de depart a la retraite avec le nombre de trimestres requis</li>
+    </ul>
+
+    <h3>Le delai de carence</h3>
+
+    <p>Le versement de l'ARE ne debute pas immediatement apres la rupture du contrat. Plusieurs delais s'appliquent :</p>
+
+    <ul>
+      <li><strong>Un delai d'attente de 7 jours</strong>, applicable a tous les demandeurs d'emploi</li>
+      <li><strong>Un differe d'indemnisation conge paye</strong>, correspondant aux jours de conges payes non pris et indemnises lors du solde de tout compte</li>
+      <li><strong>Un differe specifique</strong> lie a la fraction de l'indemnite de rupture conventionnelle depassant le minimum legal. Ce differe est calcule en divisant le montant supra-legal par le salaire journalier de reference, dans la limite de 150 jours</li>
+    </ul>
+
+    <p>Concretement, si votre indemnite de rupture conventionnelle se limite au montant legal, le differe specifique est nul et vous commencerez a percevoir l'ARE au bout de 7 jours plus le differe conges payes. En revanche, si vous avez negocie une indemnite supra-legale importante, le debut de l'indemnisation peut etre reporte de plusieurs semaines, voire plusieurs mois.</p>
+
+    <h3>Le montant de l'allocation</h3>
+
+    <p>Le montant de l'ARE est calcule sur la base de votre salaire journalier de reference (SJR). La formule retenue par France Travail est la suivante :</p>
+
+    <ul>
+      <li>57 % du SJR, ou</li>
+      <li>40,4 % du SJR + une partie fixe (environ 12,95 euros par jour en 2026)</li>
+    </ul>
+
+    <p>France Travail retient le montant le plus favorable pour le demandeur d'emploi. L'allocation journaliere ne peut pas etre inferieure a un montant plancher (environ 31,97 euros par jour en 2026) ni depasser 75 % du SJR.</p>
+
+    <p>La duree d'indemnisation depend de votre age et de votre duree d'affiliation. Pour les salaries de moins de 53 ans, la duree maximale est generalement de 18 mois. Elle est portee a 22,5 mois pour les 53-54 ans et a 27 mois pour les 55 ans et plus.</p>
+
+    <!-- FAQ -->
+    <div class="faq-section">
+      <h2>Questions frequentes sur la rupture conventionnelle</h2>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          L'employeur peut-il refuser une rupture conventionnelle ?
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Oui. La rupture conventionnelle repose sur le principe du consentement mutuel. Ni le salarie ni l'employeur ne peut imposer cette procedure a l'autre partie. L'employeur est donc parfaitement en droit de refuser une demande de rupture conventionnelle, et ce sans avoir a justifier sa decision. Si tel est le cas, le salarie peut renouveler sa demande apres un certain delai, ou bien envisager d'autres solutions comme la demission ou une negociation de depart. En pratique, il est recommande de preparer sa demande en mettant en avant les avantages mutuels de la rupture conventionnelle.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Peut-on negocier plus que le minimum legal ?
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Absolument. L'indemnite legale constitue un plancher en dessous duquel les parties ne peuvent pas descendre, mais rien n'empeche de negocier un montant superieur. C'est meme une pratique courante, en particulier lorsque l'initiative de la rupture vient de l'employeur. Les montants negocies varient considerablement selon le contexte : rapport de force, taille de l'entreprise, motif du depart, difficulte a recruter un remplacant, etc. En moyenne, les indemnites supra-legales representent entre 1 et 3 mois de salaire supplementaires, mais certains salaries obtiennent des montants bien plus eleves. Pour maximiser vos chances, documentez votre valeur ajoutee, vos realisations et le cout de votre remplacement pour l'entreprise.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Quel est le delai de retractation ?
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Apres la signature de la convention de rupture, chaque partie (salarie et employeur) dispose d'un delai de retractation de 15 jours calendaires. Ce delai court a compter du lendemain de la date de signature du formulaire de rupture conventionnelle. Pendant cette periode, l'une ou l'autre des parties peut revenir sur sa decision par simple lettre recommandee avec accuse de reception ou par lettre remise en main propre contre decharge, sans avoir a motiver cette retractation. Une fois le delai expire sans retractation, la demande d'homologation peut etre adressee a la DREETS (ex-DIRECCTE), qui dispose alors de 15 jours ouvrables pour valider ou refuser la convention.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          La rupture conventionnelle ouvre-t-elle droit au chomage ?
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>Oui, c'est l'un des avantages majeurs de la rupture conventionnelle par rapport a la demission. Le salarie qui quitte son emploi dans le cadre d'une rupture conventionnelle est considere comme involontairement prive d'emploi et peut donc beneficier de l'allocation d'aide au retour a l'emploi (ARE), sous reserve de remplir les conditions d'affiliation. Il faut notamment justifier d'au moins 6 mois de travail (130 jours ou 910 heures) au cours des 24 derniers mois. L'inscription aupres de France Travail doit etre effectuee rapidement apres la fin du contrat. Attention cependant au differe d'indemnisation qui peut retarder le debut du versement des allocations, surtout si l'indemnite negociee est nettement superieure au minimum legal.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          L'anciennete inclut-elle les periodes de conge parental ?
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="faq-a">
+          <p>La reponse est nuancee. Conformement a l'article L1225-54 du Code du travail, le conge parental d'education est pris en compte pour moitie dans le calcul de l'anciennete du salarie. Concretement, si vous avez beneficie de 2 ans de conge parental, cette periode compte pour 1 an d'anciennete. En revanche, le conge de maternite ou de paternite est integralement pris en compte dans le calcul de l'anciennete (il est considere comme du temps de travail effectif). Il en va de meme pour les arrets maladie d'origine professionnelle. Pour les arrets maladie non professionnels, la reponse depend de votre convention collective : certaines conventions prevoient une prise en compte totale ou partielle, d'autres non.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="../assets/images/mlrh-logo.png" alt="MLRH" style="height:30px;width:auto"></div>
+          <p>Comparatifs independants et guides sur les logiciels RH, paie et SIRH pour les PME francaises.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Comparatifs</p>
+          <ul>
+            <li><a href="../comparatifs/payfit-vs-factorial.html">PayFit vs Factorial</a></li>
+            <li><a href="../comparatifs/">Tous les comparatifs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Ressources</p>
+          <ul>
+            <li><a href="../guides/choisir-logiciel-paie.html">Choisir son logiciel de paie</a></li>
+            <li><a href="../alternatives/payfit.html">Alternatives a PayFit</a></li>
+            <li><a href="../avis/payfit.html">PayFit avis 2026</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Le site</p>
+          <ul>
+            <li><a href="../a-propos.html">A propos</a></li>
+            <li><a href="../methodologie.html">Methodologie</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../plan-du-site.html">Plan du site</a></li>
+            <li><a href="../mentions-legales.html">Mentions legales</a></li>
+            <li><a href="../politique-de-confidentialite.html">Politique de confidentialite</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-affiliation">Certains liens sont des liens d'affiliation. Nos avis restent independants et bases sur des donnees verifiees.</div>
+      <div class="footer-bottom"><span>&copy; 2026 MLRH. Tous droits reserves</span><span>Donnees verifiees sur les sites officiels</span></div>
+    </div>
+  </footer>
+
+  <script>
+  /* ====== FAQ Toggle ====== */
+  function toggleFaq(btn) {
+    var item = btn.parentElement;
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(el) {
+      el.classList.remove('open');
+    });
+    if (!wasOpen) {
+      item.classList.add('open');
+    }
+  }
+
+  /* ====== Burger Menu ====== */
+  (function() {
+    var burger = document.querySelector('.nav-burger');
+    var nav = document.querySelector('.site-nav');
+    if (!burger || !nav) return;
+    burger.addEventListener('click', function() {
+      var open = nav.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', function(e) {
+      if (!burger.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+
+  /* ====== Calculator ====== */
+  (function() {
+    var btnCalculer = document.getElementById('btn-calculer');
+    var resultsEl = document.getElementById('results');
+
+    /* Input elements */
+    var dateEntreeEl = document.getElementById('date-entree');
+    var dateRuptureEl = document.getElementById('date-rupture');
+    var salaire12El = document.getElementById('salaire-12');
+    var salaire3El = document.getElementById('salaire-3');
+    var primesEl = document.getElementById('primes');
+
+    /* Result elements */
+    var resIndemnite = document.getElementById('res-indemnite');
+    var resAnciennete = document.getElementById('res-anciennete');
+    var resSalaireRef = document.getElementById('res-salaire-ref');
+    var resMethode = document.getElementById('res-methode');
+    var resDetail = document.getElementById('res-detail');
+    var resFiscalText = document.getElementById('res-fiscal-text');
+    var resSocialText = document.getElementById('res-social-text');
+
+    /* Set default dates */
+    var today = new Date();
+    dateRuptureEl.value = formatDate(today);
+
+    /* Default entry date: 5 years ago */
+    var fiveYearsAgo = new Date(today.getFullYear() - 5, today.getMonth(), today.getDate());
+    dateEntreeEl.value = formatDate(fiveYearsAgo);
+
+    function formatDate(d) {
+      var y = d.getFullYear();
+      var m = String(d.getMonth() + 1).padStart(2, '0');
+      var day = String(d.getDate()).padStart(2, '0');
+      return y + '-' + m + '-' + day;
+    }
+
+    function formatMoney(n) {
+      return n.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' \u20AC';
+    }
+
+    /**
+     * Calculate anciennete in years and months precisely.
+     * Returns { years, months, totalYears }
+     */
+    function calcAnciennete(dateEntree, dateRupture) {
+      var years = dateRupture.getFullYear() - dateEntree.getFullYear();
+      var months = dateRupture.getMonth() - dateEntree.getMonth();
+      var days = dateRupture.getDate() - dateEntree.getDate();
+
+      /* If the day hasn't been reached yet, subtract one month */
+      if (days < 0) {
+        months--;
+      }
+
+      /* If months are negative, subtract one year */
+      if (months < 0) {
+        years--;
+        months += 12;
+      }
+
+      var totalYears = years + (months / 12);
+      return { years: years, months: months, totalYears: totalYears };
+    }
+
+    /**
+     * Calculate the legal indemnity.
+     * Art. L1234-9 / R1234-2 Code du travail:
+     * - 1/4 month salary per year for first 10 years
+     * - 1/3 month salary per year beyond 10 years
+     * Incomplete years prorated by month.
+     */
+    function calcIndemnite(salaireRef, totalYears) {
+      var indemnite = 0;
+
+      if (totalYears <= 10) {
+        indemnite = (1 / 4) * salaireRef * totalYears;
+      } else {
+        /* First 10 years at 1/4 */
+        indemnite = (1 / 4) * salaireRef * 10;
+        /* Beyond 10 years at 1/3 */
+        indemnite += (1 / 3) * salaireRef * (totalYears - 10);
+      }
+
+      return Math.round(indemnite * 100) / 100;
+    }
+
+    function doCalculation() {
+      /* Validate inputs */
+      var dateEntree = new Date(dateEntreeEl.value);
+      var dateRupture = new Date(dateRuptureEl.value);
+      var salaire12 = parseFloat(salaire12El.value);
+      var salaire3 = parseFloat(salaire3El.value) || 0;
+      var primes = parseFloat(primesEl.value) || 0;
+
+      if (!dateEntreeEl.value || !dateRuptureEl.value) {
+        alert('Veuillez renseigner les dates d\'entree et de rupture.');
+        return;
+      }
+
+      if (isNaN(salaire12) || salaire12 <= 0) {
+        alert('Veuillez renseigner votre salaire brut mensuel moyen (12 derniers mois).');
+        return;
+      }
+
+      if (dateEntree >= dateRupture) {
+        alert('La date d\'entree doit etre anterieure a la date de rupture.');
+        return;
+      }
+
+      /* Calculate anciennete */
+      var anc = calcAnciennete(dateEntree, dateRupture);
+
+      if (anc.totalYears < (8 / 12)) {
+        alert('L\'anciennete minimum requise pour une indemnite de rupture conventionnelle est de 8 mois.');
+        return;
+      }
+
+      /* Determine salary reference */
+      /* Method 1: average of last 12 months (already provided) */
+      var ref12 = salaire12;
+
+      /* Method 2: average of last 3 months + prorated annual primes */
+      var ref3 = 0;
+      var methode = '';
+      if (salaire3 > 0) {
+        /* Primes are prorated: primes * 3/12 = primes/4, then divided over 3 months */
+        ref3 = salaire3 + (primes * (3 / 12)) / 3;
+      }
+
+      var salaireRef;
+      if (ref3 > ref12 && ref3 > 0) {
+        salaireRef = ref3;
+        methode = 'Moyenne des 3 derniers mois (plus favorable)';
+      } else {
+        salaireRef = ref12;
+        methode = 'Moyenne des 12 derniers mois';
+      }
+
+      /* Calculate indemnity */
+      var indemnite = calcIndemnite(salaireRef, anc.totalYears);
+
+      /* Build detail string */
+      var detail = '';
+      if (anc.totalYears <= 10) {
+        detail = '1/4 x ' + formatMoney(salaireRef) + ' x ' + anc.totalYears.toFixed(3);
+      } else {
+        detail = '(1/4 x ' + formatMoney(salaireRef) + ' x 10) + (1/3 x ' + formatMoney(salaireRef) + ' x ' + (anc.totalYears - 10).toFixed(3) + ')';
+      }
+
+      /* Anciennete display */
+      var ancDisplay = anc.years + ' an' + (anc.years > 1 ? 's' : '');
+      if (anc.months > 0) {
+        ancDisplay += ' et ' + anc.months + ' mois';
+      }
+
+      /* Fiscal regime */
+      var remunerationAnnuelle = salaireRef * 12;
+      var seuilDouble = remunerationAnnuelle * 2;
+      var seuilMoitie = indemnite / 2;
+
+      var fiscalText = '';
+      if (indemnite <= seuilDouble && indemnite <= seuilMoitie * 2) {
+        fiscalText = 'Regime fiscal : votre indemnite de ' + formatMoney(indemnite) + ' est inferieure au double de votre remuneration annuelle brute (' + formatMoney(seuilDouble) + '). Elle est donc exoneree d\'impot sur le revenu si elle correspond au montant legal ou conventionnel.';
+      } else {
+        fiscalText = 'Regime fiscal : votre indemnite est exoneree d\'impot sur le revenu dans la limite du montant legal ou conventionnel, du double de la remuneration annuelle brute (' + formatMoney(seuilDouble) + ') ou de la moitie de l\'indemnite versee. La fraction excedentaire est imposable.';
+      }
+
+      var socialText = 'Regime social : la fraction de l\'indemnite ne depassant pas le montant legal est exoneree de cotisations de Securite sociale et de CSG/CRDS, dans la limite de 2 fois le plafond annuel de la Securite sociale (PASS). Au-dela, des cotisations s\'appliquent.';
+
+      /* Display results */
+      resIndemnite.textContent = formatMoney(indemnite);
+      resAnciennete.textContent = ancDisplay;
+      resSalaireRef.textContent = formatMoney(salaireRef);
+      resMethode.textContent = methode;
+      resDetail.textContent = detail;
+      resFiscalText.textContent = fiscalText;
+      resSocialText.textContent = socialText;
+
+      resultsEl.classList.add('visible');
+      resultsEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    btnCalculer.addEventListener('click', doCalculation);
+
+    /* Real-time calculation on input changes */
+    var inputs = [dateEntreeEl, dateRuptureEl, salaire12El, salaire3El, primesEl];
+    inputs.forEach(function(input) {
+      input.addEventListener('input', function() {
+        /* Only auto-calculate if minimum required fields are filled */
+        if (dateEntreeEl.value && dateRuptureEl.value && salaire12El.value && parseFloat(salaire12El.value) > 0) {
+          var d1 = new Date(dateEntreeEl.value);
+          var d2 = new Date(dateRuptureEl.value);
+          if (d1 < d2) {
+            var anc = calcAnciennete(d1, d2);
+            if (anc.totalYears >= (8 / 12)) {
+              doCalculationSilent();
+            }
+          }
+        }
+      });
+    });
+
+    /**
+     * Silent calculation (no alerts) for real-time updates
+     */
+    function doCalculationSilent() {
+      var dateEntree = new Date(dateEntreeEl.value);
+      var dateRupture = new Date(dateRuptureEl.value);
+      var salaire12 = parseFloat(salaire12El.value);
+      var salaire3 = parseFloat(salaire3El.value) || 0;
+      var primes = parseFloat(primesEl.value) || 0;
+
+      if (!dateEntreeEl.value || !dateRuptureEl.value || isNaN(salaire12) || salaire12 <= 0) return;
+      if (dateEntree >= dateRupture) return;
+
+      var anc = calcAnciennete(dateEntree, dateRupture);
+      if (anc.totalYears < (8 / 12)) return;
+
+      var ref12 = salaire12;
+      var ref3 = 0;
+      var methode = '';
+
+      if (salaire3 > 0) {
+        ref3 = salaire3 + (primes * (3 / 12)) / 3;
+      }
+
+      var salaireRef;
+      if (ref3 > ref12 && ref3 > 0) {
+        salaireRef = ref3;
+        methode = 'Moyenne des 3 derniers mois (plus favorable)';
+      } else {
+        salaireRef = ref12;
+        methode = 'Moyenne des 12 derniers mois';
+      }
+
+      var indemnite = calcIndemnite(salaireRef, anc.totalYears);
+
+      var detail = '';
+      if (anc.totalYears <= 10) {
+        detail = '1/4 x ' + formatMoney(salaireRef) + ' x ' + anc.totalYears.toFixed(3);
+      } else {
+        detail = '(1/4 x ' + formatMoney(salaireRef) + ' x 10) + (1/3 x ' + formatMoney(salaireRef) + ' x ' + (anc.totalYears - 10).toFixed(3) + ')';
+      }
+
+      var ancDisplay = anc.years + ' an' + (anc.years > 1 ? 's' : '');
+      if (anc.months > 0) {
+        ancDisplay += ' et ' + anc.months + ' mois';
+      }
+
+      var remunerationAnnuelle = salaireRef * 12;
+      var seuilDouble = remunerationAnnuelle * 2;
+
+      var fiscalText = '';
+      if (indemnite <= seuilDouble) {
+        fiscalText = 'Regime fiscal : votre indemnite de ' + formatMoney(indemnite) + ' est inferieure au double de votre remuneration annuelle brute (' + formatMoney(seuilDouble) + '). Elle est donc exoneree d\'impot sur le revenu si elle correspond au montant legal ou conventionnel.';
+      } else {
+        fiscalText = 'Regime fiscal : votre indemnite est exoneree d\'impot sur le revenu dans la limite du montant legal ou conventionnel, du double de la remuneration annuelle brute (' + formatMoney(seuilDouble) + ') ou de la moitie de l\'indemnite versee. La fraction excedentaire est imposable.';
+      }
+
+      var socialText = 'Regime social : la fraction de l\'indemnite ne depassant pas le montant legal est exoneree de cotisations de Securite sociale et de CSG/CRDS, dans la limite de 2 fois le plafond annuel de la Securite sociale (PASS). Au-dela, des cotisations s\'appliquent.';
+
+      resIndemnite.textContent = formatMoney(indemnite);
+      resAnciennete.textContent = ancDisplay;
+      resSalaireRef.textContent = formatMoney(salaireRef);
+      resMethode.textContent = methode;
+      resDetail.textContent = detail;
+      resFiscalText.textContent = fiscalText;
+      resSocialText.textContent = socialText;
+
+      resultsEl.classList.add('visible');
+    }
+  })();
+  </script>
+
+</body>
+</html>
