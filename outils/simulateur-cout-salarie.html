@@ -620,7 +620,7 @@
           <div class="calc-field">
             <label for="salaire-brut">Salaire brut mensuel</label>
             <div class="calc-input-wrap">
-              <input type="number" id="salaire-brut" class="has-suffix" placeholder="3 000" min="0" step="50" value="3000">
+              <input type="number" id="salaire-brut" class="has-suffix" placeholder="3 000" min="0" step="50" value="">
               <span class="input-suffix">&euro;</span>
             </div>
           </div>
@@ -664,7 +664,7 @@
           <div class="calc-field">
             <label for="taux-at">Taux AT/MP <span class="field-hint">(accidents du travail)</span></label>
             <div class="calc-input-wrap">
-              <input type="number" id="taux-at" class="has-suffix" placeholder="1.28" min="0" max="10" step="0.01" value="1.28">
+              <input type="number" id="taux-at" class="has-suffix" placeholder="1.28" min="0" max="10" step="0.01" value="">
               <span class="input-suffix">%</span>
             </div>
           </div>
@@ -673,7 +673,7 @@
           <div class="calc-field">
             <label for="mutuelle">Mutuelle part employeur <span class="field-hint">(mensuel)</span></label>
             <div class="calc-input-wrap">
-              <input type="number" id="mutuelle" class="has-suffix" placeholder="50" min="0" step="5" value="50">
+              <input type="number" id="mutuelle" class="has-suffix" placeholder="50" min="0" step="5" value="">
               <span class="input-suffix">&euro;</span>
             </div>
           </div>
@@ -682,7 +682,7 @@
           <div class="calc-field">
             <label for="tickets">Tickets restaurant part employeur <span class="field-hint">(mensuel)</span></label>
             <div class="calc-input-wrap">
-              <input type="number" id="tickets" class="has-suffix" placeholder="0" min="0" step="10" value="0">
+              <input type="number" id="tickets" class="has-suffix" placeholder="0" min="0" step="10" value="">
               <span class="input-suffix">&euro;</span>
             </div>
           </div>
@@ -691,82 +691,85 @@
           <div class="calc-field">
             <label for="transport">Remboursement transport <span class="field-hint">(mensuel)</span></label>
             <div class="calc-input-wrap">
-              <input type="number" id="transport" class="has-suffix" placeholder="0" min="0" step="5" value="0">
+              <input type="number" id="transport" class="has-suffix" placeholder="0" min="0" step="5" value="">
               <span class="input-suffix">&euro;</span>
             </div>
           </div>
         </div>
 
         <!-- Resultats -->
-        <div class="calc-results" id="calc-results">
-          <div class="results-title">Resultats de la simulation</div>
-          <div class="result-lines">
-            <div class="result-line">
-              <span class="rl-label">Salaire brut mensuel</span>
-              <span class="rl-value" id="res-brut">-</span>
-            </div>
-            <div class="result-line deduction">
-              <span class="rl-label">Cotisations patronales <span class="rl-pct" id="res-cotis-pct">-</span></span>
-              <span class="rl-value" id="res-cotis">-</span>
-            </div>
-            <div class="result-line deduction" id="row-fillon" style="display:none">
-              <span class="rl-label">Reduction generale (Fillon) <span class="rl-pct" id="res-fillon-pct">-</span></span>
-              <span class="rl-value" id="res-fillon" style="color:#16a34a">-</span>
-            </div>
-            <div class="result-line">
-              <span class="rl-label">Cotisations nettes employeur</span>
-              <span class="rl-value" id="res-cotis-nettes">-</span>
-            </div>
-            <div class="result-line">
-              <span class="rl-label">Mutuelle employeur</span>
-              <span class="rl-value" id="res-mutuelle">-</span>
-            </div>
-            <div class="result-line">
-              <span class="rl-label">Tickets restaurant</span>
-              <span class="rl-value" id="res-tickets">-</span>
-            </div>
-            <div class="result-line">
-              <span class="rl-label">Transport</span>
-              <span class="rl-value" id="res-transport">-</span>
-            </div>
-            <div class="result-line" id="row-precarite" style="display:none">
-              <span class="rl-label">Provision prime de precarite CDD <span class="rl-pct">10%</span></span>
-              <span class="rl-value" id="res-precarite">-</span>
-            </div>
-            <div class="result-line highlight">
-              <span class="rl-label">Cout total mensuel employeur</span>
-              <span class="rl-value" id="res-total-mensuel">-</span>
-            </div>
+        <div class="calc-results" id="calc-results" style="display:none">
+          <div class="results-title">Resultat de la simulation</div>
 
-            <div class="result-group-title">Recapitulatif</div>
-            <div class="result-line">
-              <span class="rl-label">Cout total annuel</span>
-              <span class="rl-value" id="res-total-annuel">-</span>
-            </div>
-            <div class="result-line highlight">
-              <span class="rl-label">Ratio cout / brut</span>
-              <span class="rl-value" id="res-ratio">-</span>
-            </div>
+          <!-- MAIN RESULT -->
+          <div style="background:var(--primary-light);border-radius:12px;padding:28px;text-align:center;margin-bottom:20px">
+            <div style="font-size:.85rem;font-weight:600;color:var(--primary-dark);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Cout total mensuel employeur</div>
+            <div id="res-total-mensuel" style="font-size:2.4rem;font-weight:900;color:var(--primary-dark)">-</div>
+            <div id="res-ratio" style="font-size:1rem;font-weight:700;color:var(--primary);margin-top:8px">-</div>
+            <div style="font-size:.82rem;color:var(--text-muted);margin-top:4px">Cout annuel : <span id="res-total-annuel">-</span></div>
           </div>
 
-          <!-- Detail charges -->
-          <button type="button" class="breakdown-toggle" id="btn-detail" onclick="toggleBreakdown()">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-            Voir le detail des charges patronales
-          </button>
-          <div class="breakdown-table-wrap" id="breakdown-wrap">
-            <table class="breakdown-table">
-              <thead>
-                <tr>
-                  <th>Cotisation</th>
-                  <th>Taux</th>
-                  <th>Base</th>
-                  <th>Montant</th>
-                </tr>
-              </thead>
-              <tbody id="breakdown-body">
-              </tbody>
-            </table>
+          <!-- TOGGLE -->
+          <div style="text-align:center;margin-bottom:16px">
+            <button type="button" onclick="var d=document.getElementById('cout-detail');d.style.display=d.style.display==='none'?'block':'none';this.textContent=d.style.display==='none'?'Voir le detail des charges':'Masquer le detail'" style="background:none;border:1px solid var(--border);border-radius:8px;padding:10px 18px;font-size:.85rem;font-weight:600;color:var(--primary);cursor:pointer;font-family:inherit">Voir le detail des charges</button>
+          </div>
+
+          <!-- DETAIL hidden -->
+          <div id="cout-detail" style="display:none">
+            <div class="result-lines">
+              <div class="result-line">
+                <span class="rl-label">Salaire brut mensuel</span>
+                <span class="rl-value" id="res-brut">-</span>
+              </div>
+              <div class="result-line deduction">
+                <span class="rl-label">Cotisations patronales <span class="rl-pct" id="res-cotis-pct">-</span></span>
+                <span class="rl-value" id="res-cotis">-</span>
+              </div>
+              <div class="result-line deduction" id="row-fillon" style="display:none">
+                <span class="rl-label">Reduction generale (Fillon) <span class="rl-pct" id="res-fillon-pct">-</span></span>
+                <span class="rl-value" id="res-fillon" style="color:#16a34a">-</span>
+              </div>
+              <div class="result-line">
+                <span class="rl-label">Cotisations nettes employeur</span>
+                <span class="rl-value" id="res-cotis-nettes">-</span>
+              </div>
+              <div class="result-line">
+                <span class="rl-label">Mutuelle employeur</span>
+                <span class="rl-value" id="res-mutuelle">-</span>
+              </div>
+              <div class="result-line">
+                <span class="rl-label">Tickets restaurant</span>
+                <span class="rl-value" id="res-tickets">-</span>
+              </div>
+              <div class="result-line">
+                <span class="rl-label">Transport</span>
+                <span class="rl-value" id="res-transport">-</span>
+              </div>
+              <div class="result-line" id="row-precarite" style="display:none">
+                <span class="rl-label">Provision prime de precarite CDD <span class="rl-pct">10%</span></span>
+                <span class="rl-value" id="res-precarite">-</span>
+              </div>
+            </div>
+
+            <!-- Breakdown table button and table -->
+            <button type="button" class="breakdown-toggle" id="btn-detail" onclick="toggleBreakdown()">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+              Voir le detail des cotisations patronales
+            </button>
+            <div class="breakdown-table-wrap" id="breakdown-wrap">
+              <table class="breakdown-table">
+                <thead>
+                  <tr>
+                    <th>Cotisation</th>
+                    <th>Taux</th>
+                    <th>Base</th>
+                    <th>Montant</th>
+                  </tr>
+                </thead>
+                <tbody id="breakdown-body">
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -1115,7 +1118,12 @@
 
     function calculate() {
       var brut = parseFloat(brutInput.value) || 0;
-      if (brut <= 0) return;
+      var resultsDiv = document.getElementById('calc-results');
+      if (brut <= 0 || isNaN(brut)) {
+        resultsDiv.style.display = 'none';
+        return;
+      }
+      resultsDiv.style.display = '';
 
       var statut = statutSelect.value;
       var contrat = contratSelect.value;

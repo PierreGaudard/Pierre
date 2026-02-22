@@ -642,7 +642,7 @@
           <div class="calc-field">
             <label for="salaire-brut">Salaire brut mensuel</label>
             <div class="calc-input-wrap">
-              <input type="number" id="salaire-brut" class="has-suffix" placeholder="2 500" min="0" step="50" value="2500">
+              <input type="number" id="salaire-brut" class="has-suffix" placeholder="2 500" min="0" step="50" value="">
               <span class="input-suffix">&euro;</span>
             </div>
           </div>
@@ -672,7 +672,7 @@
             </div>
             <div class="partial-hours" id="partial-hours-wrap">
               <label for="heures-partiel">Nombre d'heures par semaine</label>
-              <input type="number" id="heures-partiel" placeholder="28" min="1" max="34" value="28">
+              <input type="number" id="heures-partiel" placeholder="28" min="1" max="34" value="">
             </div>
           </div>
 
@@ -680,7 +680,7 @@
           <div class="calc-field">
             <label for="heures-sup">Heures supplementaires / mois <span class="field-hint">(facultatif)</span></label>
             <div class="calc-input-wrap">
-              <input type="number" id="heures-sup" class="has-suffix" placeholder="0" min="0" max="60" value="0">
+              <input type="number" id="heures-sup" class="has-suffix" placeholder="0" min="0" max="60" value="">
               <span class="input-suffix">h</span>
             </div>
           </div>
@@ -696,49 +696,58 @@
 
         <!-- Resultats -->
         <div class="calc-results" id="calc-results">
-          <div class="results-title">Resultats de la simulation</div>
-          <div class="result-lines">
-            <div class="result-line">
-              <span class="rl-label">Salaire brut mensuel</span>
-              <span class="rl-value" id="res-brut">-</span>
-            </div>
-            <div class="result-line deduction">
-              <span class="rl-label">Cotisations salariales <span class="rl-pct" id="res-cotis-pct">-</span></span>
-              <span class="rl-value" id="res-cotis">-</span>
-            </div>
-            <div class="result-line highlight">
-              <span class="rl-label">Salaire net avant impot</span>
-              <span class="rl-value" id="res-net-avant">-</span>
-            </div>
-            <div class="result-line deduction">
-              <span class="rl-label">
-                <span class="rl-tax-select">
-                  Prelevement a la source
-                  <select id="taux-pas">
-                    <option value="0">0 %</option>
-                    <option value="5" selected>5 %</option>
-                    <option value="10">10 %</option>
-                    <option value="15">15 %</option>
-                    <option value="20">20 %</option>
-                    <option value="30">30 %</option>
-                  </select>
-                </span>
-              </span>
-              <span class="rl-value" id="res-pas">-</span>
-            </div>
-            <div class="result-line highlight">
-              <span class="rl-label">Salaire net apres impot</span>
-              <span class="rl-value" id="res-net-apres">-</span>
-            </div>
+          <div class="results-title">Resultat de la simulation</div>
 
-            <div class="result-group-title">Recapitulatif annuel</div>
-            <div class="result-line">
-              <span class="rl-label">Salaire net annuel (avant impot)</span>
-              <span class="rl-value" id="res-net-annuel">-</span>
-            </div>
-            <div class="result-line">
-              <span class="rl-label">Cout total employeur <span class="rl-pct" id="res-emp-pct">-</span></span>
-              <span class="rl-value" id="res-cout-employeur">-</span>
+          <!-- MAIN RESULT - big and clear -->
+          <div class="result-main" style="background:var(--primary-light);border-radius:12px;padding:24px;text-align:center;margin-bottom:20px">
+            <div style="font-size:.82rem;font-weight:600;color:var(--primary-dark);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Salaire net avant impot</div>
+            <div id="res-net-avant" style="font-size:2.4rem;font-weight:900;color:var(--primary-dark)">-</div>
+            <div style="font-size:.85rem;color:var(--text-muted);margin-top:8px">par mois</div>
+          </div>
+
+          <!-- TOGGLE DETAIL -->
+          <button type="button" onclick="document.getElementById('detail-results').style.display=document.getElementById('detail-results').style.display==='none'?'block':'none';this.textContent=document.getElementById('detail-results').style.display==='none'?'Voir le detail du calcul':'Masquer le detail'" style="display:flex;align-items:center;gap:6px;background:none;border:1px solid var(--border);border-radius:8px;padding:10px 18px;font-size:.85rem;font-weight:600;color:var(--primary);cursor:pointer;margin:0 auto 16px;font-family:inherit">Voir le detail du calcul</button>
+
+          <!-- DETAIL - hidden by default -->
+          <div id="detail-results" style="display:none">
+            <div class="result-lines">
+              <div class="result-line">
+                <span class="rl-label">Salaire brut mensuel</span>
+                <span class="rl-value" id="res-brut">-</span>
+              </div>
+              <div class="result-line deduction">
+                <span class="rl-label">Cotisations salariales <span class="rl-pct" id="res-cotis-pct">-</span></span>
+                <span class="rl-value" id="res-cotis">-</span>
+              </div>
+              <div class="result-line deduction">
+                <span class="rl-label">
+                  <span class="rl-tax-select">
+                    Prelevement a la source
+                    <select id="taux-pas">
+                      <option value="0">0 %</option>
+                      <option value="5" selected>5 %</option>
+                      <option value="10">10 %</option>
+                      <option value="15">15 %</option>
+                      <option value="20">20 %</option>
+                      <option value="30">30 %</option>
+                    </select>
+                  </span>
+                </span>
+                <span class="rl-value" id="res-pas">-</span>
+              </div>
+              <div class="result-line">
+                <span class="rl-label">Salaire net apres impot</span>
+                <span class="rl-value" id="res-net-apres">-</span>
+              </div>
+              <div class="result-group-title">Recapitulatif annuel</div>
+              <div class="result-line">
+                <span class="rl-label">Salaire net annuel (avant impot)</span>
+                <span class="rl-value" id="res-net-annuel">-</span>
+              </div>
+              <div class="result-line">
+                <span class="rl-label">Cout total employeur <span class="rl-pct" id="res-emp-pct">-</span></span>
+                <span class="rl-value" id="res-cout-employeur">-</span>
+              </div>
             </div>
           </div>
         </div>
@@ -1213,8 +1222,8 @@
     tauxPasSelect.addEventListener('change', calculate);
     btnCalculer.addEventListener('click', calculate);
 
-    // Initial calculation
-    calculate();
+    // Don't auto-calculate on load - wait for user input
+    // calculate();
   })();
 
   // FAQ toggle
