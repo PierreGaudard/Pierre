@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulateur chomage ARE 2026 : calculez vos allocations gratuitement - MLRH</title>
+  <meta name="description" content="Simulateur gratuit d'allocation chomage ARE 2026. Calculez en ligne le montant et la duree de vos allocations chomage selon les regles France Travail en vigueur.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://meilleur-logiciel-rh.fr/outils/simulateur-chomage-are.html">
+  <link rel="apple-touch-icon" href="../assets/images/apple-touch-icon.png">
+  <meta property="og:title" content="Simulateur chomage ARE 2026 : calculez vos allocations gratuitement">
+  <meta property="og:description" content="Estimez le montant et la duree de vos allocations chomage en quelques clics. Calcul base sur les regles France Travail 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <link rel="icon" href="../assets/images/favicon-mlrh.png" type="image/png">
+  <link rel="stylesheet" href="../assets/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://meilleur-logiciel-rh.fr/"},
+          {"@type": "ListItem", "position": 2, "name": "Outils RH", "item": "https://meilleur-logiciel-rh.fr/outils/"},
+          {"@type": "ListItem", "position": 3, "name": "Simulateur chomage ARE"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "La demission ouvre-t-elle droit au chomage ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "En principe, la demission ne donne pas droit aux allocations chomage. Cependant, certaines demissions dites legitimes ouvrent des droits : demission pour suivre un conjoint, demission suite a un non-paiement de salaire, ou demission pour creation d'entreprise apres 5 ans d'activite salariee. Depuis 2019, les salaries ayant au moins 5 ans d'anciennete et porteurs d'un projet professionnel reel et serieux peuvent egalement beneficier de l'ARE apres demission, sous reserve de validation par une commission paritaire."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Peut-on cumuler ARE et activite partielle ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, il est possible de cumuler partiellement l'ARE avec une activite salariee. France Travail applique un mecanisme de cumul : les revenus d'activite sont partiellement deduits de l'allocation. Concretement, 70% du salaire brut mensuel est soustrait du montant mensuel de l'ARE. Le cumul total (salaire + allocation) ne peut pas depasser l'ancien salaire brut. Les jours non indemnises repoussent d'autant la fin de droits."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Les allocations chomage sont-elles imposables ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Oui, les allocations chomage sont soumises a l'impot sur le revenu. Elles doivent etre declarees dans la categorie des traitements et salaires. France Travail preleve directement le prelevement a la source sur le montant brut de l'ARE. En revanche, les allocations chomage ne sont pas soumises aux cotisations sociales classiques, mais a une contribution de 3% pour la retraite complementaire et a la CSG/CRDS."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Quand commence le versement des allocations ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le versement de l'ARE ne commence pas immediatement apres l'inscription a France Travail. Il faut respecter un delai de carence incompressible de 7 jours calendaires, auquel s'ajoute un differe conges payes (correspondant aux indemnites compensatrices de conges payes) et eventuellement un differe specifique lie aux indemnites supra-legales de rupture. En general, comptez entre 10 et 30 jours avant le premier versement."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment est calcule le differe d'indemnisation ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Le differe d'indemnisation se compose de trois elements : le delai d'attente de 7 jours (systematique), le differe conges payes (indemnite compensatrice de conges payes divisee par le salaire journalier de reference) et le differe specifique (indemnites supra-legales de rupture divisees par 102.4, plafonne a 150 jours). Ces delais se cumulent et repoussent la date de debut de versement de l'ARE."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Simulateur allocation chomage ARE 2026",
+        "url": "https://meilleur-logiciel-rh.fr/outils/simulateur-chomage-are.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "description": "Calculez gratuitement le montant et la duree de vos allocations chomage ARE selon les regles France Travail 2026."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* HERO */
+    .tool-hero {
+      background: linear-gradient(135deg, #14532d 0%, #16a34a 100%);
+      padding: 0 24px 48px;
+      color: #fff;
+    }
+    .tool-hero .breadcrumb { padding: 20px 0 16px; }
+    .tool-hero .breadcrumb a { color: #bbf7d0; }
+    .tool-hero .breadcrumb .sep { color: rgba(255,255,255,.4); }
+    .tool-hero .breadcrumb span:last-child { color: rgba(255,255,255,.7); }
+    .tool-hero h1 {
+      font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+      font-weight: 900;
+      line-height: 1.2;
+      letter-spacing: -.02em;
+      margin-bottom: 12px;
+      max-width: 700px;
+    }
+    .tool-hero .hero-sub {
+      font-size: 1.05rem;
+      color: #dcfce7;
+      line-height: 1.6;
+      max-width: 600px;
+      opacity: .9;
+    }
+
+    /* CALCULATOR SECTION */
+    .calc-section {
+      padding: 48px 24px 64px;
+      background: var(--bg);
+    }
+    .calc-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .calc-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+    }
+    .calc-card h2 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .calc-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .calc-field.full { grid-column: 1 / -1; }
+    .calc-field label {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .calc-field input,
+    .calc-field select {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: .92rem;
+      color: var(--text);
+      background: #fff;
+      outline: none;
+      transition: border-color .2s;
+      width: 100%;
+    }
+    .calc-field input:focus,
+    .calc-field select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(22,163,74,.1);
+    }
+    .calc-field .input-wrap {
+      position: relative;
+    }
+    .calc-field .input-wrap .suffix {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: .85rem;
+      font-weight: 600;
+      pointer-events: none;
+    }
+    .calc-field .input-wrap input {
+      padding-right: 36px;
+    }
+    .calc-radio-group {
+      display: flex;
+      gap: 12px;
+    }
+    .calc-radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: .88rem;
+    }
+    .calc-radio-group input[type="radio"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--primary);
+    }
+    .calc-hint {
+      font-size: .78rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .calc-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 14px 28px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .15s, transform .15s;
+      margin-top: 8px;
+    }
+    .calc-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+
+    /* RESULTS */
+    .calc-results {
+      margin-top: 32px;
+      display: none;
+    }
+    .calc-results.visible { display: block; }
+    .calc-results h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--primary-light);
+    }
+    .result-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .result-item {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+    }
+    .result-item.highlight {
+      background: var(--primary-light);
+      border-color: #bbf7d0;
+    }
+    .result-label {
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: 4px;
+    }
+    .result-value {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text);
+    }
+    .result-item.highlight .result-value {
+      color: var(--primary-dark);
+    }
+    .result-item.full {
+      grid-column: 1 / -1;
+    }
+    .result-note {
+      font-size: .82rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* SALARY BAR */
+    .salary-bar-wrap {
+      margin-top: 8px;
+    }
+    .salary-bar-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .salary-bar-label span {
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .salary-bar-label strong {
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+    }
+    .salary-bar {
+      height: 20px;
+      background: #e2e8f0;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+    }
+    .salary-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #16a34a, #22c55e);
+      border-radius: 10px;
+      transition: width .6s ease;
+    }
+
+    /* DEGRESSIVITE WARNING */
+    .degres-warning {
+      display: none;
+      margin-top: 16px;
+      padding: 14px 18px;
+      background: #fef3c7;
+      border: 1px solid #fcd34d;
+      border-radius: 10px;
+      font-size: .85rem;
+      color: #92400e;
+      line-height: 1.6;
+    }
+    .degres-warning.visible { display: block; }
+    .degres-warning strong { color: #78350f; }
+
+    /* CONTENT SECTION */
+    .content-section {
+      padding: 64px 24px;
+      background: #fff;
+    }
+    .content-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .content-wrap h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text);
+      margin: 48px 0 16px;
+      letter-spacing: -.01em;
+    }
+    .content-wrap h2:first-child { margin-top: 0; }
+    .content-wrap p {
+      font-size: .94rem;
+      color: var(--text);
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+    .content-wrap ul {
+      margin: 0 0 16px 20px;
+      font-size: .94rem;
+      color: var(--text);
+      line-height: 1.8;
+    }
+    .content-wrap ul li { margin-bottom: 6px; }
+    .content-wrap strong { color: var(--text); }
+
+    /* TABLE */
+    .content-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 28px;
+      font-size: .88rem;
+    }
+    .content-table thead th {
+      background: var(--primary);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+    .content-table thead th:first-child { border-radius: 8px 0 0 0; }
+    .content-table thead th:last-child { border-radius: 0 8px 0 0; }
+    .content-table tbody td {
+      padding: 11px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+    .content-table tbody tr:nth-child(even) { background: var(--bg); }
+    .content-table tbody tr:hover { background: var(--primary-light); }
+
+    /* FAQ */
+    .faq-section {
+      padding: 48px 24px 64px;
+      background: var(--bg);
+    }
+    .faq-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .faq-wrap h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .faq-item {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 16px 20px;
+      font-weight: 700;
+      font-size: .92rem;
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+      transition: color .15s;
+    }
+    .faq-question:hover { color: var(--primary); }
+    .faq-toggle {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 700;
+      transition: transform .2s;
+    }
+    .faq-item.open .faq-toggle { transform: rotate(45deg); }
+    .faq-answer {
+      display: none;
+      padding: 0 20px 16px;
+      font-size: .88rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+    .faq-item.open .faq-answer { display: block; }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      .calc-grid { grid-template-columns: 1fr; }
+      .result-grid { grid-template-columns: 1fr; }
+      .calc-card { padding: 20px; }
+      .tool-hero { padding: 0 16px 32px; }
+      .content-section { padding: 40px 16px; }
+      .faq-section { padding: 32px 16px 48px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo"><img src="../assets/images/mlrh-logo.png" alt="MLRH" style="height:30px;width:auto;filter:brightness(0)"></a>
+      <nav class="site-nav">
+        <a href="/comparatifs/">Comparatifs</a>
+        <a href="/guides/">Guides</a>
+        <a href="/alternatives/">Alternatives</a>
+        <a href="/avis/">Avis</a>
+        <a href="/outils/">Outils</a>
+        <a href="/trouver-mon-logiciel.html" class="nav-cta">Trouver mon logiciel</a>
+      </nav>
+      <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="tool-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="/">Accueil</a><span class="sep">›</span>
+        <a href="/outils/">Outils RH</a><span class="sep">›</span>
+        <span>Simulateur chomage ARE</span>
+      </nav>
+      <h1>Simulateur allocation chomage (ARE) 2026</h1>
+      <p class="hero-sub">Estimez le montant et la duree de vos allocations chomage en quelques clics. Calcul base sur les regles France Travail en vigueur.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section class="calc-section">
+    <div class="calc-wrap">
+      <div class="calc-card">
+        <h2>Calculez vos allocations chomage</h2>
+        <div class="calc-grid">
+
+          <div class="calc-field">
+            <label for="calc-age">Votre age a la date de fin de contrat</label>
+            <input type="number" id="calc-age" min="16" max="67" placeholder="Ex : 35" value="">
+          </div>
+
+          <div class="calc-field">
+            <label for="calc-salaire">Salaire brut mensuel moyen (12 derniers mois)</label>
+            <div class="input-wrap">
+              <input type="number" id="calc-salaire" min="0" step="100" placeholder="Ex : 2800" value="">
+              <span class="suffix">EUR</span>
+            </div>
+          </div>
+
+          <div class="calc-field">
+            <label for="calc-motif">Type de fin de contrat</label>
+            <select id="calc-motif">
+              <option value="" disabled selected>Selectionnez un motif</option>
+              <option value="licenciement">Licenciement</option>
+              <option value="rupture-conv">Rupture conventionnelle</option>
+              <option value="fin-cdd">Fin de CDD</option>
+              <option value="demission-leg">Demission legitime</option>
+            </select>
+          </div>
+
+          <div class="calc-field">
+            <label for="calc-duree">Duree d'emploi sur les 24 derniers mois</label>
+            <select id="calc-duree">
+              <option value="6">6 mois</option>
+              <option value="7">7 mois</option>
+              <option value="8">8 mois</option>
+              <option value="9">9 mois</option>
+              <option value="10">10 mois</option>
+              <option value="11">11 mois</option>
+              <option value="12" selected>12 mois</option>
+              <option value="13">13 mois</option>
+              <option value="14">14 mois</option>
+              <option value="15">15 mois</option>
+              <option value="16">16 mois</option>
+              <option value="17">17 mois</option>
+              <option value="18">18 mois</option>
+              <option value="19">19 mois</option>
+              <option value="20">20 mois</option>
+              <option value="21">21 mois</option>
+              <option value="22">22 mois</option>
+              <option value="23">23 mois</option>
+              <option value="24">24 mois</option>
+            </select>
+          </div>
+
+          <div class="calc-field full">
+            <label>Avez-vous deja percu des allocations chomage ?</label>
+            <div class="calc-radio-group">
+              <label><input type="radio" name="calc-already" value="non" checked> Non</label>
+              <label><input type="radio" name="calc-already" value="oui"> Oui</label>
+            </div>
+          </div>
+
+          <div class="calc-field full">
+            <button class="calc-btn" id="calc-submit" type="button">Calculer mes allocations</button>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="calc-results" id="calc-results">
+          <h3>Resultat de votre simulation</h3>
+          <div class="result-grid">
+            <div class="result-item">
+              <div class="result-label">Salaire journalier de reference (SJR)</div>
+              <div class="result-value" id="res-sjr">--</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Allocation journaliere brute</div>
+              <div class="result-value" id="res-are-brut">--</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Allocation journaliere nette</div>
+              <div class="result-value" id="res-are-net">--</div>
+            </div>
+            <div class="result-item highlight">
+              <div class="result-label">Allocation mensuelle nette estimee (30 j.)</div>
+              <div class="result-value" id="res-mensuel">--</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Duree d'indemnisation maximale</div>
+              <div class="result-value" id="res-duree">--</div>
+            </div>
+            <div class="result-item">
+              <div class="result-label">Differe d'indemnisation (delai de carence)</div>
+              <div class="result-value" id="res-carence">--</div>
+              <div class="result-note">7 jours incompressibles + differe conges payes</div>
+            </div>
+            <div class="result-item full">
+              <div class="salary-bar-wrap">
+                <div class="salary-bar-label">
+                  <span>Pourcentage du salaire net maintenu</span>
+                  <strong id="res-pourcent">--%</strong>
+                </div>
+                <div class="salary-bar">
+                  <div class="salary-bar-fill" id="res-bar" style="width:0%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="degres-warning" id="degres-warning">
+            <strong>Degressivite applicable :</strong> Votre salaire brut depasse 4 915 EUR/mois et vous avez moins de 57 ans. Apres 6 mois d'indemnisation, votre allocation journaliere sera reduite de 30%. Le montant apres degressivite ne peut toutefois pas descendre en dessous de 92,12 EUR/jour.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SEO CONTENT -->
+  <section class="content-section">
+    <div class="content-wrap">
+
+      <h2>Comment est calculee l'allocation chomage en 2026 ?</h2>
+
+      <p>Le calcul de l'allocation d'aide au retour a l'emploi (ARE) repose sur un mecanisme precis defini par France Travail (anciennement Pole emploi). Comprendre ce mecanisme est essentiel pour anticiper ses revenus pendant une periode de chomage. Voici comment fonctionne le calcul, etape par etape.</p>
+
+      <p><strong>Le salaire journalier de reference (SJR)</strong> constitue la base de tout le calcul. Il s'obtient en divisant la totalite des salaires bruts percus au cours des 24 derniers mois (ou 36 mois pour les plus de 53 ans) par le nombre de jours calendaires de la periode de reference. Pour simplifier, si vous connaissez votre salaire brut mensuel moyen, on peut utiliser la formule suivante : SJR = (salaire brut mensuel x 12) / 365. Ce calcul donne un SJR quotidien qui servira de point de depart pour determiner votre allocation.</p>
+
+      <p><strong>Deux formules de calcul</strong> sont ensuite appliquees en parallele, et France Travail retient la plus avantageuse pour le demandeur d'emploi :</p>
+      <ul>
+        <li><strong>Formule 1 :</strong> 40,4 % du SJR + 13,18 EUR de part fixe journaliere (montant 2026). Cette formule est generalement plus favorable pour les salaires moyens et bas.</li>
+        <li><strong>Formule 2 :</strong> 57 % du SJR. Cette formule beneficie davantage aux salaires modestes, car elle represente un pourcentage plus eleve du salaire de reference.</li>
+      </ul>
+
+      <p>Le montant retenu est le plus eleve des deux, avec deux garde-fous importants. D'une part, un <strong>plancher a 31,97 EUR par jour</strong> garantit un minimum d'indemnisation. D'autre part, un <strong>plafond a 75 % du SJR</strong> empeche l'allocation de depasser les trois quarts du salaire de reference quotidien. En pratique, ce plafond ne s'applique que rarement, car les formules de calcul aboutissent generalement a un montant inferieur.</p>
+
+      <p>Pour obtenir le montant net, il faut deduire environ <strong>3 % de cotisation retraite complementaire</strong> (prelevee sur l'ARE brute). Le prelevement a la source de l'impot sur le revenu peut egalement s'appliquer selon votre taux d'imposition. Le simulateur ci-dessus vous donne une estimation du montant net avant impot sur le revenu.</p>
+
+      <p>Prenons un exemple concret : un salarie qui percevait 2 500 EUR bruts par mois. Son SJR est de (2 500 x 12) / 365 = 82,19 EUR. La formule 1 donne : 82,19 x 0,404 + 13,18 = 46,38 EUR. La formule 2 donne : 82,19 x 0,57 = 46,85 EUR. On retient 46,85 EUR (la plus favorable). Le plafond est de 82,19 x 0,75 = 61,64 EUR : on est bien en dessous. Apres deduction de la cotisation retraite (environ 3 %), l'allocation nette quotidienne s'etablit autour de 45,44 EUR, soit environ 1 363 EUR par mois.</p>
+
+      <h2>Tableau des allocations chomage selon le salaire</h2>
+
+      <p>Pour vous donner une vision rapide, voici un tableau recapitulatif des allocations estimees selon differents niveaux de salaire brut mensuel. Ces montants sont calcules pour un salarie de moins de 53 ans, sans degressivite, sur la base des regles en vigueur en 2026.</p>
+
+      <div class="table-wrap">
+        <table class="content-table">
+          <thead>
+            <tr>
+              <th>Salaire brut mensuel</th>
+              <th>SJR</th>
+              <th>ARE journaliere brute</th>
+              <th>ARE mensuelle nette (30 j.)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1 500 EUR</td>
+              <td>49,32 EUR</td>
+              <td>31,97 EUR</td>
+              <td>930 EUR</td>
+            </tr>
+            <tr>
+              <td>2 000 EUR</td>
+              <td>65,75 EUR</td>
+              <td>39,75 EUR</td>
+              <td>1 157 EUR</td>
+            </tr>
+            <tr>
+              <td>2 500 EUR</td>
+              <td>82,19 EUR</td>
+              <td>46,85 EUR</td>
+              <td>1 363 EUR</td>
+            </tr>
+            <tr>
+              <td>3 000 EUR</td>
+              <td>98,63 EUR</td>
+              <td>53,04 EUR</td>
+              <td>1 543 EUR</td>
+            </tr>
+            <tr>
+              <td>3 500 EUR</td>
+              <td>115,07 EUR</td>
+              <td>59,67 EUR</td>
+              <td>1 736 EUR</td>
+            </tr>
+            <tr>
+              <td>4 000 EUR</td>
+              <td>131,51 EUR</td>
+              <td>66,31 EUR</td>
+              <td>1 930 EUR</td>
+            </tr>
+            <tr>
+              <td>4 500 EUR</td>
+              <td>147,95 EUR</td>
+              <td>72,95 EUR</td>
+              <td>2 123 EUR</td>
+            </tr>
+            <tr>
+              <td>5 000 EUR</td>
+              <td>164,38 EUR</td>
+              <td>79,59 EUR</td>
+              <td>2 316 EUR</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Ces chiffres sont des estimations. Le montant reel peut varier en fonction de votre situation personnelle, du nombre exact de jours travailles et des primes eventuellement incluses dans le calcul du salaire de reference. Les montants nets sont calcules apres deduction de la cotisation retraite complementaire d'environ 3 %, mais avant prelevement a la source.</p>
+
+      <h2>Duree d'indemnisation : combien de temps touche-t-on le chomage ?</h2>
+
+      <p>La duree d'indemnisation au chomage depend de deux facteurs principaux : la duree d'emploi au cours de la periode de reference et l'age du demandeur d'emploi a la date de fin de contrat. Le principe de base est simple : <strong>un jour travaille equivaut a un jour indemnise</strong>, dans la limite d'un plafond qui varie selon l'age.</p>
+
+      <p><strong>Pour les moins de 53 ans :</strong> la duree maximale d'indemnisation est de 18 mois, soit 548 jours calendaires. Ainsi, un salarie de 40 ans ayant travaille 14 mois sur les 24 derniers mois beneficiera de 14 mois d'indemnisation. S'il a travaille 24 mois, il sera plafonne a 18 mois. Il faut avoir travaille au minimum 6 mois (soit 130 jours ou 910 heures) pour ouvrir des droits.</p>
+
+      <p><strong>Pour les 53-54 ans :</strong> le plafond est releve a 22,5 mois, soit 685 jours. Cette extension reconnait la difficulte accrue de retrouver un emploi passe la cinquantaine. Un cadre de 53 ans ayant travaille 20 mois pourra ainsi etre indemnise pendant 20 mois, contre 18 mois maximum s'il avait 52 ans.</p>
+
+      <p><strong>Pour les 55 ans et plus :</strong> la duree maximale atteint 27 mois, soit 822 jours. Ce plafond plus genereux tient compte des realites du marche de l'emploi pour les seniors. Cela represente plus de deux ans d'indemnisation, ce qui laisse davantage de temps pour retrouver un poste ou preparer une transition vers la retraite.</p>
+
+      <p>Prenons un exemple parlant : Marie, 45 ans, a travaille 16 mois en CDI avant un licenciement economique. Elle aura droit a 16 mois d'indemnisation. Son collegue Philippe, 56 ans, licencie dans les memes conditions apres 24 mois de travail, beneficiera de 24 mois d'indemnisation (sous le plafond de 27 mois pour sa tranche d'age).</p>
+
+      <h2>La degressivite des allocations chomage</h2>
+
+      <p>Depuis 2021, un mecanisme de degressivite s'applique aux demandeurs d'emploi dont les revenus anterieurs etaient eleves. Cette regle, confirmee et maintenue en 2026, vise a inciter les cadres et profils bien remuneres a rechercher activement un emploi.</p>
+
+      <p><strong>Les conditions de declenchement :</strong> la degressivite s'applique lorsque deux conditions sont reunies simultanement. Premierement, le demandeur d'emploi percevait un <strong>salaire brut mensuel superieur a 4 915 EUR</strong> (soit environ 3 800 EUR nets). Deuxiemement, il a <strong>moins de 57 ans</strong> a la date de fin de contrat. Les seniors de 57 ans et plus sont exoneres de cette mesure.</p>
+
+      <p><strong>Le mecanisme :</strong> apres 6 mois d'indemnisation (soit 182 jours), l'allocation journaliere est <strong>reduite de 30 %</strong>. Cette baisse est significative mais encadree par un plancher : le montant apres reduction ne peut pas descendre en dessous de 92,12 EUR par jour. Concretement, un cadre percevant 120 EUR d'allocation journaliere verra son montant passer a 92,12 EUR (et non 84 EUR) grace a ce filet de securite.</p>
+
+      <p>Pour un ancien salarie a 5 500 EUR bruts par mois, l'ARE brute initiale est d'environ 93,78 EUR par jour (soit environ 2 730 EUR nets par mois). Apres 6 mois, la degressivite de 30 % ramenerait theoriquement ce montant a 65,65 EUR, mais le plancher de 92,12 EUR s'applique, donc le montant reste a 92,12 EUR. En revanche, pour un salaire brut de 8 000 EUR, l'ARE initiale d'environ 135 EUR serait reduite a 94,50 EUR apres degressivite, au-dessus du plancher.</p>
+
+      <p>Cette mesure touche en pratique environ 10 % des demandeurs d'emploi, essentiellement des cadres superieurs et des profils tres qualifies. Si vous etes concerne, anticipez cette baisse dans votre budget des le debut de votre periode de chomage.</p>
+
+      <h2>Cas particuliers : demission, CDD, rupture conventionnelle</h2>
+
+      <p>Toutes les fins de contrat n'ouvrent pas automatiquement droit aux allocations chomage. Voici les principales situations et leurs consequences sur l'eligibilite a l'ARE.</p>
+
+      <p><strong>Le licenciement</strong> (qu'il soit economique, pour faute simple, ou pour inaptitude) ouvre systematiquement droit aux allocations chomage, a condition de remplir les conditions de duree d'emploi minimale. Meme un licenciement pour faute grave ou lourde donne droit a l'ARE, contrairement a une idee recue tres repandue. La seule difference concerne les indemnites de licenciement, qui ne sont pas versees en cas de faute grave ou lourde, mais l'ARE elle-meme n'est pas affectee.</p>
+
+      <p><strong>La rupture conventionnelle</strong> est l'un des modes de rupture les plus utilises en France, justement parce qu'elle permet de percevoir les allocations chomage. Le salarie et l'employeur se mettent d'accord sur les conditions de depart, incluant generalement une indemnite de rupture au moins egale a l'indemnite legale de licenciement. L'ARE est versee apres un differe d'indemnisation qui peut etre allonge par les indemnites supra-legales eventuellement percues.</p>
+
+      <p><strong>La fin de CDD</strong> ouvre droit a l'ARE dans les memes conditions qu'un licenciement. A l'arrivee du terme du contrat, le salarie est considere comme involontairement prive d'emploi. Il percoit en plus une indemnite de precarite (10 % de la remuneration brute totale percue pendant le CDD), qui peut neanmoins generer un differe d'indemnisation.</p>
+
+      <p><strong>La demission</strong> ne donne en principe pas droit au chomage, puisqu'il s'agit d'un depart volontaire. Cependant, plusieurs exceptions existent. Les demissions dites "legitimes" ouvrent droit a l'ARE : demenagement pour suivre un conjoint, non-paiement des salaires par l'employeur, actes delictueux subis sur le lieu de travail, ou encore demission pour creation d'entreprise apres 5 ans d'activite salariee continue. Depuis la reforme de 2019, un dispositif specifique permet egalement aux salaries ayant au moins 5 ans d'anciennete et porteurs d'un projet de reconversion professionnelle serieux de demissionner et de percevoir l'ARE, apres validation par une commission paritaire interprofessionnelle regionale.</p>
+
+      <p>Si vous avez demissionne sans motif legitime, vous pouvez tout de meme demander un reexamen de votre situation apres 121 jours (4 mois) de chomage. France Travail peut alors vous accorder l'ARE si vous prouvez des recherches d'emploi actives.</p>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-wrap">
+      <h2>Questions frequentes sur l'allocation chomage ARE</h2>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>La demission ouvre-t-elle droit au chomage ?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>En principe non, la demission est un depart volontaire qui n'ouvre pas droit a l'ARE. Toutefois, il existe des exceptions importantes. Les demissions dites "legitimes" permettent de percevoir les allocations chomage : demenagement pour suivre son conjoint, non-paiement des salaires, violences au travail, ou encore demission pour creer une entreprise apres 5 ans d'anciennete. Depuis 2019, les salaries ayant au moins 5 ans d'activite et un projet de reconversion professionnel serieux peuvent egalement beneficier de l'ARE, apres validation par une commission paritaire. En cas de demission classique, un reexamen est possible apres 121 jours si vous prouvez des recherches d'emploi actives.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Peut-on cumuler ARE et activite partielle ?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Oui, le cumul entre l'ARE et une activite salariee partielle est tout a fait possible et meme encourage par France Travail. Le mecanisme est le suivant : 70 % de votre salaire brut mensuel d'activite est soustrait du montant mensuel de votre ARE. Le total de vos revenus (salaire + allocation) ne peut pas depasser votre ancien salaire brut mensuel de reference. Les jours non indemnises du fait de cette deduction ne sont pas perdus : ils prolongent d'autant votre duree de droits. Ce dispositif vous permet donc de reprendre progressivement une activite tout en conservant un complement d'allocation.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Les allocations chomage sont-elles imposables ?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Oui, les allocations chomage sont integralement soumises a l'impot sur le revenu. Elles doivent etre declarees dans la categorie des traitements et salaires. Depuis le 1er janvier 2019, le prelevement a la source s'applique directement sur le montant brut de l'ARE : France Travail preleve votre taux d'imposition personnalise avant de vous verser l'allocation nette. En plus de l'impot, l'ARE supporte une cotisation retraite complementaire d'environ 3 %. En revanche, les allocations ne sont pas soumises aux cotisations sociales classiques (securite sociale, assurance chomage), ce qui explique l'ecart relativement faible entre brut et net.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Quand commence le versement des allocations ?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Le versement de l'ARE ne debute jamais immediatement apres l'inscription a France Travail. Un delai de carence incompressible de 7 jours calendaires s'applique systematiquement. A ce delai s'ajoute un differe conges payes, calcule en divisant le montant de l'indemnite compensatrice de conges payes par votre SJR. Si vous avez percu des indemnites de rupture superieures au minimum legal (indemnites "supra-legales"), un differe specifique supplementaire peut s'appliquer (plafonne a 150 jours). En pratique, pour un salarie classique sans indemnites supra-legales, comptez entre 10 et 15 jours entre l'inscription et le premier versement. Pour une rupture conventionnelle avec indemnites elevees, ce delai peut atteindre plusieurs mois.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">
+            <span>Comment est calcule le differe d'indemnisation ?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Le differe d'indemnisation se decompose en trois elements distincts qui se cumulent. Le <strong>delai d'attente</strong> de 7 jours est systematique et s'applique a tous les demandeurs d'emploi. Le <strong>differe conges payes</strong> est calcule en divisant le montant de l'indemnite compensatrice de conges payes par votre salaire journalier de reference : le resultat donne le nombre de jours de differe. Le <strong>differe specifique</strong> concerne uniquement les personnes ayant percu des indemnites supra-legales de rupture (au-dela du minimum legal) : ces indemnites sont divisees par 102,4 pour obtenir un nombre de jours, plafonne a 150 jours. Exemple : un salarie percevant 3 000 EUR d'indemnite de conges payes avec un SJR de 80 EUR aura un differe conges payes de 37 jours, auquel s'ajoutent les 7 jours de delai d'attente, soit un demarrage de l'ARE apres 44 jours.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="../assets/images/mlrh-logo.png" alt="MLRH" style="height:30px;width:auto"></div>
+          <p>Comparatifs independants et guides sur les logiciels RH, paie et SIRH pour les PME francaises.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Comparatifs</p>
+          <ul>
+            <li><a href="/comparatifs/payfit-vs-factorial.html">PayFit vs Factorial</a></li>
+            <li><a href="/comparatifs/">Tous les comparatifs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Ressources</p>
+          <ul>
+            <li><a href="/guides/choisir-logiciel-paie.html">Choisir son logiciel de paie</a></li>
+            <li><a href="/alternatives/payfit.html">Alternatives a PayFit</a></li>
+            <li><a href="/avis/payfit.html">PayFit avis 2026</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Le site</p>
+          <ul>
+            <li><a href="/a-propos.html">A propos</a></li>
+            <li><a href="/methodologie.html">Methodologie</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/plan-du-site.html">Plan du site</a></li>
+            <li><a href="/mentions-legales.html">Mentions legales</a></li>
+            <li><a href="/politique-de-confidentialite.html">Politique de confidentialite</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-affiliation">Certains liens sont des liens d'affiliation. Nos avis restent independants et bases sur des donnees verifiees.</div>
+      <div class="footer-bottom"><span>© 2026 MLRH. Tous droits reserves</span><span>Donnees verifiees sur les sites officiels</span></div>
+    </div>
+  </footer>
+
+  <!-- FAQ toggle -->
+  <script>
+  function toggleFaq(el) {
+    var item = el.parentElement;
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(x) { x.classList.remove('open'); });
+    if (!wasOpen) item.classList.add('open');
+  }
+  </script>
+
+  <!-- CALCULATOR LOGIC -->
+  <script>
+  (function() {
+    var ageInput = document.getElementById('calc-age');
+    var salaireInput = document.getElementById('calc-salaire');
+    var motifSelect = document.getElementById('calc-motif');
+    var dureeSelect = document.getElementById('calc-duree');
+    var submitBtn = document.getElementById('calc-submit');
+    var resultsDiv = document.getElementById('calc-results');
+
+    function formatEur(n) {
+      return n.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?![\d,]))/g, ' ') + ' EUR';
+    }
+
+    function calculate() {
+      var age = parseInt(ageInput.value);
+      var salaireBrut = parseFloat(salaireInput.value);
+      var motif = motifSelect.value;
+      var dureeMois = parseInt(dureeSelect.value);
+
+      // Validation
+      if (!age || age < 16 || age > 67) return;
+      if (!salaireBrut || salaireBrut <= 0) return;
+      if (!motif) return;
+      if (dureeMois < 6) return;
+
+      // SJR = (salaire brut mensuel x 12) / 365
+      var sjr = (salaireBrut * 12) / 365;
+
+      // ARE journaliere brute : le plus favorable des deux
+      var formule1 = sjr * 0.404 + 13.18;
+      var formule2 = sjr * 0.57;
+      var areJourBrut = Math.max(formule1, formule2);
+
+      // Minimum 31.97 EUR/jour
+      areJourBrut = Math.max(areJourBrut, 31.97);
+
+      // Maximum 75% du SJR
+      var plafond = sjr * 0.75;
+      areJourBrut = Math.min(areJourBrut, plafond);
+
+      // Securite : au moins le minimum
+      areJourBrut = Math.max(areJourBrut, 31.97);
+
+      // Cotisation retraite complementaire ~3%
+      var areJourNet = areJourBrut * 0.97;
+
+      // Allocation mensuelle nette (30 jours)
+      var areMensuelNet = areJourNet * 30;
+
+      // Duree d'indemnisation
+      var dureeJoursTravailles = dureeMois * 30.4; // approx jours calendaires
+      var dureeMaxJours;
+      if (age < 53) {
+        dureeMaxJours = Math.min(dureeJoursTravailles, 548); // 18 mois
+      } else if (age <= 54) {
+        dureeMaxJours = Math.min(dureeJoursTravailles, 685); // 22.5 mois
+      } else {
+        dureeMaxJours = Math.min(dureeJoursTravailles, 822); // 27 mois
+      }
+      dureeMaxJours = Math.round(dureeMaxJours);
+
+      var dureeMoisResult = Math.round(dureeMaxJours / 30.4 * 10) / 10;
+
+      // Differe : 7 jours carence + estimation differe conges payes (~10 jours)
+      var differeJours = 7 + 10; // 7 jours incompressibles + estimation CP
+
+      // Pourcentage salaire net maintenu
+      // Salaire net estime = brut * 0.78 (approximation)
+      var salaireNet = salaireBrut * 0.78;
+      var pourcentMaintenu = Math.round((areMensuelNet / salaireNet) * 100);
+      pourcentMaintenu = Math.min(pourcentMaintenu, 100);
+
+      // Degressivite
+      var degressivite = (salaireBrut > 4915 && age < 57);
+
+      // Display results
+      resultsDiv.classList.add('visible');
+      document.getElementById('res-sjr').textContent = formatEur(sjr);
+      document.getElementById('res-are-brut').textContent = formatEur(areJourBrut);
+      document.getElementById('res-are-net').textContent = formatEur(areJourNet);
+      document.getElementById('res-mensuel').textContent = formatEur(areMensuelNet);
+      document.getElementById('res-duree').textContent = dureeMaxJours + ' jours (' + dureeMoisResult + ' mois)';
+      document.getElementById('res-carence').textContent = 'Environ ' + differeJours + ' jours';
+      document.getElementById('res-pourcent').textContent = pourcentMaintenu + '%';
+      document.getElementById('res-bar').style.width = pourcentMaintenu + '%';
+
+      // Degressivite warning
+      var warning = document.getElementById('degres-warning');
+      if (degressivite) {
+        warning.classList.add('visible');
+      } else {
+        warning.classList.remove('visible');
+      }
+
+      // Scroll to results
+      resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    // Button click
+    submitBtn.addEventListener('click', calculate);
+
+    // Real-time update on input change
+    [ageInput, salaireInput, motifSelect, dureeSelect].forEach(function(el) {
+      el.addEventListener('input', function() {
+        // Only auto-calculate if all fields are filled
+        if (ageInput.value && salaireInput.value && motifSelect.value && dureeSelect.value) {
+          calculate();
+        }
+      });
+      el.addEventListener('change', function() {
+        if (ageInput.value && salaireInput.value && motifSelect.value && dureeSelect.value) {
+          calculate();
+        }
+      });
+    });
+
+    // Radio buttons
+    document.querySelectorAll('input[name="calc-already"]').forEach(function(r) {
+      r.addEventListener('change', function() {
+        if (ageInput.value && salaireInput.value && motifSelect.value && dureeSelect.value) {
+          calculate();
+        }
+      });
+    });
+  })();
+  </script>
+
+  <!-- BURGER MENU -->
+  <script>
+  (function(){
+    var burger = document.querySelector('.nav-burger');
+    var nav = document.querySelector('.site-nav');
+    if(!burger || !nav) return;
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', function(e){
+      if(!burger.contains(e.target) && !nav.contains(e.target)){
+        nav.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>

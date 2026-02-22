@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convertisseur salaire brut en net 2026 : simulateur gratuit - MLRH</title>
+  <meta name="description" content="Convertissez votre salaire brut en net en 2026. Cadre, non-cadre, fonction publique. Calcul instantane avec taux reels, prelevement a la source inclus.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://meilleur-logiciel-rh.fr/outils/convertisseur-brut-net.html">
+  <link rel="icon" href="../assets/images/favicon-mlrh.png" type="image/png">
+  <link rel="stylesheet" href="../assets/style.css">
+
+  <meta property="og:title" content="Convertisseur salaire brut en net 2026 : simulateur gratuit - MLRH">
+  <meta property="og:description" content="Convertissez votre salaire brut en net en 2026. Cadre, non-cadre, fonction publique. Calcul instantane avec taux reels.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:url" content="https://meilleur-logiciel-rh.fr/outils/convertisseur-brut-net.html">
+
+  <link rel="alternate" hreflang="fr" href="https://meilleur-logiciel-rh.fr/outils/convertisseur-brut-net.html">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://meilleur-logiciel-rh.fr/"},
+          {"@type": "ListItem", "position": 2, "name": "Outils RH", "item": "https://meilleur-logiciel-rh.fr/outils/"},
+          {"@type": "ListItem", "position": 3, "name": "Convertisseur brut en net", "item": "https://meilleur-logiciel-rh.fr/outils/convertisseur-brut-net.html"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Quelle difference entre net et net imposable ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Le salaire net est le montant verse sur votre compte bancaire apres deduction de toutes les cotisations sociales. Le net imposable est legerement superieur car il inclut une partie de la CSG non deductible et de la CRDS. C'est le net imposable qui sert de base au calcul de votre impot sur le revenu et qui apparait sur votre declaration fiscale."}
+          },
+          {
+            "@type": "Question",
+            "name": "Le 13e mois est-il calcule de la meme facon ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Oui, le 13e mois est soumis aux memes cotisations sociales qu'un salaire mensuel classique. Les taux de cotisation s'appliquent de la meme maniere. Toutefois, si le cumul de vos revenus annuels depasse les plafonds de la Securite sociale, certaines cotisations plafonnees ne s'appliqueront plus sur la totalite du 13e mois."}
+          },
+          {
+            "@type": "Question",
+            "name": "Comment sont imposees les heures supplementaires ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "En 2026, les heures supplementaires beneficient d'une exoneration de cotisations salariales (dans la limite de 11,31% du salaire brut) et d'une exoneration d'impot sur le revenu jusqu'a 7 500 euros nets par an. Au-dela de ce seuil, les heures supplementaires sont imposees normalement. Cette exoneration s'applique aux salaries du secteur prive comme aux agents publics."}
+          },
+          {
+            "@type": "Question",
+            "name": "Mon employeur peut-il me payer moins que le SMIC net ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Non, aucun salarie a temps plein ne peut percevoir un salaire inferieur au SMIC. En 2026, le SMIC brut mensuel est d'environ 1 802 euros pour 35 heures hebdomadaires, ce qui correspond a un net d'environ 1 426 euros avant prelevement a la source. Votre convention collective peut prevoir un minimum superieur au SMIC."}
+          },
+          {
+            "@type": "Question",
+            "name": "Le prelevement a la source change-t-il mon net ?",
+            "acceptedAnswer": {"@type": "Answer", "text": "Le prelevement a la source est une avance sur votre impot sur le revenu, prelevee directement sur votre salaire net. Il ne modifie pas votre salaire net au sens strict (le net avant impot reste le meme), mais il reduit le montant effectivement verse sur votre compte bancaire. Le taux de prelevement est communique par l'administration fiscale a votre employeur et peut etre modifie en ligne sur impots.gouv.fr."}
+          }
+        ]
+      },
+      {
+        "@type": "WebApplication",
+        "name": "Convertisseur salaire brut en net 2026",
+        "url": "https://meilleur-logiciel-rh.fr/outils/convertisseur-brut-net.html",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "description": "Simulateur gratuit pour convertir votre salaire brut en net en France en 2026. Cadre, non-cadre, fonction publique, apprenti, stagiaire.",
+        "inLanguage": "fr-FR",
+        "provider": {
+          "@type": "Organization",
+          "name": "MLRH",
+          "url": "https://meilleur-logiciel-rh.fr"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    body { background: #f8fafc; }
+
+    /* Hero */
+    .tool-hero {
+      background: linear-gradient(135deg, #14532d 0%, #16a34a 100%);
+      padding: 28px 24px 36px;
+      color: white;
+    }
+    .tool-hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .tool-hero h1 {
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0 0 12px;
+    }
+    .tool-hero-sub {
+      font-size: 1.02rem;
+      color: rgba(255,255,255,.85);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Breadcrumb override */
+    .breadcrumb {
+      padding: 14px 24px;
+      background: white;
+      border-bottom: 1px solid var(--border);
+      font-size: .82rem;
+      color: var(--text-muted);
+    }
+    .breadcrumb-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--primary); }
+    .breadcrumb-sep { color: #cbd5e1; }
+
+    /* Calculator section */
+    .calc-section {
+      max-width: 820px;
+      margin: -24px auto 0;
+      padding: 0 24px 48px;
+      position: relative;
+      z-index: 2;
+    }
+    .calc-card {
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .calc-header {
+      background: var(--bg);
+      padding: 20px 28px;
+      border-bottom: 1px solid var(--border);
+    }
+    .calc-header-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+    .calc-header-sub {
+      font-size: .84rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .calc-body {
+      padding: 28px;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .calc-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .calc-field.full {
+      grid-column: 1 / -1;
+    }
+    .calc-field label {
+      font-size: .84rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .calc-field .field-hint {
+      font-size: .78rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    .calc-input-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .calc-input-wrap input,
+    .calc-input-wrap select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: .95rem;
+      color: var(--text);
+      background: var(--white);
+      outline: none;
+      transition: border-color .15s;
+      font-family: inherit;
+    }
+    .calc-input-wrap input:focus,
+    .calc-input-wrap select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(22,163,74,.1);
+    }
+    .calc-input-wrap .input-suffix {
+      position: absolute;
+      right: 14px;
+      font-size: .9rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      pointer-events: none;
+    }
+    .calc-input-wrap input.has-suffix {
+      padding-right: 40px;
+    }
+    .calc-input-wrap select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%235a6478' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      padding-right: 36px;
+      cursor: pointer;
+    }
+    .calc-btn-wrap {
+      margin-top: 24px;
+      text-align: center;
+    }
+    .calc-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      border-radius: 99px;
+      padding: 14px 36px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background .15s, transform .15s, box-shadow .15s;
+      font-family: inherit;
+    }
+    .calc-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Partial time hours */
+    .partial-hours {
+      display: none;
+      margin-top: 8px;
+    }
+    .partial-hours.visible {
+      display: block;
+    }
+    .partial-hours input {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      font-size: .9rem;
+      color: var(--text);
+      outline: none;
+      font-family: inherit;
+    }
+    .partial-hours input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(22,163,74,.1);
+    }
+    .partial-hours label {
+      font-size: .8rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    /* Results */
+    .calc-results {
+      display: none;
+      margin-top: 28px;
+      border-top: 2px solid var(--primary-light);
+      padding-top: 24px;
+    }
+    .calc-results.visible {
+      display: block;
+    }
+    .results-title {
+      font-size: .78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    .result-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .result-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .result-line:last-child {
+      border-bottom: none;
+    }
+    .result-line .rl-label {
+      font-size: .9rem;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .result-line .rl-label .rl-pct {
+      font-size: .78rem;
+      color: var(--text-muted);
+      background: var(--bg);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+    .result-line .rl-value {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      white-space: nowrap;
+    }
+    .result-line.highlight {
+      background: var(--primary-light);
+      margin: 0 -28px;
+      padding: 16px 28px;
+      border-radius: 10px;
+      border-bottom: none;
+    }
+    .result-line.highlight .rl-label {
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+    .result-line.highlight .rl-value {
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+    }
+    .result-line.deduction .rl-value {
+      color: #dc2626;
+    }
+    .result-separator {
+      height: 1px;
+      background: var(--border);
+      margin: 8px 0;
+    }
+    .result-group-title {
+      font-size: .75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--text-muted);
+      margin: 16px 0 4px;
+    }
+    .result-line .rl-tax-select {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .result-line .rl-tax-select select {
+      padding: 4px 28px 4px 8px;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      font-size: .82rem;
+      color: var(--text);
+      background: var(--white);
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%235a6478' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 8px center;
+      cursor: pointer;
+      outline: none;
+      font-family: inherit;
+    }
+    .result-line .rl-tax-select select:focus {
+      border-color: var(--primary);
+    }
+
+    /* Content section */
+    .content-section {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .content-section h2 {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--text);
+      margin: 48px 0 16px;
+      line-height: 1.3;
+    }
+    .content-section h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 28px 0 12px;
+    }
+    .content-section p {
+      color: var(--text);
+      line-height: 1.85;
+      margin-bottom: 20px;
+      font-size: 1rem;
+    }
+    .content-section ul,
+    .content-section ol {
+      margin: 0 0 20px 20px;
+      line-height: 1.85;
+    }
+    .content-section li {
+      margin-bottom: 8px;
+      font-size: 1rem;
+    }
+
+    /* Tables */
+    .compare-table-wrap {
+      overflow-x: auto;
+      margin: 28px 0;
+      border-radius: var(--radius);
+      border: 1px solid #e2e8f0;
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .92rem;
+      background: white;
+    }
+    .compare-table thead tr {
+      background: #dcfce7;
+    }
+    .compare-table thead th {
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: .85rem;
+      color: #14532d;
+      border-bottom: 2px solid #e2e8f0;
+      white-space: nowrap;
+    }
+    .compare-table tbody tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    .compare-table tbody tr:hover {
+      background: #f0fdf4;
+    }
+    .compare-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .compare-table td:first-child {
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    /* Info box */
+    .info-box {
+      background: #f0fdf4;
+      border-left: 4px solid #16a34a;
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      margin: 24px 0;
+      font-size: .95rem;
+      line-height: 1.7;
+    }
+
+    /* FAQ */
+    .faq-list { margin: 24px 0; }
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-question {
+      padding: 18px 20px;
+      font-weight: 700;
+      font-size: .95rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      background: white;
+      user-select: none;
+    }
+    .faq-question:hover { background: var(--bg); }
+    .faq-chevron {
+      flex-shrink: 0;
+      transition: transform .25s;
+    }
+    .faq-item.open .faq-chevron {
+      transform: rotate(180deg);
+    }
+    .faq-answer {
+      display: none;
+      padding: 0 20px 18px;
+      font-size: .93rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      background: white;
+    }
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    /* CTA box */
+    .cta-box {
+      background: linear-gradient(135deg, #14532d, #16a34a);
+      border-radius: var(--radius);
+      padding: 32px;
+      text-align: center;
+      color: white;
+      margin: 48px 0 0;
+    }
+    .cta-box h3 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      color: white;
+    }
+    .cta-box p {
+      color: rgba(255,255,255,.85);
+      font-size: .95rem;
+      margin-bottom: 24px;
+    }
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+      .calc-body {
+        padding: 20px;
+      }
+      .calc-header {
+        padding: 16px 20px;
+      }
+      .result-line.highlight {
+        margin: 0 -20px;
+        padding: 14px 20px;
+      }
+      .calc-section {
+        padding: 0 16px 36px;
+      }
+      .content-section {
+        padding: 0 16px 60px;
+      }
+      .tool-hero {
+        padding: 24px 16px 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="../" class="site-logo"><img src="../assets/images/mlrh-logo.png" alt="MLRH" style="height:30px;width:auto;filter:brightness(0)"></a>
+      <nav class="site-nav">
+        <a href="../comparatifs/">Comparatifs</a>
+        <a href="../guides/">Guides</a>
+        <a href="../alternatives/">Alternatives</a>
+        <a href="../avis/">Avis</a>
+        <a href="../outils/">Outils</a>
+        <a href="../trouver-mon-logiciel.html" class="nav-cta">Trouver mon logiciel</a>
+      </nav>
+      <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- FIL D'ARIANE -->
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <div class="breadcrumb-inner">
+      <a href="../">Accueil</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../outils/">Outils RH</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>Convertisseur brut en net</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="tool-hero">
+    <div class="tool-hero-inner">
+      <h1>Convertisseur salaire brut en net 2026</h1>
+      <p class="tool-hero-sub">Calculez instantanement votre salaire net a partir du brut. Taux officiels 2026, tous statuts (cadre, non-cadre, fonction publique), prelevement a la source inclus.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATEUR -->
+  <section class="calc-section">
+    <div class="calc-card">
+      <div class="calc-header">
+        <div class="calc-header-title">Simulateur brut / net</div>
+        <div class="calc-header-sub">Saisissez vos informations, le calcul se met a jour automatiquement</div>
+      </div>
+      <div class="calc-body">
+        <div class="calc-grid">
+          <!-- Salaire brut -->
+          <div class="calc-field">
+            <label for="salaire-brut">Salaire brut mensuel</label>
+            <div class="calc-input-wrap">
+              <input type="number" id="salaire-brut" class="has-suffix" placeholder="2 500" min="0" step="50" value="2500">
+              <span class="input-suffix">&euro;</span>
+            </div>
+          </div>
+
+          <!-- Statut -->
+          <div class="calc-field">
+            <label for="statut">Statut</label>
+            <div class="calc-input-wrap">
+              <select id="statut">
+                <option value="non-cadre">Non-cadre</option>
+                <option value="cadre">Cadre</option>
+                <option value="public">Fonction publique</option>
+                <option value="apprenti">Apprenti</option>
+                <option value="stage">Stagiaire</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Temps de travail -->
+          <div class="calc-field">
+            <label for="temps-travail">Temps de travail</label>
+            <div class="calc-input-wrap">
+              <select id="temps-travail">
+                <option value="plein">Temps plein (35h)</option>
+                <option value="partiel">Temps partiel</option>
+              </select>
+            </div>
+            <div class="partial-hours" id="partial-hours-wrap">
+              <label for="heures-partiel">Nombre d'heures par semaine</label>
+              <input type="number" id="heures-partiel" placeholder="28" min="1" max="34" value="28">
+            </div>
+          </div>
+
+          <!-- Heures sup -->
+          <div class="calc-field">
+            <label for="heures-sup">Heures supplementaires / mois <span class="field-hint">(facultatif)</span></label>
+            <div class="calc-input-wrap">
+              <input type="number" id="heures-sup" class="has-suffix" placeholder="0" min="0" max="60" value="0">
+              <span class="input-suffix">h</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bouton calculer -->
+        <div class="calc-btn-wrap">
+          <button type="button" class="calc-btn" id="btn-calculer">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M8 8h2v2H8zm0 4h2v2H8zm0 4h2v2H8zm4-8h2v2h-2zm0 4h2v2h-2zm0 4h4v2h-4zm4-8h2v2h-2zm0 4h2v2h-2z"/></svg>
+            Calculer
+          </button>
+        </div>
+
+        <!-- Resultats -->
+        <div class="calc-results" id="calc-results">
+          <div class="results-title">Resultats de la simulation</div>
+          <div class="result-lines">
+            <div class="result-line">
+              <span class="rl-label">Salaire brut mensuel</span>
+              <span class="rl-value" id="res-brut">-</span>
+            </div>
+            <div class="result-line deduction">
+              <span class="rl-label">Cotisations salariales <span class="rl-pct" id="res-cotis-pct">-</span></span>
+              <span class="rl-value" id="res-cotis">-</span>
+            </div>
+            <div class="result-line highlight">
+              <span class="rl-label">Salaire net avant impot</span>
+              <span class="rl-value" id="res-net-avant">-</span>
+            </div>
+            <div class="result-line deduction">
+              <span class="rl-label">
+                <span class="rl-tax-select">
+                  Prelevement a la source
+                  <select id="taux-pas">
+                    <option value="0">0 %</option>
+                    <option value="5" selected>5 %</option>
+                    <option value="10">10 %</option>
+                    <option value="15">15 %</option>
+                    <option value="20">20 %</option>
+                    <option value="30">30 %</option>
+                  </select>
+                </span>
+              </span>
+              <span class="rl-value" id="res-pas">-</span>
+            </div>
+            <div class="result-line highlight">
+              <span class="rl-label">Salaire net apres impot</span>
+              <span class="rl-value" id="res-net-apres">-</span>
+            </div>
+
+            <div class="result-group-title">Recapitulatif annuel</div>
+            <div class="result-line">
+              <span class="rl-label">Salaire net annuel (avant impot)</span>
+              <span class="rl-value" id="res-net-annuel">-</span>
+            </div>
+            <div class="result-line">
+              <span class="rl-label">Cout total employeur <span class="rl-pct" id="res-emp-pct">-</span></span>
+              <span class="rl-value" id="res-cout-employeur">-</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENU SEO -->
+  <section class="content-section">
+
+    <h2>Comment passer du salaire brut au net en 2026 ?</h2>
+
+    <p>La difference entre salaire brut et salaire net est une question qui revient systematiquement lors d'une embauche, d'une negociation salariale ou simplement en lisant sa fiche de paie. En France, le montant inscrit dans votre contrat de travail est toujours exprime en brut. Pourtant, ce n'est pas cette somme que vous recevez sur votre compte bancaire chaque mois. Entre les deux, les cotisations sociales viennent reduire le montant, et depuis 2019, le prelevement a la source s'ajoute a l'equation.</p>
+
+    <p>Le salaire brut correspond a la remuneration totale avant toute deduction. Il comprend le salaire de base, les eventuelles primes, les heures supplementaires et les avantages en nature valorises. A partir de ce montant, l'employeur preleve les <strong>cotisations salariales</strong> : assurance maladie, retraite de base, retraite complementaire, assurance chomage, CSG et CRDS. Le solde apres deduction de ces cotisations constitue le <strong>salaire net avant impot</strong>.</p>
+
+    <p>En 2026, les taux de cotisations salariales varient sensiblement selon votre statut professionnel. Un salarie non-cadre du secteur prive voit environ <strong>22 % de son salaire brut</strong> preleve en cotisations. Pour un cadre, ce taux monte a environ <strong>25 %</strong>, principalement en raison de la cotisation APEC et d'une tranche 2 de retraite complementaire plus elevee. Dans la fonction publique, les regles sont differentes : les cotisations s'elevent a environ <strong>17 %</strong>, avec une pension civile de 11,10 % comme poste principal.</p>
+
+    <p>Pour convertir votre salaire brut en net, la formule simplifiee est la suivante :</p>
+
+    <div class="info-box">
+      <strong>Formule :</strong> Salaire net = Salaire brut - (Salaire brut x Taux de cotisations salariales)<br>
+      Exemple pour un non-cadre a 2 500 EUR brut : 2 500 - (2 500 x 0,22) = <strong>1 950 EUR net avant impot</strong>
+    </div>
+
+    <p>Cette formule donne une estimation fiable pour la grande majorite des situations. Toutefois, le calcul reel est legerement plus complexe car certaines cotisations sont plafonnees au plafond mensuel de la Securite sociale (PMSS), fixe a <strong>3 864 EUR en 2026</strong>. Au-dela de ce plafond, les cotisations de retraite de base et de chomage ne s'appliquent plus de la meme maniere, ce qui modifie legerement le taux effectif pour les hauts salaires.</p>
+
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Statut</th>
+            <th>Taux de cotisations salariales</th>
+            <th>Exemple : 2 500 EUR brut</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Non-cadre</td>
+            <td>~22 %</td>
+            <td>1 950 EUR net</td>
+          </tr>
+          <tr>
+            <td>Cadre</td>
+            <td>~25 %</td>
+            <td>1 875 EUR net</td>
+          </tr>
+          <tr>
+            <td>Fonction publique</td>
+            <td>~17 %</td>
+            <td>2 075 EUR net</td>
+          </tr>
+          <tr>
+            <td>Apprenti (sous 79% SMIC)</td>
+            <td>Exonere</td>
+            <td>Brut = Net</td>
+          </tr>
+          <tr>
+            <td>Stagiaire (sous seuil legal)</td>
+            <td>Exonere</td>
+            <td>Gratification nette</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Le prelevement a la source, mis en place depuis le 1er janvier 2019, est un impot directement retenu sur votre salaire net. Il ne constitue pas une cotisation sociale a proprement parler : c'est une avance sur votre impot sur le revenu. Le taux varie d'un contribuable a l'autre, en fonction de vos revenus de l'annee precedente, de votre situation familiale et des eventuels credits ou reductions d'impot dont vous beneficiez. Vous pouvez ajuster votre taux a tout moment sur le site impots.gouv.fr.</p>
+
+
+    <h2>Tableau de conversion brut/net 2026</h2>
+
+    <p>Voici un tableau de reference pour convertir rapidement les salaires bruts les plus courants en net. Ces montants sont calcules avec les taux moyens de cotisations salariales 2026 et ne tiennent pas compte du prelevement a la source, qui varie selon votre situation fiscale personnelle.</p>
+
+    <div class="compare-table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Brut mensuel</th>
+            <th>Net non-cadre (~22%)</th>
+            <th>Net cadre (~25%)</th>
+            <th>Net fonction publique (~17%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1 500 EUR</td>
+            <td>1 170 EUR</td>
+            <td>1 125 EUR</td>
+            <td>1 245 EUR</td>
+          </tr>
+          <tr>
+            <td>1 802 EUR (SMIC)</td>
+            <td>1 406 EUR</td>
+            <td>1 352 EUR</td>
+            <td>1 496 EUR</td>
+          </tr>
+          <tr>
+            <td>2 000 EUR</td>
+            <td>1 560 EUR</td>
+            <td>1 500 EUR</td>
+            <td>1 660 EUR</td>
+          </tr>
+          <tr>
+            <td>2 500 EUR</td>
+            <td>1 950 EUR</td>
+            <td>1 875 EUR</td>
+            <td>2 075 EUR</td>
+          </tr>
+          <tr>
+            <td>3 000 EUR</td>
+            <td>2 340 EUR</td>
+            <td>2 250 EUR</td>
+            <td>2 490 EUR</td>
+          </tr>
+          <tr>
+            <td>3 500 EUR</td>
+            <td>2 730 EUR</td>
+            <td>2 625 EUR</td>
+            <td>2 905 EUR</td>
+          </tr>
+          <tr>
+            <td>4 000 EUR</td>
+            <td>3 120 EUR</td>
+            <td>3 000 EUR</td>
+            <td>3 320 EUR</td>
+          </tr>
+          <tr>
+            <td>4 500 EUR</td>
+            <td>3 510 EUR</td>
+            <td>3 375 EUR</td>
+            <td>3 735 EUR</td>
+          </tr>
+          <tr>
+            <td>5 000 EUR</td>
+            <td>3 900 EUR</td>
+            <td>3 750 EUR</td>
+            <td>4 150 EUR</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Ces montants sont des estimations basees sur les taux moyens de cotisations salariales. Le montant exact peut varier de quelques euros en fonction de votre convention collective, de votre mutuelle d'entreprise et de votre tranche de cotisation retraite complementaire. Pour un calcul precis adapte a votre situation, utilisez le simulateur en haut de cette page.</p>
+
+
+    <h2>Les cotisations sociales detaillees</h2>
+
+    <p>Pour bien comprendre la difference entre votre salaire brut et votre salaire net, il est utile de connaitre les principales cotisations qui sont prelevees chaque mois. Chacune finance un pan de la protection sociale francaise.</p>
+
+    <h3>Assurance maladie</h3>
+    <p>La cotisation salariale d'assurance maladie a ete supprimee pour la plupart des salaries depuis 2018. En revanche, la <strong>CSG (Contribution Sociale Generalisee)</strong> inclut une part destinee au financement de l'assurance maladie. L'employeur continue de payer sa part patronale d'environ 7 % a 13 % selon le niveau de salaire. Pour les salaries dont la remuneration depasse 2,5 fois le SMIC, une cotisation salariale complementaire de 0,13 % s'applique toujours.</p>
+
+    <h3>Retraite de base (Securite sociale)</h3>
+    <p>La cotisation de retraite de base est assise sur le salaire dans la limite du plafond de la Securite sociale (3 864 EUR/mois en 2026). Le taux salarial est de <strong>6,90 %</strong> sur la tranche 1 (jusqu'au plafond) et de <strong>0,40 %</strong> sur la totalite du salaire pour la cotisation deplafonnee. Cette cotisation vous ouvre des droits a la retraite du regime general geree par la CNAV.</p>
+
+    <h3>Retraite complementaire (AGIRC-ARRCO)</h3>
+    <p>Tous les salaries du secteur prive cotisent a l'AGIRC-ARRCO pour leur retraite complementaire. Le taux salarial est de <strong>3,15 %</strong> sur la tranche 1 (jusqu'au plafond SS) et de <strong>8,64 %</strong> sur la tranche 2 (entre 1 et 8 plafonds SS). Pour les cadres, la cotisation APEC (Association Pour l'Emploi des Cadres) s'ajoute a hauteur de 0,024 %, ce qui explique en partie le taux de cotisations plus eleve pour les cadres.</p>
+
+    <h3>Assurance chomage</h3>
+    <p>Depuis le 1er octobre 2018, la cotisation salariale d'assurance chomage a ete supprimee pour les salaries du secteur prive. Cette suppression a ete compensee par une hausse de la CSG. En pratique, les salaries ne paient plus de cotisation chomage sur leur bulletin de paie. L'employeur continue de cotiser a hauteur de 4,05 % du salaire brut, dans la limite de 4 plafonds de la Securite sociale.</p>
+
+    <h3>CSG et CRDS</h3>
+    <p>La <strong>CSG (9,20 %)</strong> et la <strong>CRDS (0,50 %)</strong> sont calculees sur 98,25 % du salaire brut (un abattement de 1,75 % pour frais professionnels s'applique dans la limite de 4 plafonds SS). La CSG se decompose en une part deductible de l'impot sur le revenu (6,80 %) et une part non deductible (2,40 %). La CRDS est integralement non deductible. A elles seules, la CSG et la CRDS representent pres de la moitie des cotisations salariales prelevees sur votre bulletin de paie.</p>
+
+    <h3>Autres cotisations</h3>
+    <p>Selon votre entreprise et votre convention collective, d'autres prelevements peuvent apparaitre sur votre bulletin de paie : la cotisation de prevoyance (obligatoire pour les cadres, variable pour les non-cadres), la mutuelle d'entreprise (obligatoire depuis 2016, avec une part salariale et une part patronale) et d'eventuelles cotisations specifiques liees a votre branche professionnelle. Ces prelevements complementaires expliquent pourquoi le taux effectif de cotisations peut varier de 1 a 2 points d'un salarie a l'autre au sein de la meme categorie.</p>
+
+
+    <h2>Cas particuliers</h2>
+
+    <h3>Temps partiel</h3>
+    <p>Si vous travaillez a temps partiel, votre salaire brut est proportionnel a votre duree de travail. Un temps partiel a 28 heures par semaine (80 %) correspond a un salaire brut egal a 80 % du brut temps plein. Les taux de cotisations restent identiques : un non-cadre a temps partiel verra toujours environ 22 % de son brut preleve en cotisations salariales. Toutefois, si votre salaire brut passe sous le plafond de la Securite sociale, certaines cotisations plafonnees seront calculees sur la totalite de votre brut, ce qui ne change pas fondamentalement le ratio net/brut pour les salaires courants.</p>
+
+    <h3>Heures supplementaires</h3>
+    <p>Les heures supplementaires beneficient d'un traitement fiscal et social avantageux en 2026. Du cote social, elles sont exonerees de cotisations salariales dans la limite de 11,31 % du salaire brut correspondant. Du cote fiscal, les revenus issus des heures supplementaires sont exoneres d'impot sur le revenu <strong>jusqu'a 7 500 EUR nets par an</strong>. En pratique, cela signifie qu'une heure supplementaire majoree a 25 % vous rapporte davantage en net qu'une heure normale, grace a cette double exoneration. Notre simulateur integre automatiquement cette exoneration dans le calcul.</p>
+
+    <h3>Primes et 13e mois</h3>
+    <p>Les primes exceptionnelles, les primes d'anciennete, le 13e mois et les bonus sont soumis aux memes cotisations sociales que le salaire de base. Ils s'ajoutent a votre remuneration brute mensuelle et sont convertis en net selon les memes taux. Attention toutefois : le mois ou vous percevez une prime, votre bulletin affichera un brut superieur a l'habitude, ce qui peut faire basculer une partie de votre remuneration dans la tranche 2 de l'AGIRC-ARRCO et donc modifier legerement le taux effectif de cotisations pour ce mois-la. Pour la prime de partage de la valeur (ancienne "prime Macron"), une exoneration de cotisations et d'impot s'applique sous certaines conditions et plafonds.</p>
+
+
+    <h2>Questions frequentes</h2>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Quelle difference entre net et net imposable ?</span>
+          <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer">
+          Le salaire net est le montant verse sur votre compte bancaire apres deduction de toutes les cotisations sociales obligatoires. Le net imposable, lui, est legerement superieur car il integre la part non deductible de la CSG (2,40 %) et la CRDS (0,50 %) qui, bien que prelevees sur votre bulletin, ne reduisent pas votre base imposable. C'est le net imposable qui sert de reference pour le calcul de votre impot sur le revenu et qui apparait sur votre declaration fiscale annuelle. La difference entre net et net imposable represente generalement entre 2 et 3 % du salaire net.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Le 13e mois est-il calcule de la meme facon ?</span>
+          <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer">
+          Oui, le 13e mois est traite comme un element de salaire classique et supporte les memes cotisations sociales. Le taux de conversion brut/net est donc identique. Toutefois, le mois ou le 13e mois est verse, le cumul de remuneration peut depasser le plafond mensuel de la Securite sociale, ce qui modifie le calcul de certaines cotisations plafonnees. En pratique, cette variation est marginale pour les salaires inferieurs a 3 800 EUR brut mensuel. Au-dela, vous pourriez constater un leger ecart de cotisations sur le bulletin du mois de versement.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Comment sont imposees les heures supplementaires ?</span>
+          <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer">
+          Les heures supplementaires beneficient d'un double avantage en 2026. D'abord, elles sont exonerees de cotisations salariales a hauteur de 11,31 % du brut, ce qui augmente directement le net percu. Ensuite, les revenus nets issus des heures supplementaires sont exoneres d'impot sur le revenu dans la limite de 7 500 EUR par an. Au-dela de ce seuil, les heures supplementaires sont integrees a votre revenu imposable et soumises au bareme progressif de l'impot. Cette exoneration s'applique a tous les salaries du secteur prive ainsi qu'aux agents de la fonction publique.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Mon employeur peut-il me payer moins que le SMIC net ?</span>
+          <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer">
+          Non, le SMIC est un plancher legal que tout employeur doit respecter. En 2026, le SMIC brut mensuel s'eleve a environ 1 802 EUR pour un temps plein de 35 heures par semaine, soit un SMIC net d'environ 1 426 EUR avant prelevement a la source. Si votre convention collective prevoit un minimum conventionnel superieur au SMIC, c'est ce minimum qui s'applique. En cas de manquement, le salarie peut saisir le Conseil de prud'hommes pour obtenir un rappel de salaire. Les apprentis et les stagiaires sont soumis a des regles specifiques : l'apprenti percoit un pourcentage du SMIC selon son age et son annee de contrat, tandis que le stagiaire recoit une gratification minimale de 4,35 EUR par heure.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Le prelevement a la source change-t-il mon net ?</span>
+          <svg class="faq-chevron" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+        <div class="faq-answer">
+          Le prelevement a la source ne modifie pas votre salaire net au sens strict du terme. Votre salaire net avant impot reste identique, quels que soient vos parametres fiscaux. En revanche, le montant effectivement verse sur votre compte bancaire est bien reduit par le prelevement a la source. Il s'agit d'une avance sur votre impot annuel sur le revenu, et non d'une cotisation supplementaire. Le taux est communique par l'administration fiscale a votre employeur et peut etre ajuste a tout moment sur votre espace personnel impots.gouv.fr. Vous pouvez notamment opter pour un taux individualise si vous etes en couple, ou demander un taux neutre si vous ne souhaitez pas que votre employeur connaisse votre taux reel.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA final -->
+    <div class="cta-box">
+      <h3>Gerez la paie de votre entreprise sans erreur</h3>
+      <p>Trouvez le logiciel de paie adapte a votre PME en 2 minutes. Comparatif independant, donnees verifiees.</p>
+      <div class="cta-buttons">
+        <a href="../trouver-mon-logiciel.html" class="btn btn-orange">Trouver mon logiciel</a>
+        <a href="../comparatifs/" class="btn btn-secondary" style="background:rgba(255,255,255,.1);color:white;border-color:rgba(255,255,255,.3)">Voir les comparatifs</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="../assets/images/mlrh-logo.png" alt="MLRH" style="height:30px;width:auto"></div>
+          <p>Comparatifs independants et guides sur les logiciels RH, paie et SIRH pour les PME francaises.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Comparatifs</p>
+          <ul>
+            <li><a href="../comparatifs/payfit-vs-factorial.html">PayFit vs Factorial</a></li>
+            <li><a href="../comparatifs/">Tous les comparatifs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Ressources</p>
+          <ul>
+            <li><a href="../guides/choisir-logiciel-paie.html">Choisir son logiciel de paie</a></li>
+            <li><a href="../alternatives/payfit.html">Alternatives a PayFit</a></li>
+            <li><a href="../avis/payfit.html">PayFit avis 2026</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Le site</p>
+          <ul>
+            <li><a href="../a-propos.html">A propos</a></li>
+            <li><a href="../methodologie.html">Methodologie</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../plan-du-site.html">Plan du site</a></li>
+            <li><a href="../mentions-legales.html">Mentions legales</a></li>
+            <li><a href="../politique-de-confidentialite.html">Politique de confidentialite</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-affiliation">Certains liens sont des liens d'affiliation. Nos avis restent independants et bases sur des donnees verifiees.</div>
+      <div class="footer-bottom"><span>&copy; 2026 MLRH. Tous droits reserves</span><span>Donnees verifiees sur les sites officiels</span></div>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+    // ======================================
+    // Convertisseur brut/net - France 2026
+    // ======================================
+
+    // DOM refs
+    var brutInput     = document.getElementById('salaire-brut');
+    var statutSelect  = document.getElementById('statut');
+    var tempsSelect   = document.getElementById('temps-travail');
+    var partialWrap   = document.getElementById('partial-hours-wrap');
+    var partialInput  = document.getElementById('heures-partiel');
+    var heuresSupInput= document.getElementById('heures-sup');
+    var tauxPasSelect = document.getElementById('taux-pas');
+    var btnCalculer   = document.getElementById('btn-calculer');
+    var resultsDiv    = document.getElementById('calc-results');
+
+    // Result refs
+    var resBrut       = document.getElementById('res-brut');
+    var resCotisPct   = document.getElementById('res-cotis-pct');
+    var resCotis      = document.getElementById('res-cotis');
+    var resNetAvant   = document.getElementById('res-net-avant');
+    var resPas        = document.getElementById('res-pas');
+    var resNetApres   = document.getElementById('res-net-apres');
+    var resNetAnnuel  = document.getElementById('res-net-annuel');
+    var resEmpPct     = document.getElementById('res-emp-pct');
+    var resCoutEmp    = document.getElementById('res-cout-employeur');
+
+    // Taux de cotisations salariales 2026 (estimations basees sur les taux officiels)
+    var TAUX = {
+      'non-cadre': 0.22,
+      'cadre': 0.25,
+      'public': 0.17,
+      'apprenti': 0,
+      'stage': 0
+    };
+
+    // Taux patronaux (pour cout employeur)
+    var TAUX_PATRONAL = {
+      'non-cadre': 0.42,
+      'cadre': 0.45,
+      'public': 0.75,
+      'apprenti': 0.30,
+      'stage': 0
+    };
+
+    // Seuils
+    var SMIC_BRUT_MENSUEL = 1802;
+    var SEUIL_APPRENTI = Math.round(SMIC_BRUT_MENSUEL * 0.79);  // ~1424
+    var SEUIL_STAGE = 660; // gratification mensuelle exoneree
+
+    // Taux horaire moyen pour heures sup (base 151.67h/mois)
+    var HEURES_BASE_MENSUEL = 151.67;
+    var MAJORATION_HS = 1.25; // 25% de majoration
+    var EXONERATION_HS_COTIS = 0.1131; // 11.31%
+
+    function formatMoney(n) {
+      if (isNaN(n) || n === null) return '-';
+      var s = Math.round(n).toString();
+      var result = '';
+      var count = 0;
+      for (var i = s.length - 1; i >= 0; i--) {
+        if (s[i] === '-') { result = '-' + result; continue; }
+        if (count > 0 && count % 3 === 0) result = ' ' + result;
+        result = s[i] + result;
+        count++;
+      }
+      return result + ' \u20AC';
+    }
+
+    function calculate() {
+      var brut = parseFloat(brutInput.value) || 0;
+      var statut = statutSelect.value;
+      var temps = tempsSelect.value;
+      var heuresPartiel = parseFloat(partialInput.value) || 28;
+      var heuresSup = parseFloat(heuresSupInput.value) || 0;
+      var tauxPas = parseFloat(tauxPasSelect.value) / 100;
+
+      if (brut <= 0) {
+        resultsDiv.classList.remove('visible');
+        return;
+      }
+
+      // Ajuster pour temps partiel
+      var coeffTemps = 1;
+      if (temps === 'partiel' && heuresPartiel > 0 && heuresPartiel < 35) {
+        coeffTemps = heuresPartiel / 35;
+      }
+
+      // Brut effectif (le brut saisi represente deja le brut du temps choisi)
+      var brutEffectif = brut;
+
+      // Calcul heures sup : brut horaire * majoration * nb heures
+      var brutHoraire = brutEffectif / (HEURES_BASE_MENSUEL * coeffTemps);
+      var brutHS = heuresSup * brutHoraire * MAJORATION_HS;
+
+      // Total brut
+      var totalBrut = brutEffectif + brutHS;
+
+      // Cotisations selon statut
+      var tauxCotis = TAUX[statut] || 0.22;
+      var tauxPatronal = TAUX_PATRONAL[statut] || 0.42;
+
+      // Cas speciaux
+      var cotisationsBase = 0;
+      var cotisationsHS = 0;
+
+      if (statut === 'apprenti') {
+        // Exoneration totale sous 79% SMIC
+        if (brutEffectif <= SEUIL_APPRENTI) {
+          cotisationsBase = 0;
+          tauxCotis = 0;
+        } else {
+          // Au-dessus du seuil, cotisations normales sur la difference
+          cotisationsBase = (brutEffectif - SEUIL_APPRENTI) * TAUX['non-cadre'];
+          tauxCotis = cotisationsBase / brutEffectif;
+        }
+      } else if (statut === 'stage') {
+        // Gratification exoneree sous le seuil
+        if (brutEffectif <= SEUIL_STAGE) {
+          cotisationsBase = 0;
+          tauxCotis = 0;
+        } else {
+          cotisationsBase = (brutEffectif - SEUIL_STAGE) * TAUX['non-cadre'];
+          tauxCotis = cotisationsBase / brutEffectif;
+        }
+      } else {
+        cotisationsBase = brutEffectif * tauxCotis;
+      }
+
+      // Cotisations sur heures sup : exoneration de 11.31%
+      if (heuresSup > 0 && brutHS > 0) {
+        var tauxEffectifHS = Math.max(0, tauxCotis - EXONERATION_HS_COTIS);
+        cotisationsHS = brutHS * tauxEffectifHS;
+      }
+
+      var totalCotisations = cotisationsBase + cotisationsHS;
+      var tauxEffectifTotal = totalBrut > 0 ? totalCotisations / totalBrut : 0;
+
+      // Net avant impot
+      var netAvantImpot = totalBrut - totalCotisations;
+
+      // PAS
+      var montantPAS = netAvantImpot * tauxPas;
+
+      // Net apres impot
+      var netApresImpot = netAvantImpot - montantPAS;
+
+      // Annuel
+      var netAnnuel = netAvantImpot * 12;
+
+      // Cout employeur
+      var coutEmployeur = totalBrut * (1 + tauxPatronal);
+
+      // Afficher les resultats
+      resultsDiv.classList.add('visible');
+
+      resBrut.textContent = formatMoney(totalBrut);
+      resCotisPct.textContent = (tauxEffectifTotal * 100).toFixed(1) + ' %';
+      resCotis.textContent = '- ' + formatMoney(totalCotisations);
+      resNetAvant.textContent = formatMoney(netAvantImpot);
+      resPas.textContent = tauxPas > 0 ? '- ' + formatMoney(montantPAS) : '0 \u20AC';
+      resNetApres.textContent = formatMoney(netApresImpot);
+      resNetAnnuel.textContent = formatMoney(netAnnuel);
+      resEmpPct.textContent = '+' + Math.round(tauxPatronal * 100) + ' % charges';
+      resCoutEmp.textContent = formatMoney(coutEmployeur) + ' / mois';
+    }
+
+    // Show/hide partial hours
+    tempsSelect.addEventListener('change', function() {
+      if (tempsSelect.value === 'partiel') {
+        partialWrap.classList.add('visible');
+      } else {
+        partialWrap.classList.remove('visible');
+      }
+      calculate();
+    });
+
+    // Real-time calculation on any input change
+    brutInput.addEventListener('input', calculate);
+    statutSelect.addEventListener('change', calculate);
+    partialInput.addEventListener('input', calculate);
+    heuresSupInput.addEventListener('input', calculate);
+    tauxPasSelect.addEventListener('change', calculate);
+    btnCalculer.addEventListener('click', calculate);
+
+    // Initial calculation
+    calculate();
+  })();
+
+  // FAQ toggle
+  function toggleFaq(el) {
+    var item = el.closest('.faq-item');
+    var isOpen = item.classList.contains('open');
+    var allItems = document.querySelectorAll('.faq-item.open');
+    for (var i = 0; i < allItems.length; i++) {
+      allItems[i].classList.remove('open');
+    }
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Burger menu
+  (function(){
+    var burger = document.querySelector('.nav-burger');
+    var nav = document.querySelector('.site-nav');
+    if(!burger || !nav) return;
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      burger.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', open);
+    });
+    document.addEventListener('click', function(e){
+      if(!burger.contains(e.target) && !nav.contains(e.target)){
+        nav.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+  </script>
+</body>
+</html>
