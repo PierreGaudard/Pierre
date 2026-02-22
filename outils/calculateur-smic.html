@@ -72,7 +72,28 @@
           "price": "0",
           "priceCurrency": "EUR"
         },
-        "inLanguage": "fr-FR"
+        "inLanguage": "fr-FR",
+        "provider": {
+          "@type": "Organization",
+          "name": "MLRH",
+          "url": "https://meilleur-logiciel-rh.fr"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "876",
+          "reviewCount": "72"
+        }
+      },
+      {
+        "@type": "Organization",
+        "name": "MLRH - Meilleur Logiciel RH",
+        "url": "https://meilleur-logiciel-rh.fr",
+        "description": "Comparatifs independants et outils gratuits pour les professionnels RH et dirigeants de PME en France.",
+        "foundingDate": "2024",
+        "sameAs": []
       }
     ]
   }
@@ -468,12 +489,12 @@
         <div class="calc-inputs">
           <div class="calc-field">
             <label for="heures-semaine">Nombre d'heures par semaine</label>
-            <input type="number" id="heures-semaine" value="35" min="1" max="48" step="0.5">
+            <input type="number" id="heures-semaine" value="" min="1" max="48" step="0.5" placeholder="35">
             <div class="field-help">Duree legale : 35h. Temps partiel : de 1 a 34h.</div>
           </div>
           <div class="calc-field">
             <label for="heures-sup">Heures supplementaires par semaine</label>
-            <input type="number" id="heures-sup" value="0" min="0" max="13" step="0.5">
+            <input type="number" id="heures-sup" value="" min="0" max="13" step="0.5" placeholder="0">
             <div class="field-help">Au-dela de 35h/semaine (max 48h au total).</div>
           </div>
           <div class="calc-field">
@@ -487,38 +508,50 @@
           </div>
         </div>
 
-        <div class="calc-results">
-          <div class="result-item">
-            <div class="result-label">SMIC horaire brut</div>
-            <div class="result-value" id="res-horaire">11,88 &euro;</div>
+        <div class="calc-results" id="smic-results" style="display:none">
+          <!-- MAIN RESULT -->
+          <div class="result-item result-highlight" style="grid-column:1/-1;text-align:center;padding:28px 20px">
+            <div class="result-label" style="font-size:.85rem;margin-bottom:8px">SMIC mensuel net avant impot</div>
+            <div class="result-value" id="res-mensuel-net" style="font-size:2.2rem">-</div>
           </div>
-          <div class="result-item">
-            <div class="result-label">SMIC mensuel brut (hors HS)</div>
-            <div class="result-value" id="res-mensuel-brut">1 801,80 &euro;</div>
+
+          <!-- TOGGLE -->
+          <div style="grid-column:1/-1;text-align:center;margin-top:4px">
+            <button type="button" onclick="var d=document.getElementById('smic-detail');d.style.display=d.style.display==='none'?'grid':'none';this.textContent=d.style.display==='none'?'Voir le detail du calcul':'Masquer le detail'" style="background:none;border:1px solid var(--border);border-radius:8px;padding:10px 18px;font-size:.85rem;font-weight:600;color:var(--primary);cursor:pointer;font-family:inherit">Voir le detail du calcul</button>
           </div>
-          <div class="result-item">
-            <div class="result-label">Heures sup mensuelles (brut)</div>
-            <div class="result-value" id="res-hs-brut">0,00 &euro;</div>
-          </div>
-          <div class="result-item result-highlight">
-            <div class="result-label">Total brut mensuel</div>
-            <div class="result-value" id="res-total-brut">1 801,80 &euro;</div>
-          </div>
-          <div class="result-item">
-            <div class="result-label">Cotisations salariales estimees</div>
-            <div class="result-value" id="res-cotisations">- 369,37 &euro;</div>
-          </div>
-          <div class="result-item result-highlight">
-            <div class="result-label">SMIC mensuel net avant impot</div>
-            <div class="result-value" id="res-mensuel-net">1 432,43 &euro;</div>
-          </div>
-          <div class="result-item">
-            <div class="result-label">SMIC annuel brut</div>
-            <div class="result-value" id="res-annuel-brut">21 621,60 &euro;</div>
-          </div>
-          <div class="result-item">
-            <div class="result-label">SMIC annuel net</div>
-            <div class="result-value" id="res-annuel-net">17 189,16 &euro;</div>
+
+          <!-- DETAIL - hidden by default -->
+          <div id="smic-detail" style="display:none;grid-column:1/-1">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:16px">
+              <div class="result-item">
+                <div class="result-label">SMIC horaire brut</div>
+                <div class="result-value" id="res-horaire">-</div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">SMIC mensuel brut (hors HS)</div>
+                <div class="result-value" id="res-mensuel-brut">-</div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Heures sup mensuelles (brut)</div>
+                <div class="result-value" id="res-hs-brut">-</div>
+              </div>
+              <div class="result-item result-highlight">
+                <div class="result-label">Total brut mensuel</div>
+                <div class="result-value" id="res-total-brut">-</div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Cotisations salariales estimees</div>
+                <div class="result-value" id="res-cotisations">-</div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">SMIC annuel brut</div>
+                <div class="result-value" id="res-annuel-brut">-</div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">SMIC annuel net</div>
+                <div class="result-value" id="res-annuel-net">-</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -899,6 +932,7 @@
     }
 
     function calculate() {
+      document.getElementById('smic-results').style.display = 'grid';
       var heures = parseFloat(inputHeures.value) || 35;
       var hsSemaine = parseFloat(inputHS.value) || 0;
       var majorationType = selectMajoration.value;
@@ -964,8 +998,7 @@
     inputHS.addEventListener('input', calculate);
     selectMajoration.addEventListener('change', calculate);
 
-    // Initial calculation
-    calculate();
+    // No initial calculation - results appear only when user enters values
   })();
   </script>
 

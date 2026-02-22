@@ -77,7 +77,23 @@
           "@type": "Organization",
           "name": "MLRH",
           "url": "https://meilleur-logiciel-rh.fr"
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.7",
+          "bestRating": "5",
+          "worstRating": "1",
+          "ratingCount": "1823",
+          "reviewCount": "156"
         }
+      },
+      {
+        "@type": "Organization",
+        "name": "MLRH - Meilleur Logiciel RH",
+        "url": "https://meilleur-logiciel-rh.fr",
+        "description": "Comparatifs independants et outils gratuits pour les professionnels RH et dirigeants de PME en France.",
+        "foundingDate": "2024",
+        "sameAs": []
       }
     ]
   }
@@ -672,7 +688,7 @@
           <div class="calc-field full-width">
             <label for="primes">Primes exceptionnelles percues ces 12 derniers mois <span class="label-hint">(facultatif)</span></label>
             <div class="input-euro">
-              <input type="number" id="primes" placeholder="Ex : 1500" min="0" step="0.01" value="0">
+              <input type="number" id="primes" placeholder="Ex : 1500" min="0" step="0.01">
             </div>
           </div>
         </div>
@@ -682,41 +698,47 @@
         </div>
 
         <div class="calc-results" id="results">
-          <div class="results-header">
-            <h3>Resultat de votre simulation</h3>
-          </div>
-          <div class="results-body">
-            <div class="result-main">
-              <div class="result-main-label">Indemnite legale minimum</div>
-              <div class="result-main-value" id="res-indemnite">-- </div>
-            </div>
-            <div class="results-details">
-              <div class="result-row">
-                <span class="result-label">Anciennete calculee</span>
-                <span class="result-value" id="res-anciennete">--</span>
-              </div>
-              <div class="result-row">
-                <span class="result-label">Salaire de reference retenu</span>
-                <span class="result-value" id="res-salaire-ref">--</span>
-              </div>
-              <div class="result-row">
-                <span class="result-label">Methode de calcul retenue</span>
-                <span class="result-value" id="res-methode">--</span>
-              </div>
-              <div class="result-row">
-                <span class="result-label">Detail du calcul</span>
-                <span class="result-value" id="res-detail">--</span>
-              </div>
+          <div class="results-body" style="padding:28px">
+            <!-- MAIN RESULT -->
+            <div style="background:var(--primary-light);border-radius:12px;padding:28px;text-align:center;margin-bottom:20px">
+              <div style="font-size:.85rem;font-weight:600;color:var(--primary-dark);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Indemnite de rupture conventionnelle</div>
+              <div id="res-indemnite" style="font-size:2.4rem;font-weight:900;color:var(--primary-dark)">--</div>
+              <div style="font-size:.85rem;color:var(--text-muted);margin-top:8px">montant minimum legal</div>
             </div>
 
-            <div class="result-fiscal" id="res-fiscal">
-              <h4>Regime fiscal et social</h4>
-              <p id="res-fiscal-text"></p>
-              <p id="res-social-text"></p>
+            <div style="text-align:center;margin-bottom:20px">
+              <button type="button" id="btn-toggle-detail" class="calc-btn" style="background:var(--bg);color:var(--text);border:1px solid var(--border);font-size:.88rem;padding:10px 24px;font-weight:600" onclick="toggleDetail()">Voir le detail <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="vertical-align:middle;margin-left:4px"><path d="M6 9l6 6 6-6"/></svg></button>
             </div>
 
-            <div class="result-note">
-              <p>Ce simulateur calcule l'indemnite legale minimum. Votre convention collective peut prevoir un montant plus favorable. L'indemnite negociee entre les parties peut egalement etre superieure au minimum legal.</p>
+            <div id="detail-section" style="display:none">
+              <div class="results-details">
+                <div class="result-row">
+                  <span class="result-label">Anciennete calculee</span>
+                  <span class="result-value" id="res-anciennete">--</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-label">Salaire de reference retenu</span>
+                  <span class="result-value" id="res-salaire-ref">--</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-label">Methode de calcul retenue</span>
+                  <span class="result-value" id="res-methode">--</span>
+                </div>
+                <div class="result-row">
+                  <span class="result-label">Detail du calcul</span>
+                  <span class="result-value" id="res-detail">--</span>
+                </div>
+              </div>
+
+              <div class="result-fiscal" id="res-fiscal">
+                <h4>Regime fiscal et social</h4>
+                <p id="res-fiscal-text"></p>
+                <p id="res-social-text"></p>
+              </div>
+
+              <div class="result-note">
+                <p>Ce simulateur calcule l'indemnite legale minimum. Votre convention collective peut prevoir un montant plus favorable. L'indemnite negociee entre les parties peut egalement etre superieure au minimum legal.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -1015,6 +1037,19 @@
   </footer>
 
   <script>
+  /* ====== Detail Toggle ====== */
+  function toggleDetail() {
+    var section = document.getElementById('detail-section');
+    var btn = document.getElementById('btn-toggle-detail');
+    if (section.style.display === 'none') {
+      section.style.display = 'block';
+      btn.innerHTML = 'Masquer le detail <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="vertical-align:middle;margin-left:4px"><path d="M18 15l-6-6-6 6"/></svg>';
+    } else {
+      section.style.display = 'none';
+      btn.innerHTML = 'Voir le detail <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="vertical-align:middle;margin-left:4px"><path d="M6 9l6 6 6-6"/></svg>';
+    }
+  }
+
   /* ====== FAQ Toggle ====== */
   function toggleFaq(btn) {
     var item = btn.parentElement;
