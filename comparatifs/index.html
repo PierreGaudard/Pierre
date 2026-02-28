@@ -23,8 +23,13 @@
     .page-hero .breadcrumb { font-size: .82rem; color: rgba(255,255,255,.7); margin-bottom: 16px; }
     .page-hero .breadcrumb a { color: rgba(255,255,255,.7); text-decoration: none; }
     .comparatifs-section { padding: 56px 24px; }
-    .comparatifs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; margin-top: 32px; }
-    .comp-card {
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+      margin-top: 32px;
+    }
+    .blog-card {
       background: #fff;
       border: 1px solid var(--border);
       border-radius: var(--radius);
@@ -33,25 +38,93 @@
       color: var(--text);
       display: flex;
       flex-direction: column;
-      transition: box-shadow .15s, transform .15s;
+      transition: box-shadow .2s, transform .2s;
     }
-    .comp-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none; color: var(--text); }
-    .comp-thumb {
-      height: 140px;
+    .blog-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-3px);
+      text-decoration: none;
+      color: var(--text);
+    }
+    .blog-card-img {
+      height: 200px;
+      overflow: hidden;
+      background: linear-gradient(135deg, #14532d, #16a34a);
+    }
+    .blog-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .3s;
+    }
+    .blog-card:hover .blog-card-img img { transform: scale(1.05); }
+    .blog-card-body {
+      padding: 20px 24px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card-meta {
       display: flex;
       align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #fff;
-      letter-spacing: -.5px;
+      gap: 10px;
+      margin-bottom: 14px;
     }
-    .comp-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
-    .comp-body h3 { font-size: .98rem; font-weight: 700; line-height: 1.4; margin: 10px 0 8px; }
-    .comp-body p { font-size: .86rem; color: var(--text-muted); line-height: 1.55; flex: 1; }
-    .comp-footer { margin-top: 14px; display: flex; align-items: center; justify-content: space-between; font-size: .82rem; }
-    .comp-read { color: var(--primary); font-weight: 600; }
-    @media (max-width: 540px) { .comparatifs-grid { grid-template-columns: 1fr; } }
+    .blog-card-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    .blog-card-meta-text {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+    .blog-card-author {
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .blog-card-time {
+      font-size: .75rem;
+      color: var(--text-muted);
+    }
+    .blog-card-body h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 8px;
+    }
+    .blog-card-body > p {
+      font-size: .88rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      flex: 1;
+      margin-bottom: 16px;
+    }
+    .blog-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .blog-card-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .blog-card-cta {
+      font-size: .84rem;
+      font-weight: 600;
+      color: var(--primary);
+      white-space: nowrap;
+    }
+    @media (max-width: 540px) {
+      .blog-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -82,19 +155,28 @@
       <h2 class="section-title">Tous les comparatifs</h2>
       <p class="section-subtitle">1 comparatif disponible</p>
 
-      <div class="comparatifs-grid">
+      <div class="blog-grid">
 
-        <a href="payfit-vs-factorial.html" class="comp-card">
-          <div class="comp-thumb" style="background:linear-gradient(135deg,#14532d,#16a34a)">
-            PayFit vs Factorial
+        <a href="payfit-vs-factorial.html" class="blog-card">
+          <div class="blog-card-img">
+            <img src="../assets/images/blog/payfit-vs-factorial.jpg" alt="Deux ecrans d'ordinateur cote a cote comparant des logiciels RH" width="800" height="400" loading="lazy">
           </div>
-          <div class="comp-body">
-            <span class="badge badge-green">Disponible</span>
+          <div class="blog-card-body">
+            <div class="blog-card-meta">
+              <img src="../assets/images/thomas-renaud.jpg" alt="" width="32" height="32" class="blog-card-avatar">
+              <div class="blog-card-meta-text">
+                <span class="blog-card-author">Thomas Renaud</span>
+                <span class="blog-card-time">8 min de lecture</span>
+              </div>
+            </div>
             <h3>PayFit vs Factorial : quel logiciel RH choisir en 2026 ?</h3>
             <p>Paie automatisée vs SIRH complet. Le comparatif complet avec tableau, tarifs et verdict pour TPE et PME.</p>
-            <div class="comp-footer">
-              <span style="font-size:.78rem;color:var(--text-muted)">8 min de lecture</span>
-              <span class="comp-read">Lire →</span>
+            <div class="blog-card-footer">
+              <div class="blog-card-tags">
+                <span class="badge badge-green">Comparatif</span>
+                <span class="badge" style="background:#f0fdf4;color:#16a34a">Paie</span>
+              </div>
+              <span class="blog-card-cta">Lire le comparatif →</span>
             </div>
           </div>
         </a>
