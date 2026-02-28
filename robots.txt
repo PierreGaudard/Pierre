@@ -7,10 +7,13 @@
 # ======================
 User-agent: *
 Allow: /
+Disallow:
+
 Allow: /comparatifs/
 Allow: /guides/
 Allow: /avis/
 Allow: /alternatives/
+Allow: /outils/
 Allow: /auteur/
 Allow: /assets/
 

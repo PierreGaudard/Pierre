@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page introuvable - MLRH</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="/assets/images/favicon-mlrh.png" type="image/png">
+  <link rel="stylesheet" href="/assets/style.css">
+  <style>
+    .error-page {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 48px 24px;
+    }
+    .error-content { max-width: 520px; }
+    .error-code {
+      font-size: clamp(4rem, 10vw, 6rem);
+      font-weight: 900;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .error-content h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+    .error-content p {
+      color: var(--text-muted);
+      font-size: .95rem;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    .error-links {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a href="/" class="site-logo"><img src="/assets/images/mlrh-logo.png" alt="MLRH" width="82" height="30" style="height:30px;width:auto;filter:brightness(0)"></a>
+      <nav class="site-nav">
+        <a href="/comparatifs/">Comparatifs</a>
+        <a href="/guides/">Guides</a>
+        <a href="/alternatives/">Alternatives</a>
+        <a href="/avis/">Avis</a>
+        <a href="/outils/">Outils</a>
+        <a href="/trouver-mon-logiciel.html" class="nav-cta">Trouver mon logiciel</a>
+      </nav>
+      <button class="nav-burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="error-page">
+    <div class="error-content">
+      <div class="error-code">404</div>
+      <h1>Page introuvable</h1>
+      <p>La page que vous cherchez n'existe pas ou a peut-être été déplacée. Pas de panique, voici quelques liens utiles pour retrouver votre chemin.</p>
+      <div class="error-links">
+        <a href="/" class="btn btn-primary">Retour à l'accueil</a>
+        <a href="/plan-du-site.html" class="btn btn-secondary">Plan du site</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-bottom"><span>© 2026 MLRH. Tous droits réservés</span></div>
+    </div>
+  </footer>
+
+<script>
+(function(){
+  var burger = document.querySelector('.nav-burger');
+  var nav = document.querySelector('.site-nav');
+  if(!burger || !nav) return;
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    burger.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e){
+    if(!burger.contains(e.target) && !nav.contains(e.target)){
+      nav.classList.remove('open');
+      burger.classList.remove('open');
+      burger.setAttribute('aria-expanded', 'false');
+    }
+  });
+})();
+</script>
+</body>
+</html>

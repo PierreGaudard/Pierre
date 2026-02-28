@@ -4,14 +4,14 @@
   <!-- Pages principales -->
   <url>
     <loc>https://meilleur-logiciel-rh.fr/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/trouver-mon-logiciel.html</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -19,14 +19,14 @@
   <!-- Comparatifs -->
   <url>
     <loc>https://meilleur-logiciel-rh.fr/comparatifs/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/comparatifs/payfit-vs-factorial.html</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -34,14 +34,14 @@
   <!-- Alternatives -->
   <url>
     <loc>https://meilleur-logiciel-rh.fr/alternatives/</loc>
-    <lastmod>2026-02-20</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/alternatives/payfit.html</loc>
-    <lastmod>2026-02-20</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -49,49 +49,49 @@
   <!-- Guides -->
   <url>
     <loc>https://meilleur-logiciel-rh.fr/guides/</loc>
-    <lastmod>2026-02-20</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/guides/choisir-logiciel-paie.html</loc>
-    <lastmod>2026-02-20</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/guides/devenir-rh.html</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/guides/salaire-rh.html</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/guides/devenir-drh.html</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/guides/devenir-rh-sans-diplome.html</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/guides/pourquoi-rh-detestes.html</loc>
-    <lastmod>2026-02-25</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -99,14 +99,14 @@
   <!-- Avis -->
   <url>
     <loc>https://meilleur-logiciel-rh.fr/avis/</loc>
-    <lastmod>2026-02-20</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/avis/payfit.html</loc>
-    <lastmod>2026-02-20</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -114,49 +114,49 @@
   <!-- Outils RH -->
   <url>
     <loc>https://meilleur-logiciel-rh.fr/outils/</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/outils/convertisseur-brut-net.html</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/outils/simulateur-rupture-conventionnelle.html</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/outils/simulateur-chomage-are.html</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/outils/calculateur-indemnite-licenciement.html</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/outils/calculateur-smic.html</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/outils/simulateur-cout-salarie.html</loc>
-    <lastmod>2026-02-22</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -164,42 +164,42 @@
   <!-- Pages légales / site -->
   <url>
     <loc>https://meilleur-logiciel-rh.fr/a-propos.html</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/methodologie.html</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/contact.html</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/mentions-legales.html</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/politique-de-confidentialite.html</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.2</priority>
   </url>
 
   <url>
     <loc>https://meilleur-logiciel-rh.fr/plan-du-site.html</loc>
-    <lastmod>2026-02-20</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -207,7 +207,7 @@
   <!-- Auteur -->
   <url>
     <loc>https://meilleur-logiciel-rh.fr/auteur/thomas-renaud.html</loc>
-    <lastmod>2026-02-20</lastmod>
+    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
