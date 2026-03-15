@@ -571,7 +571,7 @@ table {
   background: var(--border);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .cookie-banner { padding: 16px; }
   .cookie-banner-inner { flex-direction: column; gap: 14px; }
   .cookie-banner-actions { width: 100%; }
