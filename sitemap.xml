@@ -103,6 +103,13 @@
     <priority>0.8</priority>
   </url>
 
+  <url>
+    <loc>https://meilleur-logiciel-rh.fr/guides/promesse-embauche.html</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Avis -->
   <url>
     <loc>https://meilleur-logiciel-rh.fr/avis/</loc>

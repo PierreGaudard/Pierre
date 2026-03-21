@@ -41,6 +41,7 @@
 - `guides/parcours-directeur-rh.html` - Parcours pour devenir DRH
 - `guides/formation-rh-sans-bac.html` - Formation RH sans bac
 - `guides/image-negative-rh-entreprise.html` - Image des RH en entreprise
+- `guides/promesse-embauche.html` - Promesse d'embauche : guide juridique 2026
 
 **Outils :**
 - `outils/convertisseur-brut-net.html`
@@ -67,6 +68,11 @@
 ---
 
 ## Historique des modifications
+
+### 2026-03-21
+- Ajout du guide "Promesse d'embauche en 2026" (`guides/promesse-embauche.html`) avec generateur interactif
+- Ajout de 3 images libres de droit (Pexels) dans `assets/images/blog/`
+- Mise a jour du `sitemap.xml`, `plan-du-site.html` et `guides/index.html`
 
 ### 2026-03-14
 - Ajout de `comparatifs/payfit-vs-silae.html` au `sitemap.xml` et `plan-du-site.html` (l'article existait mais n'etait pas reference dans les sitemaps)
