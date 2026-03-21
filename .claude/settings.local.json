@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:culture-rh.com)",
+      "WebSearch",
+      "WebFetch(domain:images.pexels.com)",
+      "Bash(curl -L -o \"C:/Users/pierr/Documents/Pierre/assets/images/blog/promesse-embauche.jpg\" \"https://images.pexels.com/photos/8112180/pexels-photo-8112180.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop\" 2>&1)",
+      "Bash(curl -L -o \"C:/Users/pierr/Documents/Pierre/assets/images/blog/signature-contrat-travail.jpg\" \"https://images.pexels.com/photos/7693159/pexels-photo-7693159.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop\" 2>&1)",
+      "Bash(curl -L -o \"C:/Users/pierr/Documents/Pierre/assets/images/blog/entretien-embauche-bureau.jpg\" \"https://images.pexels.com/photos/8939052/pexels-photo-8939052.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop\" 2>&1)",
+      "Bash(mkdir -p \"C:/Users/pierr/Documents/Pierre/assets/images/logos\" && cd \"C:/Users/pierr/Documents/Pierre/assets/images/logos\" && curl -L -s -o payfit.png \"https://logo.clearbit.com/payfit.com\" && echo \"payfit ok\" && curl -L -s -o factorial.png \"https://logo.clearbit.com/factorial.fr\" && echo \"factorial ok\" && curl -L -s -o silae.png \"https://logo.clearbit.com/silae.fr\" && echo \"silae ok\" && curl -L -s -o lucca.png \"https://logo.clearbit.com/lucca.fr\" && echo \"lucca ok\" && curl -L -s -o personio.png \"https://logo.clearbit.com/personio.de\" && echo \"personio ok\" && curl -L -s -o eurecia.png \"https://logo.clearbit.com/eurecia.com\" && echo \"eurecia ok\")",
+      "Bash(cd \"C:/Users/pierr/Documents/Pierre/assets/images/logos\" && curl -L -s -o payfit.png \"https://logo.clearbit.com/payfit.com\" && echo \"ok1\" && curl -L -s -o factorial.png \"https://logo.clearbit.com/factorial.fr\" && echo \"ok2\" && curl -L -s -o silae.png \"https://logo.clearbit.com/silae.fr\" && echo \"ok3\")",
+      "Bash(curl --version | head -1)",
+      "Bash(curl -v -L -o \"C:/Users/pierr/Documents/Pierre/assets/images/logos/payfit.png\" \"https://logo.clearbit.com/payfit.com\" 2>&1 | tail -20)",
+      "Bash(cd \"C:/Users/pierr/Documents/Pierre/assets/images/logos\" && curl -L -s -o payfit.png \"https://www.google.com/s2/favicons?domain=payfit.com&sz=128\" && curl -L -s -o factorial.png \"https://www.google.com/s2/favicons?domain=factorial.fr&sz=128\" && curl -L -s -o silae.png \"https://www.google.com/s2/favicons?domain=silae.fr&sz=128\" && curl -L -s -o lucca.png \"https://www.google.com/s2/favicons?domain=lucca.fr&sz=128\" && curl -L -s -o personio.png \"https://www.google.com/s2/favicons?domain=personio.de&sz=128\" && curl -L -s -o eurecia.png \"https://www.google.com/s2/favicons?domain=eurecia.com&sz=128\" && curl -L -s -o combo.png \"https://www.google.com/s2/favicons?domain=combohr.com&sz=128\" && curl -L -s -o sage.png \"https://www.google.com/s2/favicons?domain=sage.com&sz=128\" && curl -L -s -o cegid.png \"https://www.google.com/s2/favicons?domain=cegid.com&sz=128\" && curl -L -s -o nibelis.png \"https://www.google.com/s2/favicons?domain=nibelis.com&sz=128\" && ls -la *.png)",
+      "Bash(cd \"C:/Users/pierr/Documents/Pierre/assets/images/blog\" && curl -L -s -o alternatives-factorial.jpg \"https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop\" && curl -L -s -o alternatives-silae.jpg \"https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop\" && curl -L -s -o alternatives-lucca.jpg \"https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800&h=400&fit=crop\" && ls -la alternatives-*.jpg)",
+      "Bash(done)",
+      "Bash(cd /c/Users/pierr/Documents/Pierre && curl -sL \"https://images.pexels.com/photos/7681091/pexels-photo-7681091.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop\" -o assets/images/blog/payfit-vs-silae.jpg && ls -la assets/images/blog/payfit-vs-silae.jpg)"
+    ]
+  }
+}

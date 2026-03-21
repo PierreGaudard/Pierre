@@ -121,13 +121,12 @@
     .breadcrumb a:hover { color: var(--primary); }
     .breadcrumb-sep { color: #cbd5e1; }
     .article-hero { background: linear-gradient(135deg, #14532d 0%, #15803d 100%); padding: 28px 24px 32px; color: white; }
-    .article-hero-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: flex-start; justify-content: space-between; gap: 32px; }
+    .article-hero-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
     .article-hero-left { text-align: left; flex: 1; min-width: 0; }
-    .article-hero-right { flex-shrink: 0; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.15); border-radius: 12px; padding: 18px 22px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; min-width: 240px; }
     .article-hero .badge { margin-bottom: 12px; background: rgba(255,255,255,.15); color: white; }
     .article-hero h1 { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 800; line-height: 1.2; max-width: 760px; margin: 0 0 12px; }
     .article-hero-sub { font-size: 1.05rem; color: rgba(255,255,255,.85); max-width: 600px; margin: 0; line-height: 1.6; }
-    .article-hero-meta { display: flex; flex-direction: column; gap: 6px; font-size: .82rem; color: rgba(255,255,255,.7); }
+    .article-hero-meta { display: flex; flex-direction: row; gap: 16px; flex-wrap: wrap; align-items: center; font-size: .82rem; color: rgba(255,255,255,.7); margin-top: 12px; }
     .hero-rating-badge { background: rgba(255,255,255,.18); border-radius: 12px; padding: 10px 18px; display: flex; align-items: center; gap: 8px; font-size: 1.1rem; font-weight: 800; color: white; margin-top: 4px; }
     .hero-rating-badge .hero-stars { color: #fbbf24; font-size: .95rem; letter-spacing: 1px; }
     .hero-logo-block { display: flex; align-items: center; margin-bottom: 12px; }
@@ -221,10 +220,11 @@
     .video-embed { margin: 28px 0; border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
     .video-embed iframe { width: 100%; aspect-ratio: 16/9; border: none; display: block; }
     @media (max-width: 1024px) { .article-outer { grid-template-columns: 1fr; max-width: 800px; } .toc { position: static; border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; background: white; max-height: none; } .article-main { max-width: 100%; } }
-    @media (max-width: 700px) { .summary-meta, .summary-lists { grid-template-columns: 1fr; } .internal-links ul { grid-template-columns: 1fr; } .article-hero { padding: 24px 20px 28px; } .article-hero-inner { flex-direction: column; gap: 18px; } .article-hero-right { min-width: 0; width: 100%; } .article-outer { padding: 24px 16px 40px; } .verdict-score-label { flex: 0 0 110px; font-size: .82rem; } .section-alt { margin: 0 -16px; padding: 24px 16px; } .article-hero .author-line { justify-content: center; } }
-    .article-hero .author-line { justify-content: flex-start; color: rgba(255,255,255,.85); }
+    @media (max-width: 700px) { .summary-meta, .summary-lists { grid-template-columns: 1fr; } .internal-links ul { grid-template-columns: 1fr; } .article-hero { padding: 24px 20px 28px; } .article-hero-inner { flex-direction: column; gap: 18px; } .article-hero-right { min-width: 0; width: 100%; } .article-outer { padding: 24px 16px 40px; } .verdict-score-label { flex: 0 0 110px; font-size: .82rem; } .section-alt { margin: 0 -16px; padding: 24px 16px; } .article-hero .author-line { justify-content: center; } .article-hero-meta { justify-content: center; } .hero-thumb { display: none; } }
+    .article-hero .author-line { justify-content: flex-start; color: rgba(255,255,255,.85); margin-top: 0; }
     .article-hero .author-line a { color: white; }
     .article-hero .author-avatar { background: rgba(255,255,255,.2); color: white; }
+    .hero-thumb { width: 320px; flex-shrink: 0; height: auto; border-radius: 10px; aspect-ratio: 16/9; object-fit: cover; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
   </style>
 </head>
 <body class="article-page-wrap">
@@ -270,18 +270,17 @@
         <p class="article-hero-sub">
           Notre test complet du SIRH tout-en-un le plus populaire en Europe. Prix réels, fonctionnalités détaillées, points forts, limites et verdict honnête pour les PME françaises.
         </p>
-      </div>
-      <div class="article-hero-right">
-        <div class="author-line"><div class="author-avatar"><img src="../assets/images/thomas-renaud.jpg" alt="Thomas Renaud" width="28" height="28"></div> Par <a href="../auteur/thomas-renaud.html">Thomas Renaud</a></div>
         <div class="article-hero-meta">
+          <div class="author-line"><div class="author-avatar"><img src="../assets/images/thomas-renaud.jpg" alt="Thomas Renaud" width="28" height="28"></div> Par <a href="../auteur/thomas-renaud.html">Thomas Renaud</a></div>
           <span>Mis à jour le 8 mars 2026</span>
           <span>Lecture : 12 min</span>
           <span>Données vérifiées</span>
-        </div>
-        <div class="hero-rating-badge">
-          4,5/5 <span class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+          <div class="hero-rating-badge">
+            4,5/5 <span class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+          </div>
         </div>
       </div>
+      <img class="hero-thumb" src="../assets/images/blog/factorial-avis.jpg" alt="Interface du logiciel Factorial SIRH tout-en-un" width="320" height="180">
     </div>
   </section>
 
