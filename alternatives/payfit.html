@@ -58,20 +58,20 @@
   </script>
 
   <style>
-    .article-hero {
-      background: linear-gradient(135deg, #14532d 0%, #15803d 100%);
-      color: #fff;
-      padding: 28px 24px 32px;
-    }
-    .article-hero-inner { display:flex; align-items:center; justify-content:space-between; gap:24px; max-width:1100px; margin:0 auto; flex-wrap:wrap; }
-    .article-hero-left { text-align:left; }
+    .breadcrumb { padding: 14px 24px; font-size: .82rem; color: var(--text-muted); }
+    .breadcrumb-inner { max-width: 1100px; margin: 0 auto; }
+    .breadcrumb a { color: var(--text-muted); text-decoration: none; }
+    .breadcrumb a:hover { color: var(--primary); }
+    .breadcrumb-sep { color: #cbd5e1; }
+    .article-hero { background: linear-gradient(135deg, #14532d 0%, #15803d 100%); padding: 28px 24px 32px; color: white; }
+    .article-hero-flex { display: flex; align-items: center; justify-content: space-between; gap: 32px; max-width: 1100px; margin: 0 auto; }
+    .article-hero-left { text-align: left; flex: 1; min-width: 0; }
+    .article-hero .badge { margin-bottom: 12px; background: rgba(255,255,255,.15); color: white; }
+    .article-hero h1 { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 800; line-height: 1.2; max-width: 760px; margin: 0 0 12px; }
+    .article-hero-sub { font-size: 1.05rem; color: rgba(255,255,255,.85); max-width: 620px; margin: 0; line-height: 1.6; }
     .article-hero-meta { display: flex; flex-direction: row; gap: 16px; flex-wrap: wrap; align-items: center; font-size: .82rem; color: rgba(255,255,255,.7); margin-top: 12px; }
     .article-hero .author-line { justify-content: flex-start; }
-    @media(max-width:700px) { .article-hero-inner { flex-direction:column; text-align:center; } .article-hero-left { text-align:center; } .article-hero .author-line { justify-content: center; } .article-hero-meta { justify-content: center; } .hero-thumb { display: none; } }
-    .article-hero .breadcrumb { font-size: .82rem; color: rgba(255,255,255,.7); margin-bottom: 16px; }
-    .article-hero .breadcrumb a { color: rgba(255,255,255,.7); text-decoration: none; }
-    .article-hero h1 { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 800; margin-bottom: 12px; }
-    .article-hero .meta { color: rgba(255,255,255,.85); font-size: .88rem; }
+    @media(max-width:700px) { .article-hero-flex { flex-direction:column; gap: 16px; } .article-hero-left { text-align:center; } .article-hero .author-line { justify-content: center; } .article-hero-meta { justify-content: center; } .hero-thumb { display: none; } }
 
 
     .article-hero .author-line {
@@ -182,21 +182,32 @@
     </div>
   </header>
 
-  <div class="article-hero">
-    <div class="article-hero-inner">
+  <nav class="breadcrumb" aria-label="Fil d'Ariane">
+    <div class="breadcrumb-inner">
+      <a href="../">Accueil</a>
+      <span class="breadcrumb-sep">/</span>
+      <a href="../alternatives/">Alternatives</a>
+      <span class="breadcrumb-sep">/</span>
+      <span>Alternatives a PayFit</span>
+    </div>
+  </nav>
+
+  <section class="article-hero">
+    <div class="article-hero-flex">
       <div class="article-hero-left">
-        <div class="breadcrumb"><a href="../">Accueil</a> › <a href="./">Alternatives</a> › Alternatives à PayFit</div>
-        <h1>5 alternatives à PayFit en 2026 : comparatif complet pour PME</h1>
+        <span class="badge">Alternative</span>
+        <h1>5 alternatives a PayFit en 2026 : comparatif complet pour PME</h1>
+        <p class="article-hero-sub">PayFit s'est impose comme le logiciel de paie prefere des startups et PME. Mais son prix augmente vite avec les effectifs. Voici 5 alternatives testees avec un comparatif complet pour faire le bon choix.</p>
         <div class="article-hero-meta">
           <div class="author-line"><div class="author-avatar"><img src="../assets/images/thomas-renaud.jpg" alt="Thomas Renaud" width="28" height="28"></div> Par <a href="../auteur/thomas-renaud.html">Thomas Renaud</a></div>
-          <span>📅 Mis à jour le 19 février 2026</span>
-          <span>⏱ Lecture : 10 min</span>
-          <span>✅ Données vérifiées</span>
+          <span>Mis a jour le 19 fevrier 2026</span>
+          <span>Lecture : 10 min</span>
+          <span>Donnees verifiees</span>
         </div>
       </div>
       <img class="hero-thumb" src="../assets/images/blog/alternatives-payfit.jpg" alt="Comparatif des alternatives a PayFit pour PME" width="320" height="180">
     </div>
-  </div>
+  </section>
 
   <div class="article-layout">
 
