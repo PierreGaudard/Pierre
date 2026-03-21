@@ -35,7 +35,7 @@ body {
   line-height: 1.75;
   color: var(--text);
   background: var(--white);
-  overflow-x: clip;
+  overflow-x: hidden;
   min-width: 0;
 }
 
@@ -377,6 +377,34 @@ img { max-width: 100%; display: block; }
 
 table {
   min-width: 0;
+}
+
+/* =============================================
+   ARTICLE CONTENT — MOBILE OVERFLOW FIX
+   ============================================= */
+
+.article-content,
+.article-main {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.article-layout,
+.article-outer {
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+  .article-layout,
+  .article-outer {
+    overflow-x: hidden;
+  }
+
+  .article-content,
+  .article-main {
+    overflow-x: auto;
+  }
 }
 
 /* =============================================
