@@ -32,7 +32,7 @@
   </script>
   <style>
     .tool-hero {
-      background: linear-gradient(135deg, #14532d 0%, #16a34a 100%);
+      background: linear-gradient(135deg, #14532d 0%, #15803d 100%);
       color: #fff;
       padding: 28px 24px 24px;
       text-align: center;
@@ -64,7 +64,7 @@
     .progress-wrap { margin-bottom: 36px; }
     .progress-top { display: flex; justify-content: space-between; font-size: .82rem; color: var(--text-muted); margin-bottom: 10px; }
     .progress-track { height: 6px; background: var(--border); border-radius: 99px; overflow: hidden; }
-    .progress-fill { height: 100%; background: linear-gradient(90deg, #15803d, #16a34a); border-radius: 99px; transition: width .4s ease; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #15803d, #15803d); border-radius: 99px; transition: width .4s ease; }
     .progress-steps {
       display: flex; gap: 0; margin-top: 12px; overflow-x: auto; padding-bottom: 4px;
     }
@@ -199,7 +199,7 @@
     .result-why h3 { font-size: .85rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 12px; }
     .result-why ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
     .result-why ul li { font-size: .9rem; display: flex; gap: 8px; align-items: flex-start; line-height: 1.45; }
-    .result-why ul li::before { content: '✓'; color: #16a34a; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
+    .result-why ul li::before { content: '✓'; color: #15803d; font-weight: 700; flex-shrink: 0; margin-top: 2px; }
     .result-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
     .btn-restart-q {
       background: none; border: 2px solid var(--border);
@@ -838,7 +838,7 @@
 
       if (sector === 'chr') {
         return {
-          name: 'Skello', color: '#16a34a', bg: '#f0fdf4', logo: logos['Skello'],
+          name: 'Skello', color: '#15803d', bg: '#f0fdf4', logo: logos['Skello'],
           tagline: 'La référence pour la gestion des plannings en CHR et retail',
           desc: 'Skello est conçu spécifiquement pour les secteurs à horaires variables. Sa gestion des plannings, du pointage et des contrats courts est imbattable dans la restauration, l\'hôtellerie et le commerce.',
           reasons: ['Planning drag & drop avec contraintes légales automatiques', 'Gestion des extras, CDD courts et heures sup', 'Conformité CCN CHR et retail intégrée', 'Application mobile pour les équipes terrain', 'Intégration paie via PayFit ou Silae'],
@@ -860,7 +860,7 @@
       }
       if ((size === '1-9' || size === '10-49') && mgr !== 'rh' && delay === 'urgent') {
         return {
-          name: 'PayFit', color: '#16a34a', bg: '#f0fdf4', logo: logos['PayFit'],
+          name: 'PayFit', color: '#15803d', bg: '#f0fdf4', logo: logos['PayFit'],
           tagline: 'La paie automatisée idéale pour TPE et startups',
           desc: 'PayFit est la solution la plus rapide à déployer pour une PME sans service RH. Mise en production en moins d\'une semaine, paie 100% automatisée, DSN native et interface ultra-simple.',
           reasons: ['Onboarding en moins d\'une semaine', 'Paie et DSN 100% automatisées', '350+ conventions collectives couvertes', 'Interface intuitive sans formation', 'Support francophone très réactif'],
@@ -904,7 +904,7 @@
       }
       // Default
       return {
-        name: 'PayFit', color: '#16a34a', bg: '#f0fdf4', logo: logos['PayFit'],
+        name: 'PayFit', color: '#15803d', bg: '#f0fdf4', logo: logos['PayFit'],
         tagline: 'La paie automatisée idéale pour les PME françaises',
         desc: 'Pour la majorité des PME françaises, PayFit est un excellent point de départ : déploiement rapide, paie automatisée et interface accessible à tous, même sans expertise RH.',
         reasons: ['Démarrage en moins d\'une semaine', 'Paie et DSN automatisées', '350+ conventions collectives', 'Interface sans formation requise', 'Hébergement 100% France (ISO 27001)'],

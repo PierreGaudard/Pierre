@@ -110,6 +110,14 @@
 
 ---
 
+## Objectif et concurrent principal
+
+- **Concurrent principal** : [culture-rh.com](https://culture-rh.com/) - Site WordPress d'actualité RH très complet avec des centaines d'articles, des avis logiciels, des guides pratiques, des outils et une forte autorité SEO
+- **Objectif** : Atteindre le même niveau de puissance et de couverture que culture-rh.com, en se différenciant par des comparatifs plus détaillés, des outils interactifs gratuits et un design moderne en HTML statique (plus rapide, pas de WordPress)
+- **Stratégie** : Continuer à étoffer le catalogue d'avis, de comparatifs, de guides et d'outils pour couvrir l'ensemble du marché des logiciels RH français
+
+---
+
 ## Rappels pour Claude
 
 - **Toujours lire ce fichier en debut de session** pour connaitre l'etat actuel du site
