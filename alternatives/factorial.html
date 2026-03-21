@@ -67,10 +67,9 @@
     }
     .article-hero-inner { display:flex; align-items:center; justify-content:space-between; gap:24px; max-width:1100px; margin:0 auto; flex-wrap:wrap; }
     .article-hero-left { text-align:left; }
-    .article-hero-right { flex-shrink:0; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.15); border-radius: 12px; padding: 18px 22px; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; min-width: 240px; }
-    .article-hero-meta { display: flex; flex-direction: column; gap: 6px; font-size: .82rem; color: rgba(255,255,255,.7); margin-top: 0; }
+    .article-hero-meta { display: flex; flex-direction: row; gap: 16px; flex-wrap: wrap; align-items: center; font-size: .82rem; color: rgba(255,255,255,.7); margin-top: 12px; }
     .article-hero .author-line { justify-content: flex-start; }
-    @media(max-width:700px) { .article-hero-inner { flex-direction:column; text-align:center; } .article-hero-left { text-align:center; } .article-hero-right { width: 100%; align-items: center; } .article-hero .author-line { justify-content: center; } .article-hero-meta { align-items: center; } }
+    @media(max-width:700px) { .article-hero-inner { flex-direction:column; text-align:center; } .article-hero-left { text-align:center; } .article-hero .author-line { justify-content: center; } .article-hero-meta { justify-content: center; } .hero-thumb { display: none; } }
     .article-hero .breadcrumb { font-size: .82rem; color: rgba(255,255,255,.7); margin-bottom: 16px; }
     .article-hero .breadcrumb a { color: rgba(255,255,255,.7); text-decoration: none; }
     .article-hero h1 { font-size: clamp(1.3rem, 3vw, 1.8rem); font-weight: 800; margin-bottom: 12px; }
@@ -198,8 +197,7 @@
     .quiz-result p { font-size: .9rem; color: var(--text-muted); line-height: 1.7; }
     .quiz-result .quiz-restart { background: none; border: 1px solid var(--primary); color: var(--primary); border-radius: 99px; padding: 8px 20px; font-size: .85rem; cursor: pointer; margin-top: 14px; font-weight: 600; }
     .quiz-result .quiz-restart:hover { background: var(--primary-light); }
-    .hero-thumb { width: 100%; max-width: 150px; height: auto; border-radius: 10px; aspect-ratio: 16/9; object-fit: cover; box-shadow: 0 2px 10px rgba(0,0,0,.15); margin-bottom: 8px; }
-    @media (max-width: 700px) { .hero-thumb { display: none; } }
+    .hero-thumb { width: 220px; flex-shrink: 0; height: auto; border-radius: 10px; aspect-ratio: 16/9; object-fit: cover; box-shadow: 0 2px 10px rgba(0,0,0,.15); }
   </style>
 </head>
 <body>
@@ -224,16 +222,14 @@
       <div class="article-hero-left">
         <div class="breadcrumb"><a href="../">Accueil</a> &rsaquo; <a href="./">Alternatives</a> &rsaquo; Alternatives a Factorial</div>
         <h1>5 alternatives a Factorial en 2026 : comparatif complet pour PME</h1>
-      </div>
-      <div class="article-hero-right">
-        <img class="hero-thumb" src="../assets/images/blog/alternatives-factorial.jpg" alt="Comparatif des alternatives a Factorial pour la gestion RH" width="150" height="84">
-        <div class="author-line"><div class="author-avatar"><img src="../assets/images/thomas-renaud.jpg" alt="Thomas Renaud" width="28" height="28"></div> Par <a href="../auteur/thomas-renaud.html">Thomas Renaud</a></div>
         <div class="article-hero-meta">
+          <div class="author-line"><div class="author-avatar"><img src="../assets/images/thomas-renaud.jpg" alt="Thomas Renaud" width="28" height="28"></div> Par <a href="../auteur/thomas-renaud.html">Thomas Renaud</a></div>
           <span>Mis a jour le 21 mars 2026</span>
           <span>Lecture : 12 min</span>
           <span>Donnees verifiees</span>
         </div>
       </div>
+      <img class="hero-thumb" src="../assets/images/blog/alternatives-factorial.jpg" alt="Comparatif des alternatives a Factorial pour la gestion RH" width="220" height="124">
     </div>
   </div>
 
