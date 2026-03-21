@@ -86,7 +86,8 @@
       color: white;
     }
     .article-layout { display: grid; grid-template-columns: 220px 1fr; gap: 40px; max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
-    @media (max-width: 860px) { .article-layout { grid-template-columns: 1fr; } .toc { display: none; } }
+    @media (max-width: 860px) { .article-layout { grid-template-columns: 1fr; padding: 24px 16px; } .toc { display: none; } }
+    @media (max-width: 480px) { .article-layout { padding: 20px 14px; } .alt-detail { padding: 20px 16px; } .summary-box { padding: 18px 16px; } .cta-box { padding: 24px 16px; } .article-hero-right { min-width: 0; } }
 
     .toc { position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 100px); overflow-y: auto; }
     .toc h4 { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); margin-bottom: 12px; }
@@ -109,7 +110,8 @@
     }
     .summary-box h2 { margin-top: 0; color: var(--primary-dark); }
 
-    .comp-table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: .88rem; }
+    .comp-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 20px 0 28px; border-radius: 10px; border: 1px solid var(--border); }
+    .comp-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
     .comp-table th { background: #f0fdf4; color: var(--primary-dark); font-weight: 700; text-align: left; padding: 12px 14px; border-bottom: 2px solid #bbf7d0; }
     .comp-table td { padding: 12px 14px; border-bottom: 1px solid var(--border); color: var(--text-muted); }
     .comp-table tr:hover { background: #fafffe; }
@@ -261,6 +263,7 @@
 
       <p>Voici une vue d'ensemble des <strong>5 alternatives</strong> face à PayFit sur les critères les plus importants pour une <strong>PME française</strong>.</p>
 
+      <div class="comp-table-wrap">
       <table class="comp-table">
         <thead>
           <tr>
@@ -357,6 +360,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
 
       <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:20px 0 28px">
         <a href="https://factorial.fr" target="_blank" rel="noopener" class="btn btn-primary" style="border-radius:99px;font-size:.85rem;padding:8px 20px">Essayer Factorial</a>
@@ -373,6 +377,7 @@
         <h3>Factorial en résumé</h3>
         <p><strong>Factorial</strong> est un <strong>SIRH tout-en-un</strong> qui couvre l'intégralité du cycle RH : recrutement, onboarding, gestion des congés et absences, suivi du temps de travail, entretiens annuels, formation et paie. C'est l'alternative la plus complète à PayFit pour les PME qui ont besoin de plus qu'un simple logiciel de paie.</p>
 
+        <div class="comp-table-wrap">
         <table class="comp-table">
           <thead><tr><th>Critère</th><th>Détail</th></tr></thead>
           <tbody>
@@ -383,6 +388,7 @@
             <tr><td class="nm">Support</td><td>Chat, email, gestionnaire de compte dédié</td></tr>
           </tbody>
         </table>
+        </div>
 
         <div class="pros-cons">
           <div class="pros">
@@ -422,6 +428,7 @@
         <h3>Silae en résumé</h3>
         <p><strong>Silae</strong> est le moteur de paie le plus puissant du marché français. Utilisé par plus de <strong>30 000 cabinets comptables</strong>, il gère plus de <strong>400 conventions collectives</strong>, les cas les plus complexes (multi-établissements, expatriés, intermittents) et offre un reporting paie très avancé.</p>
 
+        <div class="comp-table-wrap">
         <table class="comp-table">
           <thead><tr><th>Critère</th><th>Détail</th></tr></thead>
           <tbody>
@@ -432,6 +439,7 @@
             <tr><td class="nm">Support</td><td>Via l'intégrateur partenaire</td></tr>
           </tbody>
         </table>
+        </div>
 
         <div class="pros-cons">
           <div class="pros">
@@ -471,6 +479,7 @@
         <h3>Lucca en résumé</h3>
         <p><strong>Lucca</strong> est un éditeur français qui propose un <strong>SIRH modulaire</strong>. Vous choisissez les briques dont vous avez besoin : Pagga (paie via Silae), Figgo (congés et absences), Cleemy (notes de frais), Timmi (temps de travail), Poplee (gestion RH) et Elevo (entretiens). Cette approche permet de ne payer que ce que vous utilisez.</p>
 
+        <div class="comp-table-wrap">
         <table class="comp-table">
           <thead><tr><th>Critère</th><th>Détail</th></tr></thead>
           <tbody>
@@ -481,6 +490,7 @@
             <tr><td class="nm">Support</td><td>Chat, email, gestionnaire de compte</td></tr>
           </tbody>
         </table>
+        </div>
 
         <div class="pros-cons">
           <div class="pros">
@@ -515,6 +525,7 @@
         <h3>Sage Paie en résumé</h3>
         <p><strong>Sage Paie</strong> est le logiciel historique des PME françaises. Présent depuis plus de <strong>30 ans</strong> sur le marché, il bénéficie d'une large base installée et d'un réseau de partenaires certifiés. Sage a opéré sa transition vers le cloud avec <strong>Sage Business Cloud Paie</strong>, qui modernise l'interface tout en conservant la puissance du moteur de calcul.</p>
 
+        <div class="comp-table-wrap">
         <table class="comp-table">
           <thead><tr><th>Critère</th><th>Détail</th></tr></thead>
           <tbody>
@@ -525,6 +536,7 @@
             <tr><td class="nm">Support</td><td>Téléphone, email, partenaires certifiés</td></tr>
           </tbody>
         </table>
+        </div>
 
         <div class="pros-cons">
           <div class="pros">
@@ -564,6 +576,7 @@
         <h3>Nibelis en résumé</h3>
         <p><strong>Nibelis</strong> propose un modèle différent : l'<strong>externalisation complète de la paie</strong>. Vous confiez l'intégralité de la production paie à leurs équipes, qui utilisent un logiciel propriétaire. C'est la solution idéale pour les entreprises qui ne veulent pas gérer la paie en interne, en particulier les <strong>ETI</strong> avec des besoins complexes.</p>
 
+        <div class="comp-table-wrap">
         <table class="comp-table">
           <thead><tr><th>Critère</th><th>Détail</th></tr></thead>
           <tbody>
@@ -574,6 +587,7 @@
             <tr><td class="nm">Support</td><td>Gestionnaire paie dédié, hotline</td></tr>
           </tbody>
         </table>
+        </div>
 
         <div class="pros-cons">
           <div class="pros">
@@ -617,6 +631,7 @@
         <li>Testez au moins 2 solutions avec vos donnees reelles</li>
       </ul>
 
+      <div class="comp-table-wrap">
       <table class="comp-table">
         <thead>
           <tr><th>Votre profil</th><th>Notre recommandation</th><th>Pourquoi</th></tr>
@@ -649,6 +664,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
 
       <p>Vous hésitez encore ? Notre <a href="../trouver-mon-logiciel.html">outil de recommandation gratuit</a> vous pose 8 questions et vous donne une recommandation personnalisée en 2 minutes.</p>
 
