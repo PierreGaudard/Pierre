@@ -198,8 +198,8 @@
     .quiz-result p { font-size: .9rem; color: var(--text-muted); line-height: 1.7; }
     .quiz-result .quiz-restart { background: none; border: 1px solid var(--primary); color: var(--primary); border-radius: 99px; padding: 8px 20px; font-size: .85rem; cursor: pointer; margin-top: 14px; font-weight: 600; }
     .quiz-result .quiz-restart:hover { background: var(--primary-light); }
-    .article-hero-banner { max-width: 900px; margin: 20px auto 0; }
-    .article-hero-banner img { width: 100%; height: auto; border-radius: 12px; aspect-ratio: 16/9; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,.2); }
+    .hero-thumb { width: 100%; max-width: 150px; height: auto; border-radius: 10px; aspect-ratio: 16/9; object-fit: cover; box-shadow: 0 2px 10px rgba(0,0,0,.15); margin-bottom: 8px; }
+    @media (max-width: 700px) { .hero-thumb { display: none; } }
   </style>
 </head>
 <body>
@@ -226,6 +226,7 @@
         <h1>5 alternatives a Factorial en 2026 : comparatif complet pour PME</h1>
       </div>
       <div class="article-hero-right">
+        <img class="hero-thumb" src="../assets/images/blog/alternatives-factorial.jpg" alt="Comparatif des alternatives a Factorial pour la gestion RH" width="150" height="84">
         <div class="author-line"><div class="author-avatar"><img src="../assets/images/thomas-renaud.jpg" alt="Thomas Renaud" width="28" height="28"></div> Par <a href="../auteur/thomas-renaud.html">Thomas Renaud</a></div>
         <div class="article-hero-meta">
           <span>Mis a jour le 21 mars 2026</span>
@@ -233,9 +234,6 @@
           <span>Donnees verifiees</span>
         </div>
       </div>
-    </div>
-    <div class="article-hero-banner">
-      <img src="../assets/images/blog/alternatives-factorial.jpg" alt="Comparatif des alternatives a Factorial pour la gestion RH" width="900" height="506">
     </div>
   </div>
 

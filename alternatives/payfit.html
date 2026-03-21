@@ -162,8 +162,8 @@
     .internal-links h4 { font-size: .82rem; text-transform: uppercase; letter-spacing: .06em; color: var(--text-muted); margin-bottom: 12px; }
     .internal-links a { display: flex; align-items: center; gap: 8px; font-size: .88rem; color: var(--primary); font-weight: 600; padding: 6px 0; text-decoration: none; }
     .internal-links a:hover { text-decoration: underline; }
-    .article-hero-banner { max-width: 900px; margin: 20px auto 0; }
-    .article-hero-banner img { width: 100%; height: auto; border-radius: 12px; aspect-ratio: 16/9; object-fit: cover; box-shadow: 0 4px 20px rgba(0,0,0,.2); }
+    .hero-thumb { width: 100%; max-width: 150px; height: auto; border-radius: 10px; aspect-ratio: 16/9; object-fit: cover; box-shadow: 0 2px 10px rgba(0,0,0,.15); margin-bottom: 8px; }
+    @media (max-width: 700px) { .hero-thumb { display: none; } }
   </style>
 </head>
 <body>
@@ -190,6 +190,7 @@
         <h1>5 alternatives à PayFit en 2026 : comparatif complet pour PME</h1>
       </div>
       <div class="article-hero-right">
+        <img class="hero-thumb" src="../assets/images/blog/alternatives-payfit.jpg" alt="Comparatif des alternatives a PayFit pour PME" width="150" height="84">
         <div class="author-line"><div class="author-avatar"><img src="../assets/images/thomas-renaud.jpg" alt="Thomas Renaud" width="28" height="28"></div> Par <a href="../auteur/thomas-renaud.html">Thomas Renaud</a></div>
         <div class="article-hero-meta">
           <span>📅 Mis à jour le 19 février 2026</span>
@@ -197,9 +198,6 @@
           <span>✅ Données vérifiées</span>
         </div>
       </div>
-    </div>
-    <div class="article-hero-banner">
-      <img src="../assets/images/blog/alternatives-payfit.jpg" alt="Comparatif des alternatives a PayFit pour PME" width="900" height="506">
     </div>
   </div>
 
