@@ -88,7 +88,8 @@
       color: white;
     }
     .article-layout { display: grid; grid-template-columns: 220px 1fr; gap: 40px; max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
-    @media (max-width: 860px) { .article-layout { grid-template-columns: 1fr; } .toc { display: none; } }
+    @media (max-width: 860px) { .article-layout { grid-template-columns: 1fr; padding: 24px 16px; } .toc { display: none; } }
+    @media (max-width: 480px) { .article-layout { padding: 20px 14px; } .alt-detail { padding: 20px 16px; } .summary-box { padding: 18px 16px; } .cta-box { padding: 24px 16px; } }
 
     .toc { position: sticky; top: 80px; align-self: start; max-height: calc(100vh - 100px); overflow-y: auto; }
     .toc h4 { font-size: .75rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text-muted); margin-bottom: 12px; }
@@ -759,6 +760,7 @@
 
       <p>Le bon choix depend de trois parametres : la <strong>taille de votre entreprise</strong>, la <strong>complexite de votre paie</strong> et votre <strong>budget</strong>. Voici notre grille de recommandation synthetique.</p>
 
+      <div style="overflow-x:auto">
       <table class="comp-table">
         <thead>
           <tr><th>Votre profil</th><th>Notre recommandation</th><th>Pourquoi</th></tr>
@@ -791,6 +793,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
 
       <p>Avant de vous decider, testez au minimum deux solutions avec vos donnees reelles. La plupart des editeurs proposent une demo ou un essai gratuit. Notre <a href="../trouver-mon-logiciel.html">outil de recommandation gratuit</a> peut aussi vous aider a affiner votre choix.</p>
 
