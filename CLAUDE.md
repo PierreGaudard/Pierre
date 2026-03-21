@@ -73,6 +73,18 @@
 - **Les articles les plus recents sont toujours en haut**, les plus anciens en bas (ordre ante-chronologique)
 - Cette regle s'applique sur la page d'accueil ET sur les pages index de categories
 
+### Maillage interne
+
+- **Chaque article doit contenir du maillage interne coherent** : liens vers d'autres pages du site avec des ancres exactes (le texte du lien = le sujet de la page cible)
+- Privilegier les liens contextuels dans le corps du texte plutot que des blocs de liens isoles
+- Chaque article doit pointer vers au moins 2-3 autres pages du site de maniere logique (ex: un guide vers un comparatif, un avis vers une alternative, etc.)
+
+### Image hero dans les articles
+
+- Chaque page article contient une **image paysage (16:9)** placee entre le hero et le contenu principal, dans un div `.article-hero-banner`
+- Format constant : `max-width: 900px`, `border-radius: 12px`, `aspect-ratio: 16/9`, `object-fit: cover`
+- Utiliser l'image deja associee a l'article (celle du dossier `assets/images/blog/`)
+
 ### Date de creation sur les cards
 
 - Chaque blog-card affiche la date de creation dans le span `.blog-card-time` au format : `"21 mars 2026 · 12 min de lecture"`
