@@ -29,6 +29,9 @@
 
 **Alternatives :**
 - `alternatives/payfit.html` - Alternatives a PayFit 2026
+- `alternatives/silae.html` - Alternatives a Silae 2026
+- `alternatives/factorial.html` - Alternatives a Factorial 2026
+- `alternatives/lucca.html` - Alternatives a Lucca 2026
 
 **Avis :**
 - `avis/payfit.html` - Avis PayFit 2026
@@ -62,14 +65,27 @@
 
 1. **`sitemap.xml`** - Sitemap XML pour Google (ajouter chaque nouvelle page)
 2. **`plan-du-site.html`** - Plan du site visible par les utilisateurs (ajouter chaque nouvelle page)
-3. **`index.html`** - Page d'accueil (si le nouveau contenu doit y apparaitre)
+3. **`index.html`** - Page d'accueil : toujours ajouter les nouveaux articles, mais limiter le nombre affiche (garder uniquement les plus recents, max ~6-8 articles visibles). Les plus anciens sont retires de la page d'accueil (ils restent accessibles via les pages index de categories).
 4. **Pages index des categories** (`comparatifs/index.html`, `guides/index.html`, etc.) - Ajouter les nouveaux articles dans leur categorie
+
+### Ordre d'affichage des articles
+
+- **Les articles les plus recents sont toujours en haut**, les plus anciens en bas (ordre ante-chronologique)
+- Cette regle s'applique sur la page d'accueil ET sur les pages index de categories
+
+### Date de creation sur les cards
+
+- Chaque blog-card affiche la date de creation dans le span `.blog-card-time` au format : `"21 mars 2026 · 12 min de lecture"`
+- Toujours ajouter la date lors de la creation d'un nouvel article
 
 ---
 
 ## Historique des modifications
 
 ### 2026-03-21
+- Ajout de 3 pages alternatives : `alternatives/factorial.html`, `alternatives/silae.html`, `alternatives/lucca.html` avec quiz interactif, tableaux comparatifs et logos
+- Telechargement de 10 logos (Google Favicons API) dans `assets/images/logos/` et 3 images hero dans `assets/images/blog/`
+- Mise a jour du `sitemap.xml`, `plan-du-site.html` et `alternatives/index.html` (4 articles)
 - Ajout du guide "Promesse d'embauche en 2026" (`guides/promesse-embauche.html`) avec generateur interactif
 - Ajout de 3 images libres de droit (Pexels) dans `assets/images/blog/`
 - Mise a jour du `sitemap.xml`, `plan-du-site.html` et `guides/index.html`
