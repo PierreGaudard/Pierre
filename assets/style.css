@@ -408,32 +408,59 @@ table {
     overflow-x: auto;
   }
 
-  /* Tables : forcer scroll horizontal au lieu d'écraser les colonnes */
+  /* Tous les wrappers de tableaux : scroll horizontal */
   .compare-table-wrap,
-  .comp-table-wrap {
-    overflow-x: auto;
+  .comp-table-wrap,
+  .table-wrap,
+  .smic-table-wrap,
+  .comparison-table-wrap,
+  .breakdown-table-wrap,
+  .seo-table-wrap,
+  div[style*="overflow-x"] {
+    overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;
   }
 
+  /* Tous les tableaux : min-width pour ne pas écraser les colonnes */
   .compare-table,
-  .comp-table {
+  .comp-table,
+  .content-table,
+  .smic-table,
+  .comparison-table,
+  .breakdown-table,
+  .seo-table {
     min-width: 600px;
   }
 
-  /* Première colonne sticky pour garder le contexte en scrollant */
+  /* Première colonne sticky sur tous les tableaux */
   .compare-table td:first-child,
   .compare-table th:first-child,
   .comp-table td:first-child,
-  .comp-table th:first-child {
+  .comp-table th:first-child,
+  .content-table td:first-child,
+  .content-table th:first-child,
+  .smic-table td:first-child,
+  .smic-table th:first-child,
+  .comparison-table td:first-child,
+  .comparison-table th:first-child,
+  .breakdown-table td:first-child,
+  .breakdown-table th:first-child,
+  .seo-table td:first-child,
+  .seo-table th:first-child {
     position: sticky;
     left: 0;
     background: #fff;
     z-index: 1;
-    min-width: 120px;
+    min-width: 110px;
   }
 
   .compare-table thead th:first-child,
-  .comp-table thead th:first-child {
+  .comp-table thead th:first-child,
+  .content-table thead th:first-child,
+  .smic-table thead th:first-child,
+  .comparison-table thead th:first-child,
+  .breakdown-table thead th:first-child,
+  .seo-table thead th:first-child {
     background: #f0fdf4;
   }
 
