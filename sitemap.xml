@@ -81,6 +81,13 @@
     <priority>0.9</priority>
   </url>
 
+  <url>
+    <loc>https://meilleur-logiciel-rh.fr/alternatives/elevo.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Guides -->
   <url>
     <loc>https://meilleur-logiciel-rh.fr/guides/</loc>

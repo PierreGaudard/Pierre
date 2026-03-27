@@ -32,6 +32,7 @@
 - `alternatives/silae.html` - Alternatives a Silae 2026
 - `alternatives/factorial.html` - Alternatives a Factorial 2026
 - `alternatives/lucca.html` - Alternatives a Lucca 2026
+- `alternatives/elevo.html` - Alternatives a Elevo 2026
 
 **Avis :**
 - `avis/payfit.html` - Avis PayFit 2026
