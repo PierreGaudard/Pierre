@@ -690,4 +690,32 @@ table {
 .share-btn-x { background: #000; }
 .share-btn-facebook { background: #1877F2; }
 .share-btn-reddit { background: #FF4500; }
+
+/* =============================================
+   MOBILE : HERO SUB + TOC
+   ============================================= */
+@media (max-width: 700px) {
+  .article-hero-sub {
+    font-size: .88rem !important;
+    line-height: 1.45 !important;
+  }
+  .toc ul {
+    display: none;
+  }
+  .toc-title {
+    cursor: pointer;
+    position: relative;
+  }
+  .toc-title::after {
+    content: "\25BC";
+    font-size: .65rem;
+    margin-left: 8px;
+    transition: transform .2s;
+  }
+  .toc.open .toc-title::after {
+    transform: rotate(180deg);
+  }
+  .toc.open ul {
+    display: block;
+  }
 }
