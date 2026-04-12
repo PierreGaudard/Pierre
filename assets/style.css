@@ -645,3 +645,49 @@ table {
   .cookie-banner-actions { width: 100%; }
   .cookie-btn { flex: 1; text-align: center; padding: 12px 16px; }
 }
+
+/* =============================================
+   BOUTONS DE PARTAGE
+   ============================================= */
+.share-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 32px 0;
+  flex-wrap: wrap;
+}
+
+.share-bar-label {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+}
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: .82rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: opacity .2s;
+}
+
+.share-btn:hover {
+  opacity: .85;
+}
+
+.share-btn svg {
+  flex-shrink: 0;
+}
+
+.share-btn-linkedin { background: #0A66C2; }
+.share-btn-x { background: #000; }
+.share-btn-facebook { background: #1877F2; }
+.share-btn-reddit { background: #FF4500; }
+}

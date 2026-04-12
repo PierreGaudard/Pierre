@@ -134,6 +134,15 @@
 - Chaque article doit aussi avoir un schema BreadcrumbList et un schema FAQPage (minimum 3 questions)
 - **Toujours verifier les donnees structurees** avec le test de Google (https://search.google.com/test/rich-results) apres creation d'un nouvel article
 
+### GEO (Generative Engine Optimization)
+
+- Le site dispose d'un fichier `llms.txt` a la racine, conforme a la spec llmstxt.org
+- A chaque nouvel article, ajouter l'URL et la description dans le `llms.txt` (dans la section correspondante)
+- Le `robots.txt` reference le `llms.txt` en commentaire
+- Chaque article contient des boutons de partage (LinkedIn, X, Facebook, Reddit) places juste avant la section FAQ
+- Les boutons utilisent les classes CSS `.share-bar`, `.share-btn-linkedin`, `.share-btn-x`, `.share-btn-facebook`, `.share-btn-reddit` definies dans `assets/style.css`
+- Les URLs dans les boutons doivent etre encodees (URL encoding)
+
 ---
 
 ## Historique des modifications
