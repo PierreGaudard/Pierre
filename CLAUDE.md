@@ -49,6 +49,7 @@
 - `guides/conges-imposes-employeur.html` - Congés imposés par l'employeur : combien de semaines ?
 - `guides/quitter-cdi-sans-perdre-droits.html` - Comment quitter un CDI sans perdre ses droits ?
 - `guides/jours-fractionnement-conges.html` - Comment obtenir les 2 jours de fractionnement ?
+- `guides/avertissements-avant-licenciement.html` - Combien d'avertissements avant un licenciement ?
 
 **Outils :**
 - `outils/convertisseur-brut-net.html`
@@ -84,11 +85,14 @@
 - Privilegier les liens contextuels dans le corps du texte plutot que des blocs de liens isoles
 - Chaque article doit pointer vers au moins 2-3 autres pages du site de maniere logique (ex: un guide vers un comparatif, un avis vers une alternative, etc.)
 
-### Image hero dans les articles
+### Images dans les articles
 
-- Chaque page article contient une **image paysage (16:9)** placee entre le hero et le contenu principal, dans un div `.article-hero-banner`
-- Format constant : `max-width: 900px`, `border-radius: 12px`, `aspect-ratio: 16/9`, `object-fit: cover`
-- Utiliser l'image deja associee a l'article (celle du dossier `assets/images/blog/`)
+- Chaque page article contient une **image hero/thumb** dans le bandeau vert (classe `.hero-thumb`)
+- **Minimum 2 images supplementaires** dans le corps de l'article (pas de reutilisation de l'image hero)
+- Les images dans le contenu utilisent la classe `.article-img` ou un div avec `border-radius: 12px; aspect-ratio: 16/9; object-fit: cover`
+- Toutes les images du contenu doivent avoir `loading="lazy"`, un `alt` descriptif et un `title`
+- Ne jamais dupliquer l'image hero dans le corps de l'article : utiliser des images differentes
+- Images stockees dans `assets/images/blog/`
 
 ### Date de creation sur les cards
 
