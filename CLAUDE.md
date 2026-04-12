@@ -46,6 +46,7 @@
 - `guides/formation-rh-sans-bac.html` - Formation RH sans bac
 - `guides/image-negative-rh-entreprise.html` - Image des RH en entreprise
 - `guides/promesse-embauche.html` - Promesse d'embauche : guide juridique 2026
+- `guides/conges-imposes-employeur.html` - Conges imposes par l'employeur : combien de semaines ?
 
 **Outils :**
 - `outils/convertisseur-brut-net.html`
@@ -91,9 +92,42 @@
 - Chaque blog-card affiche la date de creation dans le span `.blog-card-time` au format : `"21 mars 2026 · 12 min de lecture"`
 - Toujours ajouter la date lors de la creation d'un nouvel article
 
+### Accents obligatoires
+
+- **Toujours ecrire avec les accents francais** (e, a, e, u, c, etc.) dans TOUT le contenu HTML : titres, meta tags, paragraphes, tableaux, FAQ, JSON-LD, alt images, etc.
+- Ne jamais omettre les accents. Un texte sans accents est un bug.
+
+### Encart "En bref" sous le hero
+
+- Chaque article contient un encart `.tldr` juste apres le debut du contenu principal
+- Le titre de cet encart est **"En bref"** (pas "Ce qu'il faut retenir", pas "Resume")
+- CSS class : `.tldr-title` avec le texte "En bref"
+
+### Reponse directe sous le H1 du hero
+
+- Sous le H1 (qui pose une question) et le paragraphe `.article-hero-sub`, ajouter un **paragraphe de reponse directe en gras**
+- Ce paragraphe repond immediatement a la question du H1 en une phrase claire et complete
+- Format : `<p class="article-hero-sub" style="font-weight:700;color:white;font-size:1.1rem;margin-top:8px;"><strong>Reponse directe ici.</strong></p>`
+- Exemple : pour "Combien de semaines de conges l'employeur peut-il imposer ?", la reponse est "En France, l'employeur peut imposer jusqu'a 4 semaines de conges payes consecutives (24 jours ouvrables), et la 5e semaine separement."
+
+### Donnees structurees (JSON-LD)
+
+- Chaque article doit avoir un schema Article complet avec ces champs obligatoires :
+  - `image` : objet ImageObject avec l'URL de l'image hero (meme URL que og:image)
+  - `datePublished` et `dateModified` : format ISO 8601 complet avec fuseau horaire (`2026-04-12T00:00:00+02:00`), jamais juste `2026-04-12`
+  - `headline`, `description`, `author`, `publisher`, `mainEntityOfPage`, `keywords`, `wordCount`, `timeRequired`
+- Chaque article doit aussi avoir un schema BreadcrumbList et un schema FAQPage (minimum 3 questions)
+- **Toujours verifier les donnees structurees** avec le test de Google (https://search.google.com/test/rich-results) apres creation d'un nouvel article
+
 ---
 
 ## Historique des modifications
+
+### 2026-04-12
+- Audit SEO technique complet : ajout attributs title sur toutes les images (~250), correction alt vides, raccourcissement titles trop longs, correction extension image, suppression favicon doublon
+- Ajout du guide "Conges imposes par l'employeur" (`guides/conges-imposes-employeur.html`) avec FAQ schema, tableaux, maillage interne
+- Correction des donnees structurees (JSON-LD) sur tous les articles : ajout champ image manquant, format date ISO 8601 complet avec fuseau horaire
+- Ajout de regles dans CLAUDE.md : accents obligatoires, encart "En bref", reponse directe sous H1, checklist donnees structurees
 
 ### 2026-03-21
 - Ajout de 3 pages alternatives : `alternatives/factorial.html`, `alternatives/silae.html`, `alternatives/lucca.html` avec quiz interactif, tableaux comparatifs et logos
