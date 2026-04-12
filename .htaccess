@@ -139,32 +139,22 @@ RewriteRule ^(.+/)index\.html$ /$1 [R=301,L]
 RedirectMatch 404 /\.git
 
 # ---------------------------------------------------------------
-# 8. REDIRECTIONS 404 CORRIGEES
-# ---------------------------------------------------------------
-# Logo SVG demande mais inexistant -> redirect vers PNG
-RewriteRule ^assets/images/logo\.svg$ /assets/images/mlrh-logo.png [R=301,L]
-
-# Anciennes images guides supprimees -> redirect vers images existantes
-RewriteRule ^assets/images/guides/formation-rh-adulte\.jpg$ /assets/images/blog/devenir-rh-sans-diplome.jpg [R=301,L]
-RewriteRule ^assets/images/guides/assistant-rh-bureau\.jpg$ /assets/images/blog/devenir-rh.jpg [R=301,L]
-
-# ---------------------------------------------------------------
-# 9. PAGE 404 PERSONNALISEE
+# 8. PAGE 404 PERSONNALISEE
 # ---------------------------------------------------------------
 ErrorDocument 404 /404.html
 
 # ---------------------------------------------------------------
-# 10. EMPECHER LE LISTING DES REPERTOIRES
+# 9. EMPECHER LE LISTING DES REPERTOIRES
 # ---------------------------------------------------------------
 Options -Indexes
 
 # ---------------------------------------------------------------
-# 11. ENCODAGE UTF-8 PAR DEFAUT
+# 10. ENCODAGE UTF-8 PAR DEFAUT
 # ---------------------------------------------------------------
 AddDefaultCharset UTF-8
 
 # ---------------------------------------------------------------
-# 12. ETAG (eviter doublons de cache)
+# 11. ETAG (eviter doublons de cache)
 # ---------------------------------------------------------------
 <IfModule mod_headers.c>
   Header unset ETag
