@@ -111,6 +111,13 @@
 - Le paragraphe `.article-hero-sub` descriptif est **remplace** par la reponse directe en gras (pas les deux en meme temps)
 - Un seul `<p class="article-hero-sub">` avec `font-weight:700` et `<strong>` qui repond directement a la question du H1
 
+### Sommaire (table des matieres)
+
+- Le sommaire dans la colonne gauche (`aside.toc`) doit reprendre **exactement les textes des H2** de l'article
+- Ne pas raccourcir, ne pas reformuler : copier-coller le texte du H2 dans le lien du sommaire
+- Le premier item du sommaire est toujours "En bref" (lien vers l'encart tldr)
+- Le dernier item est toujours "Questions frequentes" (lien vers la section FAQ)
+
 ### Donnees structurees (JSON-LD)
 
 - Chaque article doit avoir un schema Article complet avec ces champs obligatoires :
