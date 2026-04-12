@@ -48,6 +48,7 @@
 - `guides/promesse-embauche.html` - Promesse d'embauche : guide juridique 2026
 - `guides/conges-imposes-employeur.html` - Congés imposés par l'employeur : combien de semaines ?
 - `guides/quitter-cdi-sans-perdre-droits.html` - Comment quitter un CDI sans perdre ses droits ?
+- `guides/jours-fractionnement-conges.html` - Comment obtenir les 2 jours de fractionnement ?
 
 **Outils :**
 - `outils/convertisseur-brut-net.html`
