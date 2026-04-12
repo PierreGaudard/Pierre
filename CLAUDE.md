@@ -112,6 +112,7 @@
 - Le titre de cet encart est **"En bref"** (pas "Ce qu'il faut retenir", pas "Resume")
 - CSS class : `.tldr-title` avec le texte "En bref"
 - **JAMAIS de `<strong>` dans les `<li>` de l'encart** : le CSS `display: flex` sur les items casse le rendu quand il y a du gras. Ecrire le texte en clair, sans balise strong.
+- **JAMAIS de liens externes dans l'encart En bref** : les liens vers des sources officielles (Legifrance, service-public.fr, etc.) doivent etre places dans le corps du texte uniquement, pas dans le resume.
 
 ### Reponse directe sous le H1 du hero
 
