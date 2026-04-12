@@ -46,7 +46,8 @@
 - `guides/formation-rh-sans-bac.html` - Formation RH sans bac
 - `guides/image-negative-rh-entreprise.html` - Image des RH en entreprise
 - `guides/promesse-embauche.html` - Promesse d'embauche : guide juridique 2026
-- `guides/conges-imposes-employeur.html` - Conges imposes par l'employeur : combien de semaines ?
+- `guides/conges-imposes-employeur.html` - Congés imposés par l'employeur : combien de semaines ?
+- `guides/quitter-cdi-sans-perdre-droits.html` - Comment quitter un CDI sans perdre ses droits ?
 
 **Outils :**
 - `outils/convertisseur-brut-net.html`
@@ -102,13 +103,12 @@
 - Chaque article contient un encart `.tldr` juste apres le debut du contenu principal
 - Le titre de cet encart est **"En bref"** (pas "Ce qu'il faut retenir", pas "Resume")
 - CSS class : `.tldr-title` avec le texte "En bref"
+- **JAMAIS de `<strong>` dans les `<li>` de l'encart** : le CSS `display: flex` sur les items casse le rendu quand il y a du gras. Ecrire le texte en clair, sans balise strong.
 
 ### Reponse directe sous le H1 du hero
 
-- Sous le H1 (qui pose une question) et le paragraphe `.article-hero-sub`, ajouter un **paragraphe de reponse directe en gras**
-- Ce paragraphe repond immediatement a la question du H1 en une phrase claire et complete
-- Format : `<p class="article-hero-sub" style="font-weight:700;color:white;font-size:1.1rem;margin-top:8px;"><strong>Reponse directe ici.</strong></p>`
-- Exemple : pour "Combien de semaines de conges l'employeur peut-il imposer ?", la reponse est "En France, l'employeur peut imposer jusqu'a 4 semaines de conges payes consecutives (24 jours ouvrables), et la 5e semaine separement."
+- Le paragraphe `.article-hero-sub` descriptif est **remplace** par la reponse directe en gras (pas les deux en meme temps)
+- Un seul `<p class="article-hero-sub">` avec `font-weight:700` et `<strong>` qui repond directement a la question du H1
 
 ### Donnees structurees (JSON-LD)
 
