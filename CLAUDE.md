@@ -74,6 +74,7 @@
 3. **`index.html`** - Page d'accueil : toujours ajouter les nouveaux articles, mais limiter le nombre affiche (garder uniquement les plus recents, max ~6-8 articles visibles). Les plus anciens sont retires de la page d'accueil (ils restent accessibles via les pages index de categories).
 4. **Pages index des categories** (`comparatifs/index.html`, `guides/index.html`, etc.) - Ajouter les nouveaux articles dans leur categorie
 5. **`auteur/thomas-renaud.html`** - Page auteur : ajouter chaque nouvel article sous forme de blog-card avec image, date et description (meme format que les pages index de categories)
+6. **`404.html`** - Page 404 : mettre a jour la section "Nos derniers articles" avec les 6 articles les plus recents (format card avec image, titre, description). Les plus anciens sont remplaces par les nouveaux.
 
 ### Ordre d'affichage des articles
 

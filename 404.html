@@ -13,14 +13,10 @@
   <link rel="stylesheet" href="/assets/style.css">
   <style>
     .error-page {
-      min-height: 60vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      padding: 64px 24px 48px;
       text-align: center;
-      padding: 48px 24px;
     }
-    .error-content { max-width: 520px; }
+    .error-content { max-width: 520px; margin: 0 auto; }
     .error-code {
       font-size: clamp(4rem, 10vw, 6rem);
       font-weight: 900;
@@ -45,6 +41,58 @@
       gap: 12px;
       justify-content: center;
       flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .error-articles {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+    }
+    .error-articles h2 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    .error-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .error-card {
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      text-decoration: none;
+      color: var(--text);
+      transition: box-shadow .2s, transform .2s;
+      background: white;
+    }
+    .error-card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,.08);
+      transform: translateY(-2px);
+    }
+    .error-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+    .error-card-body {
+      padding: 14px 16px;
+    }
+    .error-card-body h3 {
+      font-size: .88rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+    .error-card-body p {
+      font-size: .8rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+      margin: 0;
     }
   </style>
 </head>
@@ -69,7 +117,7 @@
     <div class="error-content">
       <div class="error-code">404</div>
       <h1>Page introuvable</h1>
-      <p>La page que vous cherchez n'existe pas ou a peut-être été déplacée. Pas de panique, voici quelques liens utiles pour retrouver votre chemin.</p>
+      <p>La page que vous cherchez n'existe pas ou a été déplacée. Voici quelques liens pour retrouver votre chemin.</p>
       <div class="error-links">
         <a href="/" class="btn btn-primary">Retour à l'accueil</a>
         <a href="/plan-du-site.html" class="btn btn-secondary">Plan du site</a>
@@ -77,9 +125,93 @@
     </div>
   </main>
 
+  <section class="error-articles">
+    <h2>Nos derniers articles</h2>
+    <div class="error-grid">
+      <a href="/guides/demission-arret-maladie.html" class="error-card">
+        <img src="/assets/images/blog/demission-arret-maladie-hero.jpg" alt="Personne en arrêt maladie consultant son ordinateur" loading="lazy">
+        <div class="error-card-body">
+          <h3>Peut-on démissionner pendant un arrêt maladie ?</h3>
+          <p>Préavis, IJSS, chômage : les règles complètes.</p>
+        </div>
+      </a>
+      <a href="/guides/avertissements-avant-licenciement.html" class="error-card">
+        <img src="/assets/images/blog/avertissements-licenciement-hero.jpg" alt="Entretien disciplinaire" loading="lazy">
+        <div class="error-card-body">
+          <h3>Combien d'avertissements avant un licenciement ?</h3>
+          <p>Aucun minimum légal. Faute grave, échelle des sanctions.</p>
+        </div>
+      </a>
+      <a href="/guides/jours-fractionnement-conges.html" class="error-card">
+        <img src="/assets/images/blog/jours-fractionnement-conges.jpg" alt="Calendrier de congés payés" loading="lazy">
+        <div class="error-card-body">
+          <h3>Comment obtenir les 2 jours de fractionnement ?</h3>
+          <p>Conditions, calcul et exemples concrets.</p>
+        </div>
+      </a>
+      <a href="/guides/quitter-cdi-sans-perdre-droits.html" class="error-card">
+        <img src="/assets/images/blog/quitter-cdi-sans-perdre-droits.jpg" alt="Salarié en réflexion" loading="lazy">
+        <div class="error-card-body">
+          <h3>Comment quitter un CDI sans perdre ses droits ?</h3>
+          <p>Les 5 solutions pour partir en gardant le chômage.</p>
+        </div>
+      </a>
+      <a href="/guides/conges-imposes-employeur.html" class="error-card">
+        <img src="/assets/images/blog/conges-imposes-employeur.jpg" alt="Équipe en réunion pour planifier les congés" loading="lazy">
+        <div class="error-card-body">
+          <h3>Congés imposés : combien de semaines en 2026 ?</h3>
+          <p>4 semaines max, 5e semaine à part, délai et droits.</p>
+        </div>
+      </a>
+      <a href="/guides/promesse-embauche.html" class="error-card">
+        <img src="/assets/images/blog/promesse-embauche.jpg" alt="Poignée de main après un entretien" loading="lazy">
+        <div class="error-card-body">
+          <h3>Promesse d'embauche : guide juridique 2026</h3>
+          <p>Valeur juridique, modèle et générateur gratuit.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
   <footer class="site-footer">
     <div class="site-footer-inner">
-      <div class="footer-bottom"><span>© 2026 MLRH. Tous droits réservés</span></div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo"><img src="/assets/images/mlrh-logo.png" alt="MLRH" title="Logo Meilleur Logiciel RH" width="82" height="30" style="height:30px;width:auto"></div>
+          <p>Comparatifs indépendants et guides sur les logiciels RH, paie et SIRH pour les PME françaises.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Comparatifs</p>
+          <ul>
+            <li><a href="/comparatifs/payfit-vs-factorial.html">PayFit vs Factorial</a></li>
+            <li><a href="/comparatifs/payfit-vs-silae.html">PayFit vs Silae</a></li>
+            <li><a href="/comparatifs/">Tous les comparatifs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Ressources</p>
+          <ul>
+            <li><a href="/guides/">Guides RH</a></li>
+            <li><a href="/outils/">Outils gratuits</a></li>
+            <li><a href="/guides/choisir-logiciel-paie.html">Choisir son logiciel de paie</a></li>
+            <li><a href="/alternatives/payfit.html">Alternatives à PayFit</a></li>
+            <li><a href="/avis/payfit.html">PayFit avis 2026</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-col-title">Le site</p>
+          <ul>
+            <li><a href="/a-propos.html">À propos</a></li>
+            <li><a href="/methodologie.html">Méthodologie</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a href="/plan-du-site.html">Plan du site</a></li>
+            <li><a href="/mentions-legales.html">Mentions légales</a></li>
+            <li><a href="/politique-de-confidentialite.html">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-affiliation">Certains liens sont des liens d'affiliation. Nos avis restent indépendants et basés sur des données vérifiées.</div>
+      <div class="footer-bottom"><span>&copy; 2026 MLRH. Tous droits réservés</span><span>Données vérifiées sur les sites officiels</span></div>
     </div>
   </footer>
 
