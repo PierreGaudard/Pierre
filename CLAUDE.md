@@ -70,6 +70,7 @@
 2. **`plan-du-site.html`** - Plan du site visible par les utilisateurs (ajouter chaque nouvelle page)
 3. **`index.html`** - Page d'accueil : toujours ajouter les nouveaux articles, mais limiter le nombre affiche (garder uniquement les plus recents, max ~6-8 articles visibles). Les plus anciens sont retires de la page d'accueil (ils restent accessibles via les pages index de categories).
 4. **Pages index des categories** (`comparatifs/index.html`, `guides/index.html`, etc.) - Ajouter les nouveaux articles dans leur categorie
+5. **`auteur/thomas-renaud.html`** - Page auteur : ajouter chaque nouvel article sous forme de blog-card avec image, date et description (meme format que les pages index de categories)
 
 ### Ordre d'affichage des articles
 
