@@ -50,6 +50,7 @@
 - `guides/quitter-cdi-sans-perdre-droits.html` - Comment quitter un CDI sans perdre ses droits ?
 - `guides/jours-fractionnement-conges.html` - Comment obtenir les 2 jours de fractionnement ?
 - `guides/avertissements-avant-licenciement.html` - Combien d'avertissements avant un licenciement ?
+- `guides/demission-arret-maladie.html` - Peut-on démissionner pendant un arrêt maladie ?
 
 **Outils :**
 - `outils/convertisseur-brut-net.html`
