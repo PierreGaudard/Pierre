@@ -100,6 +100,15 @@ def render(slug, d):
 
     breadcrumb_name = d.get("breadcrumb_name", h1)
 
+    # H1 affiché : on ajoute " : définition" après le terme court
+    # Pour les H1 avec parenthèses "ABC (Full Name)", on insère entre le sigle et la parenthèse
+    import re as _re
+    m = _re.match(r'^([^(]+?)\s*\(([^)]+)\)$', h1)
+    if m:
+        h1_display = f"{m.group(1).strip()} : définition ({m.group(2).strip()})"
+    else:
+        h1_display = f"{h1} : définition"
+
     # Build JSON-LD
     jsonld = {
         "@context": "https://schema.org",
@@ -255,7 +264,7 @@ def render(slug, d):
     <div class="article-hero-flex">
       <div class="article-hero-left">
         <span class="badge">Définition RH</span>
-        <h1>{h1}</h1>
+        <h1>{h1_display}</h1>
         <p class="article-hero-sub">
           <strong>{hero_strong}</strong> {hero_rest}
         </p>
