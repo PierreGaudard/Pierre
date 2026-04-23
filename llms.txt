@@ -50,6 +50,26 @@ MLRH n'est pas un éditeur de logiciel. Le site ne vend aucune solution RH. Les 
 - [Calculateur SMIC](https://meilleur-logiciel-rh.fr/outils/calculateur-smic.html): SMIC brut et net actualisé pour 2026
 - [Simulateur coût salarié](https://meilleur-logiciel-rh.fr/outils/simulateur-cout-salarie.html): Coût total employeur d'un salarié (salaire + charges)
 
+## Définitions RH (glossaire)
+
+- [Glossaire RH](https://meilleur-logiciel-rh.fr/definitions-rh/): Plus de 60 définitions RH sharp et concrètes : paie, droit du travail, management, logiciels SIRH
+- [Onboarding](https://meilleur-logiciel-rh.fr/definitions-rh/onboarding.html): Parcours d'intégration d'un nouveau salarié, de la signature à la fin de la période d'essai
+- [SIRH](https://meilleur-logiciel-rh.fr/definitions-rh/sirh.html): Système d'information RH qui centralise la gestion du personnel
+- [Logiciel de paie](https://meilleur-logiciel-rh.fr/definitions-rh/logiciel-paie.html): Outil qui calcule les bulletins et génère la DSN mensuelle
+- [DSN](https://meilleur-logiciel-rh.fr/definitions-rh/dsn.html): Déclaration sociale nominative mensuelle, remplace 30+ déclarations
+- [Bulletin de paie](https://meilleur-logiciel-rh.fr/definitions-rh/bulletin-paie.html): Document mensuel détaillant salaire, cotisations et net versé
+- [GPEC](https://meilleur-logiciel-rh.fr/definitions-rh/gpec.html): Gestion prévisionnelle des emplois et compétences (aujourd'hui GEPP)
+- [Période d'essai](https://meilleur-logiciel-rh.fr/definitions-rh/periode-essai.html): Phase de début de contrat permettant une rupture libre des deux côtés
+- [Soft skills](https://meilleur-logiciel-rh.fr/definitions-rh/soft-skills.html): Compétences comportementales transférables, par opposition aux hard skills
+- [Culture d'entreprise](https://meilleur-logiciel-rh.fr/definitions-rh/culture-entreprise.html): Valeurs, normes, rituels partagés qui façonnent le fonctionnement d'une boîte
+- [BDESE](https://meilleur-logiciel-rh.fr/definitions-rh/bdese.html): Base de données économique, sociale et environnementale obligatoire >50 salariés
+- [DUERP](https://meilleur-logiciel-rh.fr/definitions-rh/duerp.html): Document unique d'évaluation des risques professionnels, obligatoire dès 1 salarié
+- [Dialogue social](https://meilleur-logiciel-rh.fr/definitions-rh/dialogue-social.html): Échanges institutionnels entre employeur et représentants du personnel
+- [Négociation collective](https://meilleur-logiciel-rh.fr/definitions-rh/negociation-collective.html): Discussions pour conclure des accords de branche ou d'entreprise
+- [Solde de tout compte](https://meilleur-logiciel-rh.fr/definitions-rh/solde-tout-compte.html): Document remis au salarié au départ avec les sommes dues
+- [Forfait jours](https://meilleur-logiciel-rh.fr/definitions-rh/forfait-jours.html): Décompte annuel en jours pour cadres autonomes (218 max)
+- [RTT](https://meilleur-logiciel-rh.fr/definitions-rh/rtt.html): Jours de Réduction du Temps de Travail, compensation d'heures au-delà de 35h
+
 ## Optional
 
 - [À propos de MLRH](https://meilleur-logiciel-rh.fr/a-propos.html): Présentation du site et de sa mission

@@ -16,9 +16,11 @@
 /alternatives/            - Index + alternatives logiciels
 /avis/                    - Index + avis logiciels
 /guides/                  - Index + guides pratiques RH
+/definitions-rh/          - Glossaire RH (60+ définitions) + index alphabétique
 /outils/                  - Outils RH gratuits (simulateurs, calculateurs)
 /auteur/                  - Page auteur
 /assets/                  - CSS, images, JS
+/scripts/                 - Générateur Python des pages définitions
 ```
 
 ### Pages existantes
@@ -59,6 +61,14 @@
 - `outils/calculateur-indemnite-licenciement.html`
 - `outils/calculateur-smic.html`
 - `outils/simulateur-cout-salarie.html`
+
+**Définitions RH (glossaire) :**
+- `definitions-rh/index.html` - Page index du glossaire avec recherche live + nav A-Z + 3 cards "À la une"
+- 60 pages définitions individuelles dans `definitions-rh/*.html` (onboarding, gpec, sirh, soft-skills, culture-entreprise, periode-essai + 54 autres couvrant paie, droit du travail, management, recrutement, dialogue social)
+- Template différent des guides : mono-colonne, plus court (400-650 mots), orienté dictionnaire
+- CSS dédié : `assets/definitions.css`
+- Images dédiées : `assets/images/definitions/`
+- **Générateur Python** : `scripts/gen-definitions.py` (template) + `scripts/definitions_data.py` (data). Pour ajouter ou modifier une définition, éditer `definitions_data.py` puis relancer `python3 gen-definitions.py`. Les 6 premières définitions (onboarding, gpec, sirh, soft-skills, culture-entreprise, periode-essai) ne sont PAS générées par le script : elles ont été écrites à la main avant la refonte template et doivent être modifiées directement dans leur fichier HTML.
 
 **Pages legales/site :**
 - `a-propos.html`, `methodologie.html`, `contact.html`
@@ -146,7 +156,27 @@
 
 ---
 
+## Rubrique Définitions RH — règles spécifiques
+
+- Les pages définitions ont un **template distinct** des guides : pas de TOC sticky en colonne gauche, contenu mono-colonne, hero vert dégradé, encart "En bref" en haut, développement court, encart "Cas concret" (fond jaune), encart "Cadre légal" bleu pour les définitions juridiques, 3 stats chiffrées, cards "Termes liés", bloc "Pour aller plus loin", share bar, FAQ accordéon.
+- **Longueur cible** : 400-650 mots de contenu (vs 2000-3000 pour un guide). Sharp et concis, pas de bla-bla.
+- **JSON-LD** : chaque page contient un `DefinedTerm` + Article + BreadcrumbList + FAQPage. Le `DefinedTerm.inDefinedTermSet` pointe vers `/definitions-rh/`.
+- **Maillage** : chaque définition liste 4 "Termes liés" (cards pointant vers d'autres définitions) et 2-3 "Pour aller plus loin" (guides, comparatifs, outils existants). Les termes liés doivent tous pointer vers des slugs qui existent vraiment dans le glossaire (éviter les liens cassés).
+- **Images** : les 60 images sont dans `assets/images/definitions/<slug>.jpg`, téléchargées depuis Pexels, au format 1200×800 environ. Quand on ajoute une définition, télécharger une image Pexels cohérente et la nommer selon le slug.
+- **Lien menu** : le menu header de TOUTES les pages du site inclut `Définitions` entre Guides et Alternatives. Idem pour le footer (section Ressources, lien "Définitions RH").
+- **Sitemap, plan-du-site, llms.txt** : à chaque nouvelle définition, mettre à jour ces 3 fichiers (sitemap.xml, plan-du-site.html section "Définitions RH (glossaire)", et llms.txt section "Définitions RH (glossaire)" si la définition est stratégique).
+- **Anti-patterns IA** : s'appliquent encore plus ici qu'ailleurs (format court = pièges plus visibles). Pas de "en outre", "il convient", "dans le monde de...", pas de tirets cadratins, phrases courtes/longues alternées, opinions assumées, exemples chiffrés concrets.
+
 ## Historique des modifications
+
+### 2026-04-23
+- Création de la nouvelle rubrique **Définitions RH (glossaire)** avec 60 définitions : onboarding, gpec, sirh, soft-skills, culture-entreprise, periode-essai + 54 autres (audit-social, avertissement-travail, barometre-social, bdese, bloc-competences, bulletin-paie, capital-humain, cartographie-metiers, charte-ethique, classification-emplois, code-conduite, codir, communication-interne, contrat-generation, contrat-mission, deontologie, detachement, diagnostic-social, dialogue-social, discretion-professionnelle, dsn, duerp, elections-professionnelles, entretien-annuel, fiche-fonction, forfait-jours, hierarchie-entreprise, indemnite-forfaitaire, inspection-travail, logiciel-paie, management-proximite, management-operationnel, management-situationnel, mandat-syndical, mentorat, metiers-tension, mise-disposition, mobilite-geographique, negociation-collective, pilotage-performance, plan-depart-volontaire, politique-handicap, procedure-disciplinaire, referentiel-metier, registre-accidents-benins, rtt, solde-tout-compte, talent-pool, taux-frequence, temps-partiel-module, tests-psychotechniques, transfert-competences, travail-poste, tutorat)
+- Mise en place du template dictionnaire dédié (`assets/definitions.css`) et du générateur Python (`scripts/gen-definitions.py` + `scripts/definitions_data.py`)
+- Page index du glossaire avec recherche live (JS pur) et nav A-Z sticky
+- Téléchargement de 60 images Pexels uniques dans `assets/images/definitions/`
+- Mise à jour du menu header et du footer sur les 43 pages existantes du site (ajout du lien "Définitions" entre Guides et Alternatives)
+- Mise à jour de `sitemap.xml` (61 nouvelles URLs), `plan-du-site.html` (section Glossaire avec les 60 termes en 2 colonnes), `llms.txt` (section Définitions RH avec les 16 termes stratégiques)
+- Ajout d'une card "Définitions RH" dans la grille d'accueil de `index.html`
 
 ### 2026-04-12
 - Audit SEO technique complet : ajout attributs title sur toutes les images (~250), correction alt vides, raccourcissement titles trop longs, correction extension image, suppression favicon doublon
