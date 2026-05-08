@@ -15,6 +15,10 @@ MLRH n'est pas un éditeur de logiciel. Le site ne vend aucune solution RH. Les 
 
 ## Avis et tests de logiciels
 
+- [Avis Silae 2026](https://meilleur-logiciel-rh.fr/avis/silae.html): Test du logiciel de paie qui équipe 35% des cabinets comptables français, prix indicatifs et verdict côté entreprise
+- [Avis Lucca RH 2026](https://meilleur-logiciel-rh.fr/avis/lucca.html): Test du SIRH modulaire français (Poplee, Pagga, Timmi, Figgo), prix, modules et verdict pour PME et ETI
+- [Avis Skello 2026](https://meilleur-logiciel-rh.fr/avis/skello.html): Test du logiciel de planning RH pour restauration, hôtellerie et retail, prix et verdict
+- [Avis Eurécia 2026](https://meilleur-logiciel-rh.fr/avis/eurecia.html): Test du SIRH français de Toulouse (recrutement, paie, formation, notes de frais), prix et verdict
 - [Avis PayFit 2026](https://meilleur-logiciel-rh.fr/avis/payfit.html): Test complet de PayFit avec prix réels, forces, faiblesses et verdict pour TPE et startups
 - [Avis Factorial 2026](https://meilleur-logiciel-rh.fr/avis/factorial.html): Test complet du SIRH Factorial avec IA intégrée, pour PME de 20 à 200 salariés
 
