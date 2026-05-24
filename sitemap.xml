@@ -700,4 +700,41 @@
     <priority>0.6</priority>
   </url>
 
+
+
+  <url>
+    <loc>https://meilleur-logiciel-rh.fr/guides/pourquoi-generation-z.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://meilleur-logiciel-rh.fr/guides/generation-apres-z.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://meilleur-logiciel-rh.fr/guides/debut-generation-z.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://meilleur-logiciel-rh.fr/guides/definition-generation-z.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://meilleur-logiciel-rh.fr/guides/generation-avant-z.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
