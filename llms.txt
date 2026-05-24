@@ -32,6 +32,11 @@ MLRH n'est pas un éditeur de logiciel. Le site ne vend aucune solution RH. Les 
 
 ## Guides droit du travail et RH
 
+- [Pourquoi parle-t-on autant de la génération Z ?](https://meilleur-logiciel-rh.fr/guides/pourquoi-generation-z.html): Pourquoi la Z bouleverse le travail et les marques.
+- [Quelle génération vient après la génération Z ?](https://meilleur-logiciel-rh.fr/guides/generation-apres-z.html): Génération Alpha, génération Beta : ce qui vient après les Z.
+- [Quand commence la génération Z ?](https://meilleur-logiciel-rh.fr/guides/debut-generation-z.html): 1997 à 2012, on vous explique pourquoi cette borne fait consensus.
+- [Qu'est-ce que la génération Z ?](https://meilleur-logiciel-rh.fr/guides/definition-generation-z.html): Définition complète, dates et caractéristiques principales.
+- [Quelle génération vient avant la génération Z ?](https://meilleur-logiciel-rh.fr/guides/generation-avant-z.html): Les millennials précèdent la Z, puis la génération X et les boomers.
 - [Choisir son logiciel de paie](https://meilleur-logiciel-rh.fr/guides/choisir-logiciel-paie.html): Les 7 critères essentiels pour choisir un logiciel de paie en PME (DSN, intégrations, support, coût)
 - [Démissionner pendant un arrêt maladie](https://meilleur-logiciel-rh.fr/guides/demission-arret-maladie.html): Règles sur le préavis, les IJSS, le chômage selon que l'arrêt est professionnel ou non
 - [Avertissements avant licenciement](https://meilleur-logiciel-rh.fr/guides/avertissements-avant-licenciement.html): Aucun minimum légal d'avertissements, faute grave, échelle des sanctions et délais
